@@ -1,0 +1,52 @@
+<div>
+  <label class="title dialog">{{rollName}}</label>
+  <div class="dices">
+    {{#if dice.base}}
+    <div>
+      <label>{{dice.base}} x</label> <img src="systems/invincible/assets/dice/base-6.webp" width="36">
+    </div>
+    {{/if}}
+    {{#if dice.gear}}
+    <div>
+      <label>{{dice.gear}} x</label> <img src="systems/invincible/assets/dice/gear-6.webp" width="36">
+    </div>
+    {{/if}}
+  </div>
+  <div class="breakdown">
+    {{#each breakdown as | value item |}}
+    <div class="attribute">
+      <input type='text' value='{{value}}' data-dtype='Number' disabled />
+      <label class="attribute-label">{{item}}</label>
+    </div>
+    {{/each}}
+    <div class="attribute">
+      <input type="number" name="bonus" value="{{bonus}}" />
+      <label class="attribute-label">{{localize "INVINCIBLE.Roll.bonus"}}</label>
+    </div>
+  </div>
+  {{#if attackInfo}}
+  <div class="separator"></div>
+  <div class="breakdown">
+    {{#unless attackInfo.armor}}
+    <div class="attribute">
+      <input type='text' value='{{attackInfo.damage}}' data-dtype='Number' disabled />
+      <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.baseDamage.label"}}</label>
+    </div>
+    <div class="attribute">
+      <input type='text' value='{{attackInfo.minRange}}' data-dtype='Number' disabled />
+      <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.minRange.label"}}</label>
+    </div>
+    <div class="attribute">
+      <input type='text' value='{{attackInfo.maxRange}}' data-dtype='Number' disabled />
+      <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.maxRange.label"}}</label>
+    </div>
+    {{/unless}}
+    {{#if attackInfo.armor}}
+    <div class="attribute">
+      <input type='text' value='{{attackInfo.armor}}' data-dtype='Number' disabled />
+      <label class="attribute-label">{{localize "YZUR.CHAT.ROLL.ATTACK.ARMOR"}}</label>
+    </div>
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

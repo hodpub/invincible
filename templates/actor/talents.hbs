@@ -1,0 +1,23 @@
+{{log this}}
+<section class='tab talents scrollable {{tab.cssClass}}' data-group='primary' data-tab='talents'>
+  <label class="title">{{{localize "INVINCIBLE.Actor.Tabs.Talents"}}}</label>
+  {{#each talents as | talent index |}}
+  <div class="talent-info" data-document-class="Item" data-item-id="{{talent.id}}">
+    <label class="rollable" data-action="roll" data-roll-type="automation">
+      {{talent.name}}
+    </label>
+    {{{talent.enriched}}}
+  </div>
+  {{/each}}
+  {{#if drawbacks.length}}
+  <div class="separator"></div>
+  {{/if}}
+  {{#each drawbacks as | drawback index |}}
+  <div class="talent-info" data-document-class="Item" data-item-id="{{drawback.id}}">
+    <label class="rollable" data-action="roll" data-roll-type="automation">
+      {{drawback.name}}
+    </label>
+    {{{drawback.enriched}}}
+  </div>
+  {{/each}}
+</section>

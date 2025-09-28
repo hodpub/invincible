@@ -1,0 +1,24 @@
+<section class='tab powers scrollable {{tab.cssClass}}' data-group='primary' data-tab='powers'>
+  <label class="title">{{{localize "INVINCIBLE.Actor.Tabs.Powers"}}}</label>
+  {{#each powers as | ps index |}}
+  <div class="powers-info">
+    <label data-document-class="Item" data-item-id="{{ps.powerSource.id}}">
+      {{ps.powerSource.name}}
+    </label>
+    {{{ps.powerSource.enriched}}}
+    {{#each ps.powers as | power |}}
+    <ul>
+      <li data-document-class="Item" data-item-id="{{power.id}}">
+        <label class="rollable" data-action="roll" data-roll-type="automation">{{power.name}}</label>
+        {{{power.enriched}}}
+        {{#each power.system.boosts as | boost |}}
+        <ul>
+          <li><strong class="rollable" data-action="roll" data-roll-type="boost" data-power="{{power.name}}" data-roll-data="{{boost}}">{{localize "INVINCIBLE.Item.Power.FIELDS.boosts.single"}}:</strong> {{boost}}</li>
+        </ul>
+        {{/each}}
+      </li>
+    </ul>
+    {{/each}}
+  </div>
+  {{/each}}
+</section>

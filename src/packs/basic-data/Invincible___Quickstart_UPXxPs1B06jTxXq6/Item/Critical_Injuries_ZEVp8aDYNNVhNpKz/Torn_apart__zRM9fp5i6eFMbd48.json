@@ -1,0 +1,30 @@
+{
+  "folder": "ZEVp8aDYNNVhNpKz",
+  "type": "criticalInjury",
+  "img": "systems/invincible/assets/icons/criticalInjury.svg",
+  "name": "Torn apart!",
+  "system": {
+    "description": "<p>Your body is completely ripped apart, guts and gore flying everywhere. This is the end for you.</p>",
+    "lethal": true,
+    "healingTime": "–",
+    "automations": {}
+  },
+  "_id": "zRM9fp5i6eFMbd48",
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758882620961,
+    "modifiedTime": 1758924110421,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

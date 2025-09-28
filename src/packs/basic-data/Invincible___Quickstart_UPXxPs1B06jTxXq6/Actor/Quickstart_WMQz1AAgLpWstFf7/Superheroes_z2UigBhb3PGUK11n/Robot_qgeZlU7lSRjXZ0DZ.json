@@ -1,0 +1,518 @@
+{
+  "name": "Robot",
+  "type": "superhero",
+  "_id": "qgeZlU7lSRjXZ0DZ",
+  "img": "systems/invincible/assets/portraits/robot.webp",
+  "system": {
+    "attributes": {
+      "fighting": {
+        "value": 4
+      },
+      "agility": {
+        "value": 4
+      },
+      "strength": {
+        "value": 5
+      },
+      "reason": {
+        "value": 9
+      },
+      "intuition": {
+        "value": 6
+      },
+      "presence": {
+        "value": 4
+      }
+    },
+    "derived": {
+      "slugfest": {
+        "value": 2,
+        "max": 2
+      },
+      "health": {
+        "value": 7,
+        "max": 2
+      },
+      "resolve": {
+        "value": 10,
+        "max": 2
+      }
+    },
+    "biography": "<p><strong>You’re the smartest person </strong>in the room – and it’s not arrogance, simply fact. Your expertise powers your advanced, armored robotic body, equipped with state-of-the-art sensors and some real firepower. When you started being a superhero years ago, you founded the Teen Team with other young heroes, where you battled threats like the Mauler Twins and first crossed paths with the hero Invincible. After four years of operation, you recently disbanded the Teen Team to join the Guardians of the Globe – the planet’s premiere super-team. But before you could join their ranks, the original team was killed. Cecil Stedman, the Director of the secret government organization charged with protecting the world from the shadows called the Global Defense Agency, appointed you as the leader of a new GDA-sponsored Guardians team.</p><p>You helped assemble the new roster, reuniting with Rex Splode and meeting Monster Girl – with whom you developed a special interest. Your leadership has been criticized of late by GDA liaison Donald Ferguson, with him claiming that your new team’s response times are unacceptable. You know that the team – and you – can do better, and you’re going to prove it.</p>",
+    "reputation": 2,
+    "karma": 0,
+    "civilianName": "Rudolph Connors",
+    "role": "Leader",
+    "appearance": "",
+    "occupation": "Technical",
+    "personality": "Calculating, eloquent, and\ndriven to make a difference\n– as efficiently as possible.",
+    "drive": "Mastery. You strive to\nperfect yourself and the\nworld around you.",
+    "flaw": "Condescending. You are the\nsmartest person in every room.",
+    "relationships": "Donald Ferguson,\nMonster Girl"
+  },
+  "prototypeToken": {
+    "name": "Superhero",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/invincible/assets/tokens/robot.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "derived.health"
+    },
+    "bar2": {
+      "attribute": "derived.resolve"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "folder": "2XWkLJzMcFiWZHzo",
+      "name": "Robotic automaton",
+      "type": "powerSource",
+      "_id": "p8srKpv7ow8TmaTN",
+      "img": "systems/invincible/assets/icons/powersource.svg",
+      "system": {
+        "description": "<p>You invented a mechanical humanoid automaton with various superhuman abilities that you control remotely through a cybernetic interface in your brain.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.p8srKpv7ow8TmaTN",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355085339,
+        "modifiedTime": 1758535039775,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "2XWkLJzMcFiWZHzo",
+      "name": "Hypercognition",
+      "type": "powerSource",
+      "_id": "3UDY1i1e9FePMKfZ",
+      "img": "systems/invincible/assets/icons/powersource.svg",
+      "system": {
+        "description": "<p>You have conditioned your mind to process information at a remarkable speed, leading to rapid deduction and heightened capacity for mental operations.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.3UDY1i1e9FePMKfZ",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355087780,
+        "modifiedTime": 1758535084462,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Blast",
+      "type": "power",
+      "_id": "mLGfkfrtzSMtDibh",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can perform a shooting attack with base damage 3, range 0/3</p>",
+        "automations": {
+          "yQTxtBHgcfxucW05": {
+            "_id": "yQTxtBHgcfxucW05",
+            "name": "Blast attack",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": false,
+            "baseDamage": 3,
+            "minRange": 0,
+            "maxRange": 3,
+            "postExecution": null,
+            "attribute": "agility",
+            "rollBonus": 0
+          }
+        },
+        "powerSource": "p8srKpv7ow8TmaTN",
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.mLGfkfrtzSMtDibh",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355091079,
+        "modifiedTime": 1758810457562,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Detection",
+      "type": "power",
+      "_id": "KOtn8QypfpsOTElD",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You automatically sense the presence of invisible energies in your zone. Examples include magnetic fields, radiation, psionics, shadowforce, astral energies, and magic. As a quick action, roll INTUITION to sense the presence of such energies within 3 zones.</p>",
+        "automations": {
+          "jzEA70AbnCsQT0Tp": {
+            "name": "Detection",
+            "_id": "jzEA70AbnCsQT0Tp",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 0,
+            "attribute": "intuition"
+          }
+        },
+        "powerSource": "p8srKpv7ow8TmaTN",
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.KOtn8QypfpsOTElD",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355094313,
+        "modifiedTime": 1758810465680,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Flight",
+      "type": "power",
+      "_id": "xAyEn1FmpTRXf35v",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can fly up to 2 zones in a single (quick or full) action. If you take 1 point of stress, you can fly up to 4 zones in a single action.</p>",
+        "automations": {},
+        "powerSource": "p8srKpv7ow8TmaTN",
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.xAyEn1FmpTRXf35v",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355095574,
+        "modifiedTime": 1758810534040,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Protection",
+      "type": "power",
+      "_id": "lLqOnZFBVY5m5Kwu",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You have Armor 3 against all attacks.</p>",
+        "automations": {
+          "oD1155tVfrjkkKGD": {
+            "_id": "oD1155tVfrjkkKGD",
+            "name": "Protection",
+            "type": "rollArmor",
+            "showAsSelection": true,
+            "open": true,
+            "armor": 3
+          }
+        },
+        "powerSource": "p8srKpv7ow8TmaTN",
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.lLqOnZFBVY5m5Kwu",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355098734,
+        "modifiedTime": 1758810574987,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Action Plan",
+      "type": "power",
+      "_id": "ifAVVB86FlTKUdXM",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>As a full action, you may roll <strong>REASON</strong> to come up with a brilliant plan of action. If you succeed, all other heroes on your team who can hear you (even via comms or powers) gain +1 die per <span class=\"die-symbol tag\"> </span> rolled to all attribute rolls until your next turn. If they also do exactly what you say, they gain an additional +1 die.</p>",
+        "automations": {
+          "Blon4G2xKwUcdTaQ": {
+            "_id": "Blon4G2xKwUcdTaQ",
+            "name": "Action Plan",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "attribute": "reason",
+            "rollBonus": 0
+          }
+        },
+        "powerSource": "3UDY1i1e9FePMKfZ",
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.ifAVVB86FlTKUdXM",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355102471,
+        "modifiedTime": 1758810806007,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Analysis",
+      "type": "talent",
+      "_id": "bRxOjTJ0HJGhLqlg",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>You can roll for <strong>REASON</strong> to gain insight into objects or subjects that you study for at least a few minutes. For every <span class=\"die-symbol tag\"> </span> you roll, you may ask the GM one question regarding the object or subject.</p>",
+        "automations": {
+          "O2Ou58Vco8zV2xU5": {
+            "_id": "O2Ou58Vco8zV2xU5",
+            "name": "Analysis",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": false,
+            "attribute": "reason",
+            "rollBonus": 0
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.bRxOjTJ0HJGhLqlg",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355240734,
+        "modifiedTime": 1758747075953,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Tactical Support",
+      "type": "talent",
+      "_id": "41qapUSII0q3tVSP",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>As a stunt (when rolling extra <span class=\"die-symbol tag\"> </span>) for any roll in an action scene, you may provide tactical support to an ally in the same or an adjacent zone. For each <span class=\"die-symbol tag\"> </span> you spend, the ally gets +2 dice to their next attribute roll. If you rolled several extra <span class=\"die-symbol tag\"> </span>, you can distribute them across several allies.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.41qapUSII0q3tVSP",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355242976,
+        "modifiedTime": 1758535114448,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "Tee6xqkdseinR0Ad",
+      "name": "Robotic Automation",
+      "type": "drawback",
+      "_id": "1IRTO0kf4ZcQxCRC",
+      "img": "systems/invincible/assets/icons/drawback.svg",
+      "system": {
+        "description": "<p>If you are broken by damage while using your robotic automaton, it is destroyed and cannot be rallied. Don’t roll for a critical injury. Without your automaton, you’re unable to move, your physical attributes are all reduced to 1 and you lose access to all powers except ACTION PLAN (you still have access to comms). You can automatically build a new automaton in a few hours (no roll needed).</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.1IRTO0kf4ZcQxCRC",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758355266692,
+        "modifiedTime": 1758535124679,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": "z2UigBhb3PGUK11n",
+  "sort": 287500,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758347945005,
+    "modifiedTime": 1758924110312,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

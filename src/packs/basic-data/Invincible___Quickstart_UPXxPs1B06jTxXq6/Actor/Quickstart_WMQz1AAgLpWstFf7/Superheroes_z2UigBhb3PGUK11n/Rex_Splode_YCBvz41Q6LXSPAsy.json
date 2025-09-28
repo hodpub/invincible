@@ -1,0 +1,358 @@
+{
+  "name": "Rex Splode",
+  "type": "superhero",
+  "_id": "YCBvz41Q6LXSPAsy",
+  "img": "systems/invincible/assets/portraits/rex-splode.webp",
+  "system": {
+    "attributes": {
+      "fighting": {
+        "value": 6
+      },
+      "agility": {
+        "value": 7
+      },
+      "strength": {
+        "value": 4
+      },
+      "reason": {
+        "value": 2
+      },
+      "intuition": {
+        "value": 5
+      },
+      "presence": {
+        "value": 6
+      }
+    },
+    "derived": {
+      "slugfest": {
+        "value": 2,
+        "max": 2
+      },
+      "health": {
+        "value": 9,
+        "max": 2
+      },
+      "resolve": {
+        "value": 7,
+        "max": 2
+      }
+    },
+    "biography": "<p><strong>You grew up in poverty,</strong> surviving by stealing – until a government agent offered your parents a large sum of money in exchange for you joining a secret program. They agreed too easily. You underwent intense training in combat and acrobatics, and received cybernetic implants in your arms that let you charge inorganic objects with kinetic energy to blow things up. You did some things for the government, but got free from their grip with the help of Atom Eve.</p><p>When you had nowhere else to go, you lived with Eve. The two of you became romantically involved and fought crime together, eventually joining the Teen Team alongside other young superheroes. But it all fell apart when she caught you cheating on her with your teammate Dupli-Kate.</p><p>After the world’s top super-team – the Guardians of the Globe – were brutally killed, you auditioned and secured a spot on the new iteration of the team. Eve declined to join – because of you. Things are tense now, but you believe you’ll be friends again. You’d never say it out loud, but she and the Guardians are the only real family you have.</p><p></p>",
+    "reputation": 2,
+    "karma": 0,
+    "civilianName": "Rex Sloan",
+    "role": "Wildcard",
+    "appearance": "",
+    "occupation": "Operative",
+    "personality": "Sardonic, immature, arrogant, and reckless, but you get the job done.",
+    "drive": "Recognition. You chase fame, glory, and acceptance.",
+    "flaw": "Abrasive. You get under everyone’s skin easily.",
+    "relationships": "Atom Eve, Dupli-Kate"
+  },
+  "prototypeToken": {
+    "name": "Rex Splode",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/invincible/assets/tokens/rex-splode.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "derived.health"
+    },
+    "bar2": {
+      "attribute": "derived.resolve"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "folder": "2XWkLJzMcFiWZHzo",
+      "name": "Government experiment",
+      "type": "powerSource",
+      "_id": "ECjFy8AaMXzlCniA",
+      "img": "systems/invincible/assets/icons/powersource.svg",
+      "system": {
+        "description": "<p>Through experimentation with chemical injections conducted by the government, you gained the ability to charge non-living objects with potential energy that causes them to explode on contact.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.ECjFy8AaMXzlCniA",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758729450493,
+        "modifiedTime": 1758729450493,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Major Blast",
+      "type": "power",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can perform a shooting attack with base damage 4, range 0/4</p>",
+        "automations": {
+          "yQTxtBHgcfxucW05": {
+            "_id": "yQTxtBHgcfxucW05",
+            "name": "Blast attack",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": false,
+            "baseDamage": 4,
+            "minRange": 0,
+            "maxRange": 4,
+            "postExecution": null,
+            "attribute": "agility",
+            "rollBonus": 0
+          }
+        },
+        "powerSource": null,
+        "boosts": [
+          "Overwhelming Blast. When you hit with a BLAST, you can take up to 3 points of stress to increase the inflicted damage by the same amount.",
+          "Burst Effect. When using your BLAST, you can take 1 point of stress to give the attack area effect."
+        ]
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.eGtODkerRa8Ym6yQ",
+        "duplicateSource": "Item.mLGfkfrtzSMtDibh",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758729609538,
+        "modifiedTime": 1758729624454,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "_id": "eGtODkerRa8Ym6yQ",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Leaping",
+      "type": "power",
+      "_id": "nlV31Xy1xtCw6wBT",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can leap up to 2 zones in a single (quick or full) action. If you take 1 point of stress, you can leap up to 4 zones in a single action. A leap can be used in a charge attack.</p>",
+        "automations": {},
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.nlV31Xy1xtCw6wBT",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758729641244,
+        "modifiedTime": 1758729641244,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Evasive",
+      "type": "talent",
+      "_id": "sEqvqzj5QqRsFUeu",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>You get +2 dice to <strong>AGILITY</strong> rolls to dodge an attack.</p>",
+        "automations": {
+          "oHWb5pmZGqWswTfg": {
+            "name": "Dodge (evasive)",
+            "_id": "oHWb5pmZGqWswTfg",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 2,
+            "attribute": "agility"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.sEqvqzj5QqRsFUeu",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758729753764,
+        "modifiedTime": 1758729753764,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Rapid Fire",
+      "type": "talent",
+      "_id": "10h3sn8ecHH6YA6u",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>You can make a shooting attack as a quick action instead of a full action, but with -2 dice.</p>",
+        "automations": {
+          "SqI0lCUF0gEQoolJ": {
+            "name": "Blast + Rapid Fire",
+            "_id": "SqI0lCUF0gEQoolJ",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": -2,
+            "baseDamage": 4,
+            "minRange": 0,
+            "maxRange": 4,
+            "postExecution": null,
+            "attribute": "agility"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.10h3sn8ecHH6YA6u",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758729904570,
+        "modifiedTime": 1758730010248,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": "z2UigBhb3PGUK11n",
+  "sort": 275000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758650861034,
+    "modifiedTime": 1758924110312,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

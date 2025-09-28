@@ -1,0 +1,50 @@
+%baseHeader {
+  color: black;
+  border: 0;
+  font-family: $font-primary;
+  text-align: left;
+
+  margin-bottom: $default-margin * 0.5;
+
+  &.centered { text-align: center; }
+  &:first-child { margin-top: 0; }
+}
+
+%h1Text {
+  @extend %baseHeader, .black;
+  
+  font-family: Titles;
+
+  font-size: $font-size * 2.7;
+  margin-top: 2rem;
+}
+
+%h2Text {
+  @extend %baseHeader, .bold;
+  display: inline-block;
+
+  font-family: Titles;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+
+  margin-top: 2rem;
+  padding: ($default-margin * 0.2) ($default-margin * 0.4);
+  box-sizing: content-box;
+  background-color: $c-yellow;
+}
+
+%h3Text {
+  width: auto;
+  @extend %baseHeader;
+}
+
+%baseInputTitle {
+  color: $c-lightblue;
+  font-weight: 400;
+  background-color: transparent;
+  font-size: $font-size;
+  padding: ($default-margin * 1.75) ($default-margin * 3);
+  text-align: start;
+
+  &:disabled { border: 0; }
+}

@@ -1,0 +1,11 @@
+<div>
+  <strong>{{localize (concat "TYPES.Item." type)}}</strong>
+  <p>
+    <strong>{{localize "INVINCIBLE.Item.CriticalInjury.FIELDS.healingTime.label"}}:</strong> {{system.healingTime}}
+  </p>
+  <p>
+    <strong>{{localize "INVINCIBLE.Item.CriticalInjury.FIELDS.lethal.label"}}:</strong> {{ifThen system.lethal (localize
+    "Yes") (localize "No")}}
+  </p>
+  {{{system.description}}}
+</div>

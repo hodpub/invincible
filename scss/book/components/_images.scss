@@ -1,0 +1,69 @@
+img {
+  border: 0;
+  display: block ;
+  margin: 0 auto $default-margin;
+}
+
+.floatimage {
+  shape-image-threshold: 0.9;
+  position: relative; 
+  z-index: 0;
+}
+
+.hq {
+  @extend %basicSkew;
+  $image-width: 18rem;
+
+  margin: 16px auto;
+
+  box-shadow: 5px 5px 0px 0px black;
+
+  border: 16px white solid;
+  outline: 2px solid $c-lightblue;
+
+  &.no-border {
+    border: none;
+    box-shadow: none;
+
+    outline: none;
+  }
+
+  &.no-skew { transform: none; }
+
+  &.left {
+    width: $image-width; 
+    max-width: 60rem;
+    float: left;
+    margin-left: $default-margin * -0.75;
+    margin-right: ($default-margin * 2);
+    padding-left: 0;
+  }
+
+  &.right {
+    width: $image-width; 
+    max-width: 60rem;
+    float: right;
+    margin-right: $default-margin * -0.75;
+    margin-left: ($default-margin * 2);
+    padding-right: 0;
+  }
+}
+
+img.blood {
+  position: absolute;
+  width: 100%;
+
+  height: auto;
+  // TODO FIX: has class to do this
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+// .image-popout:has(img[src*="invincible"]) {
+//   figure {
+//     background: $c-cream-page;
+//     background-size: 100% 100%;
+//   }
+// }
+

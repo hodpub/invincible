@@ -1,0 +1,109 @@
+%baseBox {
+  margin: 2rem auto;
+
+  p, li { @extend .no-justify, %baseSans; }  
+
+  p { 
+    &.box-header {
+      @extend .bold;
+      margin: 0rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &.sidebar { background-color: red }
+
+  &.blue {
+    // $box-width: $default-margin * 18;
+    $box-width: 50%;
+    margin: 1.75rem auto;
+
+    a { 
+      color: $c-darkblue;
+      i { color: $c-darkblue; }
+    }
+
+    ul {
+      margin-top: 0;
+    }
+
+    li::before { background-image: url(../assets/book/icons/star-darkblue.svg); }
+    li, p { color: $c-darkblue; }
+
+    &.left {
+      width: $box-width; 
+      float: left;
+      margin-left: $default-margin * -0.5;
+      margin-right: ($default-margin * 1.75);
+      padding-left: 0;
+    }
+
+    &.right {
+      width: $box-width; 
+      float: right;
+      margin-right: $default-margin * -0.5;
+      margin-left: ($default-margin * 1.75);
+      padding-right: 0;
+    }
+  }
+
+  &.npc {
+    @extend .blue;
+
+    p.desc { 
+      text-align: justify; 
+      hyphens: auto;
+      color: black;
+
+      &:has(+ p.desc) { margin-bottom: 0.25rem; }
+      margin-bottom: 1rem
+    } 
+
+    .cartoon-header {
+      @extend .attribute;
+      width: fit-content;
+      margin-bottom: 1rem;
+
+      p { 
+        @extend .black;
+        color: black;
+
+      }
+
+    }
+
+    .health {
+      border-top:     1px $c-darkblue solid;
+      border-bottom:  1px $c-darkblue solid;
+    }
+
+    
+    .line-after {
+      border-bottom: 1px solid $c-darkblue;
+
+      & + ul {
+        margin-top: 0;
+      }
+    }
+
+    // Full page NPC sheets
+    &.large {
+      border: 2px solid $c-lightblue;
+      padding: 2rem;
+
+      .cartoon-header { margin-top: -3rem; }
+    }
+  }
+}
+
+%baseNode {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 49%;
+  bottom: -20%;
+  width: 0.5rem;
+  height: 1.5rem;
+  background-color: black;
+  transform: none !important;
+}

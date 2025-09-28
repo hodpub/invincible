@@ -1,0 +1,345 @@
+{
+  "INVINCIBLE": {
+    "Ability": {
+      "Str": {
+        "long": "Strength",
+        "abbr": "str"
+      },
+      "Con": {
+        "long": "Constitution",
+        "abbr": "con"
+      },
+      "Dex": {
+        "long": "Dexterity",
+        "abbr": "dex"
+      },
+      "Int": {
+        "long": "Intelligence",
+        "abbr": "int"
+      },
+      "Wis": {
+        "long": "Wisdom",
+        "abbr": "wis"
+      },
+      "Cha": {
+        "long": "Charisma",
+        "abbr": "cha"
+      }
+    },
+    "SheetLabels": {
+      "Actor": "Invincible Actor Sheet",
+      "Item": "Invincible Item Sheet"
+    },
+    "Actor": {
+      "Tabs": {
+        "Biography": "Biography",
+        "Portrait": "Portrait",
+        "Personal": "Personal Stuff",
+        "Powers": "Powers & Boosts",
+        "Talents": "Talents & Drawbacks",
+        "Injuries": "Critical Injuries",
+        "Gear": "Gear",
+        "Spells": "Spells",
+        "Effects": "Effects"
+      },
+      "base": {
+        "FIELDS": {
+          "biography": {
+            "label": "Biography"
+          },
+          "attributes": {
+            "label": "Attributes",
+            "graduation": {
+              "0": "No",
+              "1": "Poor",
+              "2": "Typical",
+              "3": "Good",
+              "4": "Great",
+              "5": "Extraordinary",
+              "6": "Incredible",
+              "7": "Amazing",
+              "8": "Astounding",
+              "9": "Phenomenal",
+              "10": "Awesome",
+              "11": "Godlike",
+              "12": "Invincible"
+            },
+            "fighting.label": "Fighting",
+            "agility.label": "Agility",
+            "strength.label": "Strength",
+            "reason.label": "Reason",
+            "intuition.label": "Intuition",
+            "presence.label": "Presence"
+          },
+          "civilianName.label": "Civilian Name",
+          "role.label": "Role",
+          "appearance.label": "Appearance",
+          "reputation.label": "Reputation",
+          "karma.label": "Karma",
+          "occupation.label": "Occupation",
+          "personality.label": "Personality",
+          "drive.label": "Drive",
+          "flaw.label": "Flaw",
+          "relationships.label": "Key Relationships",
+          "health": {
+            "value": {
+              "label": "Health"
+            }
+          },
+          "resolve": {
+            "value": {
+              "label": "resolve"
+            }
+          },
+          "slugfest": {
+            "label": "Slugfest",
+            "tooltip": "Base <strong>Slugfest</strong> damage {max}",
+            "slugfest": "Slugfest",
+            "charge": "Charge",
+            "grapple": "Grapple",
+            "wreckZone": "{attack} + Wreck Zone",
+            "wreckZoneBonus": "Wreck Zone"
+          }
+        }
+      },
+      "Superhero": {
+        "FIELDS": {
+          "name": {
+            "label": "Hero Name"
+          }
+        }
+      },
+      "Npc": {
+        "FIELDS": {
+          "name": {
+            "label": "Name"
+          }
+        }
+      },
+      "Character": {
+        "FIELDS": {
+          "attributes.level.value": {
+            "label": "Level"
+          }
+        }
+      }
+    },
+    "Item": {
+      "Tabs": {
+        "Attributes": "Attributes",
+        "Description": "Info",
+        "Effects": "Effects",
+        "Automations": "Auto",
+        "Boosts": "Boosts"
+      },
+      "Gear": {
+        "FIELDS": {
+          "rollFormula": {
+            "label": "Roll Formula"
+          },
+          "numDice": {
+            "label": "Number of Dice"
+          },
+          "dieSize": {
+            "label": "Die Size"
+          },
+          "rollMod": {
+            "label": "Roll Modifier"
+          },
+          "quantity": {
+            "label": "Quantity"
+          },
+          "weight": {
+            "label": "Weight"
+          }
+        }
+      },
+      "Spell": {
+        "FIELDS": {
+          "level": {
+            "label": "Spell Level"
+          }
+        },
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      },
+      "CriticalInjury": {
+        "FIELDS": {
+          "healingTime": {
+            "label": "Healing Time"
+          },
+          "lethal": {
+            "label": "Lethal"
+          }
+        }
+      },
+      "Power": {
+        "FIELDS": {
+          "boosts": {
+            "label": "Boosts",
+            "single": "Boost"
+          },
+          "powerSource": {
+            "label": "Power Source",
+            "hint": "Select the Power Source for this Power:"
+          }
+        }
+      }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    },
+    "Automation": {
+      "new": "New {type}",
+      "addNew": "Add new Automation",
+      "automate": "Automate {name} [{actor}]",
+      "actorBroken": "\"{actor}\" is broken. Are you sure you want to execute this roll?",
+      "sendToChat": "Send to Chat",
+      "Type": {
+        "label": "Type",
+        "automation": "Automation",
+        "rollAttribute": "Roll Attribute",
+        "rollAttack": "Roll Attack",
+        "rollArmor": "Roll Armor Protection",
+        "reloadWeapon": "Reload / Recharge Weapon",
+        "runMacro": "Run Macro",
+        "consume": "Consume Item",
+        "consumeSupply": "Consume Supply",
+        "runSequence": "Run Automations in Sequence",
+        "rollArmorDamage": "Roll Armor's Damage Protection",
+        "rollArmorBlight": "Roll Armor's Blight Protection",
+        "rollCreatureAttack": "Roll Creature Attack",
+        "rollBirdPower": "Roll Bird Power",
+        "rollUpgrade": "Roll Upgrade"
+      },
+      "Category": {
+        "Default": "Default",
+        "Weapons": "Weapons",
+        "Armor": "Armor",
+        "Talent": "Talent",
+        "Equipment": "Equipment",
+        "Bird": "Bird",
+        "Crew": "Crew",
+        "Upgrades": "Upgrades",
+        "Other": "Other"
+      },
+      "FIELDS": {
+        "selectWhenRolling.label": "Select When Rolling",
+        "rollBonus.label": "Roll Bonus",
+        "showAsSelection": {
+          "label": "Show as Selection"
+        },
+        "attribute": {
+          "label": "Attribute"
+        },
+        "rollAttribute": {
+          "requireAttribute.label": "Requires Attribute",
+          "canChangeAttribute.label": "Can change Attribute"
+        },
+        "rollAttack": {
+          "notLoaded": "You cannot attack with an weapon that is not loaded/charged.",
+          "postExecutionMacro.label": "Post Execution Macro",
+          "baseDamage.label": "Base Damage",
+          "range.label": "Range",
+          "minRange.label": "Min Range",
+          "maxRange.label": "Max Range"
+        },
+        "rollArmor": {
+          "armor.label": "Armor"
+        },
+        "reloadWeapon": {
+          "reloaded": "Weapon reloaded / recharged. Suppies consumed: {supplyConsumed}. Supplies available: {newQuantity}."
+        },
+        "macro": {
+          "open": "Open Macro",
+          "drop": "Drop a macro here or paste its UUID on the field",
+          "error": "This automation is not of type \"Run Macro\"",
+          "notFound": "Macro not set or not found. Please, verify."
+        },
+        "consume": {
+          "noQuantity": "This item does not have a quantity. Check the automation.",
+          "notConsumable": "This item is not marked as consumable. Check the automation.",
+          "notEnough": "You don't have more quantity to use of this item.",
+          "itemUsed": "Item used. New quantity available: {newQuantity}"
+        },
+        "consumeSupply": {
+          "noSupplyConsumed": "This item does not have a supply consumption configuration. Check the item configuration.",
+          "notEnough": "You don't have enough supply to use of this item. Supplies required: {required}. Supplies available: {available}.",
+          "itemUsed": "Item used and supply consumed. Supplies consumed: {supplyConsumed}. Supplies available: {newQuantity}"
+        },
+        "sequence": {
+          "add": "Add Automation to Sequence",
+          "delete": "Delete Automation from Sequence"
+        },
+        "armorRoll": {
+          "notArmor": "The item associated with this automation is not an armor. Please, check the configuration.",
+          "armorRatingTitle": "Damage Protection",
+          "blightProtectionTitle": "Blight Protection",
+          "armorRatingZero": "The armor rating is configured as zero. Check the item configuration.",
+          "blightProtectionZero": "The armor rating is configured as zero. Check the item configuration."
+        },
+        "birdPower": {
+          "noExplorer": "Select an explorer to command the bird.",
+          "notEnoughEnergy": "The bird does not have enough energy to execute this power."
+        },
+        "upgrade": {
+          "noExplorer": "Select an explorer to use the vehicle upgrade."
+        }
+      }
+    },
+    "Roll": {
+      "bonus": "Bonus",
+      "brokenByDamageAndStress": "This actor is broken by damage and stress. Do you want to proceed with the roll?",
+      "brokenByDamage": "This actor is broken by damage. Do you want to proceed with the roll?",
+      "brokenByStress": "This actor is broken by stress. Do you want to proceed with the roll?"
+    },
+    "Chat": {
+      "BoostRoll": {
+        "Flavor": "{power} - Boost"
+      }
+    },
+    "Stunts": {
+      "ApplyStunts": "Apply Stunts"
+    }
+  },
+  "YZUR": {
+    "CHAT.ROLL": {
+      "Success": "Successes",
+      "Push": "Push",
+      "Accept": "Accept",
+      "EnergyUsed": "Energy Used",
+      "AttackDamage": "Attack Damage",
+      "Trauma": "Stress",
+      "ATTACK": {
+        "DAMAGE": "Attack Damage",
+        "RANGE": "Range",
+        "CRITICAL": "Crit. Threshold",
+        "STUNTS": "Stunts",
+        "ARMOR": "Armor",
+        "ApplyDamage": "Apply Damage"
+      }
+    },
+    "DIETERMS": {
+      "BaseDie": "Base Success Count"
+    }
+  },
+  "TYPES": {
+    "Actor": {
+      "superhero": "Superhero",
+      "npc": "NPC",
+      "challenge": "Challenge"
+    },
+    "Item": {
+      "powerSource": "Power Source",
+      "power": "Power",
+      "talent": "Talent",
+      "drawback": "Drawback",
+      "gear": "Gear",
+      "criticalInjury": "Critical Injury"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+h1,
+p.h1 {
+  @extend %h1Text;
+}
+
+
+h2,
+p.h2 {
+  @extend %h2Text;
+}
+
+h3,
+p.h3 {
+  @extend %h3Text;
+}
+
+h1, h2, h3 {
+  &.hidden-header {
+    position: absolute;
+    height: 0;
+    visibility: hidden;
+    margin: 0 !important;
+  }
+}

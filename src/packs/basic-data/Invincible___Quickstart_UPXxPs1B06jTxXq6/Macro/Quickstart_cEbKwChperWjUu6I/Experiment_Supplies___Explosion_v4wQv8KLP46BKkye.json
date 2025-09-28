@@ -1,0 +1,26 @@
+{
+  "folder": "cEbKwChperWjUu6I",
+  "name": "Experiment Supplies - Explosion",
+  "type": "script",
+  "_id": "v4wQv8KLP46BKkye",
+  "author": "p6RpT3qDZlr0duBo",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "const roll = await new Roll(\"1d6\").roll();\n\nconst message = await roll.toMessage();\nawait game.dice3d?.waitFor3DAnimationByMessageID(message.id);\nif (roll.total > 1)\n  return;\n\nreturn new invincible.utils.InvincibleRollDialog(\n  \"Experiment Supplies - Explosion\",\n  {\n    breakdown: {\n      \"Blast Rating\": 4,\n    },\n    attackInfo: {\n      damage: 2,\n      minRange: 0,\n      maxRange: 1\n    },\n    maxPush: 0\n  }\n).wait({shiftKey: true});",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758817204921,
+    "modifiedTime": 1758924884677,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

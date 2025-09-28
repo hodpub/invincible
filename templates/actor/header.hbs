@@ -1,0 +1,75 @@
+<div class="main-sheet">
+  {{! Sheet Header }}
+  <header class='sheet-header'>
+    <img src="systems/invincible/assets/invincible-logo.webp" class="sheet-logo" />
+    <div class="bg-white"></div>
+    <div class='header-fields'>
+      <div class="form-group" style="width: 73%;">
+        <label>{{localize (concat "INVINCIBLE.Actor." currentType ".FIELDS.name.label")}}</label>
+        <div class="form-fields">
+          <input name='name' type='text' value='{{actor.name}}' placeholder='Name' />
+        </div>
+      </div>
+      {{formGroup systemFields.civilianName value=system.civilianName}}
+      {{formGroup systemFields.role value=system.role}}
+      {{formGroup systemFields.appearance value=system.appearance elementType="textarea" rows=3}}
+      <div class="grid grid-gap" style="margin: -7px 0 0 0;">
+        <div class="form-group half">
+          <label>{{localize "INVINCIBLE.Actor.base.FIELDS.reputation.label"}}</label>
+          <div class="attribute">
+            <input type='text' name='system.reputation' value='{{system.reputation}}' data-dtype='Number' />
+          </div>
+        </div>
+        <div class="form-group half">
+          <label>{{localize "INVINCIBLE.Actor.base.FIELDS.karma.label"}}</label>
+          <div class="attribute">
+            <input type='text' name='system.karma' value='{{system.karma}}' data-dtype='Number' />
+          </div>
+        </div>
+      </div>
+  </header>
+  <label class="title attribute">{{{localize "INVINCIBLE.Actor.base.FIELDS.attributes.label"}}}</label>
+  <div class="grid grid-3col">
+    {{#each system.attributes as | attribute name |}}
+    <div class="attribute {{name}}">
+      <input type='text' name='system.attributes.{{name}}.value' value='{{attribute.value}}' data-dtype='Number' />
+      <label class="graduation">{{localize (concat 'INVINCIBLE.Actor.base.FIELDS.attributes.graduation.'
+        attribute.value)}}</label>
+      <label class="rollable attribute-label" data-action="roll" data-roll-type="attribute" data-attribute="{{name}}"
+        for='system.attributes.{{name}}.value'>
+        {{localize (concat 'INVINCIBLE.Actor.base.FIELDS.attributes.' name '.label')}}
+      </label>
+      {{#if (eq name "strength")}}
+      <label class="rollable slugfest" data-action="roll" data-roll-type="slugfest" data-tooltip-html="<label class='slugfest-tooltip'>{{localize "INVINCIBLE.Actor.base.FIELDS.slugfest.tooltip" max=../system.derived.slugfest.max}}</label>">
+        <i class="fas fa-hand-fist"> </i>
+      </label>
+      {{/if}}
+    </div>
+    {{#if (eq name "strength")}}
+    <div class="bar">
+      <label>{{localize "INVINCIBLE.Actor.base.FIELDS.health.value.label"}}</label>
+      {{bar ../system.derived.health.value ../system.derived.health.max}}
+      <div class="form-fields">
+        <input type='text' name='system.derived.health.value' value='{{../system.derived.health.value}}'
+          data-dtype='Number' />
+        <label>/</label>
+        <label>{{../system.derived.health.max}}</label>
+      </div>
+    </div>
+    {{/if}}
+
+    {{#if (eq name "presence")}}
+    <div class="bar">
+      <label>{{localize "INVINCIBLE.Actor.base.FIELDS.resolve.value.label"}}</label>
+      {{bar ../system.derived.resolve.value ../system.derived.resolve.max}}
+      <div class="form-fields">
+        <input type='text' name='system.derived.resolve.value' value='{{../system.derived.resolve.value}}'
+          data-dtype='Number' />
+        <label>/</label>
+        <label>{{../system.derived.resolve.max}}</label>
+      </div>
+    </div>
+    {{/if}}
+    {{/each}}
+  </div>
+</div>

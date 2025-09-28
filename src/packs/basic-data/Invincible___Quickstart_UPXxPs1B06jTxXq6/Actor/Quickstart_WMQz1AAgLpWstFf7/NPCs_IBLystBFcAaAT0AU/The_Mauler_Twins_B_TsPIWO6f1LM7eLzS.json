@@ -1,0 +1,716 @@
+{
+  "name": "The Mauler Twins B",
+  "type": "npc",
+  "img": "systems/invincible/assets/portraits/twin2.webp",
+  "system": {
+    "attributes": {
+      "fighting": {
+        "value": 8
+      },
+      "agility": {
+        "value": 6
+      },
+      "strength": {
+        "value": 7
+      },
+      "reason": {
+        "value": 8
+      },
+      "intuition": {
+        "value": 3
+      },
+      "presence": {
+        "value": 4
+      }
+    },
+    "derived": {
+      "slugfest": {
+        "value": 2,
+        "max": 2
+      },
+      "health": {
+        "value": 17,
+        "max": 2
+      },
+      "resolve": {
+        "value": 8,
+        "max": 2
+      }
+    },
+    "biography": "<p><strong>The Mauler “twins”</strong> aren’t true twins – they're a long-running chain of clones. Because each insists he’s the original, their identity is a constant source of argument. Their origins and true motives remain unclear, but they've posed a persistent threat to superheroes for years.</p><p>Most recently, the Maulers were incarcerated at Stronghold Penitentiary when they were broken out by Isotope, lieutenant to Machine Head. In exchange for their freedom, Machine Head tasked them with creating four monstrous clones using recovered kaiju DNA. They delivered, but Machine Head reneged on the deal. Now the Maulers are on the loose, looking for payback, but first they need to make sure no one is able to replicate their work.</p>",
+    "reputation": 3,
+    "karma": 0,
+    "civilianName": "",
+    "role": "Brains",
+    "appearance": "",
+    "occupation": "Criminal",
+    "personality": "Sadistic, ambitious, and overconfident, with a surplus of self-preservation instinct.",
+    "drive": "Discovery. The hunt for knowledge results in more power.",
+    "flaw": "Short-sighted. The Mauler Twins never consider the long-term implications.",
+    "relationships": ""
+  },
+  "prototypeToken": {
+    "name": "The Mauler Twins (#1)",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/invincible/assets/tokens/twin2.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "derived.health"
+    },
+    "bar2": {
+      "attribute": "derived.resolve"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "folder": "2XWkLJzMcFiWZHzo",
+      "name": "High-tech inventions",
+      "type": "powerSource",
+      "_id": "jonmdly0WnAyx8m9",
+      "img": "systems/invincible/assets/icons/powersource.svg",
+      "system": {
+        "description": "<p>The Maulers extensively utilize technology to further their endeavors, such as energy weapons, neurotoxin darts, nano-tasers, and sensor equipment.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.jonmdly0WnAyx8m9",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Affliction",
+      "type": "power",
+      "_id": "FIZRWbaCqhwvuYpC",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>A shooting attack with base damage 3, range 0/1. The attack does not inflict any actual damage – instead, if it penetrates any armor, the target suffers –3 dice to all attribute rolls until a PRESENCE roll (with the penalty) is made to shake off the effect. The PRESENCE roll is no action, but only one attempt can be made per round and only on the victim’s own turn.</p><div class=\"foundry-info\"><p>Use the @UUID[Item.k48iWcqyA3TxfhQI]{Affliction} critical injury to apply the penalties to characters.</p></div>",
+        "automations": {
+          "ouICDnI88hHemtRP": {
+            "name": "Affliction",
+            "_id": "ouICDnI88hHemtRP",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 0,
+            "baseDamage": 3,
+            "minRange": 0,
+            "maxRange": 1,
+            "postExecution": null,
+            "attribute": "agility"
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.FIZRWbaCqhwvuYpC",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Massive Blast",
+      "type": "power",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p><strong>(energy weapon)</strong></p><p>A Mauler Twin can perform a shooting attack with base damage 5, range 0/5.</p>",
+        "automations": {
+          "yQTxtBHgcfxucW05": {
+            "_id": "yQTxtBHgcfxucW05",
+            "name": "Blast attack",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": false,
+            "baseDamage": 5,
+            "minRange": 0,
+            "maxRange": 5,
+            "postExecution": null,
+            "attribute": "agility",
+            "rollBonus": 0
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.JaSXiwEDDbbtPypQ",
+        "duplicateSource": "Item.mLGfkfrtzSMtDibh",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "JaSXiwEDDbbtPypQ",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Detection",
+      "type": "power",
+      "_id": "KOtn8QypfpsOTElD",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p><strong>(sensor gear)</strong></p><p>A Mauler can automatically sense the presence of invisible energies in their zone. Examples include magnetic fields, radiation, psionics, shadowforce, astral energies, and magic. As a quick action, they can roll <strong>INTUITION</strong> to sense the presence of such energies within 3 zones.</p>",
+        "automations": {
+          "rvLni8dUP4Y12n1z": {
+            "name": "Detection",
+            "_id": "rvLni8dUP4Y12n1z",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 0,
+            "attribute": "intuition"
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.KOtn8QypfpsOTElD",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Distress",
+      "type": "power",
+      "_id": "fNresF4JAnSwSI3v",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p><strong>(neurotoxin darts)</strong></p><p>A shooting attack with base damage 3, range 0/3. If the attack pierces any armor, it inflicts stress instead of damage. Extra <span class=\"die-symbol tag\"> </span> rolled increase the stress inflicted normally.</p>",
+        "automations": {
+          "xH1pOX7YjgsTQMpv": {
+            "name": "Distress",
+            "_id": "xH1pOX7YjgsTQMpv",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 0,
+            "baseDamage": 3,
+            "minRange": 0,
+            "maxRange": 3,
+            "postExecution": null,
+            "attribute": "agility"
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.fNresF4JAnSwSI3v",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Stun",
+      "type": "power",
+      "_id": "RqS7J0Q4DT4N32Ak",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p><strong>(nano-taser)</strong></p><p>A shooting attack with base damage 3, range 0/3. The attack does not inflict any actual damage – instead, if it penetrates any armor, the target must make an immediate <strong>PRESENCE</strong> roll (no action) or miss their next turn. They also cannot perform interrupt actions until then.</p>",
+        "automations": {
+          "fxvkqgZ9wsvZ8N6b": {
+            "name": "Stun",
+            "_id": "fxvkqgZ9wsvZ8N6b",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 0,
+            "baseDamage": 3,
+            "minRange": 0,
+            "maxRange": 3,
+            "postExecution": null,
+            "attribute": "agility"
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.RqS7J0Q4DT4N32Ak",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "2XWkLJzMcFiWZHzo",
+      "name": "Genetically altered physiology",
+      "type": "powerSource",
+      "_id": "lWavFlZzrh8prAiZ",
+      "img": "systems/invincible/assets/icons/powersource.svg",
+      "system": {
+        "description": "<p>The Maulers have heightened physical capabilities through a series of cloned iterations.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.lWavFlZzrh8prAiZ",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Protection",
+      "type": "power",
+      "_id": "lLqOnZFBVY5m5Kwu",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You have Armor 2 against all attacks.</p>",
+        "automations": {
+          "b9yDjmTdbTYzqxED": {
+            "name": "Protection",
+            "_id": "b9yDjmTdbTYzqxED",
+            "type": "rollArmor",
+            "showAsSelection": true,
+            "open": true,
+            "armor": 2
+          }
+        },
+        "powerSource": "lWavFlZzrh8prAiZ",
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.lLqOnZFBVY5m5Kwu",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "p6RpT3qDZlr0duBo",
+        "modifiedTime": 1758811112870
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Quickness",
+      "type": "power",
+      "_id": "QTMKuAIwVGnjRaUW",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>Once per round, you can gain an extra action (quick or full) by taking 1 point of stress, on their turn or as an interrupt action.</p>",
+        "automations": {},
+        "powerSource": "lWavFlZzrh8prAiZ",
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.QTMKuAIwVGnjRaUW",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "p6RpT3qDZlr0duBo",
+        "modifiedTime": 1758811062778
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Cunning",
+      "type": "talent",
+      "_id": "AJHR2MGssxDd3IX5",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>The Maulers can push any <strong>REASON</strong> roll twice. Each push still inflicts 1 point of stress.</p>",
+        "automations": {}
+      },
+      "effects": [
+        {
+          "name": "Cunning",
+          "img": "systems/invincible/assets/icons/talent.svg",
+          "origin": "Item.AJHR2MGssxDd3IX5",
+          "_id": "EKom6yQtckbZL1MJ",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "system.maxPush.reason",
+              "mode": 2,
+              "value": "2",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "lastModifiedBy": null
+          }
+        }
+      ],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.AJHR2MGssxDd3IX5",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Durable x3",
+      "type": "talent",
+      "_id": "VzvCRlhFMsQEWVFX",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>Your Health is increased by 6 (accounted for).</p>",
+        "automations": {}
+      },
+      "effects": [
+        {
+          "name": "Durable",
+          "img": "systems/invincible/assets/icons/talent.svg",
+          "origin": "Item.VzvCRlhFMsQEWVFX",
+          "_id": "qPmuhVXyI8R3Piem",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "system.derived.health.max.bonus",
+              "mode": 2,
+              "value": "6",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "lastModifiedBy": null
+          }
+        }
+      ],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.VzvCRlhFMsQEWVFX",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Find Weakness",
+      "type": "talent",
+      "_id": "MqTa6w7Kq8JAYa2y",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>When a Mauler rolls extra <span class=\"die-symbol tag\"> </span> in a slugfest attack, he can spend one <span class=\"die-symbol tag\"> </span> to eliminate the effect of any armor.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.MqTa6w7Kq8JAYa2y",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Merciless",
+      "type": "talent",
+      "_id": "WhidU158lNckv2qS",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>The Maulers regain 1 point of Resolve each time they cause an enemy to be broken by damage.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.WhidU158lNckv2qS",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "Tee6xqkdseinR0Ad",
+      "name": "Gear Dependent",
+      "type": "drawback",
+      "_id": "UZ4x3aCclJyUS1Ze",
+      "img": "systems/invincible/assets/icons/drawback.svg",
+      "system": {
+        "description": "<p>If the Maulers’ high-tech inventions are lost, neutralized, destroyed, or otherwise rendered non-operational, they lose access to all of their powers. Their attributes are not affected.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.UZ4x3aCclJyUS1Ze",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": "IBLystBFcAaAT0AU",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Actor.lxnPNFRVHJ97UGFX",
+    "duplicateSource": "Actor.lxnPNFRVHJ97UGFX",
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758804993058,
+    "modifiedTime": 1758924110312,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "_id": "TsPIWO6f1LM7eLzS",
+  "ownership": {
+    "default": 0
+  }
+}

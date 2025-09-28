@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Comic;
+  src: url(../fonts/KOMIKAH_Regular.ttf);
+}
+
+@font-face {
+  font-family: Comic;
+  src: url(../fonts/KOMIKAH_Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Comic;
+  src: url(../fonts/KOMIKAH_RegularItalic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Comic;
+  src: url(../fonts/KOMIKAH_BoldItalic.ttf);
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Titles;
+  src: url(../fonts/SpecialGothicCondensedOne-Regular.ttf);
+}
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Roboto', sans-serif;

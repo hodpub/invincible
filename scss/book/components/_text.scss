@@ -1,0 +1,35 @@
+p {
+  @extend %baseParagraph;
+}
+
+.demi { font-weight: 500; }
+.bold { font-weight: 700; }
+.black { font-weight: 900; }
+.italic { font-style: italic; }
+.upper { text-transform: uppercase; }
+
+.serif { @extend %baseSerif; }
+.sans { @extend %baseSans; }
+
+.centered { text-align: center; }
+
+.lower { text-transform: lowercase; }
+.quote { 
+  @extend .demi, .italic;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.no-justify { 
+  text-align: start;
+  hyphens: none;
+}
+
+.small-caps { 
+  @extend .upper;
+  letter-spacing: 0.75px;
+  font-size: $font-size * 0.85;
+}
+
+// a highlighter
+// a { @extend %baseEnrichers; }

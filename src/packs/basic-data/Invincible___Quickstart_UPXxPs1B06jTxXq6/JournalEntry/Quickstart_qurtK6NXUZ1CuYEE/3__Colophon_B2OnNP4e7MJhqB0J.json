@@ -1,0 +1,59 @@
+{
+  "name": "3: Colophon",
+  "_id": "B2OnNP4e7MJhqB0J",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "3: Colophon",
+      "type": "text",
+      "_id": "MvRZUl2pqr22a73B",
+      "system": {},
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><div class=\"colophon flexcol\"><div style=\"display:grid;place-items:center\"><p class=\"h2\" style=\"font-size:1.5rem\">Creators of Invincible</p></div><div class=\"flexrow\"><p class=\"centered sans\">Robert Kirkman</p><p class=\"centered sans\">Cory Walker</p><p class=\"centered sans\">Ryan Ottley</p></div></div><div class=\"colophon flexrow\"><div class=\"flexcol left\"><p class=\"h2\">Game Designers</p><p class=\"sans\">Tomas Härenstam,<br />Adam Bradford</p><p class=\"h2\">Graphic Design</p><p class=\"sans\">Johan Nohr</p><p class=\"h2\">Maps</p><p class=\"sans\">Brian Patterson</p></div><div class=\"flexcol right\"><p class=\"h2\">Lead Artists</p><p class=\"sans\">Cory Walker<br />Ryan Ottley</p><p class=\"h2\">Additional Art</p><p class=\"sans\">Reine Rosenberg</p><p class=\"h2\">Proofreading</p><p class=\"sans\">Brian Patterson</p></div></div><img src=\"systems/invincible/assets/book/art/omniman-invincible-136-cover-clr-masked.webp\" /><p class=\"sans centered\">© 2025 Skybound, LLC. Based on the comic book Invincible® by Robert Kirkman, Cory Walker and Ryan Ottley. INVINCIBLE and any related logos are registered or otherwise protected trademarks of Robert Kirkman Inc. All Rights Reserved.</p><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-074-cover-clr.webp\" /><img src=\"systems/invincible/assets/book/art/invincible-compendium-02-hc-color.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": -1
+      }
+    }
+  ],
+  "folder": "qurtK6NXUZ1CuYEE",
+  "categories": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Compendium.invincible.book.JournalEntry.B2OnNP4e7MJhqB0J",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758876358389,
+    "modifiedTime": 1758924110464,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "sort": 400000,
+  "ownership": {
+    "default": 0
+  }
+}

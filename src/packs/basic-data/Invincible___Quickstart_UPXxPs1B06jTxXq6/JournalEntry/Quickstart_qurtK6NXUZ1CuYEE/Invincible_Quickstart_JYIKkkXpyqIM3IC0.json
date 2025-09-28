@@ -1,0 +1,60 @@
+{
+  "name": "Invincible Quickstart",
+  "_id": "JYIKkkXpyqIM3IC0",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "Invincible Quickstart",
+      "type": "text",
+      "_id": "4Ml8FAlKRP9KRX8E",
+      "system": {},
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\" class=\"chapter\"><img src=\"systems/invincible/assets/book/art/cover.webp\" /><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-105-cover-clr-intro.webp\" style=\"margin:3rem 0\" /><h2 class=\"hidden-header\">Table of Contents</h2><p class=\"h1\">Table of Contents</p><div class=\"box blue toc\"><div class=\"flexrow\"><div class=\"flexcol\"><div class=\"content\"><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.kgmAI49r1woNTd9O]{1: You Might Be Invincible}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.7VUIKFCbgYi5SRLm]{What Is This Game?}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.AerTh9HkdJIGEOGm]{Roleplaying Invincible}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.R6CwscVJo2lwrNpR]{Superheroes}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.MW5XEMuISl5dOzPg]{Rolling Dice}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.FckwxiONaGWQjdj3]{Maps &amp; Zones}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.UqxbrltXCyqybJBX]{Rounds &amp; Initiative}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.BM9oGBNrLdYHTWVK]{Actions}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.y9X9ORoPWdI1QSeJ]{Movement}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb]{Slugfest}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.U68Z5GwD4P0JX4Fz]{Shooting}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.USYFvBih0DDZxI0N]{Damage}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.CGRiVbFtdTO9vVkZ]{Stress}</p><p>@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.rqCEkxmH0YsgTwbv]{Challenges}</p></div></div><div class=\"flexcol\"><div class=\"content\"><p>@UUID[JournalEntry.d7S41u6UyXvsaqNP.JournalEntryPage.kgmAI49r1woNTd9O]{2: The Clone Job}</p><p>@UUID[JournalEntry.d7S41u6UyXvsaqNP.JournalEntryPage.3Rfzf3xyaSuAcgMD]{Prologue}</p><p>@UUID[JournalEntry.d7S41u6UyXvsaqNP.JournalEntryPage.WZuEfQAzN0B0u4hA]{Briefing}</p><p>@UUID[JournalEntry.d7S41u6UyXvsaqNP.JournalEntryPage.A7T43HaipxEoFKXn]{Into Action}</p><p>@UUID[JournalEntry.d7S41u6UyXvsaqNP.JournalEntryPage.Rtd5QTO53VQ87BYy]{Act II: Cliffhanger}</p></div><div class=\"content\"><p>@UUID[JournalEntry.B2OnNP4e7MJhqB0J.JournalEntryPage.MvRZUl2pqr22a73B]{3: Colophon}</p></div></div></div></div><h2 class=\"hidden-header\">Recommended Modules</h2><p class=\"h1\">Recommended Modules</p><ul><li><span class=\"bold sans\"><a href=\"https://foundryvtt.com/packages/dice-so-nice\">Dice So Nice</a></span>: This module for Foundry VTT adds the ability to show a 3D dice simulation when a roll is made.</li><li><span class=\"bold sans\"><a href=\"https://foundryvtt.com/packages/quick-insert\">Quick Insert</a></span>: A powerful tool for finding, controlling and inserting things in Foundry VTT.</li><li><span class=\"bold sans\"><a href=\"https://foundryvtt.com/packages/yze-combat\">Year Zero Engine Combat</a></span>: A module that adds YZE combat mechanics to a game system!</li><li><span class=\"bold sans\"><a href=\"https://foundryvtt.com/packages/image-z00m\">Image Z00M</a></span>: This module adds a button to image windows that allows you to see that image on its real size and zoom them!</li></ul><h2 class=\"hidden-header\">Support</h2><p class=\"h1\" style=\"margin-bottom:20px\">Support</p><a href=\"https://hodpub.com/\"><img src=\"systems/invincible/assets/book/hod-publishing.webp\" class=\"centered\" /></a><p class=\"drop-cap\">We sincerely hope you have a flawless experience with this module, but if you have any issues or bugs, please reach out and we will do our best to get things fixed!</p><p>Please, contact us using one of the following contact options:</p><ul><li><span class=\"bold sans\">Free League: </span>support@frialigan.se</li><li><span class=\"bold sans\">Hod Publishing: </span>support@hodpub.com</li></ul></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "p6RpT3qDZlr0duBo",
+        "modifiedTime": 1758929080378
+      },
+      "ownership": {
+        "default": -1
+      }
+    }
+  ],
+  "folder": "qurtK6NXUZ1CuYEE",
+  "categories": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Compendium.invincible.book.JournalEntry.JYIKkkXpyqIM3IC0",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758876358389,
+    "modifiedTime": 1758924110464,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  }
+}

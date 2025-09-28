@@ -1,0 +1,10 @@
+// Layout
+
+img:last-child { margin-bottom: 0; }
+
+p:has(+ img:not(.floatimage)) { margin-bottom: 2rem; }
+
+div.box {
+  &:first-child { margin-top: 0 !important; }
+  &:last-child { margin-bottom: 0 !important; }
+}

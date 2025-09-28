@@ -1,0 +1,56 @@
+li { @extend %baseParagraph, .no-justify; }
+
+ul {
+  $bullet-size: 1rem;
+  $bullet-margin: $bullet-size / 2;
+
+  margin: ($default-margin*1.5) 0;
+
+  list-style: none;
+
+  &:has(+ img + ul) { margin-bottom: 0; }
+
+  p { display: inline;
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+
+
+    li {
+      margin-left: $bullet-margin - 0.25rem;
+      text-indent: $bullet-margin;
+
+      &::before {   
+        content: "⦾";
+        display: inline-block; 
+        width: $bullet-size; 
+        height: $bullet-size; 
+        line-height: $bullet-size;
+        font-size: 0.8rem;
+        background: none;
+        margin-right: 16px; 
+        vertical-align: middle; 
+      }
+    }
+  }
+
+  li {
+    margin-left: $bullet-margin - 0.25rem;
+    text-indent: $bullet-margin;
+
+    &::before {   
+      content: ''; 
+      display: inline-block; 
+      width: $bullet-size; 
+      height: $bullet-size; 
+      background-image: url(../assets/book/icons/star-black.svg); 
+      background-size: contain; 
+      background-repeat: no-repeat;
+      margin-right: $bullet-margin; 
+      margin-left: $bullet-size * -2; 
+      vertical-align: middle; 
+    }
+  }
+}

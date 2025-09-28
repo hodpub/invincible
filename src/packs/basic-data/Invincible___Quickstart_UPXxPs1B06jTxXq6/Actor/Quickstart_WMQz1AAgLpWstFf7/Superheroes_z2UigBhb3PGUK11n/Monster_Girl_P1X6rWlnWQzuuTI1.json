@@ -1,0 +1,561 @@
+{
+  "name": "Monster Girl",
+  "type": "superhero",
+  "_id": "P1X6rWlnWQzuuTI1",
+  "img": "systems/invincible/assets/portraits/monster-girl.webp",
+  "system": {
+    "attributes": {
+      "fighting": {
+        "value": 7
+      },
+      "agility": {
+        "value": 5
+      },
+      "strength": {
+        "value": 8
+      },
+      "reason": {
+        "value": 3
+      },
+      "intuition": {
+        "value": 4
+      },
+      "presence": {
+        "value": 5
+      }
+    },
+    "derived": {
+      "slugfest": {
+        "value": 2,
+        "max": 2
+      },
+      "health": {
+        "value": 12,
+        "max": 2
+      },
+      "resolve": {
+        "value": 6,
+        "max": 2
+      }
+    },
+    "biography": "<p><strong>In high school,</strong> you traveled to Europe and fell in love with a boy – until his grandmother, a practitioner of arcane magic, cursed you using strands of your hair. On your flight home, you transformed for the first time into a monstrous, troll-like creature.</p><p>Back home, you discovered your new form granted immense power, and you became the superhero Monster Woman. But there was a cost – each transformation made you physically younger. You tried to limit your transformations, but whenever people needed saving, you couldn’t stay away. Eventually, you accepted your fate and adopted the name Monster Girl.</p><p>Recently, the world’s top superhero team, the Guardians of the Globe, were murdered. The Global Defense Agency – a government organization tasked with protecting the planet and overseeing superhero activity – hosted tryouts to replace the original team. You auditioned and are now a Guardian of the Globe!</p><p>During the tryouts, you humiliated Rex Splode after he mocked your youthful appearance, but things are fine with him now. Robot seems unusually interested in you, though it’s probably just his way of trying to figure out how to break your curse. You’re trying to keep your excitement in check, but it feels good to be making a difference with the Guardians.</p>",
+    "reputation": 1,
+    "karma": 0,
+    "civilianName": "Amanda",
+    "role": "Defender",
+    "appearance": "",
+    "occupation": "Adventurer",
+    "personality": "Snarky and sarcastic, but a dependable team player at heart.",
+    "drive": "Diversion. You face danger to keep your mind off your curse.",
+    "flaw": "Hotheaded. You lose your cool whenever you’re provoked.",
+    "relationships": "Robot"
+  },
+  "prototypeToken": {
+    "name": "Monster Girl",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/invincible/assets/tokens/monster-girl.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "derived.health"
+    },
+    "bar2": {
+      "attribute": "derived.resolve"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "folder": "2XWkLJzMcFiWZHzo",
+      "name": "Monstrous transformation",
+      "type": "powerSource",
+      "_id": "b8P0QkbtQk1FbClH",
+      "img": "systems/invincible/assets/icons/powersource.svg",
+      "system": {
+        "description": "<p>As a result of the magical curse placed upon you, you can transform into a large troll-like monster that grants you remarkable abilities.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.b8P0QkbtQk1FbClH",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702075411,
+        "modifiedTime": 1758702075411,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Leaping",
+      "type": "power",
+      "_id": "nlV31Xy1xtCw6wBT",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can leap up to 2 zones in a single (quick or full) action. If you take 1 point of stress, you can leap up to 4 zones in a single action. A leap can be used in a charge attack.</p>",
+        "automations": {},
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.nlV31Xy1xtCw6wBT",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702374705,
+        "modifiedTime": 1758702374705,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Major Protection",
+      "type": "power",
+      "_id": "lLqOnZFBVY5m5Kwu",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You have Armor 4 against all attacks.</p>",
+        "automations": {
+          "bVvhmmtXkaz3mCGn": {
+            "name": "Major Protection",
+            "_id": "bVvhmmtXkaz3mCGn",
+            "type": "rollArmor",
+            "showAsSelection": true,
+            "open": true,
+            "armor": 4
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.lLqOnZFBVY5m5Kwu",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702389594,
+        "modifiedTime": 1758702409962,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Regeneration",
+      "type": "power",
+      "_id": "UPMKC23EOs4oSkFv",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>On each turn, make a STRENGTH roll (no action). For each <span class=\"die-symbol tag\"> </span>rolled, you recover 1 point of lost Health.</p>",
+        "automations": {
+          "bHFdeWEZZv7uG1Cy": {
+            "name": "Regeneration",
+            "_id": "bHFdeWEZZv7uG1Cy",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 0,
+            "attribute": "strength"
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.UPMKC23EOs4oSkFv",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702459752,
+        "modifiedTime": 1758879560718,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Hard Hitter",
+      "type": "talent",
+      "_id": "ixKEvdHkBqvmvbyn",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>You get +2 dice to <strong>FIGHTING</strong> rolls if you sacrifice your quick action in the round.</p>",
+        "automations": {
+          "BWPWznabc0Q39bJu": {
+            "name": "Hard Hitter",
+            "_id": "BWPWznabc0Q39bJu",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 2,
+            "attribute": "fighting"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.ixKEvdHkBqvmvbyn",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702492328,
+        "modifiedTime": 1758723122126,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Menacing",
+      "type": "talent",
+      "_id": "NwdImA0pHM8CVsrv",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>When threatening someone to do what you want, roll for <strong>STRENGTH</strong> instead of <strong>PRESENCE</strong> and gain +2 dice.</p>",
+        "automations": {
+          "W1LkvA4xOWiJbQgx": {
+            "name": "Menacing",
+            "_id": "W1LkvA4xOWiJbQgx",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 2,
+            "attribute": "strength"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.NwdImA0pHM8CVsrv",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702531025,
+        "modifiedTime": 1758704679362,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Second Wind",
+      "type": "talent",
+      "_id": "i44CyorjuCBRc6HU",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>When you are broken by damage, roll for <strong>STRENGTH</strong> instead of <strong>PRESENCE</strong> to rally yourself.</p>",
+        "automations": {
+          "nEY1mIwDVPgPNbDj": {
+            "name": "Second Wind",
+            "_id": "nEY1mIwDVPgPNbDj",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 0,
+            "attribute": "strength"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.i44CyorjuCBRc6HU",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702646233,
+        "modifiedTime": 1758704689788,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Durable",
+      "type": "talent",
+      "_id": "VzvCRlhFMsQEWVFX",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>Your Health is increased by 2 (accounted for).</p>",
+        "automations": {}
+      },
+      "effects": [
+        {
+          "name": "Durable",
+          "img": "systems/invincible/assets/icons/talent.svg",
+          "origin": "Item.VzvCRlhFMsQEWVFX",
+          "_id": "qPmuhVXyI8R3Piem",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "system.derived.health.max.bonus",
+              "mode": 2,
+              "value": "2",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "lastModifiedBy": null
+          }
+        }
+      ],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.VzvCRlhFMsQEWVFX",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758702688495,
+        "modifiedTime": 1758702688495,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "Tee6xqkdseinR0Ad",
+      "name": "Alternate Form",
+      "type": "drawback",
+      "_id": "GAM5XDBiMiaAQ1mI",
+      "img": "systems/invincible/assets/icons/drawback.svg",
+      "system": {
+        "description": "<p>Transforming into your monstrous form is a full action and costs 1 point of Resolve. You can only remain in your monstrous form for a few hours. In human form, your attributes are reduced to the numbers in parenthesis, and you have no powers.</p>",
+        "automations": {
+          "JbRWoTGTaWzVy3B9": {
+            "name": "Alternate Form",
+            "_id": "JbRWoTGTaWzVy3B9",
+            "type": "runMacro",
+            "showAsSelection": true,
+            "open": true,
+            "macro": "Macro.41qKvjN7il0PfZb8"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.GAM5XDBiMiaAQ1mI",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758704382695,
+        "modifiedTime": 1758721962397,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "Tee6xqkdseinR0Ad",
+      "name": "Reverse Aging",
+      "type": "drawback",
+      "_id": "6do6ntO6bsPevVeC",
+      "img": "systems/invincible/assets/icons/drawback.svg",
+      "system": {
+        "description": "<p>(unique drawback)</p><p>When you revert back to human form, your cells rebuild incorrectly, causing you to get younger each time. This costs you 1 further point of Resolve.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.6do6ntO6bsPevVeC",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758704479951,
+        "modifiedTime": 1758704479951,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": "z2UigBhb3PGUK11n",
+  "sort": 250000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758650849055,
+    "modifiedTime": 1758924110312,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

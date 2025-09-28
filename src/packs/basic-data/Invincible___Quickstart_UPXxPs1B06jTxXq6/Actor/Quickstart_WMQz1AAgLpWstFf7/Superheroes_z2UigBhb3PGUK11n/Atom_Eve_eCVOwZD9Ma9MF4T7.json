@@ -1,0 +1,487 @@
+{
+  "name": "Atom Eve",
+  "type": "superhero",
+  "_id": "eCVOwZD9Ma9MF4T7",
+  "img": "systems/invincible/assets/portraits/atom-eve.webp",
+  "system": {
+    "biography": "<p><strong>You were the subject</strong> of a government experiment designed to turn an unborn child into a weapon, but you escaped that fate, thanks to the remorse of the program’s lead scientist. As a child, you were a chemistry prodigy, your natural grasp of molecular structure hinting at the powers you would later uncover – the incredible ability to manipulate matter and energy at the subatomic level.</p><p>From the beginning, you wanted to use your powers for good. You started by freeing lab animals, then joined a group of young superheroes formed by Robot called the Teen Team as Atom Eve. You dated your teammate Rex Splode (it ended badly) and met your good friend Invincible during a routine patrol.</p><p>After the Guardians of the Globe – the world’s top super-team – were killed, you were invited to join the replacement roster and made the final cut but declined when you learned Rex had also been accepted. Still, when the Global Defense Agency – the secretive government organization tasked with protecting the world at all costs – called for help, you answered…because that’s what heroes do.</p><p></p>",
+    "attributes": {
+      "fighting": {
+        "value": 3
+      },
+      "agility": {
+        "value": 6
+      },
+      "strength": {
+        "value": 3
+      },
+      "reason": {
+        "value": 5
+      },
+      "intuition": {
+        "value": 6
+      },
+      "presence": {
+        "value": 7
+      }
+    },
+    "derived": {
+      "slugfest": {
+        "value": 2,
+        "max": 2
+      },
+      "health": {
+        "value": 6,
+        "max": 2
+      },
+      "resolve": {
+        "value": 11,
+        "max": 2
+      }
+    },
+    "civilianName": "SAMantha eve wilkins",
+    "role": "controller",
+    "appearance": "",
+    "reputation": 2,
+    "occupation": "Student",
+    "personality": "Empathetic idealist striving\nto define yourself.",
+    "drive": "Compassion. You want to do\ngood without causing harm.",
+    "flaw": "Uncertain. You’re never sure\nyou’re doing the right thing.",
+    "relationships": "Invincible, Adam Wilkins\n(your father)",
+    "karma": 0
+  },
+  "prototypeToken": {
+    "name": "Superhero",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/invincible/assets/tokens/atom-eve.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "derived.health"
+    },
+    "bar2": {
+      "attribute": "derived.resolve"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "name": "Bioengineering",
+      "type": "powerSource",
+      "_id": "KA5G7QFtLjFpIlNx",
+      "img": "icons/magic/lightning/orb-ball-blue.webp",
+      "system": {
+        "description": "<p>As a result of the genetic experiments performed on you before you were born, you can manipulate matter and energy at the subatomic level to produce a variety of effects.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.KA5G7QFtLjFpIlNx",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758320892675,
+        "modifiedTime": 1758699215229,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "Barrier",
+      "type": "power",
+      "_id": "0Xx72T0e0eNXNECC",
+      "img": "icons/magic/sonic/explosion-shock-wave-teal.webp",
+      "system": {
+        "description": "<p>As a quick action, on your turn or as an interrupt action, you can create a defensive barrier for yourself or a target in your zone. The barrier has Armor 3, can move with you (or the target) and lasts for a few minutes, until it is breached once, or until you dismiss it. You can up to three barriers active at the same time.</p>",
+        "powerSource": null,
+        "boosts": [],
+        "automations": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.0Xx72T0e0eNXNECC",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758321818579,
+        "modifiedTime": 1758699304899,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Blast",
+      "type": "power",
+      "_id": "mLGfkfrtzSMtDibh",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can perform a shooting attack with base damage 3, range 0/3</p>",
+        "automations": {
+          "yQTxtBHgcfxucW05": {
+            "_id": "yQTxtBHgcfxucW05",
+            "name": "Blast",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": false,
+            "baseDamage": 3,
+            "minRange": 0,
+            "maxRange": 3,
+            "postExecution": null,
+            "attribute": "agility",
+            "rollBonus": 0
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.mLGfkfrtzSMtDibh",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758699333186,
+        "modifiedTime": 1758700252065,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Flight",
+      "type": "power",
+      "_id": "xAyEn1FmpTRXf35v",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can fly up to 2 zones in a single (quick or full) action. If you take 1 point of stress, you can fly up to 4 zones in a single action.</p>",
+        "automations": {},
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.xAyEn1FmpTRXf35v",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758699339351,
+        "modifiedTime": 1758699339351,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Matter Control",
+      "type": "power",
+      "_id": "TUHx1acyRq8NQ70v",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>As a full action, you can move and control any non-living physical matter within your zone or an adjacent zone up to weight rating 6 (10 tons). You can use this to make a shooting attack with base damage 3, range 0/1, and +2 dice, but this automatically wrecks the target zone. If the zone is already wrecked, the attack cannot be made. This power is very versatile – the GM has final say on the limits for its use.</p>",
+        "automations": {
+          "VQvX7AyioBtapnuq": {
+            "_id": "VQvX7AyioBtapnuq",
+            "name": "Matter Control",
+            "type": "rollAttack",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "baseDamage": 3,
+            "minRange": 0,
+            "maxRange": 1,
+            "postExecution": null,
+            "attribute": "agility",
+            "rollBonus": 2
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.TUHx1acyRq8NQ70v",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758699942904,
+        "modifiedTime": 1758910641492,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Transformation",
+      "type": "power",
+      "_id": "uVEyP0wAWAI2vfKB",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>As a full action, you can permanently transform non-living physical matter in your zone up to weight rating 3 (600 lbs) and turn it into a different non-living solid matter. For each point of stress taken, up to 3 points, the weight rating can be increased by 1. The power can be used to remove barriers and armor.</p>",
+        "automations": {},
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.uVEyP0wAWAI2vfKB",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758700146601,
+        "modifiedTime": 1758700146601,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Determined",
+      "type": "talent",
+      "_id": "SrRe4e792nhz3xlY",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>Your maximum Resolve is increased by 2 (already accounted for).</p>",
+        "automations": {}
+      },
+      "effects": [
+        {
+          "name": "Determined",
+          "img": "systems/invincible/assets/icons/talent.svg",
+          "origin": "Item.SrRe4e792nhz3xlY",
+          "_id": "pgHrAlekvUbsJ3rl",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "system.derived.resolve.max.bonus",
+              "mode": 2,
+              "value": "2",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "lastModifiedBy": null
+          }
+        }
+      ],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.SrRe4e792nhz3xlY",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758700663826,
+        "modifiedTime": 1758700663826,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Knowledgeable (Natural Sciences)",
+      "type": "talent",
+      "_id": "3H8TvWaPoJqraf1J",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>You get +3 dice to <strong>REASON</strong> rolls to recall, find, or understand information related to physical sciences like biology, chemistry, astronomy, genetics, physics, and geology.</p>",
+        "automations": {
+          "kFN7dtffJaxxngED": {
+            "name": "Knowledgeable (Natural Sciences)",
+            "_id": "kFN7dtffJaxxngED",
+            "type": "rollAttribute",
+            "showAsSelection": true,
+            "open": true,
+            "requireAttribute": true,
+            "canChangeAttribute": true,
+            "rollBonus": 3,
+            "attribute": "reason"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.3H8TvWaPoJqraf1J",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758701385844,
+        "modifiedTime": 1758701385844,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": "z2UigBhb3PGUK11n",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758053619021,
+    "modifiedTime": 1758924110312,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

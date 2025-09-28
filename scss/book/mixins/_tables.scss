@@ -1,0 +1,57 @@
+%generalTables {
+  // Specific stuff
+  &.all-left { td p, th p { text-align: left; } }
+
+  &.centered-col-1 { th:nth-child(1) p, td:nth-child(1) p { text-align: center } } 
+  &.centered-col-2 { th:nth-child(2) p, td:nth-child(2) p { text-align: center } } 
+  &.centered-col-3 { th:nth-child(3) p, td:nth-child(3) p { text-align: center } } 
+  &.centered-col-4 { th:nth-child(4) p, td:nth-child(4) p { text-align: center } } 
+  &.centered-col-5 { th:nth-child(5) p, td:nth-child(5) p { text-align: center } } 
+
+  thead, tbody
+  tr, 
+  td, th {
+    background-color: white;
+    border: 0;
+  }
+}
+
+%baseTable {
+  @extend %generalTables;
+  background-color: transparent;
+
+  &:has(thead) {
+    thead tr:first-child { border-bottom: 2px solid $c-darkblue; }
+  }
+
+  &:not(:has(thead)) {
+    tbody tr:first-child { border-bottom: 2px solid $c-darkblue; }
+  }
+
+  tr {
+    &:not(:last-child) { border-bottom: (1px) $c-darkblue solid; }
+    td { vertical-align: top }
+  }
+
+  th, td {
+    &:not(:last-child) { padding-right: 1rem; }
+  }
+
+  th p,
+  td p
+  {
+    @extend .no-justify;
+    margin: 0 !important;
+  }
+
+  thead {
+    border-bottom: 1px $c-darkblue solid;
+
+    th { 
+      vertical-align: bottom;
+    }
+  }
+
+  // th, td { padding: calc($default-margin*0.125); }
+  th, td { padding: 0;}
+}

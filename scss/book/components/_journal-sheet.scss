@@ -1,0 +1,126 @@
+.sheet:has(div#invbook) {
+  .journal-entry-pages.scrollable {
+    scrollbar-color: $c-yellow transparent;
+  }
+
+  &.journal-entry {
+    .journal-header {
+      margin: 0;
+
+      input.title {
+        @extend %baseInputTitle;
+      }
+    }
+
+    .journal-entry-content {
+      background-image: url(../assets/book/art/bg-journal.webp);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      article {
+        // background-color: white;
+        // box-shadow: 5px 5px 0px 0px black;
+        // margin: 0.5rem;
+        padding: $page-padding;
+
+        // Remove this after final
+        // overflow: hidden;
+      }
+    }
+
+    .journal-page-header {
+      h1 {
+        @extend %h1Text;
+      }
+
+      h2 {
+        @extend %h2Text;
+      }
+
+      h3 {
+        @extend %h3Text;
+      }
+    }
+  }
+}
+
+.sheet:has(div#invbook.chapter-page) {
+  .journal-entry-pages.scrollable {
+    scrollbar-color: $c-yellow transparent;
+  }
+
+  &.journal-entry {
+    .journal-header {
+      display: none;
+    }
+
+    .journal-entry-content {
+      background-image: url(../assets/bg-item.webp);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      article {
+
+        // forgive me god
+        div.box.blue.right {
+          width: 30%;
+          margin-right: 1.75rem;
+        }
+
+        background: none;
+        box-shadow: none;
+        padding: $page-padding;
+      }
+    }
+  }
+}
+
+.sheet:has(div#invbook.chapter) {
+  &.journal-entry {
+    .journal-header {
+      display: none;
+    }
+  }
+}
+
+
+// Set category to be at left
+// section.window-content:has(div#invbook) {
+//   nav.toc {
+//     li.category {
+//       strong {
+//         padding-left: calc(var(--line-height) * 0.5);
+//         text-align: start;
+//       }
+//     }
+//   }
+// }
+
+// So we can the editor in foundry
+section.window-content:has(.editor-container) {
+  .editor-container {
+    background-color: #fff;
+  }
+}
+
+.sheet.adventure-importer:has(div#adventure-quickstart) {
+  .window-content {
+    scrollbar-color: $c-yellow transparent;
+
+    background-image: url(../assets/book/art/bg-journal.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0 3rem 1rem;
+
+    header {
+      display: none;
+    }
+
+    div#adventure-quickstart {
+      img {
+        border: none;
+        margin: 16px 0;
+      }
+    }
+  }
+}

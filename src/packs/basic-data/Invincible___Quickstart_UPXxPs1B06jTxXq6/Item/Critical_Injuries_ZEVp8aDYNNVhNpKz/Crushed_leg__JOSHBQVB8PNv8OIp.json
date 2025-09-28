@@ -1,0 +1,86 @@
+{
+  "folder": "ZEVp8aDYNNVhNpKz",
+  "type": "criticalInjury",
+  "img": "systems/invincible/assets/icons/criticalInjury.svg",
+  "name": "Crushed leg!",
+  "system": {
+    "description": "<p>Your leg is broken or completely mangled. Until healed, ground movement becomes a full action and you get –1 die to <strong>FIGHTING</strong>, <strong>AGILITY</strong>, and <strong>STRENGTH</strong> rolls.</p>",
+    "lethal": false,
+    "healingTime": "A few weeks",
+    "automations": {}
+  },
+  "_id": "JOSHBQVB8PNv8OIp",
+  "effects": [
+    {
+      "name": "Crushed leg!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "origin": "Item.JOSHBQVB8PNv8OIp",
+      "_id": "j2azpdlWqS2PC3wm",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "bonus.system.attributes.fighting.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        },
+        {
+          "key": "bonus.system.attributes.agility.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        },
+        {
+          "key": "bonus.system.attributes.strength.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "combat": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758883586824,
+        "modifiedTime": 1758883616921,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    }
+  ],
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758882620961,
+    "modifiedTime": 1758924110421,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

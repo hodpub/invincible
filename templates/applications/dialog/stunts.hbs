@@ -1,0 +1,26 @@
+{{log this}}
+<div>
+  <label class="title dialog">{{rollName}}</label>
+  <div class="dices">
+    <div>
+      <label>{{stunts.current}} / {{stunts.max}}</label>
+    </div>
+  </div>
+  <div class="breakdown">
+    {{#each stuntOptions as | item name |}}
+    {{log name item.value}}
+    <div class="attribute">
+      <div class="attribute-control">
+        <a class="attribute-decrease" data-action="decrease" data-item="{{name}}" {{#if item.minDisabled}}disabled{{/if}}>
+          <i class="fas fa-circle-minus" aria-hidden="true"></i>
+        </a>
+        <input type='text' name="stuntOptions.{{name}}.value" value='{{item.value}}' data-dtype='Number' />
+        <a class="attribute-increase" data-action="increase" data-item="{{name}}" {{#if item.maxDisabled}}disabled{{/if}}>
+          <i class="fas fa-circle-plus" aria-hidden="true"></i>
+        </a>
+      </div>
+      <label class="attribute-label">{{name}}</label>
+    </div>
+    {{/each}}
+  </div>
+</div>

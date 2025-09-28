@@ -1,0 +1,12 @@
+{{log this}}
+<section class='tab injuries scrollable {{tab.cssClass}}' data-group='primary' data-tab='injuries'>
+  <label class="title">{{{localize "INVINCIBLE.Actor.Tabs.Injuries"}}}</label>
+  {{#each injuries as | injury index |}}
+  <div class="injury-info" data-document-class="Item" data-item-id="{{injury.id}}">
+    <label class="rollable" data-action="roll">
+      {{injury.name}}
+    </label>
+    {{{injury.enriched}}}
+  </div>
+  {{/each}}
+</section>

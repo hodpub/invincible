@@ -1,0 +1,63 @@
+&.sheet.item {
+  --background: url(../systems/invincible/assets/bg-item.webp) center center / contain;
+
+  --color-text-emphatic: black;
+  --color-text-secondary: black;
+
+  .window-content {
+    margin: 30px 30px 30px 30px;
+    background: white;
+    border: 2px solid $c-lightblue;
+    box-shadow: 3px 3px 0px 0px black;
+    padding: 16px;
+  }
+
+  header.sheet-header {
+    border: 2px solid $c-lightblue;
+
+    input {
+      margin-top: 20px;
+    }
+  }
+
+  nav {
+    margin-top: 8px;
+    border: none;
+    gap: 0;
+    justify-content: space-between;
+
+
+    a {
+      padding: 0 12px;
+      background-color: $c-yellow;
+      border-bottom: 1px solid $c-yellow;
+      color: black;
+      margin-bottom: -1px;
+
+      &.active {
+        background-color: $c-lightblue;
+        border: 2px solid $c-lightblue;
+        color: white;
+        text-shadow: none;
+      }
+    }
+  }
+
+  label.title {
+    font-size: var(--font-size-20);
+  }
+
+  section.tab {
+    border: 2px solid $c-lightblue;
+    padding: 16px;
+    flex: 1;
+
+    &.scrollable {
+      margin-right: 0;
+    }
+  }
+
+  section prose-mirror {
+    height: 100%;
+  }
+}

@@ -1,0 +1,548 @@
+{
+  "name": "Invincible",
+  "type": "superhero",
+  "_id": "0wkr7hnQ4E9naM7W",
+  "img": "systems/invincible/assets/portraits/invincible.webp",
+  "system": {
+    "attributes": {
+      "fighting": {
+        "value": 7
+      },
+      "agility": {
+        "value": 6
+      },
+      "strength": {
+        "value": 8
+      },
+      "reason": {
+        "value": 2
+      },
+      "intuition": {
+        "value": 4
+      },
+      "presence": {
+        "value": 5
+      }
+    },
+    "derived": {
+      "slugfest": {
+        "value": 2,
+        "max": 2
+      },
+      "health": {
+        "value": 13,
+        "max": 2
+      },
+      "resolve": {
+        "value": 8,
+        "max": 2
+      }
+    },
+    "biography": "<p><strong>You were a regular</strong> high school student, balancing school and a part-time job – except your father, Nolan Grayson, was Omni-Man, the planet’s most powerful superhero. When you were seven, he told you he was a Viltrumite, a member of an alien species he claimed wanted to spread peace across the galaxy.</p><p>At seventeen, you developed powers of your own and became Invincible, fighting alongside your father and occasionally with the group of young superheroes called the Teen Team. Everything changed when you learned the truth – your father was actually preparing Earth for a Viltrumite invasion, and he wanted you to help.</p><p>You refused and fought back. Though you were easily overpowered, you must have reached him, because he spared you and fled Earth.</p><p>For the last several weeks, you’ve been recovering under the care of the clandestine government organization responsible for monitoring superheroes and protecting the planet – the Global Defense Agency. Now, you’re nearly healed and ready to protect the world again.</p>",
+    "reputation": 4,
+    "karma": 0,
+    "civilianName": "Mark Grayson",
+    "role": "Defender",
+    "appearance": "",
+    "occupation": "Student",
+    "personality": "Courageous and dedicated hero with something to prove.",
+    "drive": "Responsibility. You feel obligated to use your gifts to protect others.",
+    "flaw": "Impulsive. You always take action without thought of the consequences.",
+    "relationships": "Atom Eve, Debbie Grayson (your mother)"
+  },
+  "prototypeToken": {
+    "name": "Invincible",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/invincible/assets/tokens/invencible.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "derived.health"
+    },
+    "bar2": {
+      "attribute": "derived.resolve"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Lucky Break",
+      "type": "talent",
+      "_id": "21uA9RDGFpTMAYSz",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>You get to re-roll any roll for a critical injury once. Choose the result you prefer.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.21uA9RDGFpTMAYSz",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747368923,
+        "modifiedTime": 1758747452278,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Determined",
+      "type": "talent",
+      "_id": "SrRe4e792nhz3xlY",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>Your maximum Resolve is increased by 2 (already accounted for).</p>",
+        "automations": {}
+      },
+      "effects": [
+        {
+          "name": "Determined",
+          "img": "systems/invincible/assets/icons/talent.svg",
+          "origin": "Item.SrRe4e792nhz3xlY",
+          "_id": "pgHrAlekvUbsJ3rl",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "system.derived.resolve.max.bonus",
+              "mode": 2,
+              "value": "2",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "lastModifiedBy": null
+          }
+        }
+      ],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.SrRe4e792nhz3xlY",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747373797,
+        "modifiedTime": 1758747373797,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Durable",
+      "type": "talent",
+      "_id": "VzvCRlhFMsQEWVFX",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>Your Health is increased by 2 (accounted for).</p>",
+        "automations": {}
+      },
+      "effects": [
+        {
+          "name": "Durable",
+          "img": "systems/invincible/assets/icons/talent.svg",
+          "origin": "Item.VzvCRlhFMsQEWVFX",
+          "_id": "qPmuhVXyI8R3Piem",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "system.derived.health.max.bonus",
+              "mode": 2,
+              "value": "2",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": 0,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "lastModifiedBy": null
+          }
+        }
+      ],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.VzvCRlhFMsQEWVFX",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747378990,
+        "modifiedTime": 1758747378990,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GIVEBpIn0HdBiTD3",
+      "name": "Indomitable",
+      "type": "talent",
+      "_id": "k6QGeJsAHT8TRxvO",
+      "img": "systems/invincible/assets/icons/talent.svg",
+      "system": {
+        "description": "<p>Once per game session, you may ignore all  <span class=\"die-symbol ball\"> </span> when pushing a roll.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.k6QGeJsAHT8TRxvO",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747412623,
+        "modifiedTime": 1758747412623,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "Tee6xqkdseinR0Ad",
+      "name": "Targeted",
+      "type": "drawback",
+      "_id": "Tg4Jq71qHeQs2SaR",
+      "img": "systems/invincible/assets/icons/drawback.svg",
+      "system": {
+        "description": "<p><strong>Viltrum Empire.</strong> After your father’s treasonous act of abandoning his post, the Viltrum Empire has ordered you to take over his former responsibilities to prepare Earth for invasion… or else.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.Tg4Jq71qHeQs2SaR",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747506096,
+        "modifiedTime": 1758747506096,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Major Flight",
+      "type": "power",
+      "_id": "AMECjH7w5w6r0jUI",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You can fly up to 4 zones in a single (quick or full) action. If you take 1 point of stress, you can fly up to 8 zones in a single action.</p>",
+        "automations": {},
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.AMECjH7w5w6r0jUI",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747540347,
+        "modifiedTime": 1758747793074,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "2XWkLJzMcFiWZHzo",
+      "name": "Viltrumite hybrid physiology",
+      "type": "powerSource",
+      "_id": "9s7Rtg7l6Wi4ir1L",
+      "img": "systems/invincible/assets/icons/powersource.svg",
+      "system": {
+        "description": "<p>Due to your half-Viltrumite heritage, you possess superpowers common to all Viltrumites.</p>",
+        "automations": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.9s7Rtg7l6Wi4ir1L",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747565860,
+        "modifiedTime": 1758747565860,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Life Support",
+      "type": "power",
+      "_id": "3vrpVNWj82J6c0yw",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>By taking 1 point of stress, you can ignore essential physical needs like breathing, eating, or sleeping while in a hazardous environment – such as the vacuum of space – for a few days.</p>",
+        "automations": {},
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.3vrpVNWj82J6c0yw",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747640113,
+        "modifiedTime": 1758747640113,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Major Protection",
+      "type": "power",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>You have Armor 4 against all attacks.</p>",
+        "automations": {
+          "JouxCwQ3FBeNHXR0": {
+            "name": "Major Protection",
+            "_id": "JouxCwQ3FBeNHXR0",
+            "type": "rollArmor",
+            "showAsSelection": true,
+            "open": true,
+            "armor": 4
+          }
+        },
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.7DxMA47qjFMXWvGm",
+        "duplicateSource": "Item.lLqOnZFBVY5m5Kwu",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747684209,
+        "modifiedTime": 1758747684209,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "_id": "7DxMA47qjFMXWvGm",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r36OtkSXRsLoLW4E",
+      "name": "Quickness",
+      "type": "power",
+      "_id": "QTMKuAIwVGnjRaUW",
+      "img": "systems/invincible/assets/icons/power.svg",
+      "system": {
+        "description": "<p>Once per round, you can gain an extra action (quick or full) by taking 1 point of stress, on your turn or as an interrupt action.</p>",
+        "automations": {},
+        "powerSource": null,
+        "boosts": []
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.QTMKuAIwVGnjRaUW",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758747695416,
+        "modifiedTime": 1758747722059,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": "z2UigBhb3PGUK11n",
+  "sort": 300000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758650870572,
+    "modifiedTime": 1758924110312,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,119 @@
+:root {
+  interpolate-size: allow-keywords;
+}
+
+* {
+  --color-scrollbar: #{$c-darkblue};
+}
+
+.window-app {
+  font-family: $font-primary;
+}
+
+.rollable {
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-shadow: 0 0 10px $c-lightblue;
+    cursor: pointer;
+  }
+}
+
+%button {
+  background: $c-yellow;
+  color: black;
+  width: 100%;
+  font-family: Comic, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0;
+  box-shadow: 3px 3px 0px 0px black;
+  border: 0;
+
+  &[disabled] {
+    filter: sepia(0.5) contrast(0.75) opacity(0.4);
+  }
+
+  &:not([disabled]):hover {
+    background: $c-darkblue;
+    color: white;
+  }
+}
+
+
+
+%title {
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  right: 50px;
+  top: 75px;
+  z-index: 1;
+  text-transform: uppercase;
+  font-family: Titles, sans-serif;
+  text-align: right;
+  color: $c-yellow;
+  transform: rotate(-1deg);
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+
+#tooltip {
+  font-family: Comic, sans-serif;
+}
+
+div.foundry-info {
+  border: solid 2px $c-darkblue;
+  border-radius: 16px;
+  margin: 32px 16px;
+  padding: 16px;
+
+  position: relative;
+
+  p {
+    text-align: start;
+
+    &.title {
+      font-weight: bold;
+      font-size: 120%;
+    }
+
+    .fa,
+    .fa-brands,
+    .fa-classic,
+    .fa-duotone,
+    .fa-light,
+    .fa-regular,
+    .fa-sharp,
+    .fa-sharp-solid,
+    i.fa-solid,
+    .fa-thin,
+    .fab,
+    .fad,
+    .fal,
+    .far,
+    .fas,
+    .fasl,
+    .fasr,
+    .fass,
+    .fat {
+      display: inline;
+    }
+
+    &:first-child {
+      text-indent: 30px !important;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    height: 51px;
+    width: 51px;
+    background: url("../assets/fvtt-d20.webp");
+    background-size: 100% 100%;
+  }
+}

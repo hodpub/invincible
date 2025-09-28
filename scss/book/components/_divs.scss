@@ -1,0 +1,226 @@
+// May god forgive me for what is written here
+
+div {
+  &.chapter {
+    @extend %basicShadow;
+
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 80%;
+    padding: $default-margin * 2;
+    background-color: #fff;
+  }
+
+  &.chapter-title {
+    margin: 2rem 1rem;
+    width: fit-content;
+
+    div.number {
+      @extend .attribute;  
+      
+      float: left;
+      display: inline;
+      width: fit-content;
+      margin: 1.5rem 1rem 0rem 1.5rem;
+      border: none;
+
+      box-shadow: 5px 5px 0px 0px black;
+
+      p { @extend %baseSans; }
+    }
+
+    p.chapter {
+      @extend %chapterTitleShadow, .no-justify, .bold, .upper, .title;
+
+      max-width: 32rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      font-family: Titles, sans-serif;
+
+      font-size: 5rem;
+      line-height: 3.75rem;
+      color: $c-yellow;
+      transform: rotate(-1deg);
+
+      margin: ($default-margin * 4) auto $default-margin auto;
+
+      span {
+        &.larger {
+          display: block;
+          font-size: 9rem;
+          line-height: 0.9;
+
+          width: 100%;
+
+          &:first-child { margin-top: 0.5rem; }
+        }
+      }
+    }
+  }
+}
+
+
+div.box {
+  @extend %baseBox;
+}
+
+
+div.actions {
+  padding: $default-margin * 2;
+
+  div.attribute { box-shadow: 5px 5px 0px 0px black; }
+  div.attribute p { @extend .black; }
+
+  p { 
+    @extend %baseSans;
+
+    font-family: Titles;
+    letter-spacing: 1.5px;
+
+    font-size: ($default-margin * 1.5);
+    margin: 0;
+
+    &.plus {
+      @extend %basicSkew, .centered, .black;
+      display: inline-block;
+      font-size: 3rem;
+      margin: auto -2rem;
+    }
+
+    &.centered {
+      @extend %baseSans;
+      margin: ($default-margin * 0.5) auto;
+    }
+  }
+}
+
+
+
+div.flow {
+  p.box-header  { color: $c-darkblue; }
+  div.flexcol { align-items: center; }
+  div.flexrow   { align-items: start; }
+
+  div.attribute {
+    box-shadow: 5px 5px 0px 0px black;
+    padding: 8px;
+    position: relative;
+    z-index: 3;
+    min-width: 75%;
+
+    p { 
+      margin: auto;
+
+      &.black { 
+        @extend .centered;
+        font-family: Titles;
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+
+  // divs with nodes
+  // ============ //
+  div:has(p.bool):not(.flexrow, .flexcol, .no-node) {
+    width: 100%;
+
+    &::before { @extend %baseNode; top: -24%; }
+    &::after  { @extend %baseNode; top: 90%; }
+  }
+
+  div:not(.flexcol, .flexrow) {
+    margin: 0.5rem 0.5rem;
+
+    position: relative;
+    z-index: 3;
+
+    &:not(:last-child, .no-node, div:has(p.bool)) {
+      &::after { @extend %baseNode; top: 105%; }
+    }
+  }
+  // ============ //
+
+
+  div {
+    p.bool {
+      @extend .centered;
+      $ball-size: 48px;
+      width: fit-content;
+      border-radius: 100%;
+      background-color: $c-yellow;
+
+      font-size: 1.25rem;
+
+      height: $ball-size;
+      width: $ball-size;
+      line-height: $ball-size - 2px;
+      text-align: center;
+
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  p {
+    @extend %baseSans, .no-justify;
+
+    &.blue {
+      color: $c-darkblue;
+    }
+  }
+}
+
+div.colophon {
+
+  p.h2 { font-size: 1.25rem; }
+
+  &.flexcol {
+    margin-bottom: 2rem;
+
+    p { font-size: 1.125rem; }
+  }
+
+  &.flexrow {
+    gap: 16px;
+    div.right { align-items: start; }
+    div.left { align-items: end; }
+
+  }
+
+  p {
+    display: inline-block;
+    margin: 0.25rem 0 !important;
+    width: fit-content;
+
+    &.sans { font-family: Comic; }
+  }
+}
+
+div.toc {
+  div.flexrow { align-items: start; }
+  div.flexcol { align-items: start; }
+
+  div:not(.flexrow, .flexcol) { margin: 1rem 1rem 0.5rem; }
+
+  div {
+    p {
+      @extend .no-justify, %baseSans;
+      color: $c-darkblue;
+      margin: 0.25rem 0;
+      text-align: start;
+
+      &:first-child {
+        font-family: Titles;
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+
+      &:not(:first-child) { 
+        @extend .indent;
+      }
+    }
+  }
+}

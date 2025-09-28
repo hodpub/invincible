@@ -1,0 +1,23 @@
+<section class='tab boosts scrollable {{tab.cssClass}}' data-group='primary' data-tab='boosts'>
+  <div class="form-group">
+    <label>
+      <a class='boost-create' data-action='createBoost' data-origin="{{@root.item.uuid}}">
+        <i class='fas fa-plus'></i>
+        {{localize 'DOCUMENT.New' type='Boost'}}
+      </a>
+    </label>
+  </div>
+  {{#each system.boosts as | boost index |}}
+
+  <details data-boost-id="{{index}}" open>
+    <summary>
+      {{localize "INVINCIBLE.Item.Power.FIELDS.boosts.single"}} {{add index 1}}
+    </summary>
+    <p>{{boost}}</p>
+    <a class='delete' data-action='deleteBoost' data-index="{{index}}" data-tooltip='{{localize "DOCUMENT.Delete" type=' Boost'}}'>
+      {{localize 'DOCUMENT.Delete' type='Boost'}}
+      <i class='fas fa-trash'></i>
+    </a>
+  </details>
+  {{/each}}
+</section>

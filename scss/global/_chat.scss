@@ -1,0 +1,230 @@
+.chat-message {
+  --default-margin: 10px;
+
+  --color-text-accent: #{$c-lightblue};
+  --color-text-hyperlink: #{$c-lightblue};
+  border-radius: 0;
+  border: 2px solid $c-lightblue;
+
+
+  background: url(../assets/decorations/chat-normal.webp) no-repeat center;
+  background-size: cover;
+  background-position: top center;
+  background-image: linear-gradient(to bottom, #ffffff66, #ffffff66), url(../assets/decorations/chat-normal.webp);
+  box-shadow: 3px 3px 0px 0px black;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  * {
+    border-radius: 0;
+  }
+
+  .message-metadata {
+    align-items: center;
+
+    .message-type {
+      display: none;
+    }
+  }
+
+  &.whisper {
+    background: linear-gradient(to bottom, #ffffff66, #ffffff66), url(../assets/decorations/chat-private.webp) no-repeat center;
+    background-size: cover;
+    background-position: top center;
+
+    .message-metadata .fa-user-secret {
+      display: block;
+    }
+  }
+
+  &.whisper.blind {
+    background: url(../assets/decorations/chat-blind.webp) no-repeat center;
+    background-size: cover;
+    background-position: top center;
+
+    .message-metadata .fa-eye-slash {
+      display: block;
+    }
+  }
+
+  .message-content,
+  .message-content *:not(a):not(.roll),
+  .message-header {
+    color: $c-darkblue;
+  }
+
+  .message-content {
+    // border: 1px solid $c-darkblue;
+    // padding: calc(var(--default-margin)*1.5);
+
+    ol.dice-rolls,
+    div.dice-rolls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+
+      .roll.max,
+      .roll.min {
+        color: unset;
+        filter: unset;
+      }
+
+      img {
+        border: 1px solid $c-darkblue;
+        height: 36px;
+      }
+    }
+
+    ol.dice-rolls:has(div.dice-rolls) {
+      flex-direction: column;
+
+      span.roll {
+        width: 34px;
+      }
+    }
+
+    .dice-roll:has(+div div) {
+      margin-bottom: 8px;
+    }
+
+    .dice-roll .dice-total {
+      padding: 30px;
+      border: 0;
+      font-family: Comic, sans-serif;
+      font-size: var(--font-size-16);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: url(../assets/decorations/bubble.webp) no-repeat center;
+      background-size: contain;
+      box-shadow: none;
+
+      &.failure {
+        color: red;
+      }
+
+      &.success {
+        color: green;
+      }
+    }
+
+    .dice-roll .dice-formula,
+    .dice-roll .dice-total,
+    .dice-tooltip .part-header .part-total,
+    .dice-tooltip .part-header {
+      border-color: $c-darkblue;
+    }
+
+    .dice-roll .dice-formula,
+    .part-formula {
+      text-transform: none;
+    }
+  }
+
+  .message-header {
+    flex-direction: column;
+    gap: calc(var(--default-margin)*0.5);
+    margin-bottom: var(--default-margin);
+
+    &>* {
+      flex: 1 0 0;
+      width: 100%;
+    }
+
+    div.sender {
+      position: relative;
+      border-bottom: 2px solid $c-lightblue;
+
+      h4.flavor-text {
+        font-family: Comic, sans-serif;
+        font-style: italic;
+        position: absolute;
+        left: -5px;
+        bottom: 25px;
+      }
+
+      h4.message-sender {
+        @extend %title;
+        position: absolute;
+        left: 4px;
+        bottom: 10px;
+        right: unset;
+        top: unset;
+        font-size: var(--font-size-36);
+      }
+
+      img.avatar {
+        --avatar-size: 120px;
+        width: var(--avatar-size);
+        height: var(--avatar-size);
+        float: right;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      .top-banner {
+        position: relative;
+        min-height: 44px;
+        align-content: center;
+
+        img.banner {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    .whisper-to {
+      text-align: center;
+    }
+  }
+
+  img.bottom {
+    margin-top: var(--default-margin);
+    width: 195px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .roll-damage,
+  .roll-critical,
+  .roll-despair,
+  .roll-blight,
+  .roll-trauma,
+  .roll-gear-damage,
+  .roll-energy {
+    text-align: center;
+    margin: 6px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  div.dice-buttons {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    padding: 0 4px 4px 0;
+
+    button.dice-button {
+      @extend %button;
+    }
+  }
+
+  ul.table-results li img {
+    display: none;
+  }
+
+  strong.breakdown-value {
+    width: 20px;
+    display: inline-block;
+    text-align: right;
+  }
+}

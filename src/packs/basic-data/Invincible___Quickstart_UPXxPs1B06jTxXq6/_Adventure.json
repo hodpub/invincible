@@ -1,0 +1,77 @@
+{
+  "name": "Invincible - Quickstart",
+  "img": "systems/invincible/assets/bg-foundry.webp",
+  "caption": "",
+  "description": "<div id=\"adventure-quickstart\"><p class=\"centered\" style=\"text-align:center\"><strong>Back the project on the Kickstarter now!</strong></p><a href=\"https://www.kickstarter.com/projects/1192053011/invincible-the-roleplaying-game\"><img src=\"systems/invincible/assets/invincible.webp\" /></a><p>Invincible – Superhero Roleplaying is a superhero tabletop roleplaying game based on the groundbreaking comic book Invincible by Robert Kirkman (The Walking Dead), Cory Walker, and Ryan Ottley, currently adapted as an animated series on Prime Video. In this action-packed storytelling experience, you and your friends take on the role of superheroes in your own corner of the Invincible universe.</p><p>You have now a WIP Foundry system with the Quickstart. It gives you a brief taste of the Invincible – Superhero Roleplaying and includes condensed rules, five pre-generated characters fully configured with tokens, social scene cards, an action map, and The Clone Job – the first act of Metro Mayhem, the introductory adventure to be concluded in the Invincible – Superhero Roleplaying Starter Set.</p><a href=\"https://hodpub.com/\"><img src=\"systems/invincible/assets/book/hod-publishing.webp\" /></a><p><em>© 2025 Skybound, LLC. Based on the comic book Invincible® by Robert Kirkman, Cory Walker and Ryan Ottley. INVINCIBLE and any related logos are registered or otherwise protected trademarks of Robert Kirkman Inc. All Rights Reserved.</em></p></div>",
+  "sort": 0,
+  "actors": [
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/NPCs_IBLystBFcAaAT0AU/Concussion_Turret_A3JEclm0cKAcnFFs.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/NPCs_IBLystBFcAaAT0AU/Scientist_h4urmN8udZRhCJnV.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/NPCs_IBLystBFcAaAT0AU/The_Mauler_Twins_A_lxnPNFRVHJ97UGFX.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/NPCs_IBLystBFcAaAT0AU/The_Mauler_Twins_B_TsPIWO6f1LM7eLzS.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/Atom_Eve_eCVOwZD9Ma9MF4T7.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/Bulletproof_R52BRT3IwXcTBsWr.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/Invincible_0wkr7hnQ4E9naM7W.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/Monster_Girl_P1X6rWlnWQzuuTI1.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/Rex_Splode_YCBvz41Q6LXSPAsy.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/Robot_qgeZlU7lSRjXZ0DZ.json"
+  ],
+  "combats": [],
+  "items": [
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Torn_suit__bvXqkEwb8cZ2mjdG.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Bruised__l42Dx4TDxIqdCyNj.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Bloodied__4X4nw1do9wEOAaLx.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Beaten_up__Oulgf3tY7eF7k0S6.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Concussed__BQ2ZvGMxdvdn1GLB.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Battered__eiaM2iUvvuyuzuSo.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Crushed_arm__szsPStiukxD3MM78.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Crushed_leg__JOSHBQVB8PNv8OIp.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Cracked_skull__J9w7MzQ3WytXeXqT.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Crushed__4KReB7uDfAwudDfF.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Skewered__Hdn2EE7l4oWGsJt0.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Head_crushed__mkdA3OyOFH5A3iiz.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Torn_apart__zRM9fp5i6eFMbd48.json"
+  ],
+  "journal": [
+    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/3__Colophon_B2OnNP4e7MJhqB0J.json",
+    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/Invincible_Quickstart_JYIKkkXpyqIM3IC0.json",
+    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/2__The_Clone_Job_d7S41u6UyXvsaqNP.json",
+    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/1__You_Might_Be_Invincible_xT802qdP7kX518mO.json"
+  ],
+  "scenes": [
+    "Scene/Quickstart_G1sRmOcPPpHSievo/The_Warehouse_vL4Lqhd60r7UHjPT.json",
+    "Scene/Quickstart_G1sRmOcPPpHSievo/Invincible_sge0EEkIG8wuvCmB.json"
+  ],
+  "tables": [],
+  "macros": [
+    "Macro/Quickstart_cEbKwChperWjUu6I/Monster_Girl___Alternate_Form_41qKvjN7il0PfZb8.json",
+    "Macro/Quickstart_cEbKwChperWjUu6I/Honey__We_re_Home_V2xczE7E4mGsHqRB.json",
+    "Macro/Quickstart_cEbKwChperWjUu6I/Experiment_Supplies___Explosion_v4wQv8KLP46BKkye.json"
+  ],
+  "cards": [],
+  "playlists": [],
+  "folders": [
+    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/_Folder.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/_Folder.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/NPCs_IBLystBFcAaAT0AU/_Folder.json",
+    "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/_Folder.json",
+    "Scene/Quickstart_G1sRmOcPPpHSievo/_Folder.json",
+    "Macro/Quickstart_cEbKwChperWjUu6I/_Folder.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/_Folder.json"
+  ],
+  "_id": "UPXxPs1B06jTxXq6",
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758822633345,
+    "modifiedTime": 1758929556548,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "_key": "!adventures!UPXxPs1B06jTxXq6"
+}

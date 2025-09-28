@@ -1,0 +1,48 @@
+<div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.attribute">{{localize
+      "INVINCIBLE.Automation.FIELDS.attribute.label"}}</label>
+    <select name="system.automations.{{key}}.attribute">
+      {{selectOptions @root.config.ACTOR.ATTRIBUTE_CHOICES selected=automation.attribute localize=true}}
+    </select>
+  </div>
+  {{!-- <div class="form-group">
+    <label for="system.automations.{{@key}}.canChangeAttribute">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttribute.canChangeAttribute.label"}}</label>
+    <input type="checkbox" name="system.automations.{{@key}}.canChangeAttribute" {{checked
+      automation.canChangeAttribute}} />
+  </div> --}}
+  <div class="form-group">
+    <label for="system.automations.{{key}}.rollBonus">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollBonus.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.rollBonus" value="{{automation.rollBonus}}">
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.baseDamage">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.baseDamage.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.baseDamage" value="{{automation.baseDamage}}">
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.range">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.range.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.minRange" value="{{automation.minRange}}">
+    <input type="text" name="system.automations.{{key}}.maxRange" value="{{automation.maxRange}}">
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.macro">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.postExecutionMacro.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.postExecution" value="{{automation.postExecution}}">
+  </div>
+  <div class="tip">
+    {{#if automation.postExecution}}
+    <label class="hint">
+      <a class='automation-open-macro' data-action="automationCommand" data-command='viewAutomationMacro'>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        {{localize 'INVINCIBLE.Automation.FIELDS.macro.open'}}
+      </a>
+    </label>
+    {{else}}
+    <label class="hint">{{localize 'INVINCIBLE.Automation.FIELDS.macro.drop'}}</label>
+    {{/if}}
+  </div>
+</div>

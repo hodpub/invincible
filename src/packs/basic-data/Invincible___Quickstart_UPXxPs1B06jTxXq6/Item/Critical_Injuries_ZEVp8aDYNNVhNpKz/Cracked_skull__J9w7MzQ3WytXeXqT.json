@@ -1,0 +1,86 @@
+{
+  "folder": "ZEVp8aDYNNVhNpKz",
+  "type": "criticalInjury",
+  "img": "systems/invincible/assets/icons/criticalInjury.svg",
+  "name": "Cracked skull!",
+  "system": {
+    "description": "<p>You’re knocked out and remain unconscious for a few days. After that, you get –2 dice to <strong>REASON</strong>, <strong>INTUITION</strong>, and <strong>PRESENCE</strong> rolls until healed.</p>",
+    "lethal": false,
+    "healingTime": "A few weeks",
+    "automations": {}
+  },
+  "_id": "J9w7MzQ3WytXeXqT",
+  "effects": [
+    {
+      "name": "Cracked skull!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "origin": "Item.J9w7MzQ3WytXeXqT",
+      "_id": "SOcEu9uQyf32tNQc",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "bonus.system.attributes.reason.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        },
+        {
+          "key": "bonus.system.attributes.intuition.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        },
+        {
+          "key": "bonus.system.attributes.presence.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "combat": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758883524863,
+        "modifiedTime": 1758883551785,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    }
+  ],
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758882620961,
+    "modifiedTime": 1758924110421,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

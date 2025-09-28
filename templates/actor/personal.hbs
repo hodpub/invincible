@@ -1,0 +1,8 @@
+<section class='tab personal scrollable {{tab.cssClass}}' data-group='primary' data-tab='personal'>
+  <label class="title">{{{localize "INVINCIBLE.Actor.Tabs.Personal"}}}</label>
+  {{formGroup systemFields.occupation value=system.occupation}}
+  {{formGroup systemFields.personality value=system.personality elementType="textarea" rows=3}}
+  {{formGroup systemFields.drive value=system.drive elementType="textarea" rows=3}}
+  {{formGroup systemFields.flaw value=system.flaw elementType="textarea" rows=3}}
+  {{formGroup systemFields.relationships value=system.relationships elementType="textarea" rows=3}}
+</section>

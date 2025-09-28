@@ -1,0 +1,22 @@
+{
+  "type": "Macro",
+  "folder": null,
+  "name": "Quickstart",
+  "color": "#0096cb",
+  "sorting": "a",
+  "_id": "cEbKwChperWjUu6I",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758705252731,
+    "modifiedTime": 1758924110543,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  }
+}

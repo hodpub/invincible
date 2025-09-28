@@ -1,0 +1,33 @@
+:root {
+  --invincible-c-dark: #191813;
+  --invincible-c-faint: #c9c7b8;
+  --invincible-c-beige: #b5b3a4;
+  --invincible-c-tan: #444444;
+  --invincible-c-white: #ffffff;
+  --invincible-c-black: #000000;
+  --invincible-c-groove: #eeede0;
+}
+
+.theme-dark {
+  --invincible-c-dark: #c9c7b8;
+  --invincible-c-faint: #191813;
+  --invincible-c-beige: #444444;
+  --invincible-c-tan: #b5b3a4;
+  --invincible-c-white: #000000;
+  --invincible-c-black: #ffffff;
+  --invincible-c-groove: #11121f;
+}
+
+$c-white: var(--invincible-c-white);
+$c-black: var(--invincible-c-black);
+
+$c-dark: var(--invincible-c-dark);
+$c-faint: var(--invincible-c-faint);
+$c-beige: var(--invincible-c-beige);
+$c-tan: var(--invincible-c-tan);
+
+$c-groove: var(--invincible-c-groove);
+
+$c-yellow: #ffe72a;
+$c-lightblue: #0096cb;
+$c-darkblue: #3465A3;

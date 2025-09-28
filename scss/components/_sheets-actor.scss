@@ -1,0 +1,148 @@
+&.sheet.actor {
+  --background: url(../systems/invincible/assets/bg-actor.webp) center center / contain;
+
+
+  .sheet-logo {
+    --width: 250px;
+    position: absolute;
+    top: 50px;
+    left: calc((100% - var(--width)) / 2);
+    width: var(--width);
+    z-index: 1;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .window-content {
+    // @extend .grid;
+    margin: 30px 55px 30px 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    &>* {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  div.bg-white {
+    position: absolute;
+    top: 65px;
+    left: 30px;
+    width: 850px;
+    height: 590px;
+    background: white;
+    opacity: 1;
+    z-index: -1;
+    box-shadow: 3px 3px 0px 0px black;
+    border: 2px solid $c-lightblue;
+  }
+
+  header.sheet-header,
+  section.tab {
+    background: white;
+    border: 2px solid $c-lightblue;
+    padding: 16px;
+  }
+
+  section.tab {
+    padding-top: 50px;
+  }
+
+  section.portrait {
+    margin-right: -12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  nav.sheet-tabs {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    border: 0;
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      width: 40px;
+      padding: 0 12px;
+      background-color: $c-yellow;
+      margin-right: -7px;
+      border: 1px solid black;
+      color: black;
+
+      &:hover {
+        color: $c-lightblue;
+      }
+
+      &.active {
+        background-color: $c-lightblue;
+        border: 2px solid $c-lightblue;
+        color: white;
+        margin-right: 0;
+        text-shadow: none;
+      }
+    }
+  }
+
+  div.bar {
+    @extend .grid-span-3, .form-group;
+    font-size: var(--font-size-18);
+    border-bottom: none;
+
+    label {
+      font-family: "Comic";
+      text-transform: uppercase;
+
+      &:first-child {
+        min-width: 90px;
+      }
+    }
+
+    div.inner-bar {
+      width: 65%;
+      height: 16px;
+      background: $c-yellow;
+      border: 2px solid $c-lightblue;
+    }
+
+    .form-fields {
+      flex-direction: row;
+      display: flex;
+      gap: 6px;
+      justify-content: flex-end;
+      align-items: baseline;
+      flex: 0 0 auto;
+      min-width: 90px;
+
+      input {
+        width: 40px;
+        text-align: right;
+      }
+    }
+  }
+
+  label.slugfest {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: var(--font-size-14);
+    
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      background: $c-lightblue;
+      color: white;
+      padding: 2px;
+      transform: scale(1.5);
+    }
+  }
+}

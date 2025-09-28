@@ -1,0 +1,12 @@
+/* Layout */
+$default-margin: 1rem;
+$page-padding: ($default-margin * 1.75) ($default-margin * 1.75);
+
+
+/* Typography */
+$font-size: $default-margin;
+$default-indent: calc($font-size*1.75);
+
+// TODO FIX: font types
+$font-serif: 'PT Serif', serif;
+$font-sans: 'PT Sans', sans-serif;

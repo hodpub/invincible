@@ -1,0 +1,26 @@
+<div>
+  <div class="form-group cgd-custom">
+    <label for="system.automations.{{key}}.attribute">{{localize
+      "INVINCIBLE.Automation.FIELDS.attribute.label"}}</label>
+    <select name="system.automations.{{key}}.attribute">
+      {{selectOptions @root.config.ACTOR.ATTRIBUTE_CHOICES selected=automation.attribute localize=true}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.rollBonus">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollBonus.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.rollBonus" value="{{automation.rollBonus}}">
+  </div>
+  {{!-- <div class="form-group cgd-custom">
+    <label for="system.automations.{{@key}}.requireAttribute">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttribute.requireAttribute.label"}}</label>
+    <input type="checkbox" name="system.automations.{{@key}}.requireAttribute" {{checked
+      automation.requireAttribute}} />
+  </div> --}}
+  {{!-- <div class="form-group cgd-custom">
+    <label for="system.automations.{{@key}}.canChangeAttribute">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttribute.canChangeAttribute.label"}}</label>
+    <input type="checkbox" name="system.automations.{{@key}}.canChangeAttribute" {{checked
+      automation.canChangeAttribute}} />
+  </div> --}}
+</div>

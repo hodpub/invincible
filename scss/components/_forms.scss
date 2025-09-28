@@ -1,0 +1,165 @@
+.item-form {
+  font-family: $font-primary;
+}
+
+.sheet-header {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .profile-img {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .header-fields {
+    flex: 1;
+  }
+}
+
+.sheet-tabs {
+  flex: 0;
+}
+
+.sheet-body,
+.sheet-body .tab,
+.sheet-body .tab .editor {
+  height: 100%;
+}
+
+.tab.biography {
+  .editor {
+    height: 100%;
+  }
+}
+
+.tox {
+  .tox-editor-container {
+    background: $c-white;
+  }
+
+  .tox-edit-area {
+    padding: 0 8px;
+  }
+}
+
+div.form-group {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  border-bottom: 1px solid $c-darkblue;
+
+  &:has(+div.tip) {
+    border-bottom: none;
+  }
+
+  &+div.tip {
+    border-bottom: 1px solid $c-darkblue;
+    font-size: var(--font-size-10);
+  }
+
+  label {
+    color: $c-darkblue;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .form-fields {
+    flex: 1;
+  }
+
+  &:has(> .form-fields textarea) {
+    align-items: flex-start;
+    margin-top: 3px;
+
+    label {
+      margin-top: 7px;
+    }
+  }
+
+  &.half {
+    border-bottom: none;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 0;
+    margin-right: 16px;
+
+    div.attribute {
+      width: 35%;
+    }
+  }
+}
+
+div.attribute {
+  border: 2px solid $c-lightblue;
+  transform: skew(-5deg) rotate(-1deg);
+  padding: 5px;
+  box-shadow: 3px 3px 0px 0px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  position: relative;
+
+  &:has(input[disabled]) {
+    background: lighten($c-yellow, 30%);
+  }
+
+  input,
+  label {
+    transform: skew(5deg) rotate(1deg);
+    text-align: center;
+  }
+
+  input {
+    font-size: var(--font-size-18);
+  }
+
+  label {
+    font-weight: bold;
+    color: $c-darkblue;
+
+    &.graduation {
+      font-weight: unset;
+      color: unset;
+      font-family: "Comic", sans-serif;
+      text-transform: uppercase;
+      font-size: var(--font-size-12)
+    }
+  }
+}
+
+details {
+  overflow: hidden;
+  position: relative;
+  border: 2px solid $c-lightblue;
+  padding: 8px;
+  margin-top: 8px;
+  font-family: "Comic", sans-serif;
+  text-transform: uppercase;
+
+  summary {
+    font-size: var(--font-size-18);
+  }
+
+  &::details-content {
+    block-size: 0;
+    transition: block-size 1s, content-visibility 1s;
+    transition-behavior: allow-discrete;
+  }
+
+  &:open::details-content {
+    block-size: auto;
+  }
+
+  a.delete {
+    display: block;
+    margin-top: 6px;
+    text-align: right;
+  }
+}

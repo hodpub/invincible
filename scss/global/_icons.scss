@@ -1,0 +1,35 @@
+span.die-symbol {
+  content: "";
+  display: inline-block;
+  // width: calc($font-size * 1.2);
+  // height: calc($font-size * 1.2);
+  width: calc(var(--font-size-16) * 1.2);
+  height: calc(var(--font-size-16) * 1.2);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+
+  &.tag {
+    background-image: url(../assets/icons/dice-tag.svg);
+  }
+
+  &.ball {
+    background-image: url(../assets/icons/dice-ball.svg);
+  }
+
+  p.blue &,
+  %baseBox.blue &,
+  .chat-message & {
+    &.ball {
+      background-image: url(../assets/icons/dice-ball-darkblue.svg);
+    }
+
+    &.tag {
+      background-image: url(../assets/icons/dice-tag-darkblue.svg);
+    }
+  }
+
+
+
+
+}

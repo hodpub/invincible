@@ -1,0 +1,143 @@
+{
+  "id": "invincible",
+  "title": "Invincible",
+  "description": "The official Invincible – Superhero Roleplaying system for FoundryVTT!",
+  "version": "0.0.0",
+  "compatibility": {
+    "minimum": "13.346",
+    "verified": "13.348"
+  },
+  "authors": [
+    {
+      "name": "Cussa Mitre",
+      "url": "https://hodpub.com/",
+      "discord": "CussaMitre"
+    }
+  ],
+  "url": "https://github.com/hodpub/invincible",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "https://github.com/hodpub/invincible/issues",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/invincible/assets/invincible.webp",
+      "thumbnail": "systems/invincible/assets/invincible.webp"
+    }
+  ],
+  "esmodules": [
+    "system/invincible.mjs"
+  ],
+  "styles": [
+    "css/invincible.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "basic-data",
+      "label": "Quickstart",
+      "path": "packs/basic-data",
+      "type": "Adventure",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "invincible"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Invincible Quickstart",
+      "sorting": "m",
+      "color": "#0096cb",
+      "packs": [
+        "basic-data"
+      ]
+    }
+  ],
+  "socket": false,
+  "manifest": "https://github.com/hodpub/invincible/releases/latest/download/system.json",
+  "download": "https://github.com/hodpub/invincible/releases/latest/download/system.zip",
+  "background": "systems/invincible/assets/invincible.webp",
+  "grid": {
+    "type": 1,
+    "distance": 1,
+    "units": "m",
+    "diagonals": 0
+  },
+  "primaryTokenAttribute": "derived.health",
+  "secondaryTokenAttribute": "derived.resolve",
+  "documentTypes": {
+    "Actor": {
+      "superhero": {
+        "htmlFields": [
+          "biography"
+        ]
+      },
+      "npc": {
+        "htmlFields": [
+          "biography"
+        ]
+      },
+      "challenge": {
+        "htmlFields": [
+          "description"
+        ]
+      }
+    },
+    "Item": {
+      "powerSource": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "power": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "talent": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "drawback": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "gear": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "criticalInjury": {
+        "htmlFields": [
+          "description"
+        ]
+      }
+    }
+  },
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "css",
+        "lang",
+        "templates"
+      ]
+    }
+  }
+}

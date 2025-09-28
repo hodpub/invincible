@@ -1,0 +1,100 @@
+&.sheet.actor,
+&.sheet.item,
+&.roll-dialog {
+
+  border-radius: 0;
+  --color-text-primary: black;
+  --color-shadow-primary: #{$c-yellow};
+
+  .window-content {
+    backdrop-filter: unset;
+  }
+
+  .controls-dropdown {
+    --background: #{$c-darkblue};
+    z-index: 2;
+  }
+
+
+  .controls-dropdown .header-control>button,
+  .window-header button.header-control {
+    --button-focus-outline-color: #{$c-yellow};
+    --button-hover-background-color: #{$c-yellow};
+    --button-hover-text-color: black;
+    --color-text-primary: white;
+  }
+
+  input,
+  textarea,
+  select {
+    --input-background-color: white;
+    --input-text-color: black;
+    --input-border-color: none;
+    font-family: "Comic", sans-serif;
+    text-transform: uppercase;
+    // font-size: var(--font-size-16);
+    resize: none;
+    border-radius: 0;
+
+    &:disabled {
+      border: none;
+      background-color: lighten($c-yellow, 30%);
+    }
+  }
+
+  select {
+    font-size: var(--font-size-16);
+  }
+
+  input[type="checkbox"] {
+    --checkbox-checked-color: #{$c-darkblue};
+    --checkbox-background-color: #{$c-lightblue};
+
+    // &::before {
+    //   outline: 1px solid black;
+    // }
+  }
+
+  label.title {
+    @extend %title;
+
+    &.attribute {
+      position: relative;
+      margin-top: 10px;
+      display: block;
+      text-align: left;
+      margin-bottom: -20px;
+      z-index: 2;
+      top: 0;
+      left: 0;
+    }
+
+    &.dialog {
+      display: block;
+      position: static;
+      width: 100%;
+      margin: 0 auto 4px auto;
+      text-align: center;
+      font-size: var(--font-size-36);
+    }
+  }
+
+  div.powers-info,
+  div.talent-info,
+  div.injury-info {
+    font-family: Comic, sans-serif;
+    text-transform: uppercase;
+    font-size: var(--font-size-12);
+
+    label:first-child {
+      font-size: var(--font-size-18);
+      font-weight: bold;
+    }
+  }
+
+  div.powers-info:not(:last-child),
+  div.separator {
+    border-bottom: 2px solid $c-lightblue;
+    margin-bottom: 16px;
+  }
+}

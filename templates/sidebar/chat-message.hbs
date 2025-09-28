@@ -1,0 +1,39 @@
+<li class="chat-message message flexcol {{cssClass}}" data-message-id="{{message._id}}" {{#if
+    borderColor}}style="border-color:{{borderColor}}" {{/if}}>
+    <header class="message-header flexrow">
+        <span class="message-metadata">
+            <i class="fa-solid fa-user-secret message-type" data-tooltip="{{localize "CHAT.RollPrivate"}}"></i>
+            <i class="fa-solid fa-eye-slash message-type" data-tooltip="{{localize "CHAT.RollBlind"}}"></i>
+            <time class="message-timestamp">{{timeSince message.timestamp}}</time>
+            {{#if canDelete}}
+            <a aria-label="{{localize 'Delete'}}" class="message-delete" data-action="deleteMessage">
+                <i class="fa-solid fa-trash" inert></i>
+            </a>
+            {{/if}}
+            {{#if canClose}}
+            <a aria-label="{{ localize " CHAT.Dismiss" }}" class="message-dismiss" data-action="dismissMessage">
+                <i class="fa-solid fa-xmark" inert></i>
+            </a>
+            {{/if}}
+        </span>
+        <div class="sender">
+            {{#if message.flavor}}
+            <h4 class="flavor-text"><span class="padder left">&nbsp;</span><span
+                    class="padder right">&nbsp;</span>{{{message.flavor}}}</h4>
+            {{/if}}
+            <h4 class="message-sender">{{alias}}</h4>
+            {{#if speakerActor}}
+            <img class="avatar" src="{{speakerActor.img}}" />
+            {{else}}
+            <img class="avatar" src="systems/invincible/assets/icons/rolling-dices.svg" style="opacity: 0.25" />
+            {{/if}}
+        </div>
+
+        {{#if isWhisper}}
+        <span class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</span>
+        {{/if}}
+    </header>
+    <div class="message-content">
+        {{{message.content}}}
+    </div>
+</li>

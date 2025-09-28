@@ -1,0 +1,86 @@
+{
+  "folder": "ZEVp8aDYNNVhNpKz",
+  "type": "criticalInjury",
+  "img": "systems/invincible/assets/icons/criticalInjury.svg",
+  "name": "Concussed!",
+  "system": {
+    "description": "<p>You’ve suffered a severe blow to the head, giving you –2 dice to all <strong>REASON</strong>, <strong>INTUITION</strong>, and <strong>PRESENCE</strong> rolls until healed.</p>",
+    "lethal": false,
+    "healingTime": "A few days",
+    "automations": {}
+  },
+  "_id": "BQ2ZvGMxdvdn1GLB",
+  "effects": [
+    {
+      "name": "Concussed!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "origin": "Item.BQ2ZvGMxdvdn1GLB",
+      "_id": "xhdb4hWdZhOWcg5n",
+      "type": "base",
+      "system": {},
+      "changes": [
+        {
+          "key": "bonus.system.attributes.reason.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        },
+        {
+          "key": "bonus.system.attributes.intuition.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        },
+        {
+          "key": "bonus.system.attributes.presence.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "combat": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1758883496506,
+        "modifiedTime": 1758883520362,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    }
+  ],
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758882620961,
+    "modifiedTime": 1758924110421,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

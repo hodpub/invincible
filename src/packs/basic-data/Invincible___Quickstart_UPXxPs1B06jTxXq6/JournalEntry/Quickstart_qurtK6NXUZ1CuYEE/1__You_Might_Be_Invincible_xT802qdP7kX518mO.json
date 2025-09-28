@@ -1,0 +1,516 @@
+{
+  "name": "1: You Might Be Invincible",
+  "_id": "xT802qdP7kX518mO",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "1: You Might Be Invincible",
+      "type": "text",
+      "_id": "kgmAI49r1woNTd9O",
+      "system": {},
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\" class=\"chapter-page\"><div class=\"chapter-title\"><div class=\"number\"><p>Chapter One</p></div><p class=\"chapter\">You Might Be <span class=\"larger\">Invincible</span></p></div><div class=\"box blue right\"><p>Thanks for downloading this free Quickstart PDF! The Kickstarter for the full<span class=\"italic\"> Invincible – Superhero Roleplaying </span>game, in print and digital formats, will continue until <span class=\"bold\">October 16.</span> Don't miss out!</p></div><img style=\"margin-top:170px;margin-left:-24px;width:98%;shape-outside:url(systems/invincible/assets/book/art/hq-01.webp);shape-margin:24px;float:left\" class=\"floatimage\" src=\"systems/invincible/assets/book/art/hq-01.webp\" /><div class=\"chapter\" style=\"height:850px\"><p><span class=\"sans bold\">Welcome to Invincible – Superhero Roleplaying,</span> an action-packed storytelling experience where you and your friends become superheroes in the Invincible universe.</p><p class=\"indent\">This free quickstart <span class=\"small-caps\">PDF</span> gives you a brief taste of <span class=\"italic\">Invincible – Superhero Roleplaying</span> and includes condensed rules, five pre-generated characters, character standees, an action map, and The Clone Job – the first act of <span class=\"italic\">Metro Mayhem</span>, the introductory adventure to be concluded in the upcoming <span class=\"italic\">Invincible – Superhero Roleplaying Starter Set</span>.</p><p class=\"indent\">Beyond this <span class=\"small-caps\">PDF</span>, you’ll need a fistful of six-sided dice, ten cards numbered 1 to 10 (using the ace as 1), some pencils, and 3–5 friends to play with. Access to a printer to print out the character sheets, character standees and the action map is also useful, but you can also play online using a virtual tabletop.</p><p class=\"indent\">Enjoy!</p></div></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "What Is This Game?",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">Based on the iconic</span> comic series from Skybound Entertainment, this game is filled with everything we love about superhero stories – costumes, epic brawls, alien invasions, and alternate dimensions – often subverted in unexpected ways. Any trope can exist, and any trope can be turned on its head.</p><div class=\"box blue left\"><p class=\"box-header\">Work In Progress</p><p>This PDF is a work in progress and part of the development process for the full Invincible – Superhero Roleplaying game, including a boxed Starter Set, a Core Rulebook, full virtual tabletop support, and a wide range of supplements in the future. We welcome your feedback, which you are welcome to post on the forum dedicated to Invincible – Superhero Roleplaying on the Free League website. Thank you for your support!</p></div><p class=\"indent\">In the series, high school student Mark Grayson discovers his father, Omni-Man, is the world’s most powerful superhero. Mark gains his own powers and becomes Invincible, but quickly learns that being a superhero isn’t everything he imagined it would be. His world shatters when Omni-Man reveals his true Viltrumite heritage and his role in killing the Guardians of the Globe, the world’s top super-team. After a brutal fight, Omni-Man badly defeats his son and departs Earth, leaving Mark to pick up the pieces.</p><img class=\"floatimage\" src=\"systems/invincible/assets/book/art/invincible-42-cutout.webp\" style=\"width:47%;shape-outside:url(systems/invincible/assets/book/art/invincible-42-cutout.webp);shape-margin:1rem;margin-right:-3rem;float:right\" /><p class=\"indent\">Now, the secret government organization called the Global Defense Agency, run by the canny Cecil Stedman, handles damage control to minimize the shock and public fallout from the battle between two of the world’s mightiest heroes. To fill the gap left by Omni-Man, the GDA has commissioned a new iteration of the Guardians of the Globe team led by the mechanical hero Robot, recruiting new heroes to defend a world that badly needs them.</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.kgmAI49r1woNTd9O",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "7VUIKFCbgYi5SRLm",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Roleplaying Invincible",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">If you’ve never played</span> a roleplaying game before, you’re about to experience a whole new way to engage with stories unlike anything you can get with other forms of entertainment.</p><p class=\"indent\">In a tabletop roleplaying game (<span class=\"small-caps\">RPG</span>), each player – except one – chooses or creates a player character (<span class=\"small-caps\">PC</span>) hero that teams up with other characters played by their friends. One player takes on the role of the Gamemaster (<span class=\"small-caps\">GM</span>), who describes the world and portrays all the non-player characters (<span class=\"small-caps\">NPC</span>s) the player characters encounter.</p><p class=\"indent\">The game is a collaborative story told between the <span class=\"small-caps\">GM </span>and the players. Using a pre-written adventure or their own designs, the <span class=\"small-caps\">GM</span> sets up challenges and scenarios, while the players choose how their characters respond – whether it’s battling enemies, overcoming hazards, or facing unexpected dangers. Together, you shape the outcome of the story.</p><p class=\"indent\">As a player, you decide how your character thinks, feels, and reacts, but neither you nor the <span class=\"small-caps\">GM</span> decide what ultimately happens in the game – that’s determined by the rules and rolling dice. You play the game to find out how your story unfolds.</p><h2>Adventures &amp; Campaigns</h2><p><span class=\"italic\">Invincible – Superhero Roleplaying</span> can be played in two modes – as separate adventures or in an ongoing campaign. These modes provide a framework to manage expectations whenever you come together to play – around a table or remotely online – for a game session. A session should typically feel like a single issue of a comic.</p><p class=\"indent\">Adventures are brief standalone stories, intended to feel like a short comic event or crossover. Most adventures are designed to be played in a session or two and they can include pre-generated heroes, such as @UUID[JournalEntry.d7S41u6UyXvsaqNP.JournalEntryPage.kgmAI49r1woNTd9O]{2: The Clone Job}.</p><p class=\"indent\">Campaigns are designed for a longer continuous story with the same cast of player characters over multiple game sessions, allowing you to explore the Invincible universe in a sandbox style, whether that is patrolling the streets or journeying to the far reaches of space. Guidance on how to explore this game mode can be found in the complete Core Rulebook for <span class=\"italic\">Invincible – Superhero Roleplaying</span>.</p><p class=\"indent\">There is no hard line between the two game modes, as adventures can be extended or incorporated into longer campaigns.</p><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-022-cover-clr.webp\" /><h2>Scenes</h2><p><span class=\"italic\">Invincible – Superhero Roleplaying</span> is played in scenes. There are three main types of scenes in the game: briefings, action scenes, and social scenes.</p><ul><li><span class=\"sans bold\">Briefings</span> give the heroes information about where to go and what to do. An adventure typically starts with a briefing scene, but briefings can occur midway through the game as well.</li><li><span class=\"sans bold\">Action scenes</span> are focused on action and combat and typically involve the entire team of heroes working together. Often, but not always, action scenes are played out on a battle map.</li><li><span class=\"sans bold\">Social scenes</span> are all about roleplaying and social interactions. Typically, a social scene involves two or three heroes, or one hero and one or more <span class=\"small-caps\">NPC</span>s. A social scene will allow the heroes to recover lost Health and Resolve.</li></ul><div class=\"box blue\"><p class=\"box-header\">Safety Tools</p><p>Invincible – Superhero Roleplaying presents a dangerous universe with graphic violence and situations that raise issues relating to personal morality. That said, this is still a game, and no players should be forced to deal with topics they find distressing in real life, or that make them feel unsafe at the table.</p><p class=\"indent\">To make sure everyone is having fun and feeling safe, we recommend that you use safety tools before, during, and after the game. Examples of such safety tools are pregame discussions about lines and veils for subjects that players want to avoid or keep off-screen, safety cards to be shown during play by a player to indicate that they feel uncomfortable with what is happening in the game, and post-game debriefings.</p><p class=\"indent\">Always respect any player’s wish to raise a concern at any time during the game or even to leave the table if they want to. And don’t forget to take breaks. More information about safety tools in tabletop roleplaying can be found online.</p></div><p>Often, but not always, each hero will get the chance to play a social scene between each action scene. An adventure will typically outline the suggested scenes to play. In campaign play, the players and the <span class=\"small-caps\">GM</span> will create the story together, suggesting scenes to play as the campaign progresses.</p><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-069-cover-clr.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.7VUIKFCbgYi5SRLm",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "AerTh9HkdJIGEOGm",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Superheroes",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">Your player character </span>– your hero – is your most important asset in <span class=\"italic\">Invincible – Superhero Roleplaying</span>. Your hero is your avatar in the game world, one of the driving forces behind the story you are telling with your group.</p><p class=\"indent\">This section describes the core features of a hero in this game. You can find five pre-made heroes bundled with this <span class=\"small-caps\">PDF</span>, and the complete Core Rulebook for <span class=\"italic\">Invincible – Superhero Roleplaying</span> explains in detail how to create your own hero.</p><p class=\"indent\"><span class=\"sans bold\">Character Sheet: </span>To keep track of your character’s game stats, you need a character sheet. At the end of this <span class=\"small-caps\">PDF</span> you will find five character sheets that are already filled in for you, and you can download blank character sheets from the Free League website.</p><h2>Role</h2><p>Your role describes how you operate as a hero within your group or team. The role has no mechanical effect, but it can influence how you play your character.</p><ul><li><span class=\"sans bold\">Blaster:</span> You excel at dealing devastating attacks from a distance.</li><li><span class=\"sans bold\">Brains:</span> You adapt to any situation by using cunning and strategy to outsmart your opponents.</li><li><span class=\"sans bold\">Brawn:</span> You are a physical force that relishes surviving and delivering damage.</li><li><span class=\"sans bold\">Controller:</span> You are a master of hindering enemies, assisting allies, and managing the battlefield.</li><li><span class=\"sans bold\">Defender:</span> You are a protector that safeguards allies and engages enemies on the front lines.</li><li><span class=\"sans bold\">Leader:</span> You guide and support your allies with coordination, tactics, will, or inspiration.</li><li><span class=\"sans bold\">Striker:</span> You are a relentless force in close combat that balances strength and mobility.</li><li><span class=\"sans bold\">Wildcard:</span> You are adaptable and unpredictable, overcoming challenges with your versatility.</li></ul><h2>Attributes</h2><div class=\"box blue right\"><p class=\"box-header\">Attribute Scores</p><table><thead><tr><th><p><span class=\"sans bold\">Score</span></p></th><th><p><span class=\"sans bold\">Description</span></p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p>Poor</p></td></tr><tr><td><p>2</p></td><td><p>Typical</p></td></tr><tr><td><p>3</p></td><td><p>Good</p></td></tr><tr><td><p>4</p></td><td><p>Great</p></td></tr><tr><td><p>5</p></td><td><p>Extraordinary</p></td></tr><tr><td><p>6</p></td><td><p>Incredible</p></td></tr><tr><td><p>7</p></td><td><p>Amazing</p></td></tr><tr><td><p>8</p></td><td><p>Astounding</p></td></tr><tr><td><p>9</p></td><td><p>Phenomenal</p></td></tr><tr><td><p>10</p></td><td><p>Awesome</p></td></tr><tr><td><p>11</p></td><td><p>Godlike</p></td></tr><tr><td><p>12</p></td><td><p>Invincible</p></td></tr></tbody></table></div><p>Your hero has six attributes that indicate your capabilities – three physical and three mental. Each attribute is rated on a scale from 1 to 12. The adjacent table provides a description associated with the value of an attribute score. Typical untrained civilians have attribute level 2, but superheroes generally have much higher scores.</p><ul><li><span class=\"sans bold\">FIGHTING:</span> Hand-to-hand combat, technique, and prowess</li><li><span class=\"sans bold\">AGILITY:</span> Coordination, speed, mobility, and fine motor skills</li><li><span class=\"sans bold\">STRENGTH:</span> Muscle power, physical force, toughness, and stamina</li><li><span class=\"sans bold\">REASON:</span> Intelligence, comprehension, knowledge, and mental stability</li><li><span class=\"sans bold\">INTUITION:</span> Instinct, sensory perception, wisdom, and empathy</li><li><span class=\"sans bold\">PRESENCE:</span> Charisma, amiability, and force of personality</li></ul><img class=\"floatimage\" src=\"systems/invincible/assets/book/art/hq-03.webp\" style=\"width:42%;margin-bottom:0;margin-right:16px;float:left\" /><p>Your attributes are used when you roll dice to perform actions in the game, as well as for determining how much damage and stress you can withstand before you become @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.USYFvBih0DDZxI0N#broken-by-damage]{Broken by Damage}.</p><p class=\"indent\"><span class=\"sans bold\">Base Slugfest Damage:</span> Your base damage for slugfest attacks is equal to half your <span class=\"bold serif small-caps\">STRENGTH</span> score, rounded up. Read more about this on @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb]{Slugfest}.</p><h2>Health</h2><p>Taking damage reduces your Health. When your Health is reduced to zero, you’re broken by <span class=\"sans bold\">damage</span>. Your starting maximum Health equals the sum of your <span class=\"bold serif small-caps\">FIGHTING</span>, <span class=\"bold serif small-caps\">AGILITY</span>, and <span class=\"bold serif small-caps\">STRENGTH</span> scores divided by two, rounding up. Your Health score can be further modified by talents, drawbacks, and powers.</p><h2>Resolve</h2><p>Taking stress reduces your Resolve. When your Resolve is reduced to zero, you’re @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.CGRiVbFtdTO9vVkZ#broken-by-stress]{Broken by Stress}. Your starting maximum Resolve equals the sum of your <span class=\"bold serif small-caps\">REASON</span>, <span class=\"bold serif small-caps\">INTUITION</span>, and <span class=\"bold serif small-caps\">PRESENCE</span> scores divided by two, rounding up, Your Resolve can be affected by talents, drawbacks, and powers.</p><h2>Powers</h2><p>All heroes in this game possess superhuman capabilities called powers. The complete Core Rulebook for <span class=\"italic\">Invincible – Superhero Roleplaying</span> includes dozens of powers. In this quickstart, all relevant powers are described either on the pre-made character sheets for the heroes or in <span class=\"small-caps\">NPC</span> descriptions in the adventure at the back of the <span class=\"small-caps\">PDF</span>.</p><p class=\"indent\"><span class=\"sans bold\">Power Levels:</span> Some (but not all) powers come in levels. For now, suffice to say that a Major power is more powerful than a basic power, and a Massive power is even more powerful.</p><p class=\"indent\"><span class=\"sans bold\">Power Boosts:</span> Some powers have boosts, modifying their effects in various ways.</p><p class=\"indent\"><span class=\"sans bold\">Power Source:</span> Your powers have a power source that describes where they come from and helps you roleplay their use.</p><h2>Talents &amp; Drawbacks</h2><p>Talents are tricks, moves, and minor abilities that give you an edge. Drawbacks are limitations or vulnerabilities that can complicate life for your hero. All relevant talents and drawbacks for this quickstart are described either on the pre-made character sheets for the heroes or in the <span class=\"small-caps\">NPC</span> descriptions at the back of the <span class=\"small-caps\">PDF</span>. Many more will be included in the complete Core Rulebook for <span class=\"italic\">Invincible – Superhero Roleplaying</span>.</p><h2>Personal Stuff</h2><p>Your character sheet also includes a range of personal information. These features, listed below, help you roleplay your character but also have more specific uses explained in the complete Core Rulebook for <span class=\"italic\">Invincible – Superhero Roleplaying</span>.</p><p class=\"indent\"><span class=\"sans bold\">Occupation:</span> Your occupation represents your background, civilian life, or day job if you have one. There are over 20 occupations to choose from in the Core Rulebook.</p><p class=\"indent\"><span class=\"sans bold\">Personality:</span> The way your hero is initially perceived by others is determined by your personality.</p><p class=\"indent\"><span class=\"sans bold\">Drive:</span> The reason why you expose yourself to the dangers and challenges of being a superhero is called your drive.</p><p class=\"indent\"><span class=\"sans bold\">Flaw:</span> Your character in this game is a hero, risking life and limb for others (or your drive), but even a hero has a weakness, a flaw that can get you into trouble and you struggle to overcome.</p><p class=\"indent\"><span class=\"sans bold\">Key Relationships:</span> Each hero in the game has at least one key relationship – someone that plays a big role in your life, whether they are another hero, a family member, friend, rival, significant other, boss, or even pet. Key relationships are often used in @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.AerTh9HkdJIGEOGm#scenes]{Social Scenes}.</p><h2>Resources &amp; Gear</h2><p><span class=\"italic\">Invincible – Superhero Roleplaying</span> is not a game about collecting loot or managing equipment, but some characters use gadgets, technology, or weapons as part of their powers. Beyond this, your hero also has a Resources score that reflects your standard of living that you can use to acquire equipment outside of any gear related to powers. This is explained in detail in the Core Rulebook.</p><h2>Reputation</h2><p>As a superhero, word of your deeds will spread far and wide – if you do it long enough and make an impact. This is represented by your Reputation score, which will determine the chance of you being recognized and can affect both action and social scenes. Reputation is not used in this quickstart.</p><img class=\"hq\" src=\"systems/invincible/assets/book/art/invinciblecompv2.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.AerTh9HkdJIGEOGm",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "R6CwscVJo2lwrNpR",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Rolling Dice",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><div class=\"box blue right\"><img src=\"systems/invincible/assets/book/art/in-dice.webp\" /><p class=\"box-header\">Custom Dice</p><p>A set of dice specifically created for the game will be available for purchase separately and will also be included in the upcoming Starter Set. These custom dice have the <span class=\"die-symbol tag\"> </span> symbol on the 6 side and the <span class=\"die-symbol ball\"> </span> symbol on the 1 side. Rolling a usually means that the roll succeeds.</p></div><p><span class=\"sans bold\">To attempt something </span>difficult or dangerous, roll a number of six-sided dice equal to your attribute score that best matches the challenge at hand or your power level as detailed in the power’s description. To succeed, you need to roll at least one 6, represented by the <span class=\"die-symbol tag\"> </span> symbol.</p><p class=\"indent\"><span class=\"sans bold\">When to Roll:</span> Generally, this rulebook or the adventure text will indicate when to roll dice and what attribute or power to roll for. However, the <span class=\"small-caps\">GM</span> can always call for a roll in a situation they feel warrants it. We recommend against excessive dice rolling however, saving the rolls for dramatic and tense situations where something is truly at stake.</p><h2>Stunts</h2><p>If you roll more than one <span class=\"die-symbol tag\"> </span> in a skill roll, you can achieve bonus effects called stunts. For attacks, the stunts you can choose from are clearly specified (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#slugfest-stunts]{Slugfest Stunts} and @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.U68Z5GwD4P0JX4Fz#stunts]{Stunts}). In other situations, a stunt could mean any number of things, specified by the adventure or suggested by the <span class=\"small-caps\">GM</span> or yourself. Some examples:</p><ul><li>You show off.</li><li>You do it quickly.</li><li>You do it quietly.</li><li>You achieve some unexpected additional effect.</li></ul><p>The <span class=\"small-caps\">GM</span> has final say on what stunts can be used in any situation.</p><h2>Failure</h2><p>If you roll no <span class=\"die-symbol tag\"> </span>, something goes wrong. For some reason, you failed to achieve your goal. Feel free to elaborate on why you failed with the help of the <span class=\"small-caps\">GM</span>. They might even let a failed roll have further consequences to move the story forward in a dramatic way. You have one last chance if you really need to succeed – you can push the roll.</p><img class=\"floatimage\" src=\"systems/invincible/assets/book/art/hq-04.webp\" style=\"shape-outside:url(systems/invincible/assets/book/art/hq-04.webp);shape-margin:16px;width:94%;margin-top:1rem;float:right\" /><h2>Pushing Your Roll</h2><p>If you fail a roll, or just want more <span class=\"die-symbol tag\"> </span>, you can push the roll. Grab all dice that don’t show a <span class=\"die-symbol tag\"> </span> or a <span class=\"die-symbol ball\"> </span> and roll them again. All dice count after the re-roll, including the ones not re-rolled. For each 1 (represented by the <span class=\"die-symbol ball\"> </span> symbol and engraved on the custom dice for this game) rolled after a push, you take 1 point of stress.</p><p class=\"indent\"><span class=\"sans bold\">Passive Rolls:</span> You can only push rolls when you actively perform an action. When passive or unaware, for example when rolling for <span class=\"bold serif small-caps\">INTUITION</span> to see if you spot a @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.UqxbrltXCyqybJBX#surprise-attack]{Surprise Attack}, you cannot push the roll.</p><p class=\"indent\"><span class=\"sans bold\">Only Once:</span> You can normally only push a roll once. Certain talents can allow you to push a roll twice, however.</p><p class=\"indent\"><span class=\"sans bold\">NPCs:</span> The <span class=\"small-caps\">GM</span> makes dice rolls for <span class=\"small-caps\">NPC</span>s in the same way as players for their heroes. Major <span class=\"small-caps\">NPC</span>s can push rolls just like heroes, but should do so sparingly.</p><h2>Roll Modifiers</h2><p>The rules, the adventure text, or the <span class=\"small-caps\">GM</span> can modify your chances of success, adding or removing dice for you to roll. This is referred to as +1 die, +2 dice, etc., and conversely –1 die, –2 dice, etc. You can never go below one die.</p><p class=\"indent\"><span class=\"sans bold\">Gear:</span> Equipment can modify your roll, but not always. Sometimes a specific item is needed just to perform an action.</p><h2>Help From Others</h2><p>Up to three other allies can help you with a dice roll. Each ally helping you gives you +1 die, but they need to be in a position to actually support your action in a concrete way – just speaking to you is not enough. The <span class=\"small-caps\">GM</span> has final say.</p><h2>Opposed Rolls</h2><p>Sometimes rolling a <span class=\"die-symbol tag\"> </span> isn’t enough to succeed with your attribute or power roll. To win an opposed roll, you have to roll successfully and roll more <span class=\"die-symbol tag\"> </span> than your adversary. Every <span class=\"die-symbol tag\"> </span> your adversary rolls eliminates one of your <span class=\"die-symbol tag\"> </span>. Only you – the active party – can push the roll.</p><p class=\"indent\"><span class=\"sans bold\">Breaking a Tie:</span> If you and your opponent roll the same number of <span class=\"die-symbol tag\"> </span>, the result is a tie. Typically, your action will fail if you roll a tie as the active party in an opposed roll, but in some cases, ties have specific effects. If a tie needs to be broken, re-roll the opposed roll to determine the outcome.</p><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-048-cover-clr-intro.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.R6CwscVJo2lwrNpR",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "MW5XEMuISl5dOzPg",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Maps & Zones",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><h2>Action Maps</h2><p>An action scene in this game is typically played out using an action map of the area. A sample action map is included in the adventure in this <span class=\"small-caps\">PDF</span>, <span class=\"sans bold\">The Clone Job </span>– it is recommended that you download and print it for your table, or upload it to your virtual tabletop.</p><div class=\"box blue left\"><p class=\"box-header\">Playing Without Maps</p><p>Although action maps can be useful, you can choose not to use them and let certain action scenes play out only in the “theater of the mind.” In this case, the GM needs to determine distances between the heroes and their adversaries.</p></div><p class=\"indent\">Several large action maps will come with the Starter Set for <span class=\"italic\">Invincible – Superhero Roleplaying</span> and other expansions. Maps with less detail work as well – even quickly hand-drawn sketches by the <span class=\"small-caps\">GM</span> are fine for more improvised play.</p><h2>Character Standees</h2><p>To track movement on the action map, you can use the cutout character standees at the end of this <span class=\"small-caps\">PDF</span>. Simply download, print, cut them out, fold along the dotted lines and glue them together – or use the figures on your virtual tabletop. Sturdy cardboard standee figures will be included in the <span class=\"italic\">Invincible – Superhero Roleplaying Starter Set.</span></p><h2>Zones</h2><p>The action map is divided into zones. A zone is typically a room, a rooftop, or an area of ground up to about 100 feet wide. A zone is generally smaller in a cramped environment than in open terrain.</p><p class=\"indent\"><span class=\"sans bold\">Borders:</span> A border between two adjacent zones is either open or blocked (typically by a wall). A blocked border can have a door, as indicated by the map, allowing movement between the two zones. In official adventures, zone borders are indicated by walls or by dotted lines on the action map.</p><p class=\"indent\"><span class=\"sans bold\">Distance:</span> The distance between you and your opponents is counted in zones – simply count the number of zone borders between you following the shortest route. If you are in the same zone, the distance is 0 zones.</p><h2>Altitude</h2><p>Several powers and vehicles allow vertical movement, and characters can move through a building up to the rooftop. Altitude is abstracted into three levels:</p><ul><li><span class=\"sans bold\">Elevated:</span> On a rooftop or airborne at a similar height. Elevated characters are considered to be one zone above ground, and all elevated characters in the same horizontal zone are in the same zone. Elevated characters cannot be attacked from the ground in slugfest (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.y9X9ORoPWdI1QSeJ#vertical-movement]{Vertical Movement}), except using special powers or by @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#huge-creatures]{Huge Creatures}.</li><li><span class=\"sans bold\">Sky High:</span> Above the clouds and out of sight from the ground. All characters at sky high altitude are removed from the action map and considered to be in the same zone. Characters at other altitudes cannot attack, or be attacked by, characters at sky high altitude, even by ranged weapons.</li><li><span class=\"sans bold\">In Orbit:</span> Outside the planet’s atmosphere. The <span class=\"bold serif small-caps\">LIFE SUPPORT</span><span class=\"small-caps\"> </span>power or a spacesuit is needed to be here without being killed by the vacuum of space. All characters in orbit are removed from the action map and considered to be in the same zone. Characters at other altitudes cannot attack, or be attacked by, characters in orbit, even by ranged weapons. Read more about @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.y9X9ORoPWdI1QSeJ#vertical-movement]{Vertical Movement} .</li></ul><p class=\"indent\"></p><p><span class=\"sans bold\">Large Buildings:</span> Larger and more complex buildings can have several floors described in detail. In such cases, each floor is considered a separate vertical zone.</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.MW5XEMuISl5dOzPg",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "FckwxiONaGWQjdj3",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Rounds & Initiative",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><img class=\"hq no-border right\" src=\"systems/invincible/assets/book/art/invinciblecompv1-15.webp\" /><p><span class=\"sans bold\">Action scenes </span>are played out in rounds, each approximately 5–10 seconds long. At the start of each round, the first step is to decide who has the initiative – the order in which combatants will act during the round.</p><h2>Drawing the Initiative</h2><p>To determine the initiative, ten cards numbered 1 to 10 are used. You can use ordinary playing cards, removing the face cards and counting aces as 1. A custom initiative card deck will be included in the Starter Set for <span class=\"italic\">Invincible – Superhero Roleplaying</span>.</p><p class=\"indent\">Each player in the fight draws a random card at the beginning of each round, and the <span class=\"small-caps\">GM</span> draws cards for <span class=\"small-caps\">NPC</span>s. The number on the card determines the order in which you act in the round. Card #1 acts first, card #2 acts second, and so forth until everyone has acted.</p><p class=\"indent\"><span class=\"sans bold\">Your Turn:</span> Your place in the initiative order is called your turn. Your “previous turn” or “your next turn” can occur in the current round or the previous/next round, depending on if you’ve had your turn in the current round yet.</p><div class=\"box blue left\"><p class=\"box-header\">NPC Initiative</p><p>To make things simple, particularly in large battles, the GM can draw a single initiative card for a group of NPCs. All NPCs in that group act on the same turn in the round. The order among them is decided by the GM. When a PC holds off to swap initiative cards (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.UqxbrltXCyqybJBX#holding-off]{Holding Off}), they swap initiative with the whole NPC group.</p></div><p class=\"indent\">Place your initiative card by your character sheet so everyone can see the order in which each Hero acts. The <span class=\"small-caps\">GM</span> puts their card (or cards) in front of them. When all participants have had their turn, the round is over, and a new round begins by drawing the initiative again.</p><p class=\"indent\"><span class=\"sans bold\">Additional Turns:</span> Some exceptional beings have powers that allow them to take more than one turn per round, drawing an initiative card for each.</p><p class=\"indent\"><span class=\"sans bold\">Helping: </span>If you help another hero (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.MW5XEMuISl5dOzPg#help-from-others]{Help From Others}) in an action scene, your full action is spent on the other hero’s turn, regardless of your own initiative.</p><h2>Surprise Attack</h2><p>If combat starts with an attack that the <span class=\"small-caps\">GM</span> deems to be surprising, the defender(s) must roll for <span class=\"bold serif small-caps\">INTUITION</span>. It’s a passive roll that cannot be pushed. All defenders who fail the roll automatically get the highest (worst) initiative card(s) in the first round of combat. Distribute these randomly before letting the other combatants draw initiative. For example, if three heroes fail their <span class=\"bold serif small-caps\">INTUITION</span> rolls, they get the 8, 9, and 10 cards, randomly distributed. At the start of the second round, everyone draws the initiative as usual.</p><h2>Holding Off</h2><p>At your turn in the round, you can choose to hold off. This means that you swap initiative cards – and therefore places in the turn order – with another hero or <span class=\"small-caps\">NPC</span> (or <span class=\"small-caps\">NPC</span> group) whose turn comes after yours. They cannot refuse the trade. You cannot swap initiative cards with someone who has already had their turn, nor someone who themselves chose to hold off earlier in the round.</p><p class=\"indent\"><span class=\"sans bold\">Note:</span> All rules effects that are triggered “on your turn” are moved in the turn order when initiative cards are swapped. Your turn doesn’t happen until you use it.</p><p class=\"indent\"><span class=\"sans bold\">Interrupt Actions: </span>Quick actions that occur out of turn (such as blocking or dodging) are not affected by holding off – spent quick actions still count as spent, even if you get a new initiative number. Even if you have spent two quick actions as interrupt actions earlier in the round, and thus don’t get any action on your turn, you can still hold off and swap cards when your turn comes – this can be useful to give another hero an earlier spot in the turn order.</p><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-099-cover-clr.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.FckwxiONaGWQjdj3",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "UqxbrltXCyqybJBX",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Actions",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><h2>Full &amp; Quick Actions</h2><p>Each round, you can perform one full action and one quick action, or two quick actions. You can perform your actions in any order you like.</p><p class=\"indent\"><span class=\"sans bold\">Full Action: </span>This is often an attack or another use of a power, but can be anything you could reasonably do in less than 10 seconds that requires your full focus. It typically requires an attribute roll. See the adjacent list for examples. A full action can only be performed on your turn in the round.</p><p class=\"indent\"><span class=\"sans bold\">Quick Action:</span> These are faster than full actions and don’t necessarily demand a roll (though some do). Quick actions include movement. See the adjacent list for examples. Some quick actions can be performed out of turn, to interrupt the actions of opponents. On your turn, you can save your quick action for an interrupt action to use later in the round. If you perform two quick actions in the same round, you forfeit your full action.</p><p class=\"indent\"><span class=\"sans bold\">Action Reset:</span> All actions are reset at the start of a new combat round. Actions can never be saved from one round to the next.</p><h2>Giving Orders</h2><p>As a full action, you can give orders to another character. The target must be able to hear you, even if via a device or through a power. Roll for <span class=\"bold serif small-caps\">PRESENCE</span>. For every <span class=\"die-symbol tag\"> </span> you roll, the target gets +1 die to one roll later in the same round, but only for carrying out the order you gave.</p><div class=\"actions\"><div class=\"flexrow\"><div class=\"attribute\"><p>Full Action</p></div><p class=\"plus\">+</p><div class=\"attribute\"><p>Quick Action</p></div></div><p class=\"centered sans\">or</p><div class=\"flexrow\"><div class=\"attribute\"><p>Quick Action</p></div><p class=\"plus\">+</p><div class=\"attribute\"><p>Quick Action</p></div></div></div><div class=\"box blue\"><p class=\"box-header\">Mark Your Actions</p><p>To keep track of your actions in the round, a tip is to keep your initiative card face-up and vertical at the start of the round. Turn it horizontally when you perform a quick action. Flip the card over when you perform a full action or your second quick action. When the card is both rotated and flipped, you’re done for the round! At the beginning of a new round, flip your card over again.</p></div><div class=\"box blue\"><p class=\"box-header\">Full Actions</p><table><tbody><tr><td><p><span class=\"sans bold\">Action</span></p></td><td><p><span class=\"sans bold\">Attribute Used</span></p></td></tr><tr><td><p>Slugfest attack</p></td><td><p><span class=\"sans bold small-caps\">FIGHTING</span></p></td></tr><tr><td><p>Charge attack</p></td><td><p><span class=\"sans bold small-caps\">STRENGTH</span></p></td></tr><tr><td><p>Shooting attack</p></td><td><p><span class=\"sans bold small-caps\">AGILITY</span></p></td></tr><tr><td><p>Use a power</p></td><td><p>Varies</p></td></tr><tr><td><p>Break or lift something</p></td><td><p><span class=\"sans bold small-caps\">STRENGTH</span></p></td></tr><tr><td><p>Interact with technology</p></td><td><p><span class=\"sans bold small-caps\">REASON</span></p></td></tr><tr><td><p>Stabilize a dying character</p></td><td><p><span class=\"sans bold small-caps\">REASON</span></p></td></tr><tr><td><p>Give orders</p></td><td><p><span class=\"sans bold small-caps\">PRESENCE</span></p></td></tr><tr><td><p>Rally a broken character</p></td><td><p><span class=\"sans bold small-caps\">PRESENCE</span></p></td></tr><tr><td><p>Persuade someone</p></td><td><p><span class=\"sans bold small-caps\">PRESENCE</span></p></td></tr><tr><td><p>Fly sky high or into orbit</p></td><td><p>–</p></td></tr></tbody></table></div><div class=\"box blue\"><p class=\"box-header\">Quick Actions</p><table><tbody><tr><td><p><span class=\"sans bold\">Action</span></p></td><td><p><span class=\"sans bold\">Attribute Used</span></p></td></tr><tr><td><p>Move into an adjacent zone</p></td><td><p>–</p></td></tr><tr><td><p>Block a slugfest attack</p></td><td><p><span class=\"sans bold small-caps\">FIGHTING</span></p></td></tr><tr><td><p>Dodge a shooting attack</p></td><td><p><span class=\"sans bold small-caps\">AGILITY</span></p></td></tr><tr><td><p>Pick up an item</p></td><td><p>–</p></td></tr><tr><td><p>Scan an area for details</p></td><td><p><span class=\"sans bold small-caps\">INTUITION</span></p></td></tr><tr><td><p>Action banter</p></td><td><p><span class=\"sans bold small-caps\">PRESENCE</span></p></td></tr><tr><td><p>Start a vehicle</p></td><td><p>–</p></td></tr><tr><td><p>Enter/exit a vehicle</p></td><td><p>–</p></td></tr><tr><td><p>Handle a vehicle</p></td><td><p><span class=\"sans bold small-caps\">AGILITY</span></p></td></tr><tr><td><p>Use item</p></td><td><p>Varies</p></td></tr></tbody></table></div><img class=\"floatimage\" src=\"systems/invincible/assets/book/art/battlebeast-invincible-115-cover-masked.webp\" style=\"width:76%;margin-top:-5rem;margin-right:-1rem;margin-bottom:-2rem\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.UqxbrltXCyqybJBX",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "BM9oGBNrLdYHTWVK",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Movement",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">Movement in an action scene</span> can be both horizontal and vertical. Some powers allow you to move in special ways.</p><h2>Ground Movement</h2><p>To move horizontally on the action map, you simply need to spend a quick action to go from a zone to an adjacent zone. Moving inside a zone requires no action at all but can only be done on your turn.</p><div class=\"box blue right\"><p class=\"box-header\">Airborne Characters</p><p>Some powers and vehicles allow you to stay airborne (at elevated altitude) at the end of a move. Make a note of this or mark it using a token of some sort.</p></div><h2>Vertical Movement</h2><p>Some powers and vehicles allow vertical movement. Using these, you can also move over the top of buildings and other elevated positions without hindrance, and you can choose to end your movement on a rooftop. Some powers also allow you to end your movement airborne (see the adjacent sidebar). Vertical movement between the levels of @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.FckwxiONaGWQjdj3#altitude]{Altitude} works as follows:</p><ul><li><span class=\"sans bold\">Elevated:</span> Moving between the ground and elevated altitude is a quick action and can even be done as part of a horizontal movement without requiring a separate action.</li><li><span class=\"sans bold\">Sky High:</span> Moving between sky high altitude and any other altitude requires one full action (not just a quick action).</li><li><span class=\"sans bold\">In Orbit:</span> Moving between orbit and any other altitude requires one full action.</li></ul><p><span class=\"sans bold\">Falling:</span> A fall from elevated altitude inflicts [[/r D6]] points of damage, while a fall from sky high altitude inflicts [[/r 2D6]] points of damage. Roll for <span class=\"bold serif small-caps\">AGILITY</span> (no action) – each <span class=\"die-symbol tag\"> </span> rolled eliminates 1 point of damage. If there is anything to grab onto on the way down, a success on the <span class=\"bold serif small-caps\">AGILITY</span> roll will negate the damage completely. Some powers fully negate the risk of falling, and if in orbit, you won’t fall.</p><h2>Buildings</h2><p>Moving into a building can be done with a simple movement action (unless its doors are locked, see below). Typical buildings on a city map are considered a single zone for both horizontal and vertical movement, meaning that moving up to the rooftop (elevated altitude) from inside the building requires one (quick) movement action.</p><p class=\"indent\">Larger and more complex buildings can have several floors, each counting as one zone for vertical movement inside the building (through stairwells) and with each floor having multiple horizontal zones. Even in the case of such buildings, the rooftop can be reached from the outside with a single move for characters or vehicles capable of vertical movement.</p><p class=\"indent\"><span class=\"sans bold\">Doors &amp; Hatches:</span> An unlocked door or hatch can be passed without affecting movement. A locked door or hatch can be breached by a <span class=\"bold serif small-caps\">STRENGTH</span> roll (quick action), but only if your base slugfest damage rating (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.R6CwscVJo2lwrNpR#attributes]{Attributes}) exceeds the Armor rating of the barrier (see the adjacent table). Generally, you can open an electronically sealed door or hatch with a <span class=\"bold serif small-caps\">REASON</span> roll (full action).</p><div class=\"box blue right\"><p class=\"box-header\">Doors &amp; Walls</p><table><thead><tr><th><p><span class=\"sans bold\">Type</span></p></th><th><p><span class=\"sans bold\">Armor</span></p></th></tr></thead><tbody><tr><td><p>Interior Door</p></td><td><p>1</p></td></tr><tr><td><p>Interior Wall</p></td><td><p>2</p></td></tr><tr><td><p>Exterior Door</p></td><td><p>2</p></td></tr><tr><td><p>Exterior Wall</p></td><td><p>3</p></td></tr><tr><td><p>Reinforced <br />Door/Wall</p></td><td><p>4+</p></td></tr></tbody></table></div><p class=\"indent\"><span class=\"sans bold\">Crashing Through Walls:</span> If in a serious hurry, you can crash right through a door or wall as part of a movement action – in a single quick action, you can move and make a <span class=\"bold serif small-caps\">STRENGTH</span> roll as per above to breach the barrier. If you can move more than a single zone in a movement action and have movement left after breaching the barrier, you can continue the move normally. If the <span class=\"bold serif small-caps\">STRENGTH</span> roll fails, you stop at the barrier and take damage equal to the Armor rating of the barrier.</p><img class=\" hq\" src=\"systems/invincible/assets/book/art/invincible-062-cover-clr-intro.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.BM9oGBNrLdYHTWVK",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "p6RpT3qDZlr0duBo",
+        "modifiedTime": 1758877459222
+      },
+      "_id": "y9X9ORoPWdI1QSeJ",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Slugfest",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">Pounding your opponent</span> with your bare fists, or a melee weapon, is called slugfest. A slugfest attack can only be made at targets in the same zone, unless a power or special rule specifically allows otherwise. Slugfest is a full action using the <span class=\"bold serif small-caps\">FIGHTING</span> skill, except the charge special attack (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#charge]{Charge}), which uses <span class=\"bold serif small-caps\">STRENGTH</span> instead.</p><p class=\"indent\"><span class=\"sans bold\">Hit:</span> If the attack succeeds, it inflicts damage equal to your slugfest base damage, which is equal to half your <span class=\"bold serif small-caps\">STRENGTH</span> score (rounded up) on the target. Damage may be reduced by armor.</p><p class=\"indent\"><span class=\"sans bold\">Pulling Your Punch:</span> If you wish, you can choose a lower base damage than your full slugfest base damage rating.</p><p class=\"indent\"><span class=\"sans bold\">Weapons:</span> If you use a weapon in a close combat attack, you inflict its base damage rating instead of your slugfest base damage rating.</p><p class=\"indent\"><span class=\"sans bold\">Elevated Targets: </span>If you are on the ground, you cannot make a slugfest attack against an elevated target (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.FckwxiONaGWQjdj3#altitude]{Altitude}), unless you can reach it using a special power or vehicle. Two elevated characters in the same horizontal zone are considered to be in the same zone and can attack each other in slugfest. Huge creatures (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#huge-creatures]{Huge Creatures}) on the ground can attack elevated targets in slugfest.</p><p class=\"indent\"><span class=\"sans bold\">Unaware Opponents: </span>If your opponent is restrained or unaware of you (see Surprise on (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.UqxbrltXCyqybJBX#surprise-attack]{Surprise Attack}), they cannot block the attack, and you get +2 dice.</p><p class=\"indent\"><span class=\"sans bold\">Special Attacks: </span>There are two types of special attacks in slugfest combat: charging and grappling. Read more about them on @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#charge]{Charge} &amp; @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#grapple]{Grapple}. You must declare a special attack before any dice are rolled.</p><h2>Slugfest Stunts</h2><p>If you roll more than one <span class=\"die-symbol tag\"> </span> in a slugfest attack, you may choose to spend the extra <span class=\"die-symbol tag\"> </span> beyond the first to trigger stunts. The effects of a stunt are in addition to the base damage. Choose one stunt in the list below for each extra <span class=\"die-symbol tag\"> </span> rolled:</p><ul><li><span class=\"sans bold\">Extra Damage:</span> You inflict additional damage equal to your base slugfest damage (or the base damage of your weapon). You can choose this stunt multiple times, increasing the damage inflicted by your base damage for each <span class=\"die-symbol tag\"> </span> spent on it.</li><li><span class=\"sans bold\">Knockback:</span> Your target is knocked back a number of zones equal to your base slugfest damage minus 1. If the target hits a barrier, it suffers additional damage equal to the barrier’s Armor rating or the amount of knockback movement, whichever is lower. If the Armor is lower, the target continues its movement through the barrier, potentially hitting more barriers, until the movement stops. You can choose this stunt multiple times, increasing the knockback movement by the same amount for each <span class=\"die-symbol tag\"> </span> spent on it. @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#huge-creatures]{Huge creatures} are immune to knockback unless stated otherwise.</li><li><span class=\"sans bold\">Stun:</span> If your target takes any damage from the attack, they must make an immediate <span class=\"bold serif small-caps\">PRESENCE</span> roll (no action) or miss their next turn. They also cannot perform interrupt actions until then. @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#huge-creatures]{Huge creatures} are immune to stun unless stated otherwise.</li><li><span class=\"sans bold\">Bonus Move:</span> After this attack, you may immediately make one movement action.</li><li><span class=\"sans bold\">Bonus Attack:</span> After this attack, you may immediately make another slugfest attack against the same target or another target in the zone. Any stunt rolled in the bonus attack cannot be used to gain another bonus attack.</li><li><span class=\"sans bold\">Disarm</span>: You wrestle an item from your opponent’s grasp. You can keep the item or throw it into an adjacent zone as part of the stunt.</li><li><span class=\"sans bold\">Save Bystanders:</span> If there are innocent bystanders in peril in your zone, you get them out of harm’s way. Exactly how this happens is up to you.</li><li><span class=\"sans bold\">Special Stunt:</span> Action scenes in adventures may include specific stunts that are available only in that specific scene.</li><li><span class=\"sans bold\">Your Own:</span> If you have a cool idea for a stunt, you’re free to propose it to the <span class=\"small-caps\">GM</span>, who has final say on whether or not to allow it.</li></ul><h2>Blocking</h2><p>If you are attacked in slugfest, you can choose to block the attack to avoid being hit. Blocking is a quick action, and you roll for <span class=\"bold serif small-caps\">FIGHTING</span>. You must state that you block before the attacker rolls for their strike. Blocking turns the attack into an opposed roll (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.MW5XEMuISl5dOzPg#opposed-rolls]{Opposed Rolls}) – for each <span class=\"die-symbol tag\"> </span> you roll when blocking, you eliminate one <span class=\"die-symbol tag\"> </span> rolled by the attacker. Remember that you cannot push an opposed roll as the defender.</p><p class=\"indent\"><span class=\"sans bold\">Interruption:</span> Blocking is an interrupt action and occurs out of turn. It does require a quick action however – if you have no actions left in the round, you cannot block (unless you have powers or talents that specifically allow it).</p><p class=\"indent\"><span class=\"sans bold\">Counterattack:</span> If you roll more <span class=\"die-symbol tag\"> </span> than the attacker when blocking, you can counterattack. This counts as a normal close combat attack which hits automatically with the <span class=\"die-symbol tag\"> </span> beyond what you needed to eliminate all of the attacker’s <span class=\"die-symbol tag\"> </span>. Extra <span class=\"die-symbol tag\"> </span> can be used for stunts normally. It’s not possible to block a counterattack.</p><h3 class=\"hidden-header\">Melee Attack</h3><div class=\"box flow\"><p class=\"box-header\">Slugfest Attack</p><div class=\"flexcol\"><div class=\"attribute\"><p class=\"black\">State your target.</p></div><div class=\"attribute no-node\"><p class=\"blue\">The target decides whether to block or not (interrupt action)</p></div><div class=\"flexrow\"><div class=\"flexcol\"><div><p class=\"bool\">yes</p></div><div class=\"attribute\"><p class=\"black\">Make an opposed <br />roll for FIGHTING.</p></div><div class=\"attribute\"><p class=\"blue\">If you roll more <span class=\"die-symbol tag\"> </span>, you hit and inflict your slugfest base damage (or the weapon base damage). Choose one stunt for each <span class=\"die-symbol tag\"> </span> beyond what was needed to win the roll.</p></div><div class=\"attribute\"><p class=\"blue\">If the roll is a tie, no one is hit.</p></div><div class=\"attribute\"><p class=\"blue\">If your opponent rolls more <span class=\"die-symbol tag\"> </span>, they can counterattack, inflicting their slugfest base damage (or the weapon base damage) on you. They can also choose one stunt for each <span class=\"die-symbol tag\"> </span> beyond what was needed to win the roll.</p></div></div><div class=\"flexcol\"><div><p class=\"bool\">no</p></div><div class=\"attribute\"><p class=\"black\">Make a straight<br />FIGHTING roll.</p></div><div class=\"attribute\"><p class=\"blue\">If you roll one or more <span class=\"die-symbol tag\"> </span>,you hit and inflict your slugfest base damage (or the weapon base damage) and choose one stunt for each <span class=\"die-symbol tag\"> </span> beyond the first.</p></div><div class=\"attribute\"><p class=\"blue\">If you roll no <span class=\"die-symbol tag\"> </span>, you miss.</p></div></div></div></div></div><img class=\"hq no-border\" src=\"systems/invincible/assets/book/art/invinciblecompv1-16.webp\" /><h2>Wrecking a Zone</h2><p>As part of a slugfest attack, you can choose to wreck the zone you’re in. Wrecking a zone means tearing it up and using objects from it to hit your opponent, throw at them, or even smash your opponent into them. Some zones cannot be wrecked (like empty space), and some zones require a minimum <span class=\"bold serif small-caps\">STRENGTH</span> score to wreck (see the adjacent table). Certain powers can also be used to wreck a zone. Wrecking a zone has several effects on the attack:</p><ul><li>You get +2 dice to the attack roll.</li><li>The attack can reach an adjacent zone (range 1).</li></ul><p>A single zone can only be wrecked once during an action scene. To mark that a zone has been wrecked, place a marker or note on it or use the tokens provided in the Starter Set for <span class=\"italic\">Invincible – Superhero Roleplaying</span>.</p><h2>Charge</h2><p>A special type of slugfest attack is the charge, barreling right into your opponent with full force. A charge must be combined with movement, consuming both a full and a quick action, and cannot start in the same zone as the target. The movement must stop at the point of attack unless you slam the target (below). A charge is rolled as a normal slugfest attack but with some key differences:</p><ul><li>Roll for the attack using <span class=\"bold serif small-caps\">STRENGTH</span> instead of <span class=\"bold serif small-caps\">FIGHTING</span>.</li><li>A charge cannot be blocked, but it can be dodged as a shooting attack (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.U68Z5GwD4P0JX4Fz#ranged-attack]{Ranged Attack}).</li><li>When charging, the only allowed stunts are extra damage and to slam (below).</li></ul><p><span class=\"sans bold\">Slam:</span> If you charge an opponent and get more <span class=\"die-symbol tag\"> </span> than you need to hit and you have remaining movement left after the point of attack, you can spend one extra <span class=\"die-symbol tag\"> </span> to push your opponent before you and keep moving in the same direction until your move ends. If you hit a barrier along the way, your opponent suffers additional damage equal to the barrier’s Armor rating or your base slugfest damage, whichever is lower. If the Armor is lower, you can continue the movement through the barrier, potentially hitting more barriers, until the movement stops. @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#huge-creatures]{Huge creatures} cannot be slammed unless stated otherwise.</p><h2>Grapple</h2><p>Another special type of slugfest attack is the grapple. Roll for <span class=\"bold serif small-caps\">FIGHTING</span> normally, and the attack can be blocked as usual. No weapon can be used. If successful, your opponent cannot move or perform any actions requiring body movement except trying to break free. Attempting to break free is a quick action and an opposed <span class=\"bold serif small-caps\">STRENGTH</span> vs <span class=\"bold serif small-caps\">STRENGTH</span> roll against you (no action for you, only your opponent).</p><p class=\"indent\">While you are grappling an opponent, the only actions you can perform (until you choose to release your opponent) are movement (pulling your opponent with you) and a grapple attack. This works as a normal unarmed attack, but it cannot be blocked, and the only stunt allowed is extra damage. Huge creatures cannot be grappled.</p><h2>Huge Creatures</h2><p>Certain beings in the game are designated as huge creatures. These follow normal rules, but with a few exceptions:</p><ul><li>They can attack elevated characters in slugfest.</li><li>The slugfest stunts knockback, stun, and slam cannot be used against them.</li><li>They cannot be grappled.</li><li>They are immune to @UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.CGRiVbFtdTO9vVkZ#action-banter]{Action Banter}.</li></ul><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-093-cover-clr.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.y9X9ORoPWdI1QSeJ",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "6ePfz2Qn0DDcNvhb",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Shooting",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">When shooting someone</span> at a distance, roll for <span class=\"bold serif small-caps\">AGILITY</span>. This requires a power or weapon that allows shooting attacks. Shooting at someone is a full action.</p><p class=\"indent\"><span class=\"sans bold\">Range:</span> All shooting powers and weapons have a minimum and maximum range. Range 0 means inside the same zone. Attacks closer than the minimum range get –3 dice. A weapon cannot be used beyond its maximum range.</p><p class=\"indent\"><span class=\"sans bold\">Hit:</span> If the attack succeeds, it inflicts damage equal to the base damage of your power or weapon on the target. Damage may be reduced by armor.</p><h2>Stunts</h2><p>If you roll more than one <span class=\"die-symbol tag\"> </span> when shooting, you may choose to spend the extra <span class=\"die-symbol tag\"> </span> beyond the first to trigger stunts. The effects of a stunt are in addition to the base damage. Choose one stunt in the list below for each extra <span class=\"die-symbol tag\"> </span> rolled:</p><ul><li><span class=\"sans bold\">Extra Damage:</span> You inflict additional damage equal to the base damage of your weapon or power. You can choose this stunt multiple times, increasing the damage inflicted by the base damage for each <span class=\"die-symbol tag\"> </span> spent on it.</li><li><span class=\"sans bold\">Disarm:</span> You shoot an item from your opponent’s grasp. It falls to the ground in the same zone.</li><li><span class=\"sans bold\">Bonus Attack:</span> After this attack, you may immediately shoot again at the same target or another target in the same zone. Any stunt rolled in the bonus attack cannot be used to gain another bonus attack.</li><li><span class=\"sans bold\">Special Stunt:</span> Action scenes in adventures may include specific stunts that are available only in that specific scene.</li><li><span class=\"sans bold\">Your Own: </span>If you have a cool idea for a stunt, you’re free to propose it to the <span class=\"small-caps\">GM</span>, who has final say on whether or not to allow it.</li></ul><h2>Dodging</h2><p>If you are being shot at, you can try to dodge the attack. This is a quick action, and you roll for <span class=\"bold serif small-caps\">AGILITY</span>. You can only dodge if you are aware of the attacker, and you must declare a dodge before the attacker rolls. Dodging turns the attack into an opposed roll (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.MW5XEMuISl5dOzPg#opposed-rolls]{Opposed Rolls}) – for each <span class=\"die-symbol tag\"> </span> you roll when dodging, you eliminate one <span class=\"die-symbol tag\"> </span> rolled by the attacker. Remember that you cannot push an opposed roll as the defender.</p><p class=\"indent\"><span class=\"sans bold\">Interruption:</span> Dodging is an interrupt action and occurs out of turn. It does require a quick action however – if you have no actions left in the round, you cannot dodge. If you fear you will be attacked later in a round, it might be wise to save a quick action for a possible dodge.</p><p class=\"indent\"><span class=\"sans bold\">Dodge Move:</span> If you roll more <span class=\"die-symbol tag\"> </span> than the attacker when dodging, you can make a dodge move. This simply means you can move one zone (or within one zone) for each <span class=\"die-symbol tag\"> </span> rolled more than the attacker.</p><h3 class=\"hidden-header\">Ranged Attack</h3><div class=\"box flow\"><p class=\"box-header\">Shooting Attack</p><div class=\"flexcol\"><div class=\"attribute\"><p class=\"black\">State your target and what<br /> power or weapon you’re using.</p></div><div class=\"attribute no-node\"><p class=\"blue\">The target decides whether to dodge or not.</p></div><div class=\"flexrow\"><div class=\"flexcol\"><div><p class=\"bool\">yes</p></div><div class=\"attribute\"><p class=\"black\">Make an opposed<br />roll for AGILITY.</p></div><div class=\"attribute\"><p class=\"blue\">If you roll more <span class=\"die-symbol tag\"> </span>, you hit and inflict the base damage of your power or weapon. Choose one stunt for each <span class=\"die-symbol tag\"> </span> beyond what was needed to win the roll.</p></div><div class=\"attribute\"><p class=\"blue\">If the roll is a tie, you miss.</p></div><div class=\"attribute\"><p class=\"blue\">If your opponent rolls more <span class=\"die-symbol tag\"> </span>, you miss, and your opponent may make a dodge move of one zone for each <span class=\"die-symbol tag\"> </span> more rolled.</p></div></div><div class=\"flexcol\"><div><p class=\"bool\">no</p></div><div class=\"attribute\"><p class=\"black\">Make a straight<br />AGILITY roll.</p></div><div class=\"attribute\"><p class=\"blue\">If you roll one or more <span class=\"die-symbol tag\"> </span>, you hit and inflict the base damage of your power or weapon. Choose one stunt for each <span class=\"die-symbol tag\"> </span> beyond the first.</p></div><div class=\"attribute\"><p class=\"blue\">If you roll no <span class=\"die-symbol tag\"> </span>, you miss.</p></div></div></div></div></div><h2>Explosions</h2><p>Some powers or weapons have an explosive effect. You use these with a normal shooting attack, but if you hit your target, all other characters in the same zone suffer the same damage. Each target can dodge the attack separately. If your attack misses, the shot is assumed to have gone astray and hurts no one.</p><div class=\"box blue left\"><p class=\"box-header\">Placed Explosions</p><table><thead><tr><th><p><span class=\"sans bold\">Blast</span></p></th><th><p><span class=\"sans bold\">Blast Damage</span></p></th></tr></thead><tbody><tr><td><p>3</p></td><td><p>1</p></td></tr><tr><td><p>6</p></td><td><p>2</p></td></tr><tr><td><p>9</p></td><td><p>3</p></td></tr><tr><td><p>12</p></td><td><p>4</p></td></tr></tbody></table></div><p class=\"indent\"><span class=\"sans bold\">Placed Explosives:</span> Detonations caused by anything that’s not a ranged attack have a Blast rating and a base damage. The base damage is equal to one third of the blast power (round up to the nearest whole number). When the explosion occurs, roll for an attack with a number of dice equal to the Blast rating. If the attack hits, everyone in the zone suffers the base damage plus 1 point of damage for each <span class=\"die-symbol tag\"> </span> rolled beyond the first. Everyone in an adjacent zone suffers no base damage, but they take 1 point of damage for each <span class=\"die-symbol tag\"> </span> rolled. The blast roll cannot be pushed. The blast roll can be dodged normally and damage from an explosion may be reduced by armor.</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "U68Z5GwD4P0JX4Fz",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Damage",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">In action scenes,</span> you run the risk of being injured. Everything from exhaustion to bleeding cuts and broken bones is summarized as damage. Track damage points on your character sheet. How much damage you can take before being broken is determined by your Health score.</p><h2>Armor</h2><p>Damage can be reduced by armor, which can come from powers or gear. When you take damage from an external attack, the damage caused is simply reduced by the Armor rating. If no damage remains, you are unhurt by the attack. You can only benefit from one armor at a time.</p><h2>Broken by Damage</h2><div class=\"box blue right\" style=\"margin-top:77px\"><p class=\"box-header\">Graphic Injuries</p><p>Some of the critical injuries are gruesome, reflecting the graphic way damage is depicted in the Invincible comics. For a more family-friendly game, we recommend capping the table at the #9 result, i.e. treating all rolls of 9 or higher as the Cracked Skull injury</p></div><p>If you drop to zero Health, you are broken by damage. Immediately roll for a critical injury on the table below. Roll a [[/r D6]] and add the number of damage points you suffered in excess of what was needed to make you broken. Whatever critical injury you suffer, while broken you are out of action, unable to move, roll for any attributes, or use any powers.</p><h3 class=\"hidden-header\">Critical Injuries</h3><div class=\"box blue\"><p class=\"box-header\">Critical Injuries</p><table><tbody><tr><td><p><span class=\"sans bold\">Roll</span></p></td><td style=\"width:75%\"><p><span class=\"sans bold\">Injury</span></p></td><td><p><span class=\"sans bold\">Healing Time</span></p></td></tr><tr><td><p>1</p></td><td><p><span class=\"sans bold\">@UUID[Item.bvXqkEwb8cZ2mjdG]{Torn suit!}</span> You’re okay, but your suit is torn to shreds. You’ll have to get it repaired.</p></td><td><p>–</p></td></tr><tr><td><p>2</p></td><td><p><span class=\"sans bold\">@UUID[Item.l42Dx4TDxIqdCyNj]{Bruised!}</span> You’re hurt and get –2 dice to all <span class=\"sans bold small-caps\">FIGHTING</span>, <span class=\"sans bold small-caps\">AGILITY</span>, and <span class=\"sans bold small-caps\">STRENGTH</span> rolls until healed.</p></td><td><p>A few hours</p></td></tr><tr><td><p>3</p></td><td><p><span class=\"sans bold\">@UUID[Item.4X4nw1do9wEOAaLx]{Bloodied!}</span> Your face is a bloody mess and you’re bleeding all over yourself. You get –2 dice to all <span class=\"sans bold small-caps\">REASON</span>, <span class=\"sans bold small-caps\">INTUITION</span>, and <span class=\"sans bold small-caps\">PRESENCE</span> rolls until healed.</p></td><td><p>A few hours</p></td></tr><tr><td><p>4</p></td><td><p><span class=\"sans bold\">@UUID[Item.Oulgf3tY7eF7k0S6]{Beaten up!}</span> You’re beaten up badly with several broken ribs, and get –2 dice to all <span class=\"sans bold small-caps\">FIGHTING</span>, <span class=\"sans bold small-caps\">AGILITY</span>, and <span class=\"sans bold small-caps\">STRENGTH</span> rolls until healed.</p></td><td><p>A few days</p></td></tr><tr><td><p>5</p></td><td><p><span class=\"sans bold\">@UUID[Item.BQ2ZvGMxdvdn1GLB]{Concussed!}</span> You’ve suffered a severe blow to the head, giving you –2 dice to all <span class=\"sans bold small-caps\">REASON</span>, <span class=\"sans bold small-caps\">INTUITION</span>, and <span class=\"sans bold small-caps\">PRESENCE</span> rolls until healed.</p></td><td><p>A few days</p></td></tr><tr><td><p>6</p></td><td><p><span class=\"sans bold\">@UUID[Item.eiaM2iUvvuyuzuSo]{Battered!} </span>Your body is badly mauled with many broken bones. You get –2 dice to all <span class=\"sans bold small-caps\">FIGHTING</span>, <span class=\"sans bold small-caps\">AGILITY</span>, and <span class=\"sans bold small-caps\">STRENGTH</span> rolls until healed.</p></td><td><p>A few weeks</p></td></tr><tr><td><p>7</p></td><td><p><span class=\"sans bold\">@UUID[Item.szsPStiukxD3MM78]{Crushed arm!}</span> Your arm is broken or completely mangled. You can’t use the arm and you get a –2 dice to all <span class=\"sans bold small-caps\">FIGHTING</span>, <span class=\"sans bold small-caps\">AGILITY</span>, and <span class=\"sans bold small-caps\">STRENGTH</span> rolls until healed.</p></td><td><p>A few weeks</p></td></tr><tr><td><p>8</p></td><td><p><span class=\"sans bold\">@UUID[Item.JOSHBQVB8PNv8OIp]{Crushed leg!}</span> Your leg is broken or completely mangled. Until healed, ground movement becomes a full action and you get –1 die to <span class=\"sans bold small-caps\">FIGHTING</span>, <span class=\"sans bold small-caps\">AGILITY</span>, and <span class=\"sans bold small-caps\">STRENGTH</span> rolls.</p></td><td><p>A few weeks</p></td></tr><tr><td><p>9</p></td><td><p><span class=\"sans bold\">@UUID[Item.J9w7MzQ3WytXeXqT]{Cracked skull!}</span> You’re knocked out and remain unconscious for a few days. After that, you get –2 dice to <span class=\"sans bold small-caps\">REASON</span>, <span class=\"sans bold small-caps\">INTUITION</span>, and <span class=\"sans bold small-caps\">PRESENCE</span> rolls until healed.</p></td><td><p>A few weeks</p></td></tr><tr><td><p>10</p></td><td><p><span class=\"sans bold\">@UUID[Item.4KReB7uDfAwudDfF]{Crushed!}</span> Your body is beaten to a bloody pulp, every bone in your body broken. You will die unless someone stabilizes you (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.USYFvBih0DDZxI0N#stabilizing]{Stabilizing}) within a few hours. If you survive, you’re immobilized for a few weeks and then get –2 dice to <span class=\"sans bold small-caps\">FIGHTING</span>, <span class=\"sans bold small-caps\">AGILITY</span>, and <span class=\"sans bold small-caps\">STRENGTH</span> rolls until healed.</p></td><td><p>A few months</p></td></tr><tr><td><p>11</p></td><td><p><span class=\"sans bold\">@UUID[Item.Hdn2EE7l4oWGsJt0]{Skewered!}</span> The damage impales your body. You will die unless someone stabilizes you (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.USYFvBih0DDZxI0N#stabilizing]{Stabilizing}) within a few minutes. If you survive, you remain in a coma for a few weeks and then get –2 dice to all attribute rolls until healed.</p></td><td><p>A few months</p></td></tr><tr><td><p>12</p></td><td><p><span class=\"sans bold\">@UUID[Item.mkdA3OyOFH5A3iiz]{Head crushed!}</span> Your head bursts like a ripe melon, blood and brains gushing out. You’re dead.</p></td><td><p>–</p></td></tr><tr><td><p>13+</p></td><td><p><span class=\"sans bold\">@UUID[Item.zRM9fp5i6eFMbd48]{Torn apart!}</span> Your body is completely ripped apart, guts and gore flying everywhere. This is the end for you.</p></td><td><p>–</p></td></tr></tbody></table></div><p class=\"indent\"><span class=\"sans bold\">Damage While Broken:</span> If you suffer additional damage while broken, even a single point, you automatically suffer another critical injury. Add the number of damage points suffered directly to the [[/r D6]] roll.</p><p class=\"indent\"><span class=\"sans bold\">Multiple Crits:</span> If you have a critical hit injury and suffer another, roll for it normally, but any result equal to or lower than the (worst) crit you already have is automatically replaced by a crit one step worse. For example, if you are Battered (6) and roll a 3 for a new crit, it is shifted up to a Crushed Arm (7). Modifiers to the same attributes from different crits are not cumulative – only the worst modifier counts.</p><h2>Rallying</h2><p>When you are broken by damage, as long as you haven’t suffered the cracked skull or worse critical injury (9+), you can try to get up again on your turn in the round. This is called rallying and is a full action requiring a successful <span class=\"bold serif small-caps\">PRESENCE</span> roll. If this succeeds, you get 1 point of Health back per <span class=\"die-symbol tag\"> </span> rolled. Your critical injury remains however, which increases the risk of more severe critical injuries (below).</p><div class=\"box blue left\"><p class=\"box-header\">Broken NPCs</p><p>When an NPC is broken by damage, you don’t need to roll up a critical injury unless you want to. Instead, the GM can simply state that the NPCs is knocked out or even killed, depending on the circumstances. For major NPCs, critical injuries should be rolled up just like for heroes.</p></div><p class=\"indent\">Note that you can only get Health back by rallying when you are broken. For recovery of Health when not broken, see below.</p><p class=\"indent\"><span class=\"sans bold\">Help From Others:</span> Another hero or <span class=\"small-caps\">NPC</span> who can communicate with you (including via communicators or powers) can try to motivate you to get you back on your feet as well, with a successful <span class=\"bold serif small-caps\">PRESENCE</span> roll as per above.</p><h2>Stabilizing</h2><p>Some critical injuries require you to be stabilized within a certain time limit, or you will die. Stabilizing a critical injury requires advanced medical gear and a successful <span class=\"bold serif small-caps\">REASON</span> roll. Only one attempt is allowed. Certain powers can also stabilize lethal crits.</p><h2>Recovering Health</h2><p>After an action scene, you automatically recover all lost Health within a few minutes, as long as you don’t engage in any further physically strenuous activity (like combat). Certain powers can restore your Health during an action scene, such as <span class=\"bold serif small-caps\">REGENERATION</span>. Note that recovering all your Health points doesn’t mean that your critical injuries are gone – those take a longer time to heal.</p><h2>Healing Critical Injuries</h2><p>Each critical injury has a specific effect that you suffer during the healing time indicated, which is measured in days, weeks, or even months. Note that you can recover all your lost Health but still suffer the effects of a critical injury.</p><h2>Damaging Objects</h2><p>Objects like machines and vehicles have a Durability rating that represents how much damage they can take before they are broken. When the Durability reaches zero, the item is unusable.</p><img class=\"floatimage\" src=\"systems/invincible/assets/book/art/allen-invincible-128-cover-masked.webp\" style=\"width:47%;shape-outside:url(systems/invincible/assets/book/art/allen-invincible-128-cover-masked.webp);shape-margin:1rem;margin-right:-1rem;float:right\" /><p class=\"indent\"><span class=\"sans bold\">Repairs:</span> Damaged objects and materials can be repaired if the <span class=\"small-caps\">GM</span> allows. It takes at least a few hours of work and a successful <span class=\"bold serif small-caps\">REASON</span> roll. Tools give bonus dice to roll and can in some cases even be needed to attempt the repair at all. If the roll is successful, the Durability recovers by 1 point for every <span class=\"die-symbol tag\"> </span> rolled, up to the object’s starting level. If the roll fails, the object’s Durability is permanently decreased to its current level. If the object has been reduced to zero and the attempt to repair it fails, it is destroyed.</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.U68Z5GwD4P0JX4Fz",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "p6RpT3qDZlr0duBo",
+        "modifiedTime": 1758882758177
+      },
+      "_id": "USYFvBih0DDZxI0N",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Stress",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">In action scenes,</span> your mental fortitude is tested as much as your physical mettle. Everything from mental exhaustion to waning willpower to metaphysical anguish is summarized as stress. You can take stress by pushing rolls, using powers, and being exposed to stressful situations or certain power effects. Track stress points on your character sheet. How much stress you can take before being broken is determined by your Resolve score.</p><h2>Broken by Stress</h2><p>If you drop to zero Resolve, you are broken by stress and can’t bring yourself to continue. You may talk, move and flee the scene, but you cannot roll for any attributes or powers or use any talents. Stress doesn’t inflict critical injuries like damage does, but it can present roleplaying opportunities.</p><h3 class=\"hidden-header\">Action Banter</h3><div class=\"box blue right\"><p class=\"box-header\">Action Banter</p><p>Wisecracks and witty banter are staples of superhero stories, where a character’s words can be so frustrating that their impact is often felt more than their punches. As a quick action once per action scene, you can banter with an opponent to reduce their Resolve. Make an opposed roll for <span class=\"sans bold small-caps\">PRESENCE</span> against an opponent in the same zone. For each you rolled more than the target, they take 1 point of stress. Action banter typically doesn’t work against huge creatures (@UUID[JournalEntry.xT802qdP7kX518mO.JournalEntryPage.6ePfz2Qn0DDcNvhb#huge-creatures]{Huge Creatures}).</p></div><h2>Rallying</h2><p>When you are broken by stress, another hero or <span class=\"small-caps\">NPC</span> who can communicate with you (including via communicators or powers) can try to motivate you to press on. This requires a <span class=\"bold serif small-caps\">PRESENCE</span> roll by them (full action). If it succeeds, you regain a number of Resolve points equal to the number of <span class=\"die-symbol tag\"> </span> rolled, and you are no longer broken. If no one else rallies you, you regain 1 point of Resolve within a few minutes after the action scene is over. As for Health, rallying rolls are only allowed on broken characters.</p><p class=\"indent\"><span class=\"sans bold\">Rallying Yourself:</span> As opposed to Health, you cannot rally yourself when your Resolve is broken, unless you have a talent or power that specifically allows this.</p><h2>Recovery</h2><p>As opposed to Health, Resolve is not automatically recovered (beyond the first point after being broken by stress). To recover your Resolve, you need to take part in a brief social scene, typically with one of your key relationships or as suggested by the adventure. You are always welcome to suggest a suitable social scene to the Gamemaster.</p><p class=\"indent\">When a social scene is concluded, you recover all lost Resolve. Social scenes are a key part of the game and a great way to explore and develop your hero’s personality and motivations.</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.USYFvBih0DDZxI0N",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "CGRiVbFtdTO9vVkZ",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Challenges",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><p><span class=\"sans bold\">Superheroes are called</span> to assist with dangers that threaten the world beyond going toe-to-toe with supervillains in combat, such as fighting apartment building fires, dismantling doomsday devices, cleaning up chemical spills, getting past automated security measures, or stopping runaway trains. Situations that provide non-combat difficulties for heroes to overcome that take more than a single roll to solve are called challenges.</p><h2>Running Challenges</h2><p>How difficult a challenge is to deal with is measured by its Challenge rating and a time limit. Relatively simple or straightforward problems fall in the 1–4 range, while challenge levels that are 5–10 indicate a major crisis.</p><p class=\"indent\">Each challenge lists one or more objectives – specific goals or problems that arise due to the challenge. The objectives give you a cue to help you determine what kind of actions you might take to resolve the situation. You can also propose your own solutions and suggest appropriate rolls. The <span class=\"small-caps\">GM</span> has final say but should support creative thinking and give the players some leeway.</p><p class=\"indent\">As the heroes take actions to reduce the challenge level, narrate the results, highlighting both how their actions are improving the situation and how the danger remains imminent.</p><h2>Overcoming Challenges</h2><p>For each <span class=\"die-symbol tag\"> </span> you roll, the challenge loses 1 point from its Challenge rating. If the Challenge rating reaches 0 before the time limit expires, the challenge is considered dealt with and over. If not, you fail the challenge.</p><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-081-cover-clr.webp\" /><img class=\"hq\" src=\"systems/invincible/assets/book/art/invincible-starter-set-clr.webp\" /></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO.JournalEntryPage.CGRiVbFtdTO9vVkZ",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": null
+      },
+      "_id": "rqCEkxmH0YsgTwbv",
+      "ownership": {
+        "default": -1
+      }
+    }
+  ],
+  "folder": "qurtK6NXUZ1CuYEE",
+  "categories": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Compendium.invincible.book.JournalEntry.xT802qdP7kX518mO",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758876358389,
+    "modifiedTime": 1758924110464,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "sort": 150000,
+  "ownership": {
+    "default": 0
+  }
+}
