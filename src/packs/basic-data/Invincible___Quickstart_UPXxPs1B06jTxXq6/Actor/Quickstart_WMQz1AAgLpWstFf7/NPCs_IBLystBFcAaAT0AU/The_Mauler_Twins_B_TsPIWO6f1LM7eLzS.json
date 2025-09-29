@@ -177,7 +177,7 @@
       "_id": "FIZRWbaCqhwvuYpC",
       "img": "systems/invincible/assets/icons/power.svg",
       "system": {
-        "description": "<p>A shooting attack with base damage 3, range 0/1. The attack does not inflict any actual damage – instead, if it penetrates any armor, the target suffers –3 dice to all attribute rolls until a PRESENCE roll (with the penalty) is made to shake off the effect. The PRESENCE roll is no action, but only one attempt can be made per round and only on the victim’s own turn.</p><div class=\"foundry-info\"><p>Use the @UUID[Item.k48iWcqyA3TxfhQI]{Affliction} critical injury to apply the penalties to characters.</p></div>",
+        "description": "<p>A shooting attack with base damage 3, range 0/1. The attack does not inflict any actual damage – instead, if it penetrates any armor, the target suffers –3 dice to all attribute rolls until a PRESENCE roll (with the penalty) is made to shake off the effect. The PRESENCE roll is no action, but only one attempt can be made per round and only on the victim’s own turn.</p><div class=\"foundry-info\"><p>Use the @UUID[Item.HXUSEVR5YSYVooQu]{Affliction} critical injury to apply the penalties to characters.</p></div>",
         "automations": {
           "ouICDnI88hHemtRP": {
             "name": "Affliction",
@@ -208,7 +208,8 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "lastModifiedBy": null
+        "lastModifiedBy": "p6RpT3qDZlr0duBo",
+        "modifiedTime": 1759159046162
       },
       "ownership": {
         "default": 0
@@ -434,7 +435,7 @@
           "system": {},
           "changes": [
             {
-              "key": "system.armorProtection.protection",
+              "key": "bonuses.armorProtection.protection",
               "mode": 5,
               "value": "2",
               "priority": null
@@ -464,7 +465,7 @@
             "systemId": "invincible",
             "systemVersion": "0.0.0",
             "createdTime": 1759155603792,
-            "modifiedTime": 1759155618415,
+            "modifiedTime": 1759158026882,
             "lastModifiedBy": "p6RpT3qDZlr0duBo"
           }
         }
@@ -741,7 +742,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758804993058,
-    "modifiedTime": 1758924110312,
+    "modifiedTime": 1759157936343,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "_id": "TsPIWO6f1LM7eLzS",

@@ -180,7 +180,7 @@
       "_id": "FIZRWbaCqhwvuYpC",
       "img": "systems/invincible/assets/icons/power.svg",
       "system": {
-        "description": "<p>A shooting attack with base damage 3, range 0/1. The attack does not inflict any actual damage – instead, if it penetrates any armor, the target suffers –3 dice to all attribute rolls until a PRESENCE roll (with the penalty) is made to shake off the effect. The PRESENCE roll is no action, but only one attempt can be made per round and only on the victim’s own turn.</p><div class=\"foundry-info\"><p>Use the @UUID[Item.k48iWcqyA3TxfhQI]{Affliction} critical injury to apply the penalties to characters.</p></div>",
+        "description": "<p>A shooting attack with base damage 3, range 0/1. The attack does not inflict any actual damage – instead, if it penetrates any armor, the target suffers –3 dice to all attribute rolls until a PRESENCE roll (with the penalty) is made to shake off the effect. The PRESENCE roll is no action, but only one attempt can be made per round and only on the victim’s own turn.</p><div class=\"foundry-info\"><p>Use the @UUID[Item.HXUSEVR5YSYVooQu]{Affliction} critical injury to apply the penalties to characters.</p></div>",
         "automations": {
           "ouICDnI88hHemtRP": {
             "name": "Affliction",
@@ -212,7 +212,7 @@
         "systemId": "invincible",
         "systemVersion": "0.0.0",
         "createdTime": 1758791372614,
-        "modifiedTime": 1758793449091,
+        "modifiedTime": 1759159055608,
         "lastModifiedBy": "p6RpT3qDZlr0duBo"
       },
       "ownership": {
@@ -769,7 +769,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758788609496,
-    "modifiedTime": 1759155553171,
+    "modifiedTime": 1759157224450,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "ownership": {

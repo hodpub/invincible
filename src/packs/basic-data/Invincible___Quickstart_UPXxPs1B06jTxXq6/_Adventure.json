@@ -30,7 +30,8 @@
     "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Crushed__4KReB7uDfAwudDfF.json",
     "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Skewered__Hdn2EE7l4oWGsJt0.json",
     "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Head_crushed__mkdA3OyOFH5A3iiz.json",
-    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Torn_apart__zRM9fp5i6eFMbd48.json"
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Torn_apart__zRM9fp5i6eFMbd48.json",
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/Affliction_HXUSEVR5YSYVooQu.json"
   ],
   "journal": [
     "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/3__Colophon_B2OnNP4e7MJhqB0J.json",
@@ -77,7 +78,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758822633345,
-    "modifiedTime": 1759149935650,
+    "modifiedTime": 1759159072962,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "_key": "!adventures!UPXxPs1B06jTxXq6"
