@@ -211,22 +211,57 @@
       "img": "systems/invincible/assets/icons/power.svg",
       "system": {
         "description": "<p>You have Armor 4 against all attacks.</p>",
-        "automations": {
-          "Iis1jFI83KROpP0E": {
-            "name": "Major Protection",
-            "_id": "Iis1jFI83KROpP0E",
-            "type": "rollArmor",
-            "showAsSelection": true,
-            "open": true,
-            "armor": 4
-          }
-        },
+        "automations": {},
         "powerSource": null,
         "boosts": [
           "Energy Absorption. Each damage point absorbed give s you a bonus die that can be used for any FIGHTING, STRENGTH or AGILITY rolls you make until the end of the round. Once a die is used, it is spent and removed."
         ]
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Major Protection",
+          "img": "systems/invincible/assets/icons/power.svg",
+          "origin": "Actor.R52BRT3IwXcTBsWr.Item.KDn9Jb1N4L7gv9vJ",
+          "_id": "VLscoL91jWXrF32j",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "bonuses.armorProtection.majorProtection",
+              "mode": 5,
+              "value": "4",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "createdTime": 1759155675414,
+            "modifiedTime": 1759155696044,
+            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+          }
+        }
+      ],
       "sort": 0,
       "flags": {},
       "_stats": {
@@ -237,7 +272,7 @@
         "systemId": "invincible",
         "systemVersion": "0.0.0",
         "createdTime": 1758346685667,
-        "modifiedTime": 1758740066247,
+        "modifiedTime": 1759155700753,
         "lastModifiedBy": "p6RpT3qDZlr0duBo"
       },
       "ownership": {

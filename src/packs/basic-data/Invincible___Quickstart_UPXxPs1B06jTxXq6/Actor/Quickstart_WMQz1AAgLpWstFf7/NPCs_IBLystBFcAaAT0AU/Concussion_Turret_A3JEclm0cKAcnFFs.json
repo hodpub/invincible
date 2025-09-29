@@ -271,20 +271,55 @@
       "img": "systems/invincible/assets/icons/power.svg",
       "system": {
         "description": "<p>Each turret has Armor 3 against all attacks. They are also immune to stress.</p>",
-        "automations": {
-          "shzeYyuWvAJbyyKo": {
-            "name": "Protection",
-            "_id": "shzeYyuWvAJbyyKo",
-            "type": "rollArmor",
-            "showAsSelection": true,
-            "open": true,
-            "armor": 3
-          }
-        },
+        "automations": {},
         "powerSource": null,
         "boosts": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Protection",
+          "img": "systems/invincible/assets/icons/power.svg",
+          "origin": "Actor.A3JEclm0cKAcnFFs.Item.lLqOnZFBVY5m5Kwu",
+          "_id": "FGF5dithxsJvxnzn",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "bonuses.armorProtection.protection",
+              "mode": 5,
+              "value": "3",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "createdTime": 1759155474703,
+            "modifiedTime": 1759155573032,
+            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+          }
+        }
+      ],
       "sort": 0,
       "flags": {},
       "_stats": {
@@ -295,7 +330,7 @@
         "systemId": "invincible",
         "systemVersion": "0.0.0",
         "createdTime": 1758815898925,
-        "modifiedTime": 1758815919160,
+        "modifiedTime": 1759155506524,
         "lastModifiedBy": "p6RpT3qDZlr0duBo"
       },
       "ownership": {

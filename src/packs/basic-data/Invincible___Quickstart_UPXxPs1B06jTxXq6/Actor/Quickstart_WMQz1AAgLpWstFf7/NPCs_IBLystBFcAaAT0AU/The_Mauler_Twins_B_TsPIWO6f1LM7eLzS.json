@@ -420,20 +420,55 @@
       "img": "systems/invincible/assets/icons/power.svg",
       "system": {
         "description": "<p>You have Armor 2 against all attacks.</p>",
-        "automations": {
-          "b9yDjmTdbTYzqxED": {
-            "name": "Protection",
-            "_id": "b9yDjmTdbTYzqxED",
-            "type": "rollArmor",
-            "showAsSelection": true,
-            "open": true,
-            "armor": 2
-          }
-        },
+        "automations": {},
         "powerSource": "lWavFlZzrh8prAiZ",
         "boosts": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Protection",
+          "img": "systems/invincible/assets/icons/power.svg",
+          "origin": "Actor.TsPIWO6f1LM7eLzS.Item.lLqOnZFBVY5m5Kwu",
+          "_id": "USyPoAJUgy9OUXyX",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "system.armorProtection.protection",
+              "mode": 5,
+              "value": "2",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "createdTime": 1759155603792,
+            "modifiedTime": 1759155618415,
+            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+          }
+        }
+      ],
       "sort": 0,
       "flags": {},
       "_stats": {

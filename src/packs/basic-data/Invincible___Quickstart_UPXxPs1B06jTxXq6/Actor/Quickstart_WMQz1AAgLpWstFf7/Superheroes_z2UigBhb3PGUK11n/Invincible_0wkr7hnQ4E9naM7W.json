@@ -464,20 +464,55 @@
       "img": "systems/invincible/assets/icons/power.svg",
       "system": {
         "description": "<p>You have Armor 4 against all attacks.</p>",
-        "automations": {
-          "JouxCwQ3FBeNHXR0": {
-            "name": "Major Protection",
-            "_id": "JouxCwQ3FBeNHXR0",
-            "type": "rollArmor",
-            "showAsSelection": true,
-            "open": true,
-            "armor": 4
-          }
-        },
+        "automations": {},
         "powerSource": null,
         "boosts": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Major Protection",
+          "img": "systems/invincible/assets/icons/power.svg",
+          "origin": "Actor.0wkr7hnQ4E9naM7W.Item.7DxMA47qjFMXWvGm",
+          "_id": "5ksV3A94HPWByEG1",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "bonuses.armorProtection.majorProtection",
+              "mode": 5,
+              "value": "4",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "createdTime": 1759156205578,
+            "modifiedTime": 1759156213607,
+            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+          }
+        }
+      ],
       "sort": 0,
       "flags": {},
       "_stats": {
@@ -488,7 +523,7 @@
         "systemId": "invincible",
         "systemVersion": "0.0.0",
         "createdTime": 1758747684209,
-        "modifiedTime": 1758747684209,
+        "modifiedTime": 1759156254640,
         "lastModifiedBy": "p6RpT3qDZlr0duBo"
       },
       "_id": "7DxMA47qjFMXWvGm",

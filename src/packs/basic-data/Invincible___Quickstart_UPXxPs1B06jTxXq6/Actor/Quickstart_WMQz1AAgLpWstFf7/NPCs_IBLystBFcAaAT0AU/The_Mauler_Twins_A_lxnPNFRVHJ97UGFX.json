@@ -435,20 +435,55 @@
       "img": "systems/invincible/assets/icons/power.svg",
       "system": {
         "description": "<p>You have Armor 2 against all attacks.</p>",
-        "automations": {
-          "b9yDjmTdbTYzqxED": {
-            "name": "Protection",
-            "_id": "b9yDjmTdbTYzqxED",
-            "type": "rollArmor",
-            "showAsSelection": true,
-            "open": true,
-            "armor": 2
-          }
-        },
+        "automations": {},
         "powerSource": "lWavFlZzrh8prAiZ",
         "boosts": []
       },
-      "effects": [],
+      "effects": [
+        {
+          "name": "Protection",
+          "img": "systems/invincible/assets/icons/power.svg",
+          "origin": "Actor.lxnPNFRVHJ97UGFX.Item.lLqOnZFBVY5m5Kwu",
+          "_id": "9rp0pMXHxTWekZKO",
+          "type": "base",
+          "system": {},
+          "changes": [
+            {
+              "key": "bonuses.armorProtection.protection",
+              "mode": 5,
+              "value": "2",
+              "priority": null
+            }
+          ],
+          "disabled": false,
+          "duration": {
+            "startTime": null,
+            "combat": null,
+            "seconds": null,
+            "rounds": null,
+            "turns": null,
+            "startRound": null,
+            "startTurn": null
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "13.348",
+            "systemId": "invincible",
+            "systemVersion": "0.0.0",
+            "createdTime": 1759154551407,
+            "modifiedTime": 1759155036650,
+            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+          }
+        }
+      ],
       "sort": 0,
       "flags": {},
       "_stats": {
@@ -459,7 +494,7 @@
         "systemId": "invincible",
         "systemVersion": "0.0.0",
         "createdTime": 1758797900390,
-        "modifiedTime": 1758810919614,
+        "modifiedTime": 1759155595583,
         "lastModifiedBy": "p6RpT3qDZlr0duBo"
       },
       "ownership": {
@@ -734,7 +769,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758788609496,
-    "modifiedTime": 1758924110312,
+    "modifiedTime": 1759155553171,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "ownership": {
