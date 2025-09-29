@@ -77,6 +77,7 @@
 <ul>
 <li><a href="https://discord.gg/foundryvtt" target="_blank" rel="nofollow noopener">The Foundry</a></li>
 <li><a href="https://discord.gg/RnaydHR" target="_blank" rel="nofollow noopener">Year Zero Worlds</a></li>
+<li><a href="https://hodpub.com/discord" target="_blank" rel="nofollow noopener">Hod Publishing</a></li>
 </ul>
 </li>
 </ul>
