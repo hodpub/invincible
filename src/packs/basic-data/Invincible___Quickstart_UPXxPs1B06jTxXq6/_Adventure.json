@@ -46,7 +46,9 @@
   "macros": [
     "Macro/Quickstart_cEbKwChperWjUu6I/Monster_Girl___Alternate_Form_41qKvjN7il0PfZb8.json",
     "Macro/Quickstart_cEbKwChperWjUu6I/Honey__We_re_Home_V2xczE7E4mGsHqRB.json",
-    "Macro/Quickstart_cEbKwChperWjUu6I/Experiment_Supplies___Explosion_v4wQv8KLP46BKkye.json"
+    "Macro/Quickstart_cEbKwChperWjUu6I/Experiment_Supplies___Explosion_v4wQv8KLP46BKkye.json",
+    "Macro/Quickstart_cEbKwChperWjUu6I/Self_Destruction_Sequence_YDcr89Ao3ZY1VbTF.json",
+    "Macro/Quickstart_cEbKwChperWjUu6I/Tripwire_sXBstF1WCAQiJGm1.json"
   ],
   "cards": [],
   "playlists": [],
@@ -70,7 +72,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758822633345,
-    "modifiedTime": 1758929556548,
+    "modifiedTime": 1759129997310,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "_key": "!adventures!UPXxPs1B06jTxXq6"

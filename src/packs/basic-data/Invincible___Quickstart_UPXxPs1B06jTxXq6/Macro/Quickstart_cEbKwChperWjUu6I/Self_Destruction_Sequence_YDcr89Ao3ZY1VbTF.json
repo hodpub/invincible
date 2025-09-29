@@ -1,0 +1,26 @@
+{
+  "folder": "cEbKwChperWjUu6I",
+  "name": "Self-Destruction Sequence",
+  "type": "script",
+  "author": "p6RpT3qDZlr0duBo",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "const actor = await fromUuid(\"Actor.lxnPNFRVHJ97UGFX\");\nreturn new invincible.utils.InvincibleRollDialog(\n  \"Self-Destruction Sequence\",\n  {\n    actor,\n    breakdown: {\n      \"Blast Rating\": 9,\n    },\n    attackInfo: {\n      damage: 5,\n      minRange: 0,\n      maxRange: 1\n    },\n    maxPush: 0\n  }\n).wait(event);",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Macro.V2xczE7E4mGsHqRB",
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758924997492,
+    "modifiedTime": 1758925073523,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "_id": "YDcr89Ao3ZY1VbTF",
+  "ownership": {
+    "default": 0
+  }
+}

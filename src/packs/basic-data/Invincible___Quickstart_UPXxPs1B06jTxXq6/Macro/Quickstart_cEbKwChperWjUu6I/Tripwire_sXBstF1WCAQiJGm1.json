@@ -1,0 +1,26 @@
+{
+  "folder": "cEbKwChperWjUu6I",
+  "name": "Tripwire",
+  "type": "script",
+  "_id": "sXBstF1WCAQiJGm1",
+  "author": "p6RpT3qDZlr0duBo",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "const light = await fromUuid(\"Scene.vL4Lqhd60r7UHjPT.AmbientLight.LnkXYBNeQEriz68m\");\nreturn light.update({\"hidden\": !light.hidden});",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1758925165223,
+    "modifiedTime": 1758926414866,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 0
+  }
+}
