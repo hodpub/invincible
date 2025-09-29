@@ -39,9 +39,9 @@
     "distance": 1,
     "units": "m"
   },
-  "tokenVision": true,
+  "tokenVision": false,
   "fog": {
-    "exploration": true,
+    "exploration": false,
     "overlay": null,
     "colors": {
       "explored": null,
@@ -52,7 +52,7 @@
     "darknessLevel": 0,
     "darknessLock": false,
     "globalLight": {
-      "enabled": false,
+      "enabled": true,
       "alpha": 0.5,
       "bright": false,
       "color": null,
@@ -106,7 +106,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758885701196,
-    "modifiedTime": 1758924815427,
+    "modifiedTime": 1759128514796,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "navName": "",
