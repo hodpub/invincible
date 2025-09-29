@@ -1,0 +1,208 @@
+{
+  "name": "Social Cards",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "Robot",
+      "type": "text",
+      "_id": "MvRZUl2pqr22a73B",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><div style=\"width:60%;margin:0 auto\"><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-back-01.webp\" /><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-front-01.webp\" /></div></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "p6RpT3qDZlr0duBo",
+        "modifiedTime": 1759148109799
+      },
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Monster Girl",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><div style=\"width:60%;margin:0 auto\"><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-back-02.webp\" /><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-front-02.webp\" /></div></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "JournalEntry.CuJpWCTSnfhiMm17.JournalEntryPage.MvRZUl2pqr22a73B",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759148115681,
+        "modifiedTime": 1759148132140,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "_id": "rhGHiacFTe3GuK5o",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Rex Splode",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><div style=\"width:60%;margin:0 auto\"><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-back-03.webp\" /><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-front-03.webp\" /></div></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "JournalEntry.CuJpWCTSnfhiMm17.JournalEntryPage.rhGHiacFTe3GuK5o",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759148117107,
+        "modifiedTime": 1759148155826,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "_id": "ilFae75WDHioRlRT",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Atom Eve",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><div style=\"width:60%;margin:0 auto\"><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-back-04.webp\" /><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-front-04.webp\" /></div></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "JournalEntry.CuJpWCTSnfhiMm17.JournalEntryPage.ilFae75WDHioRlRT",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759148159334,
+        "modifiedTime": 1759148171608,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "_id": "R7fQj3rsok7wAWYD",
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "sort": 100000,
+      "name": "Bulletproof",
+      "type": "text",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div id=\"invbook\"><div style=\"width:60%;margin:0 auto\"><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-back-05.webp\" /><img class=\"hq\" src=\"systems/invincible/assets/social-events/cards-front-05.webp\" /></div></div>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": "JournalEntry.CuJpWCTSnfhiMm17.JournalEntryPage.R7fQj3rsok7wAWYD",
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759148160895,
+        "modifiedTime": 1759148191799,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      },
+      "_id": "vIbmXahcVUbEmUar",
+      "ownership": {
+        "default": -1
+      }
+    }
+  ],
+  "folder": "qurtK6NXUZ1CuYEE",
+  "categories": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Compendium.invincible.book.JournalEntry.B2OnNP4e7MJhqB0J",
+    "duplicateSource": "JournalEntry.B2OnNP4e7MJhqB0J",
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1759147774460,
+    "modifiedTime": 1759147783672,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "sort": 400000,
+  "_id": "CuJpWCTSnfhiMm17",
+  "ownership": {
+    "default": 0
+  }
+}

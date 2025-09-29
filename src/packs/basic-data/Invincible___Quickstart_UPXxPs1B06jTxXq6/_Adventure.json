@@ -36,7 +36,8 @@
     "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/3__Colophon_B2OnNP4e7MJhqB0J.json",
     "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/Invincible_Quickstart_JYIKkkXpyqIM3IC0.json",
     "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/2__The_Clone_Job_d7S41u6UyXvsaqNP.json",
-    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/1__You_Might_Be_Invincible_xT802qdP7kX518mO.json"
+    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/1__You_Might_Be_Invincible_xT802qdP7kX518mO.json",
+    "JournalEntry/Quickstart_qurtK6NXUZ1CuYEE/Social_Cards_CuJpWCTSnfhiMm17.json"
   ],
   "scenes": [
     "Scene/Quickstart_G1sRmOcPPpHSievo/The_Warehouse_vL4Lqhd60r7UHjPT.json",
@@ -72,7 +73,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758822633345,
-    "modifiedTime": 1759129997310,
+    "modifiedTime": 1759148370907,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "_key": "!adventures!UPXxPs1B06jTxXq6"
