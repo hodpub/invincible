@@ -1,0 +1,366 @@
+{
+  "folder": "zhrtPGofdAIoAbe6",
+  "name": "Critical Injuries",
+  "_id": "lRIHdMV6UBdDaeae",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "name": "Torn suit!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.bvXqkEwb8cZ2mjdG",
+      "_id": "MJyHXdOEk8ojiTUp",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149736814,
+        "modifiedTime": 1759149736814,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "name": "Bruised!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.l42Dx4TDxIqdCyNj",
+      "_id": "IunmA7YyeerMSRIk",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149738898,
+        "modifiedTime": 1759149738898,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "name": "Bloodied!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.4X4nw1do9wEOAaLx",
+      "_id": "9fyIKTIzvQ5qxfNp",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149740558,
+        "modifiedTime": 1759149740558,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "name": "Beaten up!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.Oulgf3tY7eF7k0S6",
+      "_id": "rrYD7tDZ3hV0EcOS",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149742120,
+        "modifiedTime": 1759149742120,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "name": "Concussed!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.BQ2ZvGMxdvdn1GLB",
+      "_id": "fCatbTc2zEmyBldj",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149744101,
+        "modifiedTime": 1759149744101,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "name": "Battered!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.eiaM2iUvvuyuzuSo",
+      "_id": "uKB6XzRkn0Jtcv1N",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149745795,
+        "modifiedTime": 1759149745795,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "name": "Crushed arm!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.szsPStiukxD3MM78",
+      "_id": "SgGL8V3Xq0iOmszu",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149747571,
+        "modifiedTime": 1759149747571,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "name": "Crushed leg!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.JOSHBQVB8PNv8OIp",
+      "_id": "2os6tqZ2fggoivDc",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149750659,
+        "modifiedTime": 1759149750659,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "name": "Cracked skull!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.J9w7MzQ3WytXeXqT",
+      "_id": "4MYpMjggDShzK2I3",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149752171,
+        "modifiedTime": 1759149752171,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "name": "Crushed!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.4KReB7uDfAwudDfF",
+      "_id": "rBYPKNv0W1XnVe4v",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149753836,
+        "modifiedTime": 1759149753836,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "name": "Skewered!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.Hdn2EE7l4oWGsJt0",
+      "_id": "bmVFWEPCxwfn0kV1",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149756949,
+        "modifiedTime": 1759149756949,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "name": "Head crushed!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.mkdA3OyOFH5A3iiz",
+      "_id": "c60V4PULowvCyf8y",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149758818,
+        "modifiedTime": 1759149758818,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    },
+    {
+      "type": "document",
+      "weight": 10,
+      "range": [
+        13,
+        13
+      ],
+      "name": "Torn apart!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "documentUuid": "Item.zRM9fp5i6eFMbd48",
+      "_id": "oAbMooy4lgLAZd4Z",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "createdTime": 1759149760467,
+        "modifiedTime": 1759149760467,
+        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+      }
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1759149717115,
+    "modifiedTime": 1759149893788,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "formula": "1d6",
+  "ownership": {
+    "default": 2
+  }
+}

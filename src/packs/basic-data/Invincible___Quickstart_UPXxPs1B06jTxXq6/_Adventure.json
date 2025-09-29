@@ -43,13 +43,16 @@
     "Scene/Quickstart_G1sRmOcPPpHSievo/The_Warehouse_vL4Lqhd60r7UHjPT.json",
     "Scene/Quickstart_G1sRmOcPPpHSievo/Invincible_sge0EEkIG8wuvCmB.json"
   ],
-  "tables": [],
+  "tables": [
+    "RollTable/Quickstart_zhrtPGofdAIoAbe6/Critical_Injuries_lRIHdMV6UBdDaeae.json"
+  ],
   "macros": [
     "Macro/Quickstart_cEbKwChperWjUu6I/Monster_Girl___Alternate_Form_41qKvjN7il0PfZb8.json",
     "Macro/Quickstart_cEbKwChperWjUu6I/Honey__We_re_Home_V2xczE7E4mGsHqRB.json",
     "Macro/Quickstart_cEbKwChperWjUu6I/Experiment_Supplies___Explosion_v4wQv8KLP46BKkye.json",
     "Macro/Quickstart_cEbKwChperWjUu6I/Self_Destruction_Sequence_YDcr89Ao3ZY1VbTF.json",
-    "Macro/Quickstart_cEbKwChperWjUu6I/Tripwire_sXBstF1WCAQiJGm1.json"
+    "Macro/Quickstart_cEbKwChperWjUu6I/Tripwire_sXBstF1WCAQiJGm1.json",
+    "Macro/Quickstart_cEbKwChperWjUu6I/Roll_Critical_Injury_j6bsxVzg9vXfGD9X.json"
   ],
   "cards": [],
   "playlists": [],
@@ -60,7 +63,8 @@
     "Actor/Quickstart_WMQz1AAgLpWstFf7/Superheroes_z2UigBhb3PGUK11n/_Folder.json",
     "Scene/Quickstart_G1sRmOcPPpHSievo/_Folder.json",
     "Macro/Quickstart_cEbKwChperWjUu6I/_Folder.json",
-    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/_Folder.json"
+    "Item/Critical_Injuries_ZEVp8aDYNNVhNpKz/_Folder.json",
+    "RollTable/Quickstart_zhrtPGofdAIoAbe6/_Folder.json"
   ],
   "_id": "UPXxPs1B06jTxXq6",
   "folder": null,
@@ -73,7 +77,7 @@
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758822633345,
-    "modifiedTime": 1759148370907,
+    "modifiedTime": 1759149935650,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "_key": "!adventures!UPXxPs1B06jTxXq6"

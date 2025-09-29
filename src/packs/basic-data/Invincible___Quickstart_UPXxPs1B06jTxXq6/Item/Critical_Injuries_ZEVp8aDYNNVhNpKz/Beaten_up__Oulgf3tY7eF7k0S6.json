@@ -70,17 +70,17 @@
   "sort": 0,
   "flags": {},
   "_stats": {
-    "compendiumSource": null,
+    "compendiumSource": "Item.Oulgf3tY7eF7k0S6",
     "duplicateSource": null,
     "exportSource": null,
     "coreVersion": "13.348",
     "systemId": "invincible",
     "systemVersion": "0.0.0",
     "createdTime": 1758882620961,
-    "modifiedTime": 1758924110421,
+    "modifiedTime": 1759149901063,
     "lastModifiedBy": "p6RpT3qDZlr0duBo"
   },
   "ownership": {
-    "default": 0
+    "default": 2
   }
 }

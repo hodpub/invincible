@@ -1,0 +1,26 @@
+{
+  "folder": "cEbKwChperWjUu6I",
+  "name": "Roll Critical Injury",
+  "type": "script",
+  "_id": "j6bsxVzg9vXfGD9X",
+  "author": "p6RpT3qDZlr0duBo",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "const modifier = await foundry.applications.api.DialogV2.input({\n  window: { title: \"Critical Injury\" },\n  content: `<p><label>Modifier: </label><input type=\"number\" name=\"modifier\" value=\"0\" style=\"width: 100%;\" /></p>`,\n  ok: {\n    label: \"Roll\",\n    icon: \"fa-solid fa-dice\",\n  }\n});\n\nif (!modifier)\n  return;\n\nconst roll = await new Roll(`1d6 + ${modifier.modifier}`).roll();\nawait (await fromUuid(\"RollTable.lRIHdMV6UBdDaeae\")).draw({ rollMode: CONST.DICE_ROLL_MODES.PRIVATE, roll });",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Macro.j6bsxVzg9vXfGD9X",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1759149434464,
+    "modifiedTime": 1759149886313,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  },
+  "ownership": {
+    "default": 2
+  }
+}

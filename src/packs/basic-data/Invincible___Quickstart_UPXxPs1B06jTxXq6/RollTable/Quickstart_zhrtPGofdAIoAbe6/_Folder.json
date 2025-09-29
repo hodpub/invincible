@@ -1,0 +1,22 @@
+{
+  "type": "RollTable",
+  "folder": null,
+  "name": "Quickstart",
+  "color": "#0096cb",
+  "sorting": "a",
+  "_id": "zhrtPGofdAIoAbe6",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Folder.zhrtPGofdAIoAbe6",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1759149707483,
+    "modifiedTime": 1759149707483,
+    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+  }
+}
