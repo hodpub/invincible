@@ -71,15 +71,27 @@ export async function applyTargetDamage(message, roll) {
     return;
   }
 
+  if (!roll.attackDamage)
+    return;
+
   for (const target of game.canvas.tokens.controlled) {
     const changes = {};
-    if (roll.attackDamage && target.actor.system.derived.health) {
-      changes["system.derived.health.value"] = target.actor.system.derived.health.value - roll.attackDamage;
-    }
+
+    let protection = 0;
+    if (target.actor?.bonuses?.armorProtection)
+      protection = Math.max(...Object.values(target.actor.bonuses.armorProtection));
+    const damage = Math.max(0, roll.attackDamage - protection);
+    if (!damage)
+      continue;
+
+    const newHealth = target.actor.system.derived.health.value - damage;
+    changes["system.derived.health.value"] = Math.max(0, newHealth);
+    await target.actor.update(changes);
+
+    if (newHealth >= 0)
+      continue;
 
     //TODO: roll critical injury automatically?
-
-    await target.actor.update(changes);
   }
 }
 
