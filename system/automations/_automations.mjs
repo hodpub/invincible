@@ -1,7 +1,6 @@
 export { default as BaseAutomation } from "./base-automation.mjs";
 export { default as RollAttributeAutomation } from "./roll-attribute-automation.mjs";
 export { default as RollAttackAutomation } from "./roll-attack-automation.mjs";
-export { default as RollArmorBaseAutomation } from "./roll-armor-automation.mjs";
 export { default as RunMacroAutomation } from "./run-macro-automation.mjs";
 // export { default as ReloadWeaponAutomation } from "./reload-weapon-automation.mjs";
 // export { default as RunSequenceAutomation } from "./run-sequence-automation.mjs";
