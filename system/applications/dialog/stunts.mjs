@@ -73,6 +73,21 @@ export default class InvincibleStuntsDialog extends HandlebarsApplicationMixin(A
       delete this.stuntOptions["Bonus Move"];
       delete this.stuntOptions["Save Bystanders"];
     }
+    else if (this.roll.options.attackType == "charge") {
+      delete this.stuntOptions["Knockback"];
+      delete this.stuntOptions["Stun"];
+      delete this.stuntOptions["Bonus Move"];
+      delete this.stuntOptions["Bonus Attack"];
+      delete this.stuntOptions["Disarm"];
+      delete this.stuntOptions["Save Bystanders"];
+      delete this.stuntOptions["Your Own"];
+      this.stuntOptions["Slam"] = {
+        value: 0,
+        max: 1,
+        maxDisabled: false,
+        minDisabled: true,
+      };
+    }
   }
 
   get stuntsCurrent() {

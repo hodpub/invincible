@@ -784,7 +784,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
               minRange: 1,
-              maxRange: "Movement"
+              maxRange: "Movement",
+              attackType: "charge"
             }
           }
         }
@@ -800,7 +801,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
               minRange: 1,
-              maxRange: "Movement"
+              maxRange: "Movement",
+              attackType: "charge"
             },
             bonus: {
               [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZoneBonus")]: 2
