@@ -300,6 +300,10 @@
     "Chat": {
       "BoostRoll": {
         "Flavor": "{power} - Boost"
+      },
+      "DamageInfo": {
+        "DamageTaken": "Damage Taken",
+        "DamageInfo": "<strong>{actor}</strong> took <strong>{damage}</strong> damage."
       }
     },
     "Stunts": {

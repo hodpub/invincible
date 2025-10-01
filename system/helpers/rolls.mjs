@@ -1,4 +1,5 @@
 import InvincibleStuntsDialog from "../applications/dialog/stunts.mjs";
+import { InvincibleChatMessage } from "../documents/chat-message.mjs";
 
 const ID = "invincible";
 export function registerDice3D(dice3d) {
@@ -87,6 +88,8 @@ export async function applyTargetDamage(message, roll) {
     const newHealth = target.actor.system.derived.health.value - damage;
     changes["system.derived.health.value"] = Math.max(0, newHealth);
     await target.actor.update(changes);
+
+    await InvincibleChatMessage.sendToChat(target.actor, game.i18n.localize("INVINCIBLE.Chat.DamageInfo.DamageTaken"), `<p>${game.i18n.format("INVINCIBLE.Chat.DamageInfo.DamageInfo", { actor: target.actor.name, damage: damage })}</p>`, { shiftKey: true });
 
     if (newHealth >= 0)
       continue;
