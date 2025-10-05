@@ -1,6 +1,8 @@
 import { YearZeroRoll } from "../../../lib/yzur.js";
 
 const { HandlebarsApplicationMixin, ApplicationV2, DialogV2 } = foundry.applications.api;
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
+
 export default class InvincibleRollDialog extends HandlebarsApplicationMixin(ApplicationV2) {
   constructor(
     rollName,
@@ -163,7 +165,15 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
     options.minRange = this.attackInfo?.minRange;
     options.maxRange = this.attackInfo?.maxRange;
     options.armor = this.attackInfo?.armor;
-    options.description = this.item?.system.description;
+    options.description = await TextEditor.enrichHTML(
+      this.item?.system.description,
+      {
+        // Data to fill in for inline rolls
+        rollData: this.actor?.getRollData(),
+        // Relative UUID resolution
+        relativeTo: this.actor,
+      }
+    );
     options.item = this.item?.uuid;
     options.attackType = attackType;
     let maxPush = this.maxPush ?? this.actor.system.maxPush?.["all"] ?? this.actor.system.maxPush?.[this.attribute] ?? 1;
