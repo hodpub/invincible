@@ -3,7 +3,7 @@
   "name": "Affliction",
   "type": "criticalInjury",
   "_id": "HXUSEVR5YSYVooQu",
-  "img": "systems/invincible/assets/icons/criticalinjury.svg",
+  "img": "systems/invincible/assets/icons/criticalInjury.svg",
   "system": {
     "description": "<p><strong>AFFLICTION (debilitating ray)</strong></p><p>A shooting attack with base damage 3, range 0/1. The attack does not inflict any actual damage – instead, if it penetrates any armor, the target suffers –3 dice to all attribute rolls until a <strong>PRESENCE</strong> roll (with the penalty) is made to shake off the effect. The <strong>PRESENCE</strong> roll is no action, but only one attempt can be made per round and only on the victim’s own turn.</p>",
     "automations": {},
@@ -13,7 +13,7 @@
   "effects": [
     {
       "name": "Affliction",
-      "img": "systems/invincible/assets/icons/criticalinjury.svg",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
       "origin": "Item.HXUSEVR5YSYVooQu",
       "_id": "utsMr74aw9gUdoLA",
       "type": "base",
