@@ -50,7 +50,7 @@
     "relationships": ""
   },
   "prototypeToken": {
-    "name": "The Mauler Twins (#1)",
+    "name": "The Mauler Twins B",
     "displayName": 20,
     "actorLink": true,
     "width": 1,
@@ -208,8 +208,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "lastModifiedBy": "p6RpT3qDZlr0duBo",
-        "modifiedTime": 1759159046162
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -464,9 +463,7 @@
             "coreVersion": "13.348",
             "systemId": "invincible",
             "systemVersion": "0.0.0",
-            "createdTime": 1759155603792,
-            "modifiedTime": 1759158026882,
-            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+            "lastModifiedBy": null
           }
         }
       ],
@@ -479,8 +476,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "lastModifiedBy": "p6RpT3qDZlr0duBo",
-        "modifiedTime": 1758811112870
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -508,8 +504,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "lastModifiedBy": "p6RpT3qDZlr0duBo",
-        "modifiedTime": 1758811062778
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -741,9 +736,9 @@
     "coreVersion": "13.348",
     "systemId": "invincible",
     "systemVersion": "0.0.0",
-    "createdTime": 1758804993058,
-    "modifiedTime": 1759157936343,
-    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+    "createdTime": 1759945801389,
+    "modifiedTime": 1759946430431,
+    "lastModifiedBy": "L6RKgQk6KcxyOnnr"
   },
   "_id": "TsPIWO6f1LM7eLzS",
   "ownership": {

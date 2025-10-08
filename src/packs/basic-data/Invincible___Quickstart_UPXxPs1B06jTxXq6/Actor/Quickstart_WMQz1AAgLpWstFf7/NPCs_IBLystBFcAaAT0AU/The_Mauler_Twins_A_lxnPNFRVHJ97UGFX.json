@@ -51,7 +51,7 @@
     "relationships": ""
   },
   "prototypeToken": {
-    "name": "The Mauler Twins (#1)",
+    "name": "The Mauler Twins A",
     "displayName": 20,
     "actorLink": true,
     "width": 1,
@@ -165,9 +165,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758789628807,
-        "modifiedTime": 1758789628807,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -211,9 +209,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758791372614,
-        "modifiedTime": 1759159055608,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -256,9 +252,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758792336183,
-        "modifiedTime": 1758792336183,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "_id": "JaSXiwEDDbbtPypQ",
       "ownership": {
@@ -299,9 +293,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758792481252,
-        "modifiedTime": 1758792537780,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -345,9 +337,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758793205721,
-        "modifiedTime": 1758793205721,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -391,9 +381,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758793478570,
-        "modifiedTime": 1758793478570,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -419,9 +407,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758797888745,
-        "modifiedTime": 1758797888745,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -478,9 +464,7 @@
             "coreVersion": "13.348",
             "systemId": "invincible",
             "systemVersion": "0.0.0",
-            "createdTime": 1759154551407,
-            "modifiedTime": 1759155036650,
-            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+            "lastModifiedBy": null
           }
         }
       ],
@@ -493,9 +477,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758797900390,
-        "modifiedTime": 1759155595583,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -523,9 +505,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758797926642,
-        "modifiedTime": 1758811159046,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -593,9 +573,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758798248130,
-        "modifiedTime": 1758798248130,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -650,8 +628,7 @@
             "coreVersion": "13.348",
             "systemId": "invincible",
             "systemVersion": "0.0.0",
-            "lastModifiedBy": "p6RpT3qDZlr0duBo",
-            "modifiedTime": 1758798266128
+            "lastModifiedBy": null
           }
         }
       ],
@@ -664,9 +641,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758798252193,
-        "modifiedTime": 1758798260765,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -692,9 +667,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758798937363,
-        "modifiedTime": 1758798937363,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -720,9 +693,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758798980813,
-        "modifiedTime": 1758798980813,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -748,9 +719,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758799014220,
-        "modifiedTime": 1758799014220,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -768,9 +737,9 @@
     "coreVersion": "13.348",
     "systemId": "invincible",
     "systemVersion": "0.0.0",
-    "createdTime": 1758788609496,
-    "modifiedTime": 1759157224450,
-    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+    "createdTime": 1759945801389,
+    "modifiedTime": 1759946421661,
+    "lastModifiedBy": "L6RKgQk6KcxyOnnr"
   },
   "ownership": {
     "default": 0

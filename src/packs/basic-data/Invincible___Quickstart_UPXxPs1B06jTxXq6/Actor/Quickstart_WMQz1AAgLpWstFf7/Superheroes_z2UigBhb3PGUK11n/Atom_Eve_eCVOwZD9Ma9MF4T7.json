@@ -51,7 +51,7 @@
     "karma": 0
   },
   "prototypeToken": {
-    "name": "Superhero",
+    "name": "Atom Eve",
     "displayName": 20,
     "actorLink": true,
     "width": 1,
@@ -165,9 +165,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758320892675,
-        "modifiedTime": 1758699215229,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -195,9 +193,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758321818579,
-        "modifiedTime": 1758699304899,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -241,9 +237,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758699333186,
-        "modifiedTime": 1758700252065,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -271,9 +265,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758699339351,
-        "modifiedTime": 1758699339351,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -317,9 +309,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758699942904,
-        "modifiedTime": 1758910641492,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -347,9 +337,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758700146601,
-        "modifiedTime": 1758700146601,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -417,9 +405,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758700663826,
-        "modifiedTime": 1758700663826,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -457,9 +443,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758701385844,
-        "modifiedTime": 1758701385844,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -477,9 +461,9 @@
     "coreVersion": "13.348",
     "systemId": "invincible",
     "systemVersion": "0.0.0",
-    "createdTime": 1758053619021,
-    "modifiedTime": 1758924110312,
-    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+    "createdTime": 1759945801389,
+    "modifiedTime": 1759946353900,
+    "lastModifiedBy": "L6RKgQk6KcxyOnnr"
   },
   "ownership": {
     "default": 0
