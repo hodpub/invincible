@@ -3,10 +3,10 @@
   "name": "Monster Girl - Alternate Form",
   "type": "script",
   "_id": "41qKvjN7il0PfZb8",
-  "author": "p6RpT3qDZlr0duBo",
+  "author": "L6RKgQk6KcxyOnnr",
   "img": "icons/svg/dice-target.svg",
   "scope": "global",
-  "command": "const values = {\n  true: {\n    \"system.attributes.fighting.value\": 3,\n    \"system.attributes.agility.value\": 3,\n    \"system.attributes.strength.value\": 2\n  },\n  false: {\n    \"system.attributes.fighting.value\": 7,\n    \"system.attributes.agility.value\": 5,\n    \"system.attributes.strength.value\": 8\n  }\n};\n\nconst isTransformed = actor.system.attributes.strength.value == 8;\nconst valuesToUpdate = values[isTransformed];\n\nif (isTransformed) {\n  valuesToUpdate[\"system.derived.resolve.value\"] = actor.system.derived.resolve.value - 1;\n  valuesToUpdate[\"system.derived.health.value\"] = actor.system.derived.health.value - 6;\n}\nelse {\n  valuesToUpdate[\"system.derived.health.value\"] = actor.system.derived.health.value + 6;\n}\n\nawait actor.update(valuesToUpdate);",
+  "command": "if (actor.system.derived.resolve.value == 0) {\n  ui.notifications.warn(\"Monster Girl does not have enough resolve to transform\");\n  return;\n}\n\nconst values = {\n  true: {\n    \"system.attributes.fighting.value\": 3,\n    \"system.attributes.agility.value\": 3,\n    \"system.attributes.strength.value\": 2\n  },\n  false: {\n    \"system.attributes.fighting.value\": 7,\n    \"system.attributes.agility.value\": 5,\n    \"system.attributes.strength.value\": 8\n  }\n};\n\nconst isTransformed = actor.system.attributes.strength.value == 8;\nconst valuesToUpdate = values[isTransformed];\nlet transformForm = \"Amanda\";\n\nif (isTransformed) {\n  valuesToUpdate[\"system.derived.health.value\"] = Math.min(actor.system.derived.health.value - 6, 6);\n}\nelse {\n  transformForm = \"Monster Girl\";\n  valuesToUpdate[\"system.derived.health.value\"] = Math.min(actor.system.derived.health.value + 6, 12);\n}\n\nvaluesToUpdate[\"system.derived.resolve.value\"] = actor.system.derived.resolve.value - 1;\n\nawait actor.update(valuesToUpdate);\nui.notifications.info(`Transforming to ${transformForm}.`);",
   "sort": 0,
   "flags": {},
   "_stats": {
@@ -16,9 +16,9 @@
     "coreVersion": "13.348",
     "systemId": "invincible",
     "systemVersion": "0.0.0",
-    "createdTime": 1758721326876,
-    "modifiedTime": 1758924110540,
-    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+    "createdTime": 1759945801984,
+    "modifiedTime": 1759946226244,
+    "lastModifiedBy": "L6RKgQk6KcxyOnnr"
   },
   "ownership": {
     "default": 0
