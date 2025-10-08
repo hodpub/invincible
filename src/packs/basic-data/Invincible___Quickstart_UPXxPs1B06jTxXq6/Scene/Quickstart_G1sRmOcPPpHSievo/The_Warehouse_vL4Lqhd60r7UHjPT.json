@@ -85,7 +85,7 @@
   "tokens": [
     {
       "name": "Scientists",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,
@@ -198,7 +198,7 @@
     },
     {
       "name": "Scientists",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,
@@ -311,7 +311,7 @@
     },
     {
       "name": "Scientists",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,
@@ -424,7 +424,7 @@
     },
     {
       "name": "Scientists",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,
@@ -537,7 +537,7 @@
     },
     {
       "name": "Concussion Turret",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,
@@ -650,7 +650,7 @@
     },
     {
       "name": "Concussion Turret",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,
@@ -763,7 +763,7 @@
     },
     {
       "name": "Concussion Turret",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,
@@ -876,7 +876,7 @@
     },
     {
       "name": "Concussion Turret",
-      "displayName": 0,
+      "displayName": 20,
       "actorLink": false,
       "width": 1,
       "height": 1,

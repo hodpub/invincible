@@ -53,7 +53,7 @@
   },
   "prototypeToken": {
     "name": "Scientists",
-    "displayName": 0,
+    "displayName": 20,
     "actorLink": false,
     "width": 1,
     "height": 1,
@@ -156,9 +156,9 @@
     "coreVersion": "13.348",
     "systemId": "invincible",
     "systemVersion": "0.0.0",
-    "createdTime": 1758813229371,
-    "modifiedTime": 1758924110312,
-    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+    "createdTime": 1759945801389,
+    "modifiedTime": 1759946393615,
+    "lastModifiedBy": "L6RKgQk6KcxyOnnr"
   },
   "ownership": {
     "default": 0
