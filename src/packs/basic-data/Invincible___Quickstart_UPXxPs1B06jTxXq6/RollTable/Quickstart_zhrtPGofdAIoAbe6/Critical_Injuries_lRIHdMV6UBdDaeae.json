@@ -319,10 +319,10 @@
     },
     {
       "type": "document",
-      "weight": 10,
+      "weight": 37,
       "range": [
         13,
-        13
+        50
       ],
       "name": "Torn apart!",
       "img": "systems/invincible/assets/icons/criticalInjury.svg",
