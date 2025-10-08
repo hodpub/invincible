@@ -57,7 +57,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/invincible/assets/tokens/invencible.webp",
+      "src": "systems/invincible/assets/tokens/invincible.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
