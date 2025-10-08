@@ -97,11 +97,11 @@
 // }
 
 // So we can the editor in foundry
-section.window-content:has(.editor-container) {
-  .editor-container {
-    background-color: #fff;
-  }
-}
+// section.window-content:has(.editor-container) {
+//   .editor-container {
+//     background-color: #fff;
+//   }
+// }
 
 .sheet.adventure-importer:has(div#adventure-quickstart) {
   .window-content {
