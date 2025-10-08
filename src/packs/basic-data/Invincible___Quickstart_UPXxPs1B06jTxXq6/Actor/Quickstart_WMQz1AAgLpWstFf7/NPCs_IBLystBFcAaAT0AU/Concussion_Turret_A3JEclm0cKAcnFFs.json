@@ -107,7 +107,7 @@
       }
     },
     "sight": {
-      "enabled": false,
+      "enabled": true,
       "range": 0,
       "angle": 360,
       "visionMode": "basic",
@@ -127,7 +127,7 @@
         "ring": null,
         "background": null
       },
-      "effects": 1,
+      "effects": 0,
       "subject": {
         "scale": 1,
         "texture": null
@@ -195,8 +195,7 @@
             "coreVersion": "13.348",
             "systemId": "invincible",
             "systemVersion": "0.0.0",
-            "lastModifiedBy": "p6RpT3qDZlr0duBo",
-            "modifiedTime": 1758815657474
+            "lastModifiedBy": null
           }
         }
       ],
@@ -209,9 +208,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758815625809,
-        "modifiedTime": 1758815625809,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -254,9 +251,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758815725002,
-        "modifiedTime": 1758815735530,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "_id": "eGtODkerRa8Ym6yQ",
       "ownership": {
@@ -314,9 +309,7 @@
             "coreVersion": "13.348",
             "systemId": "invincible",
             "systemVersion": "0.0.0",
-            "createdTime": 1759155474703,
-            "modifiedTime": 1759155573032,
-            "lastModifiedBy": "p6RpT3qDZlr0duBo"
+            "lastModifiedBy": null
           }
         }
       ],
@@ -329,9 +322,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758815898925,
-        "modifiedTime": 1759155506524,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -401,9 +392,7 @@
         "coreVersion": "13.348",
         "systemId": "invincible",
         "systemVersion": "0.0.0",
-        "createdTime": 1758816214183,
-        "modifiedTime": 1758816214183,
-        "lastModifiedBy": "p6RpT3qDZlr0duBo"
+        "lastModifiedBy": null
       },
       "ownership": {
         "default": 0
@@ -420,9 +409,9 @@
     "coreVersion": "13.348",
     "systemId": "invincible",
     "systemVersion": "0.0.0",
-    "createdTime": 1758815394652,
-    "modifiedTime": 1758924110312,
-    "lastModifiedBy": "p6RpT3qDZlr0duBo"
+    "createdTime": 1759945801389,
+    "modifiedTime": 1759946476845,
+    "lastModifiedBy": "L6RKgQk6KcxyOnnr"
   },
   "ownership": {
     "default": 0
