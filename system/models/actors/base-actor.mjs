@@ -75,7 +75,7 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     }
 
     const bonuses = this.parent.appliedEffects.reduce((acc, effect) => {
-      if (effect.changes) {
+      if (effect.changes && !effect.disabled) {
         effect.changes.forEach(change => {
           const propertyKey = change.key.replace("bonus.", "");
           if (!(propertyKey in acc))
