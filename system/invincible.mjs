@@ -146,6 +146,8 @@ Hooks.on('importAdventure', async (adventure) => {
       return;
   const scene = await fromUuid("Scene.sge0EEkIG8wuvCmB");
   scene.activate();
+  const journal = await fromUuid("JournalEntry.JYIKkkXpyqIM3IC0");
+  journal.sheet.render(true);
 });
 
 Hooks.once('diceSoNiceReady', registerDice3D);
