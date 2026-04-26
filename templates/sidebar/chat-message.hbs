@@ -2,9 +2,9 @@
     borderColor}}style="border-color:{{borderColor}}" {{/if}}>
     <header class="message-header flexrow">
         <span class="message-metadata">
-            <i class="fa-solid fa-user-secret message-type" data-tooltip="{{localize "CHAT.RollPrivate"}}"></i>
-            <i class="fa-solid fa-eye-slash message-type" data-tooltip="{{localize "CHAT.RollBlind"}}"></i>
             <time class="message-timestamp">{{timeSince message.timestamp}}</time>
+            <i class="fa-solid fa-user-secret message-type" data-tooltip="{{localize "CHAT.MODES.gm"}}"></i>
+            <i class="fa-solid fa-eye-slash message-type" data-tooltip="{{localize "CHAT.MODES.blind"}}"></i>
             {{#if canDelete}}
             <a aria-label="{{localize 'Delete'}}" class="message-delete" data-action="deleteMessage">
                 <i class="fa-solid fa-trash" inert></i>
