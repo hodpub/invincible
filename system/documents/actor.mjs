@@ -3,20 +3,6 @@
  * @extends {Actor}
  */
 export class InvincibleActor extends Actor {
-  /** @override */
-  prepareData() {
-    // Prepare data for the actor. Calling the super version of this executes
-    // the following, in order: data reset (to clear active effects),
-    // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
-    // prepareDerivedData().
-    super.prepareData();
-  }
-
-  /** @override */
-  prepareBaseData() {
-    // Data modifications in this step occur before processing embedded
-    // documents or derived data.
-  }
 
   /**
    * @override
@@ -26,6 +12,7 @@ export class InvincibleActor extends Actor {
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
+    super.prepareDerivedData();
     const actorData = this;
     const flags = actorData.flags.invincible || {};
   }
