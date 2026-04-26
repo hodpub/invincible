@@ -43,8 +43,8 @@
   font-weight: 400;
   background-color: transparent;
   font-size: $font-size;
-  padding: ($default-margin * 1.75) ($default-margin * 3);
   text-align: start;
+  border-radius: 0;
 
   &:disabled { border: 0; }
 }

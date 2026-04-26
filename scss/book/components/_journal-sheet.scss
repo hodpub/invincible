@@ -5,7 +5,9 @@
 
   &.journal-entry {
     .journal-header {
-      margin: 0;
+      @extend %basicShadow;
+      margin: 0 20px 0 16px;
+      background-color: white;
 
       input.title {
         @extend %baseInputTitle;
@@ -13,18 +15,12 @@
     }
 
     .journal-entry-content {
-      background-image: url(../assets/book/art/bg-journal.webp);
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/bg-item.webp);
 
       article {
-        // background-color: white;
-        // box-shadow: 5px 5px 0px 0px black;
-        // margin: 0.5rem;
+        @extend %basicShadow;
+        background-color: #fff;
         padding: $page-padding;
-
-        // Remove this after final
-        // overflow: hidden;
       }
     }
 
@@ -55,11 +51,11 @@
     }
 
     .journal-entry-content {
-      background-image: url(../assets/bg-item.webp);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/bg-item.webp);
       background-repeat: no-repeat;
       background-size: 100% 100%;
 
-      article {
+      article:first-child {
 
         // forgive me god
         div.box.blue.right {
