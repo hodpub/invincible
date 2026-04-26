@@ -67,29 +67,20 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
 
   async _prepareContext() {
     const { breakdown, dice } = this.getBreakdown();
+    const disabled = !this.hideAttribute && this.requireAttribute && !this.attribute;
+    const buttonsList = Object.keys(CONFIG.ChatMessage.modes).filter(it => it != "ic").map(key => {
+      const mode = CONFIG.ChatMessage.modes[key];
+      return {
+        type: "submit",
+        icon: mode.icon,
+        label: mode.label,
+        disabled: disabled,
+        action: key,
+      };
+    });
+    console.log(buttonsList);
     const context = {
-      buttons: [
-        {
-          type: "submit", icon: "fa-solid fa-globe", label: "CHAT.RollPublic",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.PUBLIC
-        },
-        {
-          type: "submit", icon: "fa-solid fa-user-secret", label: "CHAT.RollPrivate",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.PRIVATE
-        },
-        {
-          type: "submit", icon: "fa-solid fa-eye-slash", label: "CHAT.RollBlind",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.BLIND
-        },
-        {
-          type: "submit", icon: "fa-solid fa-user", label: "CHAT.RollSelf",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.SELF
-        },
-      ],
+      buttons: buttonsList,
       actor: this.actor,
       item: this.item,
       breakdown: this.breakdown,
