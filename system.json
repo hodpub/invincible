@@ -2,10 +2,10 @@
   "id": "invincible",
   "title": "Invincible - Superhero Roleplaying",
   "description": "The official Invincible – Superhero Roleplaying system for FoundryVTT!",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "compatibility": {
     "minimum": "13.348",
-    "verified": "13.348"
+    "verified": "14.360"
   },
   "authors": [
     {
@@ -41,6 +41,39 @@
   ],
   "packs": [
     {
+      "name": "critical-injuries",
+      "label": "Critial Injuries",
+      "path": "packs/critical-injuries",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "invincible"
+    },
+    {
+      "name": "rolltables",
+      "label": "Roll Tables",
+      "path": "packs/rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "invincible"
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "invincible"
+    },
+    {
       "name": "basic-data",
       "label": "Quickstart",
       "path": "packs/basic-data",
@@ -54,10 +87,13 @@
   ],
   "packFolders": [
     {
-      "name": "Invincible Quickstart",
+      "name": "Invincible",
       "sorting": "m",
       "color": "#0096cb",
       "packs": [
+        "critical-injuries",
+        "rolltables",
+        "macros",
         "basic-data"
       ]
     }
