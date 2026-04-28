@@ -147,7 +147,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
 
     let attackType = undefined;
     if (this.attackInfo) {
-      attackType = this.attackInfo.attackType ?? (this.attribute == "agility" ? "shooting" : "melee");
+      attackType = this.attackInfo.attackType ?? (this.attribute == "agility" ? "shooting" : "slugfest");
     }
 
     let options = this.rollOptions;

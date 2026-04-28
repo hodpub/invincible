@@ -307,6 +307,50 @@
       }
     },
     "Stunts": {
+      "DoubleDamage": {
+        "label": "Double Damage",
+        "stunt": "Double Damage"
+      },
+      "Knockback": {
+        "label": "Knockback",
+        "stunt": "Knockback: {value} zone(s)"
+      },
+      "Stun": {
+        "label": "Stun",
+        "stunt": "Stun"
+      },
+      "BangHeads": {
+        "label": "Bang Heads",
+        "stunt": "Bang Heads ({value}): damage {damage}"
+      },
+      "Suppressed": {
+        "label": "Suppressed",
+        "stunt": "Suppressed"
+      },
+      "TrickShot": {
+        "label": "TrickShot",
+        "stunt": "TrickShot"
+      },
+      "Trap": {
+        "label": "Trap",
+        "stunt": "Trap"
+      },
+      "Disarm": {
+        "label": "Disarm",
+        "stunt": "Disarm"
+      },
+      "DeadlyHit": {
+        "label": "Deadly Hit",
+        "stunt": "Deadly Hit"
+      },
+      "SpecialStunt": {
+        "label": "Special Stunt",
+        "stunt": "Special Stunt"
+      },
+      "YourOwn": {
+        "label": "Your Own",
+        "stunt": "Your Own"
+      },
       "ApplyStunts": "Apply Stunts"
     }
   },

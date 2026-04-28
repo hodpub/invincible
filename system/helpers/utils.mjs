@@ -8,3 +8,7 @@ export function unflatten(data) {
   }
   return result;
 }
+
+export function getStuntText(item, data) {
+  return game.i18n.format(`INVINCIBLE.Stunts.${item}.stunt`, data);
+}
