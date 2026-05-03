@@ -82,6 +82,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
     },
     automations: {
       template: 'systems/invincible/templates/item/automations.hbs',
+      templates: ["systems/invincible/templates/partials/automation-uuid.hbs"],
       scrollable: [""]
     },
     boosts: {

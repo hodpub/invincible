@@ -1,0 +1,13 @@
+<div class="form-group uuid-field">
+  <label for="system.automations.{{key}}.conditionToApply">{{localize label}}
+    {{#if (lookup automation field)}}
+    <a class='automation-open-item' data-action="automationCommand" data-command='viewAutomationItem'
+      data-uuid="{{lookup automation field}}">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      {{localize 'INVINCIBLE.Automation.FIELDS.item.open'}}
+    </a>
+    {{/if}}
+  </label>
+  {{formGroup (lookup automation.schema.fields field) value=(lookup automation field) name=(concat
+  "system.automations." key "." field)}}
+</div>

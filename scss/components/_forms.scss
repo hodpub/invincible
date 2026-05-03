@@ -72,6 +72,23 @@ div.form-group {
     flex: 1;
   }
 
+  &:has(document-tags) {
+    flex-direction: column;
+
+    &>label {
+      width: 100%;
+    }
+
+    .automation-open-item {
+      font-size: var(--font-size-10);
+      float: right;
+    }
+
+    input {
+      padding-left: 0;
+    }
+  }
+
   &:has(> .form-fields textarea) {
     align-items: flex-start;
     margin-top: 3px;
