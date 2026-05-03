@@ -246,7 +246,13 @@
           "baseDamage.label": "Base Damage",
           "range.label": "Range",
           "minRange.label": "Min Range",
-          "maxRange.label": "Max Range"
+          "maxRange.label": "Max Range",
+          "actualDamage.label": "Actual Damage",
+          "stressCost.label":"Stress Cost",
+          "conditionToApply":{
+            "label": "Condition To Apply",
+            "hint": "Drop a condition item here or paste its UUID on the field"
+          }
         },
         "rollArmor": {
           "armor.label": "Armor"
@@ -259,6 +265,11 @@
           "drop": "Drop a macro here or paste its UUID on the field",
           "error": "This automation is not of type \"Run Macro\"",
           "notFound": "Macro not set or not found. Please, verify."
+        },
+        "item": {
+          "open": "Open Item",
+          "drop": "Drop an item here or paste its UUID on the field",
+          "notFound": "Item not set or not found. Please, verify."
         },
         "consume": {
           "noQuantity": "This item does not have a quantity. Check the automation.",
