@@ -89,6 +89,15 @@ div.form-group {
     }
   }
 
+  &:has(code-mirror) {
+    flex-direction: column;
+
+    .form-fields {
+      width: 100%;
+      text-transform: none;
+    }
+  }
+
   &:has(> .form-fields textarea) {
     align-items: flex-start;
     margin-top: 3px;

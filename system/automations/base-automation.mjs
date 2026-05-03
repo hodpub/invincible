@@ -34,6 +34,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
         initial: true
       }),
       origin: new fields.StringField(),
+      extraConfiguration: new fields.JavaScriptField({}),
       open: new fields.BooleanField({ initial: true }),
     };
   }

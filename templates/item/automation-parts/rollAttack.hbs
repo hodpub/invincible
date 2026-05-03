@@ -41,4 +41,5 @@
   </div>
   {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="conditionToApply" label="INVINCIBLE.Automation.FIELDS.rollAttack.conditionToApply.label"}}
   {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="postExecution" label="INVINCIBLE.Automation.FIELDS.rollAttack.postExecutionMacro.label"}}
+  {{formGroup automation.schema.fields.extraConfiguration value=automation.extraConfiguration label="Extra Configuration" name=(concat "system.automations." key ".extraConfiguration")}}
 </div>
