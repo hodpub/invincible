@@ -158,6 +158,16 @@
         "htmlFields": [
           "description"
         ]
+      },
+      "boost": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "limit": {
+        "htmlFields": [
+          "description"
+        ]
       }
     }
   },

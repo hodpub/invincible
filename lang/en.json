@@ -130,7 +130,8 @@
         "Description": "Info",
         "Effects": "Effects",
         "Automations": "Auto",
-        "Boosts": "Boosts"
+        "Boosts": "Boosts",
+        "ExtraConfiguration": "Extra Configuration"
       },
       "Gear": {
         "FIELDS": {
@@ -398,7 +399,9 @@
       "talent": "Talent",
       "drawback": "Drawback",
       "gear": "Gear",
-      "criticalInjury": "Critical Injury"
+      "criticalInjury": "Critical Injury",
+      "boost": "Boost",
+      "limit": "Limit"
     }
   }
 }

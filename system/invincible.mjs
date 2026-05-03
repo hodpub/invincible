@@ -72,7 +72,8 @@ Hooks.once('init', function () {
   CONFIG.Item.documentClass = InvincibleItem;
   CONFIG.Item.dataModels = {
     gear: models.InvincibleGear,
-    feature: models.InvincibleFeature,
+    boost: models.InvincibleBoost,
+    limit: models.InvincibleLimit,
     spell: models.InvincibleSpell,
     criticalInjury: models.InvincibleCriticalInjury,
     talent: models.InvincibleTalent,

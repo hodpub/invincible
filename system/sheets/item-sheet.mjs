@@ -89,6 +89,9 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
     boosts: {
       template: 'systems/invincible/templates/item/attribute-parts/boosts.hbs',
       scrollable: [""]
+    },
+    extraConfiguration: {
+      template: 'systems/invincible/templates/item/attribute-parts/extra-configuration.hbs',
     }
   };
 
@@ -116,6 +119,11 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       case 'power':
         options.parts.push('boosts');
         break;
+      case 'boost':
+      case 'limit':
+        options.parts.push("effects", "extraConfiguration");
+        // Return to not add the effects / automations tab
+        return;
     }
     options.parts.push('effects', 'automations');
   }
@@ -155,6 +163,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       case 'attributesCriticalInjury':
       case 'automations':
       case 'boosts':
+      case 'extraConfiguration':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -231,6 +240,10 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
         case 'boosts':
           tab.id = 'boosts';
           tab.label += 'Boosts';
+          break;
+        case 'extraConfiguration':
+          tab.id = 'extraConfiguration';
+          tab.label += 'ExtraConfiguration';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
