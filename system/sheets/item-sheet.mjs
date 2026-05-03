@@ -28,6 +28,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       toggleEffect: this._toggleEffect,
       createAutomation: this._createAutomation,
       deleteAutomation: this._deleteAutomation,
+      duplicateAutomation: this._duplicateAutomation,
       automationCommand: this._automationCommand,
       createBoost: this._createBoost,
       deleteBoost: this._deleteBoost,
@@ -393,6 +394,16 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
         }
       }
     );
+  }
+
+  static async _duplicateAutomation(event, target) {
+    debugger;
+    const automationId = this._getAutomationId(target);
+    const automation = this._getAutomation(automationId);
+
+    const duplicated = foundry.utils.duplicate(automation);
+    duplicated._id = foundry.utils.randomID();
+    return this.item.update({ [`system.automations.${duplicated._id}`]: duplicated });
   }
 
   static async _automationCommand(event, target) {
