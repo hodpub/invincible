@@ -42,7 +42,7 @@ export function registerDice3D(dice3d) {
     ],
     colorset: 'Invincible Base',
     system: ID,
-  });
+  }, "d6");
   // dice3d.addDicePreset({
   //   type: 'dg',
   //   labels: [
