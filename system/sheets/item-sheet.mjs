@@ -3,6 +3,7 @@ import { BaseAutomation } from '../automations/_automations.mjs';
 
 const { api, sheets } = foundry.applications;
 const DragDrop = foundry.applications.ux.DragDrop;
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
