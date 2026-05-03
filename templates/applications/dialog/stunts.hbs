@@ -1,4 +1,3 @@
-{{log this}}
 <div>
   <label class="title dialog">{{rollName}}</label>
   <div class="dices">
@@ -8,7 +7,6 @@
   </div>
   <div class="breakdown">
     {{#each stuntOptions as | item name |}}
-    {{log name item.value}}
     <div class="attribute">
       <div class="attribute-control">
         <a class="attribute-decrease" data-action="decrease" data-item="{{name}}" {{#if item.minDisabled}}disabled{{/if}}>
