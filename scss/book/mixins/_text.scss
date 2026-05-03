@@ -1,8 +1,9 @@
-%baseSerif { font-family: $font-serif; }
+%baseSerif {
+  font-family: $font-serif;
+}
 
-%baseSans { 
+%baseSans {
   font-family: $font-sans;
-  font-size: 0.9rem;
 }
 
 
@@ -20,8 +21,13 @@
   text-align: justify;
   hyphens: auto;
 
-  &.indent { text-indent: $default-indent; }
-  &.sans { @extend %baseSans; };
+  &.indent, &+p {
+    text-indent: $default-indent;
+  }
+
+  &.sans {
+    @extend %baseSans;
+  }
 
   a {
     // &[href] { color: $c-lightblue; }
@@ -39,23 +45,35 @@
       word-break: normal;
       white-space: normal;
 
-      i { 
+      i {
         color: black;
         margin-right: 6px;
         white-space: nowrap !important;
       }
-    } 
+    }
   }
 }
 
 %baseEnrichers {
   background-color: gold;
-  &.page-num { background-color: chartreuse !important; }
-  &.content-link { 
-    &[data-type="Macro"] { background-color: #56CBF9 !important; }
+
+  &.page-num {
+    background-color: chartreuse !important;
+  }
+
+  &.content-link {
+    &[data-type="Macro"] {
+      background-color: #56CBF9 !important;
+    }
 
     background-color: blueviolet !important;
   }
-  &.content-link.broken { background-color: red !important; }
-  &.inline-roll { background-color: hotpink !important; }
+
+  &.content-link.broken {
+    background-color: red !important;
+  }
+
+  &.inline-roll {
+    background-color: hotpink !important;
+  }
 }
