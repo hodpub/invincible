@@ -6,12 +6,12 @@
       {{selectOptions @root.config.ACTOR.ATTRIBUTE_CHOICES selected=automation.attribute localize=true}}
     </select>
   </div>
-  {{!-- <div class="form-group">
+  <div class="form-group">
     <label for="system.automations.{{@key}}.canChangeAttribute">{{localize
       "INVINCIBLE.Automation.FIELDS.rollAttribute.canChangeAttribute.label"}}</label>
     <input type="checkbox" name="system.automations.{{@key}}.canChangeAttribute" {{checked
       automation.canChangeAttribute}} />
-  </div> --}}
+  </div>
   <div class="form-group">
     <label for="system.automations.{{key}}.rollBonus">{{localize
       "INVINCIBLE.Automation.FIELDS.rollBonus.label"}}</label>
@@ -29,20 +29,16 @@
     <input type="text" name="system.automations.{{key}}.maxRange" value="{{automation.maxRange}}">
   </div>
   <div class="form-group">
-    <label for="system.automations.{{key}}.macro">{{localize
-      "INVINCIBLE.Automation.FIELDS.rollAttack.postExecutionMacro.label"}}</label>
-    <input type="text" name="system.automations.{{key}}.postExecution" value="{{automation.postExecution}}">
+    <label for="system.automations.{{@key}}.actualDamage">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.actualDamage.label"}}</label>
+    <input type="checkbox" name="system.automations.{{@key}}.actualDamage" {{checked
+      automation.actualDamage}} />
   </div>
-  <div class="tip">
-    {{#if automation.postExecution}}
-    <label class="hint">
-      <a class='automation-open-macro' data-action="automationCommand" data-command='viewAutomationMacro'>
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        {{localize 'INVINCIBLE.Automation.FIELDS.macro.open'}}
-      </a>
-    </label>
-    {{else}}
-    <label class="hint">{{localize 'INVINCIBLE.Automation.FIELDS.macro.drop'}}</label>
-    {{/if}}
+  <div class="form-group">
+    <label for="system.automations.{{key}}.stressCost">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.stressCost.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.stressCost" value="{{automation.stressCost}}">
   </div>
+  {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="conditionToApply" label="INVINCIBLE.Automation.FIELDS.rollAttack.conditionToApply.label"}}
+  {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="postExecution" label="INVINCIBLE.Automation.FIELDS.rollAttack.postExecutionMacro.label"}}
 </div>

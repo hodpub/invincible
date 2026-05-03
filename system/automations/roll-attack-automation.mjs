@@ -16,6 +16,11 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
     schema.minRange = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
     schema.maxRange = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
 
+    schema.actualDamage = new foundry.data.fields.BooleanField({ initial: true, required: true });
+
+    schema.stressCost = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
+
+    schema.conditionToApply = new DocumentUUIDField();
     //TODO: Add validation to ensure maxRange >= minRange
     //TODO: Add type of action (quick/full)
     //TODO: Add validation if action type is used before rolling the attack
@@ -26,9 +31,11 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
     return schema;
   }
 
-  async viewAutomationMacro() {
-    const macro = await fromUuid(this.postExecution);
-    macro.sheet.render(true);
+  async viewAutomationItem(event) {
+    const dataset = event.target.dataset;
+    const uuid = dataset.uuid;
+    const item = await fromUuid(uuid);
+    item.sheet.render(true);
   }
 
   async execute(event) {
