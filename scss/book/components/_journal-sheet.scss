@@ -17,6 +17,10 @@
     .journal-entry-content {
       background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/bg-item.webp);
 
+      .journal-entry-pages {
+        margin-bottom: 0;
+      }
+
       article {
         @extend %basicShadow;
         background-color: #fff;
