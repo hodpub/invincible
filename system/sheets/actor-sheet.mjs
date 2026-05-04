@@ -566,6 +566,12 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             return;
           }
           await item.deleteDialog();
+          if (item.type == "power") {
+            const related = this.actor.items.filter(it => it.system.power == item.id)
+            for (const relatedItem of related) {
+              await relatedItem.delete();
+            }
+          }
         },
       },
     ]
