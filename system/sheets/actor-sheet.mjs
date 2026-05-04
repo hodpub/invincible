@@ -250,6 +250,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     const injuries = [];
     const talents = [];
     const drawbacks = [];
+    const boosts = {};
+    const limits = {};
 
     const powerSources = this.document.items.filter(i => i.type === "powerSource");
     const others = this.document.items.filter(i => i.type !== "powerSource");
@@ -281,6 +283,16 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         drawbacks.push(i);
         continue;
       }
+      if (i.type == "boost") {
+        boosts[i.system.power] ??= [];
+        boosts[i.system.power].push(i);
+        continue;
+      }
+      if (i.type == "limit") {
+        limits[i.system.power] ??= [];
+        limits[i.system.power].push(i);
+        continue;
+      }
     }
 
     for (const [key, value] of Object.entries(powers)) {
@@ -292,6 +304,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     context.injuries = injuries.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.talents = talents.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.drawbacks = drawbacks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.boosts = boosts;
+    context.limits = limits;
   }
 
   /**

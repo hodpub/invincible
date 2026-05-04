@@ -134,7 +134,7 @@
     top: 3px;
     right: 3px;
     font-size: var(--font-size-14);
-    
+
     cursor: pointer;
     transition: transform 0.2s;
 
@@ -143,6 +143,16 @@
       color: white;
       padding: 2px;
       transform: scale(1.5);
+    }
+  }
+
+  div.boostLimit {
+    min-height: 16px;
+
+    img {
+      float: left;
+      height: 16px;
+      margin-right: 3px;
     }
   }
 }

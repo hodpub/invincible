@@ -5,16 +5,34 @@
     <label data-document-class="Item" data-item-id="{{ps.powerSource.id}}">
       {{ps.powerSource.name}}
     </label>
-    {{{ps.powerSource.enriched}}}
+    <div class="item-description">
+      {{{ps.powerSource.enriched}}}
+    </div>
     {{#each ps.powers as | power |}}
     <ul>
       <li data-document-class="Item" data-item-id="{{power.id}}">
         <label class="rollable" data-action="roll" data-roll-type="automation">{{power.name}}</label>
-        {{{power.enriched}}}
-        {{#each power.system.boosts as | boost |}}
-        <ul>
-          <li><strong class="rollable" data-action="roll" data-roll-type="boost" data-power="{{power.name}}" data-roll-data="{{boost}}">{{localize "INVINCIBLE.Item.Power.FIELDS.boosts.single"}}:</strong> {{boost}}</li>
-        </ul>
+        <div class="item-description">
+          {{{power.enriched}}}
+        </div>
+        <div style="height: 15px;"></div>
+        {{#each (lookup ../../boosts power.id) as | boost |}}
+        <div class="boostLimit">
+          <img src="{{boost.img}}">
+          <strong>{{boost.name}}</strong>
+          <div class="item-description">
+            {{{boost.system.description}}}
+          </div>
+        </div>
+        {{/each}}
+        {{#each (lookup ../../limits power.id) as | limit |}}
+        <div class="boostLimit">
+          <img src="{{limit.img}}">
+          <strong>{{limit.name}}</strong>
+          <div class="item-description">
+            {{{limit.system.description}}}
+          </div>
+        </div>
         {{/each}}
       </li>
     </ul>
