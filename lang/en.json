@@ -250,8 +250,8 @@
           "minRange.label": "Min Range",
           "maxRange.label": "Max Range",
           "actualDamage.label": "Actual Damage",
-          "stressCost.label":"Stress Cost",
-          "conditionToApply":{
+          "stressCost.label": "Stress Cost",
+          "conditionToApply": {
             "label": "Condition To Apply",
             "hint": "Drop a condition item here or paste its UUID on the field"
           }
@@ -365,6 +365,12 @@
         "stunt": "Your Own"
       },
       "ApplyStunts": "Apply Stunts"
+    },
+    "Settings": {
+      "showItemDescription": {
+        "label": "Show Item Description",
+        "hint": "Show/hide the item description on the actors sheet."
+      }
     }
   },
   "YZUR": {

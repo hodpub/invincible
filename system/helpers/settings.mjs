@@ -7,6 +7,15 @@ const settings = {
     type: Boolean,
     default: false,
   },
+  showItemDescription: {
+    name: "INVINCIBLE.Settings.showItemDescription.label",
+    hint: "INVINCIBLE.Settings.showItemDescription.hint",
+    config: true,
+    scope: 'client',
+    type: Boolean,
+    default: true,
+    requiresReload: true,
+  },
 };
 
 export function registerSettings() {

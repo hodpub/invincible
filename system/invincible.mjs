@@ -130,6 +130,7 @@ Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
   adventureImport();
+  showHideItemDescription();
 });
 
 const quickstartAdventureUuid = "Compendium.invincible.basic-data.Adventure.UPXxPs1B06jTxXq6";
@@ -153,6 +154,12 @@ Hooks.on('importAdventure', async (adventure) => {
 
 Hooks.once('diceSoNiceReady', registerDice3D);
 Hooks.once('yzeCombatReady', registerYearZeroCombatSettings);
+
+function showHideItemDescription(){
+  const showItemDescription = game.settings.get(INVINCIBLE.ID, "showItemDescription");
+  if (!showItemDescription)
+    document.body.classList.add("hide-item-description");
+}
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
