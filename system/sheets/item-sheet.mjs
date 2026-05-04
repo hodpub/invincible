@@ -32,6 +32,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       duplicateAutomation: this._duplicateAutomation,
       automationCommand: this._automationCommand,
       createBoost: this._createBoost,
+      updateBoost: this._updateBoost,
       deleteBoost: this._deleteBoost,
       setPowerSource: this._setPowerSource,
     },
@@ -90,6 +91,10 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       template: 'systems/invincible/templates/item/attribute-parts/boosts.hbs',
       scrollable: [""]
     },
+    limits: {
+      template: 'systems/invincible/templates/item/attribute-parts/limits.hbs',
+      scrollable: [""]
+    },
     extraConfiguration: {
       template: 'systems/invincible/templates/item/attribute-parts/extra-configuration.hbs',
     }
@@ -117,7 +122,8 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
         options.parts.push('attributesCriticalInjury');
         break;
       case 'power':
-        options.parts.push('boosts');
+        if (this.item.isEmbedded)
+          options.parts.push('boosts', 'limits');
         break;
       case 'boost':
       case 'limit':
@@ -151,7 +157,30 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       systemFields: this.document.system.schema.fields,
     };
 
+    await this._loadBoostLimit(context);
+
+    console.log(context);
+
     return context;
+  }
+
+  async _loadBoostLimit(context) {
+    if (context.item.type != "power" || !context.item.isEmbedded)
+      return;
+
+    const boostsAndLimits = this.item.actor.items.filter(it => it.system.power == this.item.id);
+
+    context.boosts = boostsAndLimits.filter(it => it.type == "boost");
+    context.limits = boostsAndLimits.filter(it => it.type == "limit");
+
+    for (const automationId of Object.keys(context.item.system.automations)) {
+      let automation = context.item.system.automations[automationId];
+      console.log("START", automation);
+      for (const mod of boostsAndLimits) {
+        automation = mod.system.func(automation);
+        console.log("MOD", mod, automation);
+      }
+    }
   }
 
   /** @override */
@@ -163,6 +192,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       case 'attributesCriticalInjury':
       case 'automations':
       case 'boosts':
+      case 'limits':
       case 'extraConfiguration':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
@@ -240,6 +270,10 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
         case 'boosts':
           tab.id = 'boosts';
           tab.label += 'Boosts';
+          break;
+        case 'limits':
+          tab.id = 'limits';
+          tab.label += 'Limits';
           break;
         case 'extraConfiguration':
           tab.id = 'extraConfiguration';
@@ -447,24 +481,25 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
     return this.item.update({ "system.boosts": boosts });
   }
 
+  static async _updateBoost(event, target) {
+    const dataset = target.dataset;
+    const item = await fromUuid(dataset.uuid);
+    return item.sheet.render(true);
+  }
+
   static async _deleteBoost(event, target) {
-    const boosts = this.item.system.boosts ?? [];
-    const index = parseInt(target.dataset.index);
-    if (isNaN(index) || index < 0 || index >= boosts.length) {
-      ui.notifications.error("Invalid boost index.");
-      return;
-    }
-    const type = game.i18n.localize("INVINCIBLE.Item.Power.FIELDS.boosts.single");
-    const question = game.i18n.localize("AreYouSure");
-    const warning = game.i18n.format("SIDEBAR.DeleteWarning", { type });
-    const content = `<p><strong>${question}</strong> ${warning}</p>`;
+    const dataset = target.dataset;
+    const item = await fromUuid(dataset.uuid);
+    const type = game.i18n.localize(`TYPES.Item.${item.type}`);
+    const title = item.name;
+    const warning = game.i18n.format("SETUP.PackageDeleteConfirm", { type, title });
     return foundry.applications.api.DialogV2.confirm(
       {
-        content,
+        content: warning,
         yes: {
           callback: async () => {
-            boosts.splice(index, 1);
-            return this.item.update({ "system.boosts": boosts });
+            await item.delete();
+            return this.render(true);
           }
         },
         window: {
@@ -704,6 +739,16 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
    */
   async _onDropItem(event, data) {
     if (!this.item.isOwner) return false;
+    const targetItem = await fromUuid(data.uuid);
+    if (this.item.type != "power" || !this.item.isEmbedded || (["boost", "limit"].indexOf(targetItem.type) == -1))
+      return;
+
+    const newTargetItem = targetItem.toObject();
+    delete newTargetItem._id;
+    newTargetItem.system.power = this.item.id;
+
+    await this.item.actor.createEmbeddedDocuments("Item", [newTargetItem]);
+    return this.render(true);
   }
 
   /* -------------------------------------------- */
@@ -743,5 +788,15 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       formData.object[`system.automations.${detail.dataset.automationId}.open`] = detail.open;
     }
     return super._prepareSubmitData(event, form, formData, updateData);
+  }
+
+  async _processSubmitData(event, form, submitData, options = {}) {
+    await super._processSubmitData(event, form, submitData, options);
+
+    if (!this.item.system.power)
+      return;
+
+    const power = this.item.actor.items.get(this.item.system.power);
+    return power.sheet.render();
   }
 }

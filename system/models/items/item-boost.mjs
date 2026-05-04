@@ -15,4 +15,10 @@ export default class InvincibleBoost extends InvincibleItemBase {
 
     return schema;
   }
+
+  prepareDerivedData(){
+    super.prepareDerivedData();
+
+    this.func = new Function("automation", this.extraConfiguration);
+  }
 }

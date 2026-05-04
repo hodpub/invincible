@@ -39,6 +39,12 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
     };
   }
 
+  _initialize(options = {}) {
+    super._initialize(options);
+    this.choices = [];
+    this.effects = [];
+  }
+
   /**
    * The subtypes of this pseudo-document.
    * @type {Record<string, typeof PseudoDocument>}

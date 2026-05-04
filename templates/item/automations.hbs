@@ -9,7 +9,7 @@
   </div>
 
   {{#each system.automations as | automation |}}
-  <details data-automation-id="{{@key}}" {{#if automation.open}}open{{/if}}>
+  <details data-automation-id="{{@key}}" {{#if (and automation.open automation.showAsSelection)}}open{{/if}}>
     <summary>
       {{automation.name}}
     </summary>
