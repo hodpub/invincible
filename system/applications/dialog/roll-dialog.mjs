@@ -1,4 +1,5 @@
 import { YearZeroRoll } from "../../../lib/yzur.js";
+import { applyStunts } from "../../helpers/rolls.mjs";
 
 const { HandlebarsApplicationMixin, ApplicationV2, DialogV2 } = foundry.applications.api;
 const TextEditor = foundry.applications.ux.TextEditor.implementation;
@@ -155,7 +156,9 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
     options.damage = this.attackInfo?.damage;
     options.minRange = this.attackInfo?.minRange;
     options.maxRange = this.attackInfo?.maxRange;
+    options.stressCost = this.attackInfo?.stressCost;
     options.armor = this.attackInfo?.armor;
+    options.effects = this.attackInfo?.effects.sort();
     options.description = await TextEditor.enrichHTML(
       this.item?.system.description,
       {
@@ -180,6 +183,13 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
     this.close();
 
     await game.dice3d?.waitFor3DAnimationByMessageID(message.id);
+
+    if (!roll.pushable) {
+      if (options.stressCost > 0)
+        await this.actor.update({ "system.derived.resolve.value": this.actor.system.derived.resolve.value - options.stressCost });
+
+      await applyStunts(message);
+    }
 
     return this.result;
   }

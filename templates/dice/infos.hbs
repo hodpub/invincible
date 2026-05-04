@@ -39,21 +39,12 @@
   {{/if}}
   {{/if}}
 
-  {{#if roll.pushed}}
-  {{#if roll.attributeTrauma}}
+  {{#if roll.options.stressCost}}
   <div class="dice-info roll-trauma">
     <span class="label">{{localize "YZUR.CHAT.ROLL.Trauma"}}: </span>
-    <span class="result">{{roll.attributeTrauma}}</span>
+    <span class="result">{{roll.options.stressCost}}</span>
   </div>
   {{/if}}
-  {{#if roll.gearDamage}}
-  <div class="dice-info roll-gear-damage">
-    <span class="label">{{localize "YZUR.CHAT.ROLL.GearDamage"}}: </span>
-    <span class="result">{{roll.gearDamage}}</span>
-  </div>
-  {{/if}}
-  {{/if}}
-
 
   {{#if roll.stunts}}
   <div class="roll-damage">
@@ -66,5 +57,11 @@
     {{/each}}
   </ul>
   {{/if}}
+
+  <ul>
+    {{#each roll.options.effects as | item|}}
+    <li>{{{item}}}</li>
+    {{/each}}
+  </ul>
 
 </div>

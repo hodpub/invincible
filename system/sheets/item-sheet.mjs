@@ -159,8 +159,6 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
 
     await this._loadBoostLimit(context);
 
-    console.log(context);
-
     return context;
   }
 
@@ -172,15 +170,6 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
 
     context.boosts = boostsAndLimits.filter(it => it.type == "boost");
     context.limits = boostsAndLimits.filter(it => it.type == "limit");
-
-    for (const automationId of Object.keys(context.item.system.automations)) {
-      let automation = context.item.system.automations[automationId];
-      console.log("START", automation);
-      for (const mod of boostsAndLimits) {
-        automation = mod.system.func(automation);
-        console.log("MOD", mod, automation);
-      }
-    }
   }
 
   /** @override */

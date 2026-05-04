@@ -41,8 +41,20 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
 
   _initialize(options = {}) {
     super._initialize(options);
-    this.choices = [];
-    this.effects = [];
+
+  }
+
+  applyBoostsAndLimits() {
+    if (this.modsApplied)
+      return;
+    const mods = this.actor.items.filter(it => it.system.power == this.item.id);
+    let copy = this.toObject();
+    copy.choices = [];
+    copy.effects = [];
+    for (const mod of mods) {
+      copy = mod.system.func(copy);
+    }
+    return copy;
   }
 
   /**
