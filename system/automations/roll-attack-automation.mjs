@@ -48,6 +48,7 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
       }
       const choiceResult = await foundry.applications.api.DialogV2.input({
         window: { title: currentExecution.name },
+        classes: ["roll-application"],
         content: choices.join(""),
         ok: {
           label: "Apply",
