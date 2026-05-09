@@ -83,7 +83,10 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
           let value = change.value;
           if (!isNaN(value))
             value = parseInt(value);
-          acc[propertyKey][effect.parent.name] = value;
+          let parentName = effect.parent.name;
+          if (effect.parent.uuid == this.parent.uuid)
+            parentName = effect.name;
+          acc[propertyKey][parentName] = value;
         });
       }
       return acc;
