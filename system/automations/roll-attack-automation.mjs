@@ -2,7 +2,7 @@ import RollAttributeAutomation from "./roll-attribute-automation.mjs";
 import { DataHelper } from "../helpers/data.mjs";
 import InvincibleRollDialog from "../applications/dialog/roll-dialog.mjs";
 
-const { DocumentUUIDField } = foundry.data.fields;
+const fields = foundry.data.fields;
 export default class RollAttackAutomation extends RollAttributeAutomation {
   /** @inheritdoc */
   static get TYPE() {
@@ -12,21 +12,21 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
   static defineSchema() {
     const schema = super.defineSchema();
 
-    schema.baseDamage = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 1, min: 0 });
-    schema.minRange = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
-    schema.maxRange = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
+    schema.baseDamage = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 1, min: 0 });
+    schema.minRange = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
+    schema.maxRange = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
 
-    schema.actualDamage = new foundry.data.fields.BooleanField({ initial: true, required: true });
+    schema.actualDamage = new fields.BooleanField({ initial: true, required: true });
 
-    schema.stressCost = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
+    schema.stressCost = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
 
-    schema.conditionToApply = new DocumentUUIDField();
+    schema.conditionToApply = new fields.DocumentUUIDField();
     //TODO: Add validation to ensure maxRange >= minRange
     //TODO: Add type of action (quick/full)
     //TODO: Add validation if action type is used before rolling the attack
     //TODO: Auto use the action type
 
-    schema.postExecution = new DocumentUUIDField();
+    schema.postExecution = new fields.DocumentUUIDField();
 
     return schema;
   }
@@ -39,28 +39,7 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
   }
 
   async execute(event) {
-    const currentExecution = this.applyBoostsAndLimits();
-
-    if (!event?.shiftKey && currentExecution.choices.length > 0) {
-      let choices = [];
-      for (const choice of currentExecution.choices) {
-        choices.push(`<div class="form-field"><input type="checkbox" name="${choice.name}"><label for="${choice.name}">${choice.name}</label></div>`);
-      }
-      const choiceResult = await foundry.applications.api.DialogV2.input({
-        window: { title: currentExecution.name },
-        classes: ["roll-application"],
-        content: choices.join(""),
-        ok: {
-          label: "Apply",
-          icon: "fa-solid fa-floppy-disk",
-        }
-      });
-      for (const choice of currentExecution.choices) {
-        if (!choiceResult[choice.name])
-          continue;
-        choice.action(currentExecution);
-      }
-    }
+    const currentExecution = await this.applyBoostsAndLimits();
 
     const breakdown = {
       [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${currentExecution.attribute}.label`)]: this.actor.system.attributes[currentExecution.attribute].value,

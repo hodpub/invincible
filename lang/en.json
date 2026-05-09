@@ -207,6 +207,7 @@
         "rollAttribute": "Roll Attribute",
         "rollAttack": "Roll Attack",
         "rollArmor": "Roll Armor Protection",
+        "modifyRollAttack": "Modify Roll Attack",
         "reloadWeapon": "Reload / Recharge Weapon",
         "runMacro": "Run Macro",
         "consume": "Consume Item",
@@ -301,6 +302,12 @@
         },
         "upgrade": {
           "noExplorer": "Select an explorer to use the vehicle upgrade."
+        },
+        "modify": {
+          "autoModify": {
+            "label": "Auto Modify",
+            "hint": "If selected, it will automatically modify the automation. If not, it will allow you to select if you want to use the boost/limit."
+          }
         }
       }
     },

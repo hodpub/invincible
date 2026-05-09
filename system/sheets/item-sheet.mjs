@@ -125,11 +125,6 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
         if (this.item.isEmbedded)
           options.parts.push('boosts', 'limits');
         break;
-      case 'boost':
-      case 'limit':
-        options.parts.push("effects", "extraConfiguration");
-        // Return to not add the effects / automations tab
-        return;
     }
     options.parts.push('effects', 'automations');
   }

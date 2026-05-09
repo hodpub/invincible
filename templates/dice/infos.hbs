@@ -60,7 +60,8 @@
 
   <ul>
     {{#each roll.options.effects as | item|}}
-    <li>{{{item}}}</li>
+    {{log item}}
+    <li data-tooltip-html="{{{item.description}}}"><strong>[{{localize (concat "TYPES.Item." item.type)}}] {{item.name}}</strong></li>
     {{/each}}
     {{#if roll.options.conditionToApply}}
     <li><strong>Condition</strong>: {{{roll.options.conditionText}}}</li>

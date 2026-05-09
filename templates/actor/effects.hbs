@@ -14,9 +14,9 @@
         <div class='effect-name flexrow'>
           {{localize section.label}}
         </div>
-        {{!-- <div class='effect-source'>
+        <div class='effect-source'>
           {{localize 'INVINCIBLE.Effect.Source'}}
-        </div> --}}
+        </div>
         <div class='effect-source'>{{localize 'EFFECT.TABS.duration'}}</div>
         <div class='effect-controls flexrow'>
           <a
@@ -48,9 +48,9 @@
           >
             <div class='effect-name flexrow'>
               <img class='effect-image' src='{{effect.img}}' height="24" width="24"/>
-              <div>{{effect.name}}</div>
+              <label>{{effect.name}}</labe>
             </div>
-            {{!-- <div class='effect-source'>{{effect.sourceName}}</div> --}}
+            <div class='effect-source'>{{effect.sourceName}}</div>
             <div class='effect-duration'>{{effect.duration.label}}</div>
             <div class='effect-controls flexrow'>
               {{#if @root.editable}}

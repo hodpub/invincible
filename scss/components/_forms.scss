@@ -189,3 +189,11 @@ details {
     text-align: right;
   }
 }
+
+select[multiple] {
+  height: calc(var(--input-height) * 5);
+
+  option[selected] {
+    --color-select-option-bg: #{$c-lightblue};
+  }
+}

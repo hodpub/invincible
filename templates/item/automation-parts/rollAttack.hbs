@@ -2,7 +2,7 @@
   <div class="form-group">
     <label for="system.automations.{{key}}.attribute">{{localize
       "INVINCIBLE.Automation.FIELDS.attribute.label"}}</label>
-    <select name="system.automations.{{key}}.attribute">
+    <select name="system.automations.{{key}}.attribute" multiple="true">
       {{selectOptions @root.config.ACTOR.ATTRIBUTE_CHOICES selected=automation.attribute localize=true}}
     </select>
   </div>
@@ -40,6 +40,8 @@
     <input type="text" name="system.automations.{{key}}.stressCost" value="{{automation.stressCost}}">
   </div>
   {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="conditionToApply" label="INVINCIBLE.Automation.FIELDS.rollAttack.conditionToApply.label"}}
+  {{#if automation.schema.fields.postExecution}}
   {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="postExecution" label="INVINCIBLE.Automation.FIELDS.rollAttack.postExecutionMacro.label"}}
+  {{/if}}
   {{formGroup automation.schema.fields.extraConfiguration value=automation.extraConfiguration label="Extra Configuration" name=(concat "system.automations." key ".extraConfiguration")}}
 </div>
