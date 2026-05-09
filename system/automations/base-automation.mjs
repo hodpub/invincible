@@ -51,6 +51,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
     let currentExecution = this.toObject();
 
     const removeKeys = ["name", "_id", "type", "showAsSelection", "open", "autoModify"];
+    const boolKeys = ["actualDamage", "bypassArmor"];
 
     for (const mod of mods) {
       const m = Object.values(mod.system.automations).filter(it => it.type == "modifyRollAttack");
@@ -94,6 +95,11 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
         if ((Array.isArray(value) || typeof value == "string")
           && value.length)
           currentExecution[key] = value;
+        else if (boolKeys.indexOf(key) > -1) {
+          if (value == -1)
+            continue;
+          currentExecution[key] = Boolean(value);
+        }
         else if (typeof value == "number")
           currentExecution[key] = value;
       }

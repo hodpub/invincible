@@ -18,9 +18,10 @@ export default class ModifyRollAttackAutomation extends BaseAutomation {
     schema.baseDamage = new fields.NumberField();
     schema.minRange = new fields.NumberField();
     schema.maxRange = new fields.NumberField();
-    schema.actualDamage = new fields.BooleanField();
+    schema.actualDamage = new fields.NumberField({ initial: -1 });
     schema.stressCost = new fields.NumberField();
     schema.conditionToApply = new fields.DocumentUUIDField();
+    schema.bypassArmor = new fields.NumberField({ initial: -1 });
 
     schema.autoModify = new fields.BooleanField({ initial: true });
 

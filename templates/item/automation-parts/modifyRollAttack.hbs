@@ -7,5 +7,54 @@
   <div class="tip">
     <label class="hint">{{localize "INVINCIBLE.Automation.FIELDS.modify.autoModify.hint"}}</label>
   </div>
-  {{> "systems/invincible/templates/item/automation-parts/rollAttack.hbs" hideAttackField=true }}
+  <div class="form-group">
+    <label for="system.automations.{{key}}.attribute">{{localize
+      "INVINCIBLE.Automation.FIELDS.attribute.label"}}</label>
+    <select name="system.automations.{{key}}.attribute" multiple="true">
+      {{selectOptions @root.config.ACTOR.ATTRIBUTE_CHOICES selected=automation.attribute localize=true}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.rollBonus">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollBonus.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.rollBonus" value="{{automation.rollBonus}}">
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.baseDamage">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.baseDamage.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.baseDamage" value="{{automation.baseDamage}}">
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.range">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.range.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.minRange" value="{{automation.minRange}}">
+    <input type="text" name="system.automations.{{key}}.maxRange" value="{{automation.maxRange}}">
+  </div>
+  <div class="form-group stacked">
+    <label for="system.automations.{{@key}}.actualDamage">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.actualDamage.label"}}</label>
+      <select name="system.automations.{{@key}}.actualDamage">
+        {{selectOptions @root.config.AUTOMATIONS.MODIFY.BOOL selected=automation.actualDamage}}
+      </select>
+  </div>
+  <div class="form-group stacked">
+    <label for="system.automations.{{@key}}.bypassArmor">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.bypassArmor.label"}}</label>
+      <select name="system.automations.{{@key}}.bypassArmor">
+        {{selectOptions @root.config.AUTOMATIONS.MODIFY.BOOL selected=automation.bypassArmor}}
+      </select>
+  </div>
+  <div class="form-group">
+    <label for="system.automations.{{key}}.stressCost">{{localize
+      "INVINCIBLE.Automation.FIELDS.rollAttack.stressCost.label"}}</label>
+    <input type="text" name="system.automations.{{key}}.stressCost" value="{{automation.stressCost}}">
+  </div>
+  {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="conditionToApply"
+  label="INVINCIBLE.Automation.FIELDS.rollAttack.conditionToApply.label"}}
+  {{#if automation.schema.fields.postExecution}}
+  {{> "systems/invincible/templates/partials/automation-uuid.hbs" field="postExecution"
+  label="INVINCIBLE.Automation.FIELDS.rollAttack.postExecutionMacro.label"}}
+  {{/if}}
+  {{formGroup automation.schema.fields.extraConfiguration value=automation.extraConfiguration label="Extra
+  Configuration" name=(concat "system.automations." key ".extraConfiguration")}}
 </div>
