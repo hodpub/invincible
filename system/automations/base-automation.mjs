@@ -91,7 +91,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
         if (removeKeys.indexOf(key) > -1)
           continue;
         const value = modification[key];
-        if ((value instanceof Array || value instanceof String)
+        if ((Array.isArray(value) || typeof value == "string")
           && value.length)
           currentExecution[key] = value;
         else if (typeof value == "number")
