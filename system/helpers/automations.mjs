@@ -22,7 +22,7 @@ export function showAutomationsDialog(automations, title, { content, icon = 'fa-
     buttons,
     rejectClose: false,
     modal: true,
-    classes: ['choice-dialog'],
+    classes: ['roll-application', 'choices-dialog'],
     position: {
       width: 400
     },
