@@ -62,6 +62,9 @@
     {{#each roll.options.effects as | item|}}
     <li>{{{item}}}</li>
     {{/each}}
+    {{#if roll.options.conditionToApply}}
+    <li><strong>Condition</strong>: {{{roll.options.conditionText}}}</li>
+    {{/if}}
   </ul>
 
 </div>
