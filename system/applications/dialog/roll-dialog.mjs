@@ -142,7 +142,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
       breakdown.push({ name: game.i18n.localize("INVINCIBLE.Roll.bonus"), value: this.bonus });
       dice += this.bonus;
     }
-    return { breakdown, dice };
+    return { breakdown, dice: Math.max(dice, 1) };
   }
 
   async _roll(event, form, formData) {
