@@ -7,9 +7,8 @@
       </a>
     </label>
   </div>
-
   {{#each system.automations as | automation |}}
-  <details data-automation-id="{{@key}}" {{#if (and automation.open automation.showAsSelection)}}open{{/if}}>
+  <details data-automation-id="{{@key}}" {{#if (and automation.open (or automation.showAsSelection (not automation.schema.fields.showAsSelection)))}}open{{/if}}>
     <summary>
       {{automation.name}}
     </summary>
@@ -25,12 +24,14 @@
         <input type="text" name="system.automations.{{@key}}.name" value="{{automation.name}}">
       </div>
     </div>
+    {{#if automation.schema.fields.showAsSelection}}
     <div class="form-group">
       <label for="system.automations.{{@key}}.showAsSelection">{{localize
         "INVINCIBLE.Automation.FIELDS.showAsSelection.label"}}</label>
       <input type="checkbox" name="system.automations.{{@key}}.showAsSelection" {{checked
         automation.showAsSelection}} />
     </div>
+    {{/if}}
     {{> (concat "systems/invincible/templates/item/automation-parts/" automation.type ".hbs") automation=automation
     key=@key}}
 

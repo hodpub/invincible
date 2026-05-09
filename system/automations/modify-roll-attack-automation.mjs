@@ -10,6 +10,8 @@ export default class ModifyRollAttackAutomation extends BaseAutomation {
   static defineSchema() {
     const schema = super.defineSchema();
 
+    delete schema.showAsSelection;
+
     schema.attribute = new fields.SetField(new fields.StringField());
     schema.rollBonus = new fields.NumberField();
 
