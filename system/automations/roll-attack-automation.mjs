@@ -21,6 +21,7 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
     schema.stressCost = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
 
     schema.conditionToApply = new fields.DocumentUUIDField();
+    schema.bypassArmor = new fields.BooleanField({ initial: false, required: true });
     //TODO: Add validation to ensure maxRange >= minRange
     //TODO: Add type of action (quick/full)
     //TODO: Add validation if action type is used before rolling the attack
@@ -94,6 +95,7 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
         effects: currentExecution.effects,
         actualDamage: currentExecution.actualDamage,
         conditionToApply: currentExecution.conditionToApply,
+        bypassArmor: currentExecution.bypassArmor,
       },
       breakdown
     });

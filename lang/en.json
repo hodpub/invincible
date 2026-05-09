@@ -252,6 +252,7 @@
           "maxRange.label": "Max Range",
           "actualDamage.label": "Actual Damage",
           "stressCost.label": "Stress Cost",
+          "bypassArmor.label": "Bypass Armor",
           "conditionToApply": {
             "label": "Condition To Apply",
             "hint": "Drop a condition item here or paste its UUID on the field"
