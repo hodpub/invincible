@@ -136,7 +136,7 @@ Hooks.once('ready', function () {
 const quickstartAdventureUuid = "Compendium.invincible.basic-data.Adventure.UPXxPs1B06jTxXq6";
 
 async function adventureImport() {
-  if (game.items.get("4X4nw1do9wEOAaLx"))
+  if (game.scenes.get("vL4Lqhd60r7UHjPT"))
     return;
 
   const adventure = await fromUuid(quickstartAdventureUuid);
