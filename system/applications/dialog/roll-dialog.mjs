@@ -79,7 +79,10 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
         action: key,
       };
     });
-    console.log(buttonsList);
+    if (this.attackInfo)
+      this.attackInfo.conditionText = this.attackInfo.conditionToApply ?
+        await TextEditor.enrichHTML(
+          `@UUID[${this.attackInfo.conditionToApply}]`) : "";
     const context = {
       buttons: buttonsList,
       actor: this.actor,
@@ -153,12 +156,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
 
     let options = this.rollOptions;
     options.breakdown = breakdown;
-    options.damage = this.attackInfo?.damage;
-    options.minRange = this.attackInfo?.minRange;
-    options.maxRange = this.attackInfo?.maxRange;
-    options.stressCost = this.attackInfo?.stressCost;
-    options.armor = this.attackInfo?.armor;
-    options.effects = this.attackInfo?.effects.sort();
+    options = foundry.utils.mergeObject(options, this.attackInfo);
     options.description = await TextEditor.enrichHTML(
       this.item?.system.description,
       {

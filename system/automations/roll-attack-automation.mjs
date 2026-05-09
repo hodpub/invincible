@@ -79,6 +79,8 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
         maxRange: currentExecution.maxRange,
         stressCost: currentExecution.stressCost,
         effects: currentExecution.effects,
+        actualDamage: currentExecution.actualDamage,
+        conditionToApply: currentExecution.conditionToApply,
       },
       breakdown
     });

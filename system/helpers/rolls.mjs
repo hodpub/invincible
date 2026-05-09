@@ -85,6 +85,12 @@ export async function applyTargetDamage(message, roll) {
     if (!damage)
       continue;
 
+    if (roll.options.conditionToApply)
+      target.actor.createEmbeddedDocuments(condition.documentName, [condition]);
+
+    if (!roll.options.actualDamage)
+      continue;
+
     const newHealth = target.actor.system.derived.health.value - damage;
     changes["system.derived.health.value"] = Math.max(0, newHealth);
     await target.actor.update(changes);
