@@ -104,10 +104,18 @@ export async function applyTargetDamage(message, roll) {
 
     let content = `<p>${game.i18n.format("INVINCIBLE.Chat.DamageInfo.DamageInfo", { actor: target.actor.name, damage: damage })}</p>`
     if (newHealth < 0) {
-      const ciRoll = await Roll.create(`1d6 + ${newHealth * -1}`).roll();
-      const ciDraw = await criticalInjuries.draw({ roll: ciRoll, displayChat: false });
-      const ciUuid = ciDraw.results[0].documentUuid;
-      const ciItem = await fromUuid(ciUuid);
+      let ciRoll = await Roll.create(`1d6 + ${newHealth * -1}`).roll();
+      let ciDraw = await criticalInjuries.draw({ roll: ciRoll, displayChat: false });
+      let ciUuid = ciDraw.results[0].documentUuid;
+      let ciItem = await fromUuid(ciUuid);
+
+      const ciExists = target.actor.items.get(ciItem.id);
+      if (ciExists) {
+        ciRoll = await Roll.create(`${ciRoll.total + 1}`).roll();
+        ciDraw = await criticalInjuries.draw({ roll: ciRoll, displayChat: false });
+        ciUuid = ciDraw.results[0].documentUuid;
+        ciItem = await fromUuid(ciUuid);
+      }
 
       content += `<p>${game.i18n.format("INVINCIBLE.Chat.DamageInfo.CriticalInjury", { ciName: ciItem.name })}</p>`;
 
