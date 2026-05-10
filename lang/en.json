@@ -136,6 +136,12 @@
       },
       "Gear": {
         "FIELDS": {
+          "cost": {
+            "label": "Cost"
+          },
+          "singleUse": {
+            "label": "Single Use"
+          },
           "rollFormula": {
             "label": "Roll Formula"
           },
