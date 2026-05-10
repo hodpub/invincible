@@ -42,39 +42,9 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
   async execute(event) {
     const currentExecution = await this.applyBoostsAndLimits();
 
-    let attribute = currentExecution.attribute;
-    if (attribute.length == 0) {
-      ui.notifications.error("You need to have an attribute selected for the automation.");
+    let attribute = await this.getAttributeToUse();
+    if (!attribute)
       return;
-    }
-    if (attribute.length == 1)
-      attribute = attribute[0];
-    else if (attribute.length > 1) {
-      let btnIndex = 0;
-      const buttons = [
-        ...attribute.map((at) => {
-          const btn = Object.assign({
-            label: at,
-            // icon: icon,
-            action: at,
-            callback: () => at,
-          });
-          btnIndex++;
-          return btn;
-        })
-      ];
-      attribute = await foundry.applications.api.DialogV2.wait({
-        content: "",
-        buttons,
-        rejectClose: false,
-        modal: true,
-        classes: ['roll-application', 'choices-dialog'],
-        position: {
-          width: 400
-        },
-        window: { title: "Select the attribute" },
-      });
-    }
 
     const breakdown = {
       [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attribute}.label`)]: this.actor.system.attributes[attribute].value,

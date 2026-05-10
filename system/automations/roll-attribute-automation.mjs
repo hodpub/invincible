@@ -20,16 +20,56 @@ export default class RollAttributeAutomation extends BaseAutomation {
     return schema;
   }
 
+  async getAttributeToUse() {
+    let attribute = this.attribute;
+    if (attribute.length == 0) {
+      ui.notifications.error("You need to have an attribute selected for the automation.");
+      throw Error("You need to have an attribute selected for the automation.");
+    }
+
+    if (attribute.length == 1)
+      return attribute[0];
+
+    let btnIndex = 0;
+    const buttons = [
+      ...attribute.map((at) => {
+        const btn = Object.assign({
+          label: at,
+          // icon: icon,
+          action: at,
+          callback: () => at,
+        });
+        btnIndex++;
+        return btn;
+      })
+    ];
+    return foundry.applications.api.DialogV2.wait({
+      content: "",
+      buttons,
+      rejectClose: false,
+      modal: true,
+      classes: ['roll-application', 'choices-dialog'],
+      position: {
+        width: 400
+      },
+      window: { title: "Select the attribute" },
+    });
+  }
+
   async execute(event) {
+    let attribute = await this.getAttributeToUse();
+    if (!attribute)
+      return;
+
     const breakdown = {
-      [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${this.attribute}.label`)]: this.actor.system.attributes[this.attribute].value,
-      ...this.actor.system.bonuses[`system.attributes.${this.attribute}.value`]
+      [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attribute}.label`)]: this.actor.system.attributes[this.attribute].value,
+      ...this.actor.system.bonuses[`system.attributes.${attribute}.value`]
     };
     if (this.rollBonus)
       breakdown[this.name] = this.rollBonus;
     const rollDialog = new InvincibleRollDialog(this.name, {
       actor: this.actor,
-      attribute: this.attribute,
+      attribute: attribute,
       item: this.item,
       breakdown
     });

@@ -223,7 +223,8 @@
         "rollArmorBlight": "Roll Armor's Blight Protection",
         "rollCreatureAttack": "Roll Creature Attack",
         "rollBirdPower": "Roll Bird Power",
-        "rollUpgrade": "Roll Upgrade"
+        "rollUpgrade": "Roll Upgrade",
+        "useGear": "Use Gear"
       },
       "Category": {
         "Default": "Default",
