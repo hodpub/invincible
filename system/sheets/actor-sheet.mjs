@@ -96,7 +96,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     switch (this.document.type) {
       case 'superhero':
       case 'npc':
-        options.parts.push('powers', 'talents', 'injuries', 'effects', 'portrait', 'biography', 'personal');
+        options.parts.push('powers', 'talents', 'gear', 'injuries', 'effects', 'portrait', 'biography', 'personal');
         break;
     }
   }
@@ -247,6 +247,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     // if you don't need to subdivide a given type like
     // this sheet does with spells
     const powers = {};
+    const gear = [];
     const injuries = [];
     const talents = [];
     const drawbacks = [];
@@ -293,6 +294,10 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         limits[i.system.power].push(i);
         continue;
       }
+      if (i.type == "gear"){
+        gear.push(i);
+        continue;
+      }
     }
 
     for (const [key, value] of Object.entries(powers)) {
@@ -304,6 +309,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     context.injuries = injuries.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.talents = talents.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.drawbacks = drawbacks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.boosts = boosts;
     context.limits = limits;
   }

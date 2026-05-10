@@ -99,7 +99,8 @@
             "grapple": "Grapple",
             "wreckZone": "{attack} + Wreck Zone",
             "wreckZoneBonus": "Wreck Zone"
-          }
+          },
+          "resources.label": "Resources"
         }
       },
       "Superhero": {

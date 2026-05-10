@@ -53,6 +53,12 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
       min: 0
     });
 
+    schema.resources = new fields.NumberField({
+      ...DataHelper.requiredInteger,
+      initial: 0,
+      min: 0
+    });
+
     schema.occupation = new fields.StringField();
     schema.personality = new fields.StringField();
     schema.drive = new fields.StringField();

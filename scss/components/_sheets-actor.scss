@@ -155,4 +155,14 @@
       margin-right: 3px;
     }
   }
+
+  div.resources {
+    font-family: Comic, sans-serif;
+    text-transform: uppercase;
+    font-size: var(--font-size-18);
+    
+    label:first-child {
+      color: black;
+    }
+  }
 }
