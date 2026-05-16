@@ -15,7 +15,7 @@ export default class UseGearAutomation extends RollAttributeAutomation {
 
     const breakdown = {
       [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attribute}.label`)]: this.actor.system.attributes[attribute].value,
-      ...this.actor.system.bonuses[`system.attributes.${attribute}.value`]
+      ...this.actor.system.bonuses[attribute]
     };
     if (this.rollBonus)
       breakdown[this.name] = this.rollBonus;

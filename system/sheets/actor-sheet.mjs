@@ -460,7 +460,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             actor: this.actor,
             breakdown: {
               [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${dataset.attribute}.label`)]: this.actor.system.attributes[dataset.attribute].value,
-              ...this.actor.system.bonuses[`system.attributes.${dataset.attribute}.value`]
+              ...this.actor.system.bonuses[dataset.attribute]
             },
             attribute: dataset.attribute,
           }
