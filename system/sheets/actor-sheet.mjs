@@ -96,6 +96,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     switch (this.document.type) {
       case 'superhero':
       case 'npc':
+      case 'minions':
         options.parts.push('powers', 'talents', 'gear', 'injuries', 'effects', 'portrait', 'biography', 'personal');
         break;
     }
@@ -294,7 +295,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         limits[i.system.power].push(i);
         continue;
       }
-      if (i.type == "gear"){
+      if (i.type == "gear") {
         gear.push(i);
         continue;
       }

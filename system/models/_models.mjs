@@ -2,6 +2,7 @@
 export { default as InvincibleActorBase } from './actors/base-actor.mjs';
 export { default as InvincibleSuperhero } from './actors/actor-superhero.mjs';
 export { default as InvincibleNPC } from './actors/actor-npc.mjs';
+export { default as InvincibleMinions } from './actors/actor-minions.mjs';
 
 // Export Items
 export { default as InvincibleItemBase } from './items/base-item.mjs';

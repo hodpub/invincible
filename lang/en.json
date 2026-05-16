@@ -81,24 +81,26 @@
           "drive.label": "Drive",
           "flaw.label": "Flaw",
           "relationships.label": "Key Relationships",
-          "health": {
-            "value": {
-              "label": "Health"
+          "derived": {
+            "health": {
+              "value": {
+                "label": "Health"
+              }
+            },
+            "resolve": {
+              "value": {
+                "label": "resolve"
+              }
+            },
+            "slugfest": {
+              "label": "Slugfest",
+              "tooltip": "Base <strong>Slugfest</strong> damage {max}",
+              "slugfest": "Slugfest",
+              "charge": "Charge",
+              "grapple": "Grapple",
+              "wreckZone": "{attack} + Wreck Zone",
+              "wreckZoneBonus": "Wreck Zone"
             }
-          },
-          "resolve": {
-            "value": {
-              "label": "resolve"
-            }
-          },
-          "slugfest": {
-            "label": "Slugfest",
-            "tooltip": "Base <strong>Slugfest</strong> damage {max}",
-            "slugfest": "Slugfest",
-            "charge": "Charge",
-            "grapple": "Grapple",
-            "wreckZone": "{attack} + Wreck Zone",
-            "wreckZoneBonus": "Wreck Zone"
           },
           "resources.label": "Resources"
         }
@@ -114,6 +116,15 @@
         "FIELDS": {
           "name": {
             "label": "Name"
+          }
+        }
+      },
+      "Minions": {
+        "FIELDS": {
+          "name.label": "Minions Name",
+          "derived": {
+            "health.value.label": "Minions",
+            "resolve.value.label": "Resolve"
           }
         }
       },
@@ -415,7 +426,8 @@
     "Actor": {
       "superhero": "Superhero",
       "npc": "NPC",
-      "challenge": "Challenge"
+      "challenge": "Challenge",
+      "minions": "Minions"
     },
     "Item": {
       "powerSource": "Power Source",

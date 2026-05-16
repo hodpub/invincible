@@ -47,7 +47,7 @@
     </div>
     {{#if (eq name "strength")}}
     <div class="bar">
-      <label>{{localize "INVINCIBLE.Actor.base.FIELDS.health.value.label"}}</label>
+      <label>{{../systemFields.derived.fields.health.fields.value.label}}</label>
       {{bar ../system.derived.health.value ../system.derived.health.max}}
       <div class="form-fields">
         <input type='text' name='system.derived.health.value' value='{{../system.derived.health.value}}'

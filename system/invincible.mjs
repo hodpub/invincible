@@ -68,6 +68,7 @@ Hooks.once('init', function () {
   CONFIG.Actor.dataModels = {
     superhero: models.InvincibleSuperhero,
     npc: models.InvincibleNPC,
+    minions: models.InvincibleMinions,
   };
   CONFIG.Item.documentClass = InvincibleItem;
   CONFIG.Item.dataModels = {
