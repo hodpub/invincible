@@ -22,13 +22,13 @@ export default class RollAttributeAutomation extends BaseAutomation {
 
   async getAttributeToUse() {
     let attribute = this.attribute;
-    if (attribute.length == 0) {
+    if (attribute.size == 0) {
       ui.notifications.error("You need to have an attribute selected for the automation.");
       throw Error("You need to have an attribute selected for the automation.");
     }
 
-    if (attribute.length == 1)
-      return attribute[0];
+    if (attribute.size == 1)
+      return attribute.values().next().value;
 
     let btnIndex = 0;
     const buttons = [
