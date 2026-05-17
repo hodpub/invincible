@@ -333,6 +333,7 @@
     },
     "Roll": {
       "bonus": "Bonus",
+      "damage": "Damage",
       "brokenByDamageAndStress": "This actor is broken by damage and stress. Do you want to proceed with the roll?",
       "brokenByDamage": "This actor is broken by damage. Do you want to proceed with the roll?",
       "brokenByStress": "This actor is broken by stress. Do you want to proceed with the roll?"

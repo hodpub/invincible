@@ -1,3 +1,4 @@
+import { signedNumber } from "../../helpers/utils.mjs";
 import InvincibleItemBase from './base-item.mjs';
 
 export default class InvincibleGear extends InvincibleItemBase {
@@ -15,5 +16,26 @@ export default class InvincibleGear extends InvincibleItemBase {
     schema.cost = new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 });
 
     return schema;
+  }
+
+  prepareDerivedData() {
+    if (!this.automations)
+      return;
+
+    var firstAutomationId = Object.keys(this.automations)[0];
+    var firstAutomation = this.automations[firstAutomationId];
+    const extraInfo = [];
+
+    if (firstAutomation.rollBonus)
+      extraInfo.push(`${game.i18n.localize("INVINCIBLE.Roll.bonus")}: ${signedNumber(firstAutomation.rollBonus)}`)
+
+    if (firstAutomation.baseDamage)
+      extraInfo.push(`${game.i18n.localize("INVINCIBLE.Roll.damage")}: ${firstAutomation.baseDamage}`)
+
+    if (firstAutomation.minRange || firstAutomation.maxRange)
+      extraInfo.push(`${game.i18n.localize("INVINCIBLE.Automation.FIELDS.rollAttack.range.label")}: ${firstAutomation.minRange}/${firstAutomation.maxRange}`)
+
+    if (extraInfo.length)
+      this.extraInfo = `(${extraInfo.join(', ')})`;
   }
 }

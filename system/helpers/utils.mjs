@@ -12,3 +12,5 @@ export function unflatten(data) {
 export function getStuntText(item, data) {
   return game.i18n.format(`INVINCIBLE.Stunts.${item}.stunt`, data);
 }
+
+export function signedNumber(n) { return (n > 0) ? `+${n}` : n; }
