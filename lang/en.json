@@ -89,13 +89,14 @@
             },
             "resolve": {
               "value": {
-                "label": "resolve"
+                "label": "Resolve"
               }
             },
             "slugfest": {
               "label": "Slugfest",
               "tooltip": "Base <strong>Slugfest</strong> damage {max}",
               "slugfest": "Slugfest",
+              "damage": "Slugfest Damage",
               "charge": "Charge",
               "grapple": "Grapple",
               "wreckZone": "{attack} + Wreck Zone",
@@ -134,6 +135,11 @@
             "label": "Level"
           }
         }
+      },
+      "Embed": {
+        "knowPowers": "Know Powers",
+        "knowTalents": "Know Talents",
+        "knowDrawbacks": "Know Drawbacks"
       }
     },
     "Item": {

@@ -99,4 +99,103 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     }, {});
     this.bonuses = bonuses;
   }
+
+  EMBED_TEMPLATE = "systems/invincible/templates/embeds/actor.hbs";
+
+  async prepareItems(context) {
+    const powers = {};
+    const gear = [];
+    const injuries = [];
+    const talents = [];
+    const drawbacks = [];
+    const boosts = {};
+    const limits = {};
+
+    const powerSources = this.parent.items.filter(i => i.type === "powerSource");
+    const others = this.parent.items.filter(i => i.type !== "powerSource");
+    for (const ps of powerSources) {
+      ps.enriched = await this._enrich(ps.system.description);
+      powers[ps.id] = {
+        powerSource: ps,
+        powers: []
+      };
+    }
+
+    // Iterate through items, allocating to containers
+    for (let i of others) {
+      i.enriched = await this._enrich(i.system.description);
+
+      if (i.type === "power") {
+        powers[i.system.powerSource ?? powerSources[0].id].powers.push(i);
+        continue;
+      }
+      if (i.type === "criticalInjury") {
+        injuries.push(i);
+        continue;
+      }
+      if (i.type === "talent") {
+        talents.push(i);
+        continue;
+      }
+      if (i.type === "drawback") {
+        drawbacks.push(i);
+        continue;
+      }
+      if (i.type == "boost") {
+        boosts[i.system.power] ??= [];
+        boosts[i.system.power].push(i);
+        continue;
+      }
+      if (i.type == "limit") {
+        limits[i.system.power] ??= [];
+        limits[i.system.power].push(i);
+        continue;
+      }
+      if (i.type == "gear") {
+        gear.push(i);
+        continue;
+      }
+    }
+
+    for (const [key, value] of Object.entries(powers)) {
+      powers[key].powers = value.powers.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    }
+
+    // Sort then assign
+    context.powers = Object.values(powers).sort((a, b) => (a.powerSource.sort || 0) - (b.powerSource.sort || 0));
+    context.injuries = injuries.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.talents = talents.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.drawbacks = drawbacks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.boosts = boosts;
+    context.limits = limits;
+  }
+
+  async _enrich(text, relativeTo = this.parent) {
+    return await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      text,
+      {
+        // Whether to show secret blocks in the finished html
+        secrets: this.parent.isOwner,
+        // Data to fill in for inline rolls
+        rollData: this.parent.getRollData(),
+        // Relative UUID resolution
+        relativeTo: relativeTo,
+      }
+    );
+  }
+
+  async toEmbed(config, options = {}) {
+    config.hideReputation = config.values.indexOf("hideReputation") > -1;
+    const context = {
+      actor: this.parent,
+      options,
+      config
+    }
+    await this.prepareItems(context);
+    const content = await foundry.applications.handlebars.renderTemplate(this.EMBED_TEMPLATE, context);
+    const result = document.createElement("div");
+    result.innerHTML = content;
+    return result.firstChild;
+  }
 }

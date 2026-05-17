@@ -1,0 +1,86 @@
+figure.content-embed div#invbook {
+  div.invincible-actor {
+
+    div {
+      &:not(:last-child) {
+        border-bottom: 1px solid $c-darkblue;
+      }
+
+      label {
+        font-size: var(--font-size-16);
+      }
+
+      p,
+      label {
+        color: $c-darkblue;
+        font-family: $font-sans;
+        text-indent: 0;
+      }
+    }
+
+    div.name {
+      width: fit-content;
+      margin-bottom: $default-margin;
+
+      p {
+        width: fit-content;
+        margin-left: $default-margin;
+        margin-right: $default-margin;
+        color: black;
+      }
+    }
+
+    div.biography {
+      border-bottom: 0;
+
+      p {
+        text-indent: 0;
+        color: black;
+      }
+    }
+
+    div.attributes p strong {
+      text-transform: uppercase;
+    }
+
+    div.powers,
+    div.talents,
+    div.drawbacks {
+      border-bottom: 0;
+      &>p:first-child {
+        border-bottom: 1px solid $c-darkblue;
+      }
+    }
+
+    div.power-source>label {
+      float: left;
+      margin-right: 5px;
+
+      strong:first-child {
+        text-transform: uppercase;
+      }
+    }
+
+    div.power,
+    div.drawback {
+      border-bottom: 0;
+      padding-left: $default-margin;
+
+      &::before {
+        //TODO: check this symbol
+        content: "*";
+        color: $c-darkblue;
+        float: left;
+        position: absolute;
+        left: calc($default-margin * 1.7);
+        font-size: 24px;
+      }
+
+      &>label {
+        text-transform: uppercase;
+        float: left;
+        margin-right: 5px;
+      }
+    }
+  }
+}

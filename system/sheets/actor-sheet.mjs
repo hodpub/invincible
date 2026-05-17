@@ -126,8 +126,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
       currentType: this.actor.type.charAt(0).toUpperCase() + this.actor.type.slice(1),
     };
 
-    // Offloading context prep to a helper function
-    await this._prepareItems(context);
+    await this.actor.system.prepareItems(context);
 
     return context;
   }
@@ -237,83 +236,6 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     }, {});
   }
 
-  /**
-   * Organize and classify Items for Actor sheets.
-   *
-   * @param {object} context The context object to mutate
-   */
-  async _prepareItems(context) {
-    // Initialize containers.
-    // You can just use `this.document.itemTypes` instead
-    // if you don't need to subdivide a given type like
-    // this sheet does with spells
-    const powers = {};
-    const gear = [];
-    const injuries = [];
-    const talents = [];
-    const drawbacks = [];
-    const boosts = {};
-    const limits = {};
-
-    const powerSources = this.document.items.filter(i => i.type === "powerSource");
-    const others = this.document.items.filter(i => i.type !== "powerSource");
-    for (const ps of powerSources) {
-      ps.enriched = await this._enrich(ps.system.description);
-      powers[ps.id] = {
-        powerSource: ps,
-        powers: []
-      };
-    }
-
-    // Iterate through items, allocating to containers
-    for (let i of others) {
-      i.enriched = await this._enrich(i.system.description);
-
-      if (i.type === "power") {
-        powers[i.system.powerSource ?? powerSources[0].id].powers.push(i);
-        continue;
-      }
-      if (i.type === "criticalInjury") {
-        injuries.push(i);
-        continue;
-      }
-      if (i.type === "talent") {
-        talents.push(i);
-        continue;
-      }
-      if (i.type === "drawback") {
-        drawbacks.push(i);
-        continue;
-      }
-      if (i.type == "boost") {
-        boosts[i.system.power] ??= [];
-        boosts[i.system.power].push(i);
-        continue;
-      }
-      if (i.type == "limit") {
-        limits[i.system.power] ??= [];
-        limits[i.system.power].push(i);
-        continue;
-      }
-      if (i.type == "gear") {
-        gear.push(i);
-        continue;
-      }
-    }
-
-    for (const [key, value] of Object.entries(powers)) {
-      powers[key].powers = value.powers.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    }
-
-    // Sort then assign
-    context.powers = Object.values(powers).sort((a, b) => (a.powerSource.sort || 0) - (b.powerSource.sort || 0));
-    context.injuries = injuries.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.talents = talents.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.drawbacks = drawbacks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.boosts = boosts;
-    context.limits = limits;
-  }
 
   /**
    * Actions performed after any render of the Application.

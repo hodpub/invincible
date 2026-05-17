@@ -1,0 +1,94 @@
+<div id="invbook">
+  <div class="invincible-actor">
+    <div class="attribute name">
+      <p><strong>{{actor.name}}</strong></p>
+    </div>
+    <div class="biography">
+      {{{actor.system.biography}}}
+    </div>
+    <div class="role">
+      <p>
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.role.label"}}</strong>: {{actor.system.role}}
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.occupation.label"}}</strong>: {{actor.system.occupation}}
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.personality.label"}}</strong>: {{actor.system.personality}}
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.drive.label"}}</strong>: {{actor.system.drive}}
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.flaw.label"}}</strong>: {{actor.system.flaw}}
+      </p>
+    </div>
+    {{#if (not config.hideReputation)}}
+    <div class="reputation">
+      <p>
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.reputation.label"}}:</strong>
+        {{actor.system.reputation}}
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.resources.label"}}:</strong>
+        {{actor.system.resources}}
+      </p>
+    </div>
+    {{/if}}
+    <div class="attributes">
+      <p>
+        {{#each actor.system.attributes as | attribute name |}}
+        {{localize (concat 'INVINCIBLE.Actor.base.FIELDS.attributes.graduation.'
+        attribute.value)}} <strong>{{localize (concat 'INVINCIBLE.Actor.base.FIELDS.attributes.' name
+          '.label')}}</strong> {{attribute.value}}{{ifThen (not @last) ", " ""}}
+        {{#if (eq @index 2)}}
+        <br>
+        {{/if}}
+        {{/each}}
+      </p>
+    </div>
+    <div class="derived">
+      <p>
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.health.value.label"}}:</strong>
+        {{actor.system.derived.health.max}}
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.resolve.value.label"}}:</strong>
+        {{actor.system.derived.resolve.max}}
+        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.damage"}}:</strong>
+        {{actor.system.derived.slugfest.max}}
+      </p>
+    </div>
+    <div class="powers">
+      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowPowers"}}</strong></p>
+      {{#each powers as | ps i |}}
+      <div class="power-source">
+        <label>
+          <strong>{{localize "INVINCIBLE.Item.Power.FIELDS.powerSource.label"}}:</strong>
+          <strong>{{ps.powerSource.name}}</strong>.
+        </label>
+        {{{ps.powerSource.enriched}}}
+      </div>
+      {{#each ps.powers as | power index| }}
+      <div class="power">
+        <label>
+          <strong>{{power.name}}</strong>.
+        </label>
+        {{{power.enriched}}}
+      </div>
+      {{/each}}
+      {{/each}}
+    </div>
+    {{#if talents}}
+    <div class="talents">
+      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowTalents"}}</strong></p>
+      <p>
+        {{#each talents as | talent |}}
+        {{talent.name}}{{ifThen (not @last) ", " ""}}
+        {{/each}}
+      </p>
+    </div>
+    {{/if}}
+    {{#if drawbacks}}
+    <div class="drawbacks">
+      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowDrawbacks"}}</strong></p>
+      {{#each drawbacks as | drawback |}}
+      <div class="drawback">
+        <label>
+          <strong>{{drawback.name}}</strong>.
+        </label>
+        {{{drawback.enriched}}}
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+</div>
