@@ -19,10 +19,10 @@ export default class InvincibleGear extends InvincibleItemBase {
   }
 
   prepareDerivedData() {
-    if (!this.automations)
+    var firstAutomationId = Object.keys(this.automations)[0];
+    if (!firstAutomationId)
       return;
 
-    var firstAutomationId = Object.keys(this.automations)[0];
     var firstAutomation = this.automations[firstAutomationId];
     const extraInfo = [];
 
