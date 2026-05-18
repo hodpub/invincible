@@ -168,6 +168,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
     );
     options.item = this.item?.uuid;
     options.attackType = attackType;
+    options.stressCost ??= 0;
     let maxPush = this.maxPush ?? this.actor.system.maxPush?.["all"] ?? this.actor.system.maxPush?.[this.attribute] ?? 1;
 
     let roll = await new YearZeroRoll(formula, { maxPush }, options).roll();
