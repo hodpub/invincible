@@ -692,7 +692,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
   }
 
   async _slugfest(event) {
-    const slugfestFlavor = game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.label");
+    const slugfestFlavor = game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.label");
     const buttons = [
       {
         type: "submit", icon: "fa-solid fa-globe", label: slugfestFlavor,
@@ -711,12 +711,12 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: slugfestFlavor }),
+        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: slugfestFlavor }),
         action: "slugfestWreckZone",
         callback: () => {
           return {
             rollType: "slugfest",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: slugfestFlavor }),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: slugfestFlavor }),
             attribute: "fighting",
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
@@ -724,18 +724,18 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               maxRange: 1
             },
             bonus: {
-              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZoneBonus")]: 2
+              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZoneBonus")]: 2
             }
           }
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-person-running-fast", label: "INVINCIBLE.Actor.base.FIELDS.slugfest.charge",
+        type: "submit", icon: "fa-solid fa-person-running-fast", label: "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge",
         action: "charge",
         callback: () => {
           return {
             rollType: "charge",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.charge"),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge"),
             attribute: "strength",
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
@@ -747,12 +747,12 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.charge") }),
+        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge") }),
         action: "chargeWreckZone",
         callback: () => {
           return {
             rollType: "charge",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.charge") }),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge") }),
             attribute: "strength",
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
@@ -761,18 +761,18 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               attackType: "charge"
             },
             bonus: {
-              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZoneBonus")]: 2
+              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZoneBonus")]: 2
             }
           }
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-hand-holding", label: "INVINCIBLE.Actor.base.FIELDS.slugfest.grapple",
+        type: "submit", icon: "fa-solid fa-hand-holding", label: "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.grapple",
         action: "grapple",
         callback: () => {
           return {
             rollType: "grapple",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.grapple"),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.grapple"),
             attribute: "fighting",
           }
         }
