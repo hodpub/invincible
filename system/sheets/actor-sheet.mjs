@@ -799,7 +799,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         attribute: attackType.attribute,
         breakdown: {
           [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attackType.attribute}.label`)]: this.actor.system.attributes[attackType.attribute].value,
-          ...this.actor.system.bonuses[`system.attributes.${attackType.attribute}.value`],
+          ...this.actor.system.bonuses[attackType.attribute],
           ...attackType.bonus
         },
         attackInfo: attackType.attackInfo
