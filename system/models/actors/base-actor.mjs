@@ -121,12 +121,31 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
       };
     }
 
+    function getPowerSourceId(power) {
+      if (power.system.powerSource) return power.system.powerSource;
+      if (powerSources.length) return powerSources[0].id;
+
+      let dummyPowerSource = {
+        id: 0,
+        name: '(No Power Source selected)'
+      };
+
+      powerSources.push(dummyPowerSource);
+      powers[dummyPowerSource.id] = {
+        powerSource: dummyPowerSource,
+        powers: []
+      };
+      
+      return dummyPowerSource.id;
+    } 
+
+
     // Iterate through items, allocating to containers
     for (let i of others) {
       i.enriched = await this._enrich(i.system.description);
 
       if (i.type === "power") {
-        powers[i.system.powerSource ?? powerSources[0].id].powers.push(i);
+        powers[getPowerSourceId(i)].powers.push(i);
         continue;
       }
       if (i.type === "criticalInjury") {
