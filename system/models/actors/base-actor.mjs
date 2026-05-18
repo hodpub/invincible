@@ -76,7 +76,7 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
         value += typeof att == "string" ? this.attributes[att].value : att.value;
       }
       value = Math.ceil(value / 2);
-      value += this.derived[key].max.bonus ?? 0;
+      value += this.derived[key].bonus ?? 0;
       this.derived[key].max = value;
     }
 
