@@ -430,7 +430,6 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
   }
 
   static async _duplicateAutomation(event, target) {
-    debugger;
     const automationId = this._getAutomationId(target);
     const automation = this._getAutomation(automationId);
 
