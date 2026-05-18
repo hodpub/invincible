@@ -636,6 +636,13 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     return this.actor.createEmbeddedDocuments('Item', itemData);
   }
 
+  async _onDropItem(event, item) {
+    if (["boost", "limit"].indexOf(item.type) > -1)
+      return ui.notifications.error("You can't add boosts/limits directly to the actor. Open a Power and drop the boost/limit on the item sheet.");
+
+    return super._onDropItem(event, item);
+  }
+
   /********************
    *
    * Actor Override Handling
