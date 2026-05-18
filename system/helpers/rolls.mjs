@@ -130,7 +130,7 @@ export async function applyStress(message, roll) {
   if (!roll.options.stressCost)
     return;
 
-  const actor = game.actors.get(message.speaker.actor);
+  const actor = message.speakerActor;
   if (!actor)
     return;
 
