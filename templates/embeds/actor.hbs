@@ -63,6 +63,20 @@
           <strong>{{power.name}}</strong>.
         </label>
         {{{power.enriched}}}
+        {{#each (lookup @root.boosts power.id) as | boost |}}
+        <div class="boostLimit">
+          <p>
+            <strong>{{localize "TYPES.Item.boost"}}: {{boost.name}}</strong>
+          </p>
+        </div>
+        {{/each}}
+        {{#each (lookup @root.limits power.id) as | limit |}}
+        <div class="boostLimit">
+          <p>
+            <strong>{{localize "TYPES.Item.limit"}}: {{limit.name}}</strong>
+          </p>
+        </div>
+        {{/each}}
       </div>
       {{/each}}
       {{/each}}
