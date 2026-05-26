@@ -27,6 +27,23 @@ figure.content-embed {
         }
       }
 
+      div.header {
+        display: flex;
+      }
+
+      p.as-of {
+        float: right;
+        font-size: var(--font-size-13);
+        text-wrap: balance;
+        width: 50%;
+        margin-left: 20px;
+        margin-top: -2px;
+        text-align: left;
+        color: $c-darkblue;
+        transform: skew(-5deg) rotate(-1deg);
+        font-family: $font-sans;
+      }
+
       div.name {
         width: fit-content;
         margin-bottom: $default-margin;
@@ -43,6 +60,7 @@ figure.content-embed {
         color: black;
       }
 
+      div.header,
       div.biography,
       div.derived {
         border-bottom: 0;

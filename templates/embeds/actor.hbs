@@ -3,8 +3,11 @@
     {{#if (not config.hideImg)}}
     <img class="portrait" src="{{actor.img}}" />
     {{/if}}
-    <div class="attribute name">
-      <p><strong>{{actor.name}}</strong></p>
+    <div class="header">
+      <div class="attribute name">
+        <p><strong>{{actor.name}}</strong></p>
+      </div>
+      <p class="as-of">{{config.asOf}}</p>
     </div>
     <div class="biography">
       {{{actor.system.biography}}}
