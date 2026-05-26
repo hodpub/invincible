@@ -11,7 +11,7 @@
     {{#each ps.powers as | power |}}
     <ul>
       <li data-document-class="Item" data-item-id="{{power.id}}">
-        <label class="rollable" data-action="roll" data-roll-type="automation">{{power.name}}</label>
+        <label class="rollable" data-action="roll" data-roll-type="automation">{{power.system.level}}{{power.name}}</label>
         <div class="item-description">
           {{{power.enriched}}}
         </div>

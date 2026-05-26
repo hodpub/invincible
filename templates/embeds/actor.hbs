@@ -60,7 +60,7 @@
       {{#each ps.powers as | power index| }}
       <div class="power">
         <label>
-          <strong>{{power.name}}</strong>.
+          <strong><span>{{power.system.level}}</span>{{power.name}}</strong>.
         </label>
         {{{power.enriched}}}
         {{#each (lookup @root.boosts power.id) as | boost |}}

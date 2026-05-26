@@ -84,6 +84,10 @@ figure.content-embed {
           text-transform: uppercase;
           float: left;
           margin-right: 5px;
+
+          span {
+            text-transform: none;
+          }
         }
       }
 
@@ -96,7 +100,8 @@ figure.content-embed {
 
   strong.embed-caption {
     color: black;
-    &:has(+cite){
+
+    &:has(+cite) {
       margin-right: 10px;
     }
   }
