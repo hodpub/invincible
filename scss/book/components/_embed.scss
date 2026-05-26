@@ -2,6 +2,14 @@ figure.content-embed {
   div#invbook {
     div.invincible-actor {
 
+      img.portrait {
+        max-height: 210px;
+        margin-left: $default-margin;
+        margin-bottom: calc($default-margin / 2);
+        float: right;
+        box-shadow: none;
+      }
+
       div {
         &:not(:last-child) {
           border-bottom: 1px solid $c-darkblue;

@@ -206,6 +206,7 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
 
   async toEmbed(config, options = {}) {
     config.hideReputation = config.values.indexOf("hideReputation") > -1;
+    config.hideImg = config.values.indexOf("hideImg") > -1;
     const context = {
       actor: this.parent,
       options,

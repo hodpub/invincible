@@ -1,5 +1,8 @@
 <div id="invbook">
   <div class="invincible-actor">
+    {{#if (not config.hideImg)}}
+    <img class="portrait" src="{{actor.img}}" />
+    {{/if}}
     <div class="attribute name">
       <p><strong>{{actor.name}}</strong></p>
     </div>
