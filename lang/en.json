@@ -242,7 +242,8 @@
         "rollCreatureAttack": "Roll Creature Attack",
         "rollBirdPower": "Roll Bird Power",
         "rollUpgrade": "Roll Upgrade",
-        "useGear": "Use Gear"
+        "useGear": "Use Gear",
+        "toggleActiveEffect": "Toggle Active Effect"
       },
       "Category": {
         "Default": "Default",
@@ -288,6 +289,9 @@
         },
         "reloadWeapon": {
           "reloaded": "Weapon reloaded / recharged. Suppies consumed: {supplyConsumed}. Supplies available: {newQuantity}."
+        },
+        "toggleActiveEffect":{
+          "activeEffect.label": "Active Effect"
         },
         "macro": {
           "open": "Open Macro",

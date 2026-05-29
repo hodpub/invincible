@@ -32,13 +32,6 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
     return schema;
   }
 
-  async viewAutomationItem(event) {
-    const dataset = event.target.dataset;
-    const uuid = dataset.uuid;
-    const item = await fromUuid(uuid);
-    item.sheet.render(true);
-  }
-
   async execute(event) {
     const currentExecution = await this.applyBoostsAndLimits();
 

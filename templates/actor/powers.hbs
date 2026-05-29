@@ -2,7 +2,8 @@
   <label class="title">{{{localize "INVINCIBLE.Actor.Tabs.Powers"}}}</label>
   {{#each powers as | ps index |}}
   <div class="powers-info">
-    <label data-document-class="Item" data-item-id="{{ps.powerSource.id}}">
+    <label class="rollable" data-action="roll" data-roll-type="automation" data-document-class="Item"
+      data-item-id="{{ps.powerSource.id}}">
       {{ps.powerSource.name}}
     </label>
     <div class="item-description">
@@ -11,7 +12,8 @@
     {{#each ps.powers as | power |}}
     <ul>
       <li data-document-class="Item" data-item-id="{{power.id}}">
-        <label class="rollable" data-action="roll" data-roll-type="automation">{{power.system.level}}{{power.name}}</label>
+        <label class="rollable" data-action="roll"
+          data-roll-type="automation">{{power.system.level}}{{power.name}}</label>
         <div class="item-description">
           {{{power.enriched}}}
         </div>

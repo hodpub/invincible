@@ -41,7 +41,13 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
 
   _initialize(options = {}) {
     super._initialize(options);
+  }
 
+  async viewAutomationItem(event) {
+    const dataset = event.target.dataset;
+    const uuid = dataset.uuid;
+    const item = await fromUuid(uuid);
+    item.sheet.render(true);
   }
 
   async applyBoostsAndLimits() {
