@@ -4,6 +4,7 @@ import { InvincibleItem } from './documents/item.mjs';
 import { InvincibleChatMessage } from "./documents/chat-message.mjs";
 // Import sheet classes.
 import { InvincibleActorSheet } from './sheets/actor-sheet.mjs';
+import { InvincibleChallengeActorSheet } from './sheets/actor-challenge-sheet.mjs';
 import { InvincibleItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { INVINCIBLE } from './config/_invincible.mjs';
@@ -69,6 +70,7 @@ Hooks.once('init', function () {
     superhero: models.InvincibleSuperhero,
     npc: models.InvincibleNPC,
     minions: models.InvincibleMinions,
+    challenge: models.InvincibleChallenge,
   };
   CONFIG.Item.documentClass = InvincibleItem;
   CONFIG.Item.dataModels = {
@@ -96,6 +98,11 @@ Hooks.once('init', function () {
   collections.Actors.registerSheet('invincible', InvincibleActorSheet, {
     makeDefault: true,
     label: 'INVINCIBLE.SheetLabels.Actor',
+  });
+  collections.Actors.registerSheet('invincible', InvincibleChallengeActorSheet, {
+    makeDefault: true,
+    label: 'INVINCIBLE.SheetLabels.Actor',
+    types: ["challenge"],
   });
   collections.Items.unregisterSheet('core', sheets.ItemSheet);
   collections.Items.registerSheet('invincible', InvincibleItemSheet, {

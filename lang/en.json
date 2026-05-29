@@ -129,6 +129,20 @@
           }
         }
       },
+      "Challenge": {
+        "FIELDS": {
+          "name.label": "",
+          "subtitle.label": "",
+          "derived.health.value": {
+            "label": "CR",
+            "hint": "Challenge Rating"
+          },
+          "derived.resolve.value": {
+            "label": "TL",
+            "hint": "Time Limit"
+          }
+        }
+      },
       "Character": {
         "FIELDS": {
           "attributes.level.value": {
@@ -290,7 +304,7 @@
         "reloadWeapon": {
           "reloaded": "Weapon reloaded / recharged. Suppies consumed: {supplyConsumed}. Supplies available: {newQuantity}."
         },
-        "toggleActiveEffect":{
+        "toggleActiveEffect": {
           "activeEffect.label": "Active Effect"
         },
         "macro": {
