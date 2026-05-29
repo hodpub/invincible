@@ -420,7 +420,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
     return foundry.applications.api.DialogV2.confirm(
       {
         content,
-        yes: { callback: async () => await this.item.update({ [`system.automations.-=${automationId}`]: null }) },
+        yes: { callback: async () => await this.item.update({ [`system.automations.${automationId}`]: new foundry.data.operators.ForcedDeletion() }) },
         window: {
           icon: "fa-solid fa-trash",
           title: `${game.i18n.format("DOCUMENT.Delete", { type })}: ${automation.name}`
