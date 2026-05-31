@@ -222,6 +222,14 @@
           "powerSource": {
             "label": "Power Source",
             "hint": "Select the Power Source for this Power:"
+          },
+          "level": {
+            ".label": "",
+            "dynamic": "(dynamic)",
+            "basic.label": "Basic ",
+            "major.label": "Major ",
+            "massive.label": "Massive ",
+            "monstrous.label": "Monstrous "
           }
         }
       }

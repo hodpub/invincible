@@ -1,15 +1,19 @@
 <header class='sheet-header'>
-  <img
-    class='profile-img'
-    src='{{item.img}}'
-    data-edit='img'
-    data-action='onEditImage'
-    data-tooltip='{{item.name}}'
-  />
+  <img class='profile-img' src='{{item.img}}' data-edit='img' data-action='onEditImage' data-tooltip='{{item.name}}' />
   <div class='header-fields'>
     <label class="title">{{localize (concat "TYPES.Item." item.type)}}</label>
     <div class='document-name'>
       <input name='name' type='text' value='{{item.name}}' placeholder='Name' data-tooltip-text="{{item.name}}" />
     </div>
+    {{#if (eq item.type "power")}}
+    <div class='resource'>
+      {{!-- <label class='resource-label'>{{localize 'INVINCIBLE.Item.Gear.FIELDS.quantity.label'}}</label> --}}
+      <select name="system.level">
+        {{selectOptions @root.config.POWERS.LEVELS_CHOICES selected=system.level localize=true blank="(dynamic)"}}
+      </select>
+    </div>
+    {{/if}}
   </div>
+
+
 </header>

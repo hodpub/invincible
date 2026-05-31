@@ -12,12 +12,22 @@ export default class InvinciblePower extends InvincibleItemBase {
 
     schema.powerSource = new fields.DocumentIdField();
     schema.boosts = new fields.ArrayField(new fields.StringField());
+    schema.level = new fields.StringField();
 
     return schema;
   }
 
   prepareDerivedData() {
     super.prepareDerivedData();
+    this.setPowerLevel();
+  }
+
+  setPowerLevel() {
+    if (this.level) {
+      this.powerLevel = game.i18n.localize(`INVINCIBLE.Item.Power.FIELDS.level.${this.level}.label`);
+      return;
+    }
+
     let level = -1;
     for (const automation of Object.values(this.automations)) {
       const levelCheck = automation.name.toLowerCase();
@@ -25,16 +35,21 @@ export default class InvinciblePower extends InvincibleItemBase {
         continue;
 
       if (levelCheck.indexOf("basic") > -1)
-        level = 0;
+        level = Math.max(0, level);
       else if (levelCheck.indexOf("major") > -1)
-        level = 1;
+        level = Math.max(1, level);
       else if (levelCheck.indexOf("massive") > -1)
-        level = 2;
+        level = Math.max(2, level);
       else if (levelCheck.indexOf("mounstrous") > -1)
-        level = 3;
+        level = Math.max(3, level);
     }
 
     if (level > -1)
-      this.level = ["", "Major ", "Massive ", "Mounstrous "][level];
+      level = ["basic", "major", "massive", "mounstrous"][level];
+    else {
+      level = ""
+    }
+
+    this.powerLevel = game.i18n.localize(`INVINCIBLE.Item.Power.FIELDS.level.${level}.label`);
   }
 }

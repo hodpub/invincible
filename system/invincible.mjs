@@ -15,6 +15,7 @@ import registerHandlebarsHelpers from "./helpers/handlebars.mjs";
 // YZUR Lib
 import { YearZeroRollManager } from '../lib/yzur.js';
 import { InvincibleChatLog } from "./applications/sidebar/tabs/chatLog.mjs";
+import { InvincibleItemDirectory } from "./applications/sidebar/tabs/item-directory.mjs";
 import { registerDice3D } from "./helpers/rolls.mjs";
 import InvincibleRollDialog from "./applications/dialog/roll-dialog.mjs";
 import { registerSettings, registerYearZeroCombatSettings } from "./helpers/settings.mjs";
@@ -85,6 +86,8 @@ Hooks.once('init', function () {
     power: models.InvinciblePower,
   };
 
+  CONFIG.ui.items = InvincibleItemDirectory;
+
   // Active Effects are never copied to the Actor,
   // but will still apply to the Actor from within the Item
   // if the transfer property on the Active Effect is true.
@@ -153,7 +156,7 @@ async function adventureImport() {
 
 Hooks.on('importAdventure', async (adventure) => {
   if (adventure.uuid !== quickstartAdventureUuid)
-      return;
+    return;
   const scene = await fromUuid("Scene.sge0EEkIG8wuvCmB");
   scene.activate();
   const journal = await fromUuid("JournalEntry.JYIKkkXpyqIM3IC0");
@@ -163,7 +166,7 @@ Hooks.on('importAdventure', async (adventure) => {
 Hooks.once('diceSoNiceReady', registerDice3D);
 Hooks.once('yzeCombatReady', registerYearZeroCombatSettings);
 
-function showHideItemDescription(){
+function showHideItemDescription() {
   const showItemDescription = game.settings.get(INVINCIBLE.ID, "showItemDescription");
   if (!showItemDescription)
     document.body.classList.add("hide-item-description");
