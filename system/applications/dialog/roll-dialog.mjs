@@ -193,26 +193,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
   }
 
   async wait(event) {
-    let stopRoll = false;
-    let message = "brokenBy";
-    if (this.actor?.system.derived.health.max > 0 && this.actor?.system.derived.health.value == 0)
-      message += "Damage";
-    if (this.actor?.system.derived.resolve.max > 0 && this.actor?.system.derived.resolve.value == 0)
-      message += "AndStress";
-    message = message.replace("ByAnd", "By");
-
-    if (message != "brokenBy") {
-      stopRoll = !(await DialogV2.confirm({
-        window: { title: this.options.window.title },
-        content: `<p>${game.i18n.localize(`INVINCIBLE.Roll.${message}`)}</p>`,
-        modal: true,
-        rejectClose: false,
-        classes: ['roll-application'],
-      }));
-    }
-
-    if (stopRoll)
-      return;
+    await this.actor.system.checkIfBroken(this.options.window.title);
 
     if (event?.shiftKey) {
       event.submitter = {

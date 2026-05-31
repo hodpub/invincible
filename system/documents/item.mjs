@@ -93,7 +93,7 @@ export class InvincibleItem extends Item {
       }
     }
 
-    if (specificAutomationId){
+    if (specificAutomationId) {
       const specificAutomation = item.system.automations[specificAutomationId];
       return await specificAutomation.execute(event);
     }
@@ -106,8 +106,10 @@ export class InvincibleItem extends Item {
         possibleAutomations.push(item.system.automations[automationId]);
     }
 
-    if (possibleAutomations.length == 0)
+    if (possibleAutomations.length == 0) {
+      await item.actor.system.checkIfBroken(item.name);
       return this.sendToChat(event);
+    }
 
     if (possibleAutomations.length == 1)
       return possibleAutomations[0].execute(event);

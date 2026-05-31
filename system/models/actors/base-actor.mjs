@@ -135,9 +135,9 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
         powerSource: dummyPowerSource,
         powers: []
       };
-      
+
       return dummyPowerSource.id;
-    } 
+    }
 
 
     // Iterate through items, allocating to containers
@@ -217,5 +217,28 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     const result = document.createElement("div");
     result.innerHTML = content;
     return result.firstChild;
+  }
+
+  async checkIfBroken(title) {
+    let stopRoll = false;
+    let message = "brokenBy";
+    if (this.derived.health.max > 0 && this.derived.health.value == 0)
+      message += "Damage";
+    if (this.derived.resolve.max > 0 && this.derived.resolve.value == 0)
+      message += "AndStress";
+    message = message.replace("ByAnd", "By");
+
+    if (message != "brokenBy") {
+      stopRoll = !(await foundry.applications.api.DialogV2.confirm({
+        window: { title },
+        content: `<p>${game.i18n.localize(`INVINCIBLE.Roll.${message}`)}</p>`,
+        modal: true,
+        rejectClose: false,
+        classes: ['roll-application'],
+      }));
+    }
+
+    if (stopRoll)
+      throw new Error("Actor broken. Execution interrupted.")
   }
 }
