@@ -79,6 +79,9 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
           icon: "fa-solid fa-floppy-disk",
         }
       });
+      if (!choiceResult)
+        return;
+
       for (const choice of selectableMods) {
         if (!choiceResult[choice.name])
           continue;

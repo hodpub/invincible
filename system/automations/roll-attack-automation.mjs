@@ -34,6 +34,8 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
 
   async execute(event) {
     const currentExecution = await this.applyBoostsAndLimits();
+    if (!currentExecution)
+      return;
 
     let attribute = await this.getAttributeToUse();
     if (!attribute)
