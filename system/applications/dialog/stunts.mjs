@@ -122,7 +122,6 @@ export default class InvincibleStuntsDialog extends HandlebarsApplicationMixin(A
     const formValues = formData.object;
     const unflatted = unflatten(formValues);
     this.stuntOptions = unflatted.stuntOptions;
-    console.log(this);
     this.render(true);
   }
 

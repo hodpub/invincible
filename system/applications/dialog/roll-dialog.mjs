@@ -127,7 +127,6 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
   async _updateDialog(formData) {
     const formValues = formData.object;
     this.bonus = formValues.bonus || 0;
-    console.log(this);
     this.render(true);
   }
 
@@ -212,7 +211,6 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
       }));
     }
 
-    console.log(stopRoll);
     if (stopRoll)
       return;
 

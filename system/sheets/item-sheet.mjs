@@ -383,7 +383,6 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       // which turns into the dataKey 'system.spellLevel'
       foundry.utils.setProperty(effectData, dataKey, value);
     }
-    console.log(effectData, this.document);
 
     // Finally, create the embedded document!
     await aeCls.create(effectData, { parent: this.item });
@@ -750,7 +749,6 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
 
   async _onDropMacro(event, data) {
     const automationId = this._getAutomationId(event.target);
-    console.log(automationId, data, event.target);
     if (!automationId)
       return;
     const automation = this._getAutomation(automationId);

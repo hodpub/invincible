@@ -100,7 +100,6 @@ export class InvincibleChallengeActorSheet extends api.HandlebarsApplicationMixi
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
     if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
-    console.log(parts);
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: '',
