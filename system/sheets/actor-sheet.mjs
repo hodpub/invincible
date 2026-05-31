@@ -457,7 +457,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
   _getItemButtonContextOptions() {
     return [
       {
-        name: "INVINCIBLE.Automation.sendToChat",
+        label: "INVINCIBLE.Automation.sendToChat",
         icon: "<i class=\"fa-solid fa-comment\"></i>",
         callback: async (target) => {
           const item = this._getEmbeddedDocument(target);
@@ -469,7 +469,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         },
       },
       {
-        name: "Edit",
+        label: "Edit",
         icon: "<i class=\"fa-solid fa-fw fa-edit\"></i>",
         // condition: () => this.isEditMode,
         callback: async (target) => {
@@ -482,9 +482,9 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         },
       },
       {
-        name: "Delete",
+        label: "Delete",
         icon: "<i class=\"fa-solid fa-fw fa-trash\"></i>",
-        condition: (target) => {
+        visible: (target) => {
           let item = this._getEmbeddedDocument(target);
           return this.actor.isOwner && !item.flags["coriolis-tgd"]?.isSupply;
         },
