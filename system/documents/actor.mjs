@@ -1,3 +1,5 @@
+import { INVINCIBLE } from "../config/_invincible.mjs";
+
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
@@ -29,12 +31,28 @@ export class InvincibleActor extends Actor {
     return { ...super.getRollData(), ...(this.system.getRollData?.() ?? null) };
   }
 
-  static getDefaultArtwork(actorData) { 
+  static getDefaultArtwork(actorData) {
     return {
       img: `systems/invincible/assets/icons/${actorData.type.toLowerCase()}.svg`,
       texture: {
         src: `systems/invincible/assets/icons/${actorData.type.toLowerCase()}.svg`
       }
     };
+  }
+
+  /** @inheritdoc */
+  async _preCreate(data, options, user) {
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
+
+    const tokenConfig = INVINCIBLE.ACTOR.PROTOTYPE_TOKEN[data.type];
+
+    if (!tokenConfig)
+      return;
+
+    const updates = foundry.utils.mergeObject({
+      prototypeToken: tokenConfig,
+    }, data, { insertKeys: false, insertValues: false, inplace: false });
+    this.updateSource(updates);
   }
 }
