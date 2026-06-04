@@ -62,7 +62,7 @@ export default class RollAttributeAutomation extends BaseAutomation {
       return;
 
     const breakdown = {
-      [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attribute}.label`)]: this.actor.system.attributes[this.attribute].value,
+      [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attribute}.label`)]: this.actor.system.attributes[attribute].value,
       ...this.actor.system.bonuses[attribute]
     };
     if (this.rollBonus)
