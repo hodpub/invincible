@@ -60,3 +60,12 @@ ACTOR.PROTOTYPE_TOKEN = {
     },
   }
 }
+
+ACTOR.VEHICLE_TYPES = {
+  ground: "ground",
+  water: "water",
+  aerial: "aerial",
+  space: "space",
+};
+
+createListAndChoices(ACTOR, "VEHICLE_TYPES", ACTOR.VEHICLE_TYPES, "INVINCIBLE.Actor.Vehicle.FIELDS.type");

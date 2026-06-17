@@ -5,6 +5,7 @@ import { InvincibleChatMessage } from "./documents/chat-message.mjs";
 // Import sheet classes.
 import { InvincibleActorSheet } from './sheets/actor-sheet.mjs';
 import { InvincibleChallengeActorSheet } from './sheets/actor-challenge-sheet.mjs';
+import { InvincibleVehicleActorSheet } from './sheets/actor-vehicle-sheet.mjs';
 import { InvincibleItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { INVINCIBLE } from './config/_invincible.mjs';
@@ -72,6 +73,7 @@ Hooks.once('init', function () {
     npc: models.InvincibleNPC,
     minions: models.InvincibleMinions,
     challenge: models.InvincibleChallenge,
+    vehicle: models.InvincibleVehicle,
   };
   CONFIG.Item.documentClass = InvincibleItem;
   CONFIG.Item.dataModels = {
@@ -84,6 +86,7 @@ Hooks.once('init', function () {
     drawback: models.InvincibleDrawback,
     powerSource: models.InvinciblePowerSource,
     power: models.InvinciblePower,
+    vehicleWeapon: models.InvincibleVehicleWeapon,
   };
 
   CONFIG.ui.items = InvincibleItemDirectory;
@@ -106,6 +109,11 @@ Hooks.once('init', function () {
     makeDefault: true,
     label: 'INVINCIBLE.SheetLabels.Actor',
     types: ["challenge"],
+  });
+  collections.Actors.registerSheet('invincible', InvincibleVehicleActorSheet, {
+    makeDefault: true,
+    label: 'INVINCIBLE.SheetLabels.Actor',
+    types: ["vehicle"],
   });
   collections.Items.unregisterSheet('core', sheets.ItemSheet);
   collections.Items.registerSheet('invincible', InvincibleItemSheet, {

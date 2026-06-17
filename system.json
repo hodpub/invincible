@@ -129,9 +129,10 @@
       },
       "challenge": {
         "htmlFields": [
-          "description"
+          "biography"
         ]
-      }
+      },
+      "vehicle": {}
     },
     "Item": {
       "powerSource": {
@@ -170,6 +171,11 @@
         ]
       },
       "limit": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "vehicleWeapon": {
         "htmlFields": [
           "description"
         ]

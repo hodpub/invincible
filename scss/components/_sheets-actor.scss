@@ -178,3 +178,16 @@
     min-width: 30px;
   }
 }
+
+&.sheet.actor.vehicle {
+  img.profile-img {
+    height: 231px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+  }
+
+  div.bar label:first-child {
+    min-width: 30px;
+  }
+}

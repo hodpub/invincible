@@ -143,6 +143,27 @@
           }
         }
       },
+      "Vehicle": {
+        "FIELDS": {
+          "name.label": "Vehicle",
+          "type": {
+            "ground.label": "Ground",
+            "aerial.label": "Aerial",
+            "water.label": "Water",
+            "space.label": "Space",
+            "label": "Type"
+          },
+          "passengers.label":"Passengers",
+          "maneuverability.label": "Maneuverability",
+          "speed.label": "Speed",
+          "derived.health.value": {
+            "label": "D",
+            "hint": "Durability"
+          },
+          "armour.label": "Armour",
+          "cost.label": "Cost"
+        }
+      },
       "Character": {
         "FIELDS": {
           "attributes.level.value": {
@@ -232,6 +253,12 @@
             "monstrous.label": "Monstrous "
           }
         }
+      },
+      "VehicleWeapon": {
+        "FIELDS": {
+          "cost.label": "Cost",
+          "restricted.label": "Restricted"
+        }
       }
     },
     "Effect": {
@@ -252,6 +279,7 @@
         "automation": "Automation",
         "rollAttribute": "Roll Attribute",
         "rollAttack": "Roll Attack",
+        "rollAttackWithActor": "Roll Attack (with actor)",
         "rollArmor": "Roll Armor Protection",
         "modifyRollAttack": "Modify Roll Attack",
         "reloadWeapon": "Reload / Recharge Weapon",
@@ -460,7 +488,8 @@
       "superhero": "Superhero",
       "npc": "NPC",
       "challenge": "Challenge",
-      "minions": "Minions"
+      "minions": "Minions",
+      "vehicle": "Vehicle"
     },
     "Item": {
       "powerSource": "Power Source",
@@ -470,7 +499,8 @@
       "gear": "Gear",
       "criticalInjury": "Critical Injury",
       "boost": "Boost",
-      "limit": "Limit"
+      "limit": "Limit",
+      "vehicleWeapon": "Vehicle Weapon"
     }
   }
 }

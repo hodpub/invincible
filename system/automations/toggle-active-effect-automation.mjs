@@ -23,6 +23,9 @@ export default class ToggleActiveEffectAutomation extends BaseAutomation {
       return await fromUuid(this.activeEffectUuid);
 
     const effects = this.item.effects;
+    if (effects.size == 0)
+      throw ui.notifications.error("No effect configured on the item");
+
     if (effects.size == 1)
       return effects.contents[0];
 

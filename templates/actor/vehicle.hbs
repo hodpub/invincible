@@ -1,0 +1,37 @@
+{{log this}}
+<div class="main-sheet">
+  {{! Sheet Header }}
+  <header class='sheet-header'>
+    <img src="systems/invincible/assets/invincible-logo.webp" class="sheet-logo" />
+    <div class="bg-white"></div>
+    <div class='header-fields'>
+      <div class="form-group" style="width: 73%;">
+        <label>{{localize (concat "INVINCIBLE.Actor." currentType ".FIELDS.name.label")}}</label>
+        <div class="form-fields">
+          <input name='name' type='text' value='{{actor.name}}' placeholder='Name' />
+        </div>
+      </div>
+      
+      {{formGroup systemFields.type value=system.type choices=config.ACTOR.VEHICLE_TYPES_CHOICES
+      localize=true}}
+      {{formGroup systemFields.passengers value=system.passengers}}
+      {{formGroup systemFields.maneuverability value=system.maneuverability}}
+      {{formGroup systemFields.speed value=system.speed}}
+      {{formGroup systemFields.armour value=system.armour}}
+      {{formGroup systemFields.cost value=system.cost}}
+      <div class="grid grid-3col">
+        <div class="bar" data-tooltip="{{systemFields.derived.fields.health.fields.value.hint}}">
+          <label>{{systemFields.derived.fields.health.fields.value.label}}</label>
+          {{bar system.derived.health.value system.derived.health.max}}
+          <div class="form-fields">
+            <input type='number' name='system.derived.health.value' value='{{system.derived.health.value}}'
+              data-dtype='Number' />
+            <label>/</label>
+            <input type='number' name='system.derived.health.max' value='{{system.derived.health.max}}'
+              data-dtype='Number' />
+          </div>
+        </div>
+      </div>
+      <img class='profile-img' src='{{actor.img}}' data-edit='img' data-action='onEditImage' />
+  </header>
+</div>

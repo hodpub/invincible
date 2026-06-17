@@ -76,8 +76,8 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
     attributesGear: {
       template: 'systems/invincible/templates/item/attribute-parts/gear.hbs',
     },
-    attributesSpell: {
-      template: 'systems/invincible/templates/item/attribute-parts/spell.hbs',
+    attributesVehicleWeapon: {
+      template: 'systems/invincible/templates/item/attribute-parts/vehicle-weapon.hbs',
     },
     effects: {
       template: 'systems/invincible/templates/item/effects.hbs',
@@ -124,6 +124,9 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
       case 'power':
         if (this.item.isEmbedded)
           options.parts.push('boosts', 'limits');
+        break;
+      case 'vehicleWeapon':
+        options.parts.push('attributesVehicleWeapon');
         break;
     }
     options.parts.push('effects', 'automations');
@@ -172,6 +175,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
     switch (partId) {
       case 'attributesFeature':
       case 'attributesGear':
+      case 'attributesVehicleWeapon':
       case 'attributesSpell':
       case 'attributesCriticalInjury':
       case 'automations':
@@ -238,6 +242,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
           break;
         case 'attributesFeature':
         case 'attributesGear':
+        case 'attributesVehicleWeapon':
         case 'attributesSpell':
         case 'attributesCriticalInjury':
           tab.id = 'attributes';
