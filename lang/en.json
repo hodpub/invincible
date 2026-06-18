@@ -81,6 +81,8 @@
           "drive.label": "Drive",
           "flaw.label": "Flaw",
           "relationships.label": "Key Relationships",
+          "team.label": "Team",
+          "teamBase.label": "Base",
           "derived": {
             "health": {
               "value": {

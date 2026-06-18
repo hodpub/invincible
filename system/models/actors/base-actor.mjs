@@ -64,6 +64,8 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     schema.drive = new fields.StringField();
     schema.flaw = new fields.StringField();
     schema.relationships = new fields.StringField();
+    schema.team = new fields.StringField();
+    schema.teamBase = new fields.StringField();
 
     return schema;
   }
