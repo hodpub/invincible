@@ -17,6 +17,8 @@ import registerHandlebarsHelpers from "./helpers/handlebars.mjs";
 import { YearZeroRollManager } from '../lib/yzur.js';
 import { InvincibleChatLog } from "./applications/sidebar/tabs/chatLog.mjs";
 import { InvincibleItemDirectory } from "./applications/sidebar/tabs/item-directory.mjs";
+import { InvincibleCompendiumDirectory } from "./applications/sidebar/tabs/compendium-directory.mjs";
+import { InvincibleCompendium } from "./applications/sidebar/apps/compendium.mjs";
 import { registerDice3D } from "./helpers/rolls.mjs";
 import InvincibleRollDialog from "./applications/dialog/roll-dialog.mjs";
 import { registerSettings, registerYearZeroCombatSettings } from "./helpers/settings.mjs";
@@ -88,8 +90,12 @@ Hooks.once('init', function () {
     power: models.InvinciblePower,
     vehicleWeapon: models.InvincibleVehicleWeapon,
   };
+  if (!CONFIG.Item.compendiumIndexFields.includes("system.level")) {
+    CONFIG.Item.compendiumIndexFields.push("system.level");
+  }
 
   CONFIG.ui.items = InvincibleItemDirectory;
+  CONFIG.ui.compendium = InvincibleCompendiumDirectory;
 
   // Active Effects are never copied to the Actor,
   // but will still apply to the Actor from within the Item
@@ -131,6 +137,12 @@ Hooks.once('init', function () {
   });
 });
 
+Hooks.once("setup", function () {
+  for (const pack of game.packs) {
+    pack.applicationClass = InvincibleCompendium;
+  }
+});
+
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */
 /* -------------------------------------------- */
@@ -150,6 +162,12 @@ Hooks.once('ready', function () {
   Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
   adventureImport();
   showHideItemDescription();
+
+  for (const pack of game.packs.contents) {
+    if (pack.documentName !== "Item") continue;
+
+    pack.getIndex();
+  }
 });
 
 const quickstartAdventureUuid = "Compendium.invincible.basic-data.Adventure.UPXxPs1B06jTxXq6";
