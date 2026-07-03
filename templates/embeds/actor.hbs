@@ -62,12 +62,15 @@
     <div class="derived">
       <p>
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.health.value.label"}}:</strong>
-        {{actor.system.derived.health.max}}
+        {{actor.system.derived.health.max}}{{#if (eq actor.type "minions")}}*{{/if}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.resolve.value.label"}}:</strong>
         {{actor.system.derived.resolve.max}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.damage"}}:</strong>
         {{actor.system.derived.slugfest.max}}
       </p>
+      {{#if (eq actor.type "minions")}}
+        <p>*{{localize "INVINCIBLE.Actor.Embed.minionGroups"}}</p>
+      {{/if}}
     </div>
     
     {{#if powers}}
@@ -107,26 +110,67 @@
     </div> 
     {{/if}}
     {{#if talents}}
-    <div class="talents">
-      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowTalents"}}</strong></p>
-      <p>
-        {{#each talents as | talent |}}
-        {{talent.name}}{{ifThen (not @last) ", " ""}}
-        {{/each}}
-      </p>
-    </div>
+      {{#unless isKnowTalentsDrawbacks}}
+      <div class="talents non-hero">
+        <p><strong>{{localize "INVINCIBLE.Actor.Embed.talents"}}: </strong>
+          {{#each talents as | talent |}}
+          {{talent.name}}{{ifThen (not @last) ", " ""}}
+          {{/each}}
+        </p>
+      </div>
+      {{/unless}}
+
+      {{#if isKnowTalentsDrawbacks}}
+      <div class="talents">
+        <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowTalents"}}</strong></p>
+        <p>
+          {{#each talents as | talent |}}
+          {{talent.name}}{{ifThen (not @last) ", " ""}}
+          {{/each}}
+        </p>
+      </div>
+      {{/if}}
+  
     {{/if}}
     {{#if drawbacks}}
-    <div class="drawbacks">
-      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowDrawbacks"}}</strong></p>
-      {{#each drawbacks as | drawback |}}
-      <div class="drawback">
-        <label>
-          <strong>{{drawback.name}}</strong>.
-        </label>
-        {{{drawback.enriched}}}
+
+      {{#unless isKnowTalentsDrawbacks}}
+         <div class="non-hero">
+            {{#each drawbacks as | drawback |}}
+              <div class="drawback">
+                <label>
+                  <strong>{{localize "INVINCIBLE.Actor.Embed.drawback"}}: {{drawback.name}}</strong>.
+                </label>
+                {{{drawback.enriched}}}
+              </div>
+            {{/each}}
+          </div>
+      {{/unless}}
+
+      {{#if isKnowTalentsDrawbacks}}
+        <div class="drawbacks">
+          <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowDrawbacks"}}</strong></p>
+          {{#each drawbacks as | drawback |}}
+          <div class="drawback">
+            <label>
+              <strong>{{drawback.name}}</strong>.
+            </label>
+            {{{drawback.enriched}}}
+          </div>
+          {{/each}}
+        </div>
+      {{/if}}
+
+
+    {{/if}}
+    {{#if gear}}
+    <div class="gears">
+      <p><strong>{{localize "INVINCIBLE.Actor.Embed.gear"}}: </strong>
+        {{#each gear as | g |}}
+        {{g.name}}{{ifThen g.system.extraInfo (concat " " g.system.extraInfo) "" }}{{ifThen (not @last) ", " ""}}
+        {{/each}}
+      </p>
       </div>
-      {{/each}}
     </div>
     {{/if}}
   </div>
