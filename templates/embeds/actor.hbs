@@ -7,29 +7,45 @@
       <div class="attribute name">
         <p><strong>{{actor.name}}</strong></p>
       </div>
+      {{#if config.asOf}}
       <p class="as-of">{{config.asOf}}</p>
+      {{/if}}
     </div>
     <div class="biography">
       {{{actor.system.biography}}}
     </div>
     <div class="role">
       <p>
+        {{#if actor.system.role}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.role.label"}}</strong>: {{actor.system.role}}
+        {{/if}}
+        {{#if actor.system.occupation}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.occupation.label"}}</strong>: {{actor.system.occupation}}
+        {{/if}}
+        {{#if actor.system.personality}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.personality.label"}}</strong>: {{actor.system.personality}}
+        {{/if}}
+        {{#if actor.system.drive}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.drive.label"}}</strong>: {{actor.system.drive}}
+        {{/if}}
+        {{#if actor.system.flaw}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.flaw.label"}}</strong>: {{actor.system.flaw}}
+        {{/if}}
+        
       </p>
     </div>
     {{#if (not config.hideReputation)}}
-    <div class="reputation">
-      <p>
-        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.reputation.label"}}:</strong>
-        {{actor.system.reputation}}
-        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.resources.label"}}:</strong>
-        {{actor.system.resources}}
-      </p>
-    </div>
+      {{log this leve="warn"}}
+      {{#if hasReputation}}
+      <div class="reputation">
+        <p>
+          <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.reputation.label"}}:</strong>
+          {{actor.system.reputation}}
+          <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.resources.label"}}:</strong>
+          {{actor.system.resources}}
+        </p>
+      </div>
+      {{/if}}
     {{/if}}
     <div class="attributes">
       <p>
