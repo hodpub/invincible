@@ -110,7 +110,7 @@
     </div> 
     {{/if}}
     {{#if talents}}
-      {{#unless isKnowTalentsDrawbacks}}
+      {{#unless isKnownTalentsDrawbacks}}
       <div class="talents non-hero">
         <p><strong>{{localize "INVINCIBLE.Actor.Embed.talents"}}: </strong>
           {{#each talents as | talent |}}
@@ -119,8 +119,7 @@
         </p>
       </div>
       {{/unless}}
-
-      {{#if isKnowTalentsDrawbacks}}
+      {{#if isKnownTalentsDrawbacks}}
       <div class="talents">
         <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowTalents"}}</strong></p>
         <p>
@@ -130,11 +129,9 @@
         </p>
       </div>
       {{/if}}
-  
     {{/if}}
     {{#if drawbacks}}
-
-      {{#unless isKnowTalentsDrawbacks}}
+      {{#unless isKnownTalentsDrawbacks}}
          <div class="non-hero">
             {{#each drawbacks as | drawback |}}
               <div class="drawback">
@@ -146,8 +143,7 @@
             {{/each}}
           </div>
       {{/unless}}
-
-      {{#if isKnowTalentsDrawbacks}}
+      {{#if isKnownTalentsDrawbacks}}
         <div class="drawbacks">
           <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowDrawbacks"}}</strong></p>
           {{#each drawbacks as | drawback |}}
@@ -160,8 +156,6 @@
           {{/each}}
         </div>
       {{/if}}
-
-
     {{/if}}
     {{#if gear}}
     <div class="gears">
