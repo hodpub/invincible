@@ -216,7 +216,6 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     }
 
     await this.prepareItems(context);
-    debugger
     context.hasReputation = context.actor.system.reputation + context.actor.system.resources;
     const content = await foundry.applications.handlebars.renderTemplate(this.EMBED_TEMPLATE, context);
     const result = document.createElement("div");
