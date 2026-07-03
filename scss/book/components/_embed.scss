@@ -27,6 +27,13 @@ figure.content-embed {
         }
       }
 
+      ul {
+        margin: 0;
+        li::before {
+          background-image: url(../assets/book/icons/star-darkblue.svg); 
+        }
+      }
+
       div.header {
         display: flex;
       }
@@ -97,12 +104,15 @@ figure.content-embed {
         padding-left: $default-margin;
 
         &::before {
-          //TODO: check this symbol
-          content: "*";
+          content: "";
+          background-image: url(../assets/book/icons/star-darkblue.svg); 
           color: $c-darkblue;
+          width: $default-margin;
+          height: $default-margin;
           float: left;
           position: absolute;
-          left: calc($default-margin * 1.7);
+          left: calc($default-margin) * 1.5;
+          margin-top: 0.2rem;
           font-size: 24px;
         }
 
@@ -118,7 +128,10 @@ figure.content-embed {
       }
 
       div.boostLimit::before {
-        //TODO: check this symbol
+        background-image: none;
+        content: "⦾"; 
+        font-size: 0.8rem;
+        float: left;
         left: calc($default-margin * 2.7);
       }
     }
