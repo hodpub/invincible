@@ -69,6 +69,8 @@
         {{actor.system.derived.slugfest.max}}
       </p>
     </div>
+    
+    {{#if powers}}
     <div class="powers">
       <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowPowers"}}</strong></p>
       {{#each powers as | ps i |}}
@@ -102,7 +104,8 @@
       </div>
       {{/each}}
       {{/each}}
-    </div>
+    </div> 
+    {{/if}}
     {{#if talents}}
     <div class="talents">
       <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowTalents"}}</strong></p>
