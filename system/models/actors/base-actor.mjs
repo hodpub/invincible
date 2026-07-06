@@ -215,8 +215,6 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
       config
     }
 
-
-
     await this.prepareItems(context);
     context.hasReputationOrResources = context.actor.system.reputation + context.actor.system.resources;
     const content = await foundry.applications.handlebars.renderTemplate(this.EMBED_TEMPLATE, context);
