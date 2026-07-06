@@ -1,7 +1,7 @@
 <div id="invbook">
   <div class="invincible-actor">
     {{#if (not config.hideImg)}}
-    <img class="portrait" src="{{actor.img}}" />
+    <img class="portrait" src="{{actor.img}}" style="shape-outside: url({{actor.img}});" />
     {{/if}}
     <div class="header">
       <div class="attribute name">
@@ -34,9 +34,7 @@
         
       </p>
     </div>
-    {{#if (not config.hideReputation)}}
-      {{log this leve="warn"}}
-      {{#if hasReputation}}
+    {{#if (and hasReputationOrResources (not config.hideReputation))}}
       <div class="reputation">
         <p>
           <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.reputation.label"}}:</strong>
@@ -45,7 +43,6 @@
           {{actor.system.resources}}
         </p>
       </div>
-      {{/if}}
     {{/if}}
     <div class="attributes">
       <p>
@@ -59,7 +56,7 @@
         {{/each}}
       </p>
     </div>
-    <div class="derived">
+    <div class="derived {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
       <p>
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.health.value.label"}}:</strong>
         {{actor.system.derived.health.max}}{{#if (eq actor.type "minions")}}*{{/if}}
@@ -74,8 +71,8 @@
     </div>
     
     {{#if powers}}
-    <div class="powers">
-      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowPowers"}}</strong></p>
+    <div class="powers {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
+      {{#if (eq actor.type "superhero")}}<p><strong>{{localize "INVINCIBLE.Actor.Embed.knownPowers"}}</strong></p>{{/if}}
       {{#each powers as | ps i |}}
       <div class="power-source">
         <label>
@@ -110,52 +107,31 @@
     </div> 
     {{/if}}
     {{#if talents}}
-      {{#unless isKnownTalentsDrawbacks}}
-      <div class="talents non-hero">
-        <p><strong>{{localize "INVINCIBLE.Actor.Embed.talents"}}: </strong>
-          {{#each talents as | talent |}}
-          {{talent.name}}{{ifThen (not @last) ", " ""}}
-          {{/each}}
-        </p>
-      </div>
-      {{/unless}}
-      {{#if isKnownTalentsDrawbacks}}
-      <div class="talents">
-        <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowTalents"}}</strong></p>
-        <p>
-          {{#each talents as | talent |}}
-          {{talent.name}}{{ifThen (not @last) ", " ""}}
-          {{/each}}
-        </p>
-      </div>
-      {{/if}}
+
+    <div class="talents {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
+      <p><strong>{{#if (not (eq actor.type "superhero"))}}{{localize "INVINCIBLE.Actor.Embed.talents"}}: {{else}}{{localize "INVINCIBLE.Actor.Embed.knownTalents"}}{{/if}}</strong></p>
+      <p>
+        {{#each talents as | talent |}}
+        {{talent.name}}{{ifThen (not @last) ", " ""}}
+        {{/each}}
+      </p>
+    </div>
+
     {{/if}}
     {{#if drawbacks}}
-      {{#unless isKnownTalentsDrawbacks}}
-         <div class="non-hero">
-            {{#each drawbacks as | drawback |}}
-              <div class="drawback">
-                <label>
-                  <strong>{{localize "INVINCIBLE.Actor.Embed.drawback"}}: {{drawback.name}}</strong>.
-                </label>
-                {{{drawback.enriched}}}
-              </div>
-            {{/each}}
-          </div>
-      {{/unless}}
-      {{#if isKnownTalentsDrawbacks}}
-        <div class="drawbacks">
-          <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowDrawbacks"}}</strong></p>
-          {{#each drawbacks as | drawback |}}
-          <div class="drawback">
-            <label>
-              <strong>{{drawback.name}}</strong>.
-            </label>
-            {{{drawback.enriched}}}
-          </div>
-          {{/each}}
-        </div>
+    <div class="drawbacks {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
+      {{#if (eq actor.type "superhero")}}
+        <p><strong>{{localize "INVINCIBLE.Actor.Embed.knownDrawbacks"}}</strong></p>
       {{/if}}
+      {{#each drawbacks as | drawback |}}
+      <div class="drawback">
+      <label>
+      <strong>{{#if (not (eq actor.type "superhero"))}}{{localize "INVINCIBLE.Actor.Embed.drawback"}}: {{/if}}{{drawback.name}}</strong>.
+      </label>
+      {{{drawback.enriched}}}
+      </div>
+      {{/each}}
+    </div>
     {{/if}}
     {{#if gear}}
     <div class="gears">

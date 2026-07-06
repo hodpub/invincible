@@ -4,22 +4,29 @@ figure.content-embed {
 
       img.portrait {
         max-height: 210px;
-        margin-left: $default-margin;
+        margin-left: $default-margin !important;
         margin-bottom: calc($default-margin / 2);
+        shape-margin: 16px;
         float: right;
         box-shadow: none;
       }
 
-      div {
-        &:not(:last-child) {
-          border-bottom: 1px solid $c-darkblue;
-        }
 
+      & > div:not(:last-child) {
+        border-bottom: 1px solid $c-darkblue;
+
+        &.talents,
+        &:has(+ .talents) {
+          border-bottom: 0;
+        }
+      }
+
+      div {
         label {
           font-size: var(--font-size-16);
         }
 
-        p {
+        &:not(.biography) p {
           text-align: start;
           hyphens: none;
         }
@@ -74,7 +81,7 @@ figure.content-embed {
 
       div.header,
       div.biography,
-      div.derived {
+      div.derived:not(.non-hero) {
         border-bottom: 0;
       }
 
@@ -85,15 +92,17 @@ figure.content-embed {
       div.powers,
       div.talents,
       div.drawbacks {
-        border-bottom: 0;
         margin-top: $default-margin;
 
-        &>p:first-child {
+        & > p:first-child {
           border-bottom: 1px solid $c-darkblue;
         }
       }
 
-      div.power-source>label {
+      div.power-source {
+        border-bottom: 1px solid $c-darkblue;
+
+        &>label {
         float: left;
         margin-right: 5px;
 
@@ -101,6 +110,7 @@ figure.content-embed {
           text-transform: uppercase;
         }
       }
+    }
 
       div.power,
       div.drawback,
@@ -143,21 +153,35 @@ figure.content-embed {
 
     div.non-hero {
       margin-top: 0 !important;
-      border-top: 1px solid $c-darkblue;
-      p { border-bottom: none !important; }
+      strong {
+        text-transform: capitalize;
+      }
 
-
-      &:has(.drawback) {
-        border-bottom: none !important;
-
+      &.drawback {
         .drawback label strong {
           text-transform: none !important;
+        }
+      }
+
+      &.talents {
+        border-top: 1px solid $c-darkblue;
+        border-bottom: 1px solid $c-darkblue !important;
+
+        p { border: 0 !important; }
+
+        strong:first-child {
+          @extend .small-caps;
+          margin-right: calc($default-margin * 0.25);
+        } 
+
+        p:not(:last-child) {
+          float: left !important;
         }
       }
     }
 
     div.gears {
-      border-top: 1px solid $c-darkblue;
+      clear: both;
       strong { @extend .small-caps }
     }
   }

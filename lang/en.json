@@ -178,9 +178,9 @@
         "talents": "Talents",
         "drawback": "Drawback",
         "minionGroups": "A group of minions has a Health score equal to their number",
-        "knowPowers": "Know Powers",
-        "knowTalents": "Know Talents",
-        "knowDrawbacks": "Know Drawbacks"
+        "knownPowers": "Known Powers",
+        "knownTalents": "Known Talents",
+        "knownDrawbacks": "Known Drawbacks"
       }
     },
     "Item": {
