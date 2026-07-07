@@ -1,35 +1,48 @@
 <div id="invbook">
   <div class="invincible-actor">
     {{#if (not config.hideImg)}}
-    <img class="portrait" src="{{actor.img}}" />
+    <img class="portrait" src="{{actor.img}}" style="shape-outside: url({{actor.img}});" />
     {{/if}}
     <div class="header">
       <div class="attribute name">
         <p><strong>{{actor.name}}</strong></p>
       </div>
+      {{#if config.asOf}}
       <p class="as-of">{{config.asOf}}</p>
+      {{/if}}
     </div>
     <div class="biography">
       {{{actor.system.biography}}}
     </div>
     <div class="role">
       <p>
+        {{#if actor.system.role}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.role.label"}}</strong>: {{actor.system.role}}
+        {{/if}}
+        {{#if actor.system.occupation}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.occupation.label"}}</strong>: {{actor.system.occupation}}
+        {{/if}}
+        {{#if actor.system.personality}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.personality.label"}}</strong>: {{actor.system.personality}}
+        {{/if}}
+        {{#if actor.system.drive}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.drive.label"}}</strong>: {{actor.system.drive}}
+        {{/if}}
+        {{#if actor.system.flaw}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.flaw.label"}}</strong>: {{actor.system.flaw}}
+        {{/if}}
+        
       </p>
     </div>
-    {{#if (not config.hideReputation)}}
-    <div class="reputation">
-      <p>
-        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.reputation.label"}}:</strong>
-        {{actor.system.reputation}}
-        <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.resources.label"}}:</strong>
-        {{actor.system.resources}}
-      </p>
-    </div>
+    {{#if (and hasReputationOrResources (not config.hideReputation))}}
+      <div class="reputation">
+        <p>
+          <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.reputation.label"}}:</strong>
+          {{actor.system.reputation}}
+          <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.resources.label"}}:</strong>
+          {{actor.system.resources}}
+        </p>
+      </div>
     {{/if}}
     <div class="attributes">
       <p>
@@ -43,18 +56,22 @@
         {{/each}}
       </p>
     </div>
-    <div class="derived">
+    <div class="derived {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
       <p>
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.health.value.label"}}:</strong>
-        {{actor.system.derived.health.max}}
+        {{actor.system.derived.health.max}}{{#if (eq actor.type "minions")}}*{{/if}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.resolve.value.label"}}:</strong>
         {{actor.system.derived.resolve.max}}
         <strong>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.damage"}}:</strong>
         {{actor.system.derived.slugfest.max}}
       </p>
+      {{#if (eq actor.type "minions")}}
+        <p>*{{localize "INVINCIBLE.Actor.Embed.minionGroups"}}</p>
+      {{/if}}
     </div>
-    <div class="powers">
-      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowPowers"}}</strong></p>
+    {{#if powers}}
+    <div class="powers {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
+      {{#if (eq actor.type "superhero")}}<p><strong>{{localize "INVINCIBLE.Actor.Embed.knownPowers"}}</strong></p>{{/if}}
       {{#each powers as | ps i |}}
       <div class="power-source">
         <label>
@@ -86,10 +103,11 @@
       </div>
       {{/each}}
       {{/each}}
-    </div>
+    </div> 
+    {{/if}}
     {{#if talents}}
-    <div class="talents">
-      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowTalents"}}</strong></p>
+    <div class="talents {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
+      <p><strong>{{#if (not (eq actor.type "superhero"))}}{{localize "INVINCIBLE.Actor.Embed.talents"}}: {{else}}{{localize "INVINCIBLE.Actor.Embed.knownTalents"}}{{/if}}</strong></p>
       <p>
         {{#each talents as | talent |}}
         {{talent.name}}{{ifThen (not @last) ", " ""}}
@@ -98,16 +116,28 @@
     </div>
     {{/if}}
     {{#if drawbacks}}
-    <div class="drawbacks">
-      <p><strong>{{localize "INVINCIBLE.Actor.Embed.knowDrawbacks"}}</strong></p>
+    <div class="drawbacks {{#if (not (eq actor.type "superhero"))}}non-hero{{/if}}">
+      {{#if (eq actor.type "superhero")}}
+        <p><strong>{{localize "INVINCIBLE.Actor.Embed.knownDrawbacks"}}</strong></p>
+      {{/if}}
       {{#each drawbacks as | drawback |}}
       <div class="drawback">
-        <label>
-          <strong>{{drawback.name}}</strong>.
-        </label>
-        {{{drawback.enriched}}}
+      <label>
+      <strong>{{#if (not (eq actor.type "superhero"))}}{{localize "INVINCIBLE.Actor.Embed.drawback"}}: {{/if}}{{drawback.name}}</strong>.
+      </label>
+      {{{drawback.enriched}}}
       </div>
       {{/each}}
+    </div>
+    {{/if}}
+    {{#if gear}}
+    <div class="gears">
+      <p><strong>{{localize "INVINCIBLE.Actor.Embed.gear"}}: </strong>
+        {{#each gear as | g |}}
+        {{g.name}}{{ifThen g.system.extraInfo (concat " " g.system.extraInfo) "" }}{{ifThen (not @last) ", " ""}}
+        {{/each}}
+      </p>
+      </div>
     </div>
     {{/if}}
   </div>
