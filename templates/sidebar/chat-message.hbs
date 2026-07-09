@@ -1,4 +1,4 @@
-<li class="chat-message message flexcol {{cssClass}}" data-message-id="{{message._id}}" {{#if
+<li class="chat-message message flexcol {{cssClass}} {{ifThen message.speaker.actor "has-actor" "no-actor"}}" data-message-id="{{message._id}}" {{#if
     borderColor}}style="border-color:{{borderColor}}" {{/if}}>
     <header class="message-header flexrow">
         <span class="message-metadata">
