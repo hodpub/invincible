@@ -12,7 +12,7 @@ figure.content-embed {
       }
 
 
-      & > div:not(:last-child) {
+      &>div:not(:last-child) {
         border-bottom: 1px solid $c-darkblue;
 
         &.talents,
@@ -41,8 +41,9 @@ figure.content-embed {
 
       ul {
         margin: 0;
+
         li::before {
-          background-image: url(../assets/book/icons/star-darkblue.svg); 
+          background-image: url(../assets/book/icons/star-darkblue.svg);
         }
       }
 
@@ -75,8 +76,12 @@ figure.content-embed {
         }
       }
 
-      div.biography p {
-        color: black;
+      div.biography {
+        margin-bottom: 1.5rem;
+
+        p {
+          color: black;
+        }
       }
 
       div.header,
@@ -94,7 +99,7 @@ figure.content-embed {
       div.drawbacks {
         margin-top: $default-margin;
 
-        & > p:first-child {
+        &>p:first-child {
           border-bottom: 1px solid $c-darkblue;
         }
       }
@@ -103,14 +108,14 @@ figure.content-embed {
         border-bottom: 1px solid $c-darkblue;
 
         &>label {
-        float: left;
-        margin-right: 5px;
+          float: left;
+          margin-right: 5px;
 
-        strong:first-child {
-          text-transform: uppercase;
+          strong:first-child {
+            text-transform: uppercase;
+          }
         }
       }
-    }
 
       div.power,
       div.drawback,
@@ -120,7 +125,7 @@ figure.content-embed {
 
         &::before {
           content: "";
-          background-image: url(../assets/book/icons/star-darkblue.svg); 
+          background-image: url(../assets/book/icons/star-darkblue.svg);
           color: $c-darkblue;
           width: $default-margin;
           height: $default-margin;
@@ -144,7 +149,7 @@ figure.content-embed {
 
       div.boostLimit::before {
         background-image: none;
-        content: "⦾"; 
+        content: "⦾";
         font-size: 0.8rem;
         float: left;
         left: calc($default-margin * 2.7);
@@ -153,6 +158,7 @@ figure.content-embed {
 
     div.non-hero {
       margin-top: 0 !important;
+
       strong {
         text-transform: capitalize;
       }
@@ -167,12 +173,14 @@ figure.content-embed {
         border-top: 1px solid $c-darkblue;
         border-bottom: 1px solid $c-darkblue !important;
 
-        p { border: 0 !important; }
+        p {
+          border: 0 !important;
+        }
 
         strong:first-child {
           @extend .small-caps;
           margin-right: calc($default-margin * 0.25);
-        } 
+        }
 
         p:not(:last-child) {
           float: left !important;
@@ -182,7 +190,10 @@ figure.content-embed {
 
     div.gears {
       clear: both;
-      strong { @extend .small-caps }
+
+      strong {
+        @extend .small-caps
+      }
     }
   }
 
