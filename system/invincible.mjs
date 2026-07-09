@@ -160,7 +160,7 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
-  adventureImport();
+  // adventureImport();
   showHideItemDescription();
 
   for (const pack of game.packs.contents) {
@@ -172,13 +172,13 @@ Hooks.once('ready', function () {
 
 const quickstartAdventureUuid = "Compendium.invincible.basic-data.Adventure.UPXxPs1B06jTxXq6";
 
-async function adventureImport() {
-  if (game.scenes.get("vL4Lqhd60r7UHjPT"))
-    return;
+// async function adventureImport() {
+//   if (game.scenes.get("vL4Lqhd60r7UHjPT"))
+//     return;
 
-  const adventure = await fromUuid(quickstartAdventureUuid);
-  adventure.sheet.render(true);
-}
+//   const adventure = await fromUuid(quickstartAdventureUuid);
+//   adventure.sheet.render(true);
+// }
 
 Hooks.on('importAdventure', async (adventure) => {
   if (adventure.uuid !== quickstartAdventureUuid)
