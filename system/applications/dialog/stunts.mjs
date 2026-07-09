@@ -21,6 +21,9 @@ export default class InvincibleStuntsDialog extends HandlebarsApplicationMixin(A
     const stuntsList = STUNTS[this.roll.options.attackType];
     const defaultStunts = {};
     for (const stunt of stuntsList) {
+      if (!this.message.speaker.actor && STUNTS.list[stunt].requiresActor)
+        continue;
+
       defaultStunts[stunt] = foundry.utils.mergeObject({ value: 0 }, STUNTS.list[stunt]);
     }
     this.stuntOptions = foundry.utils.mergeObject(customStunts, defaultStunts);

@@ -18,6 +18,7 @@ STUNTS.list = {
     maxDisabled: false,
     minDisabled: true,
     exclusion: ["DeadlyHit"],
+    requiresActor: true,
     action: async (actor, roll) => {
       const knockbackValue = Math.ceil(actor.system.attributes.strength.value / 2);
       roll.options.stuntsList.push(getStuntText("Knockback", { value: knockbackValue }));
@@ -37,6 +38,7 @@ STUNTS.list = {
     max: 99,
     maxDisabled: false,
     minDisabled: true,
+    requiresActor: true,
     action: async (actor, roll, value) => {
       const damage = Math.ceil(actor.system.attributes.strength.value / 2);
       roll.options.stuntsList.push(getStuntText("BangHeads", { value: value, damage: damage }));
@@ -78,6 +80,7 @@ STUNTS.list = {
     max: 1,
     maxDisabled: false,
     minDisabled: true,
+    requiresActor: true,
     action: async (actor, roll) => {
       const damage = Math.ceil(actor.system.attributes.strength.value / 2);
       roll.options.stuntsList.push(getStuntText("Slam", { value: damage }));
