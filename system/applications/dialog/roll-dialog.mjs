@@ -193,7 +193,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
   }
 
   async wait(event) {
-    await this.actor.system.checkIfBroken(this.options.window.title);
+    await this.actor?.system.checkIfBroken(this.options.window.title);
 
     if (event?.shiftKey) {
       event.submitter = {
