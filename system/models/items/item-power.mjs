@@ -40,12 +40,12 @@ export default class InvinciblePower extends InvincibleItemBase {
         level = Math.max(1, level);
       else if (levelCheck.indexOf("massive") > -1)
         level = Math.max(2, level);
-      else if (levelCheck.indexOf("mounstrous") > -1)
+      else if (levelCheck.indexOf("monstrous") > -1)
         level = Math.max(3, level);
     }
 
     if (level > -1)
-      level = ["basic", "major", "massive", "mounstrous"][level];
+      level = ["basic", "major", "massive", "monstrous"][level];
     else {
       level = ""
     }
