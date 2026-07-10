@@ -155,7 +155,7 @@
             "space.label": "Space",
             "label": "Type"
           },
-          "passengers.label":"Passengers",
+          "passengers.label": "Passengers",
           "maneuverability.label": "Maneuverability",
           "speed.label": "Speed",
           "derived.health.value": {
@@ -201,23 +201,8 @@
           "singleUse": {
             "label": "Single Use"
           },
-          "rollFormula": {
-            "label": "Roll Formula"
-          },
-          "numDice": {
-            "label": "Number of Dice"
-          },
-          "dieSize": {
-            "label": "Die Size"
-          },
-          "rollMod": {
-            "label": "Roll Modifier"
-          },
-          "quantity": {
-            "label": "Quantity"
-          },
-          "weight": {
-            "label": "Weight"
+          "restricted": {
+            "label": "Restricted"
           }
         }
       },

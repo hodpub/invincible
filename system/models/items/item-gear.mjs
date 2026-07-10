@@ -14,6 +14,7 @@ export default class InvincibleGear extends InvincibleItemBase {
 
     schema.singleUse = new fields.BooleanField({ initial: false });
     schema.cost = new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 });
+    schema.restricted = new fields.BooleanField({ initial: false });
 
     return schema;
   }
