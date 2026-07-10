@@ -2,5 +2,5 @@
     {{#if thumbnail}}
     <img class="thumbnail" src="{{ thumbnail }}" alt="{{ name }}" loading="lazy">
     {{/if}}
-    <a class="entry-name ellipsis" data-action="activateEntry">{{#if (eq type "power")}}{{system.powerLevel}} {{/if}}{{ name }}</a>
+    <a class="entry-name ellipsis" data-action="activateEntry">{{#if (eq type "power")}}{{localize (concat "INVINCIBLE.Item.Power.FIELDS.level." system.level ".label")}}{{/if}}{{ name }}</a>
 </li>
