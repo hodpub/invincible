@@ -451,7 +451,8 @@
         "label": "Show Item Description",
         "hint": "Show/hide the item description on the actors sheet."
       }
-    }
+    },
+    "SystemManual": "Invincible System Manual"
   },
   "YZUR": {
     "CHAT.ROLL": {

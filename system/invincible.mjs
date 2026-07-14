@@ -189,6 +189,25 @@ Hooks.on('importAdventure', async (adventure) => {
   journal.sheet.render(true);
 });
 
+Hooks.on("renderSettings", (_application, element) => {
+  const supportButton = element.querySelector(
+    '[data-help-docs] [data-app="support"]'
+  );
+  if (!supportButton) return;
+
+  const manualLink = document.createElement("a");
+  manualLink.className = "button";
+  manualLink.href = "https://github.com/hodpub/invincible/wiki";
+  manualLink.target = "_blank";
+  manualLink.rel = "nofollow noopener";
+  manualLink.innerHTML = `
+    <i class="fa-solid fa-book-open" inert></i>
+    ${game.i18n.localize("INVINCIBLE.SystemManual")}
+  `;
+
+  supportButton.insertAdjacentElement("beforebegin", manualLink);
+});
+
 Hooks.once('diceSoNiceReady', registerDice3D);
 Hooks.once('yzeCombatReady', registerYearZeroCombatSettings);
 
