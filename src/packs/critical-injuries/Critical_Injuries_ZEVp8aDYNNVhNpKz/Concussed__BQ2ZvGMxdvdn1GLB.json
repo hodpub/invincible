@@ -1,0 +1,93 @@
+{
+  "folder": "ZEVp8aDYNNVhNpKz",
+  "type": "criticalInjury",
+  "img": "systems/invincible/assets/icons/criticalInjury.svg",
+  "name": "Concussed!",
+  "system": {
+    "description": "<p>You’ve suffered a severe blow to the head, giving you –2 dice to all <strong>REASON</strong>, <strong>INTUITION</strong>, and <strong>PRESENCE</strong> rolls until healed.</p>",
+    "lethal": false,
+    "healingTime": "A few days",
+    "automations": {}
+  },
+  "_id": "BQ2ZvGMxdvdn1GLB",
+  "effects": [
+    {
+      "name": "Concussed!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "origin": "Item.BQ2ZvGMxdvdn1GLB",
+      "_id": "xhdb4hWdZhOWcg5n",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "bonus.system.attributes.reason.value",
+            "value": -2,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          },
+          {
+            "key": "bonus.system.attributes.intuition.value",
+            "value": -2,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          },
+          {
+            "key": "bonus.system.attributes.presence.value",
+            "value": -2,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "W2gM75eXe7s7FPbM",
+        "createdTime": 1777407886428,
+        "modifiedTime": 1777407886428
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!BQ2ZvGMxdvdn1GLB.xhdb4hWdZhOWcg5n"
+    }
+  ],
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Item.BQ2ZvGMxdvdn1GLB",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.360",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1777407886428,
+    "modifiedTime": 1777407886428,
+    "lastModifiedBy": "W2gM75eXe7s7FPbM"
+  },
+  "ownership": {
+    "default": 2,
+    "W2gM75eXe7s7FPbM": 3
+  },
+  "_key": "!items!BQ2ZvGMxdvdn1GLB"
+}

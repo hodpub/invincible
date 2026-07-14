@@ -7,7 +7,6 @@
       </a>
     </label>
   </div>
-
   {{#each system.automations as | automation |}}
   <details data-automation-id="{{@key}}" {{#if automation.open}}open{{/if}}>
     <summary>
@@ -25,19 +24,24 @@
         <input type="text" name="system.automations.{{@key}}.name" value="{{automation.name}}">
       </div>
     </div>
+    {{#if automation.schema.fields.showAsSelection}}
     <div class="form-group">
       <label for="system.automations.{{@key}}.showAsSelection">{{localize
         "INVINCIBLE.Automation.FIELDS.showAsSelection.label"}}</label>
       <input type="checkbox" name="system.automations.{{@key}}.showAsSelection" {{checked
         automation.showAsSelection}} />
     </div>
+    {{/if}}
     {{> (concat "systems/invincible/templates/item/automation-parts/" automation.type ".hbs") automation=automation
     key=@key}}
 
-    <a class='delete' data-action='deleteAutomation' data-tooltip='{{localize "DOCUMENT.Delete" type='
-      Automation'}}'>
+    <a class='delete' data-action='deleteAutomation' data-tooltip='{{localize "DOCUMENT.Delete" type='Automation'}}'>
       {{localize 'DOCUMENT.Delete' type='Automation'}}
       <i class='fas fa-trash'></i>
+    </a>
+    <a class='delete' data-action='duplicateAutomation' data-tooltip='{{localize "DOCUMENT.Duplicate" type='Automation'}}'>
+      {{localize 'Duplicate' type='Automation'}}
+      <i class='fas fa-copy'></i>
     </a>
 
   </details>

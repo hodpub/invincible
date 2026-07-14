@@ -1,0 +1,27 @@
+<section class='tab limits scrollable {{tab.cssClass}}' data-group='primary' data-tab='limits'>
+  {{!-- <div class="form-group">
+    <label>
+      <a class='boost-create' data-action='createBoost' data-origin="{{@root.item.uuid}}">
+        <i class='fas fa-plus'></i>
+        {{localize 'DOCUMENT.New' type='Boost'}}
+      </a>
+    </label>
+  </div> --}}
+  {{#each limits as | limit index |}}
+
+  <details open>
+    <summary>
+      {{limit.name}}
+    </summary>
+    {{{limit.system.description}}}
+    <a class='delete' data-action='updateBoost' data-uuid="{{limit.uuid}}" data-tooltip='{{localize "DOCUMENT.Update" type=' Limit'}}'>
+      {{localize 'DOCUMENT.Update' type='Limit'}}
+      <i class='fas fa-edit'></i>
+    </a>
+    <a class='delete' data-action='deleteBoost' data-uuid="{{limit.uuid}}" data-tooltip='{{localize "DOCUMENT.Delete" type=' Limit'}}'>
+      {{localize 'DOCUMENT.Delete' type='Limit'}}
+      <i class='fas fa-trash'></i>
+    </a>
+  </details>
+  {{/each}}
+</section>

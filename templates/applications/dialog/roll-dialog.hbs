@@ -40,6 +40,12 @@
       <input type='text' value='{{attackInfo.maxRange}}' data-dtype='Number' disabled />
       <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.maxRange.label"}}</label>
     </div>
+    {{#if attackInfo.stressCost}}
+    <div class="attribute">
+      <input type='text' value='{{attackInfo.stressCost}}' data-dtype='Number' disabled />
+      <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.stressCost.label"}}</label>
+    </div>
+    {{/if}}
     {{/unless}}
     {{#if attackInfo.armor}}
     <div class="attribute">

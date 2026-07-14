@@ -1,0 +1,93 @@
+{
+  "folder": "ZEVp8aDYNNVhNpKz",
+  "type": "criticalInjury",
+  "img": "systems/invincible/assets/icons/criticalInjury.svg",
+  "name": "Battered!",
+  "system": {
+    "description": "<p>Your body is badly mauled with many broken bones. You get –2 dice to all <strong>FIGHTING</strong>, <strong>AGILITY</strong>, and <strong>STRENGTH</strong> rolls until healed.</p>",
+    "lethal": false,
+    "healingTime": "A few weeks",
+    "automations": {}
+  },
+  "_id": "eiaM2iUvvuyuzuSo",
+  "effects": [
+    {
+      "name": "Battered!",
+      "img": "systems/invincible/assets/icons/criticalInjury.svg",
+      "origin": "Item.eiaM2iUvvuyuzuSo",
+      "_id": "4ozN4hQo86NWEfHJ",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "bonus.system.attributes.fighting.value",
+            "value": -2,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          },
+          {
+            "key": "bonus.system.attributes.agility.value",
+            "value": -2,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          },
+          {
+            "key": "bonus.system.attributes.strength.value",
+            "value": -2,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.360",
+        "systemId": "invincible",
+        "systemVersion": "0.0.0",
+        "lastModifiedBy": "W2gM75eXe7s7FPbM",
+        "createdTime": 1777407886420,
+        "modifiedTime": 1777407886420
+      },
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!items.effects!eiaM2iUvvuyuzuSo.4ozN4hQo86NWEfHJ"
+    }
+  ],
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": "Item.eiaM2iUvvuyuzuSo",
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.360",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1777407886420,
+    "modifiedTime": 1777407886420,
+    "lastModifiedBy": "W2gM75eXe7s7FPbM"
+  },
+  "ownership": {
+    "default": 2,
+    "W2gM75eXe7s7FPbM": 3
+  },
+  "_key": "!items!eiaM2iUvvuyuzuSo"
+}

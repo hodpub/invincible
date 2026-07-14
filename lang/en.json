@@ -81,25 +81,31 @@
           "drive.label": "Drive",
           "flaw.label": "Flaw",
           "relationships.label": "Key Relationships",
-          "health": {
-            "value": {
-              "label": "Health"
+          "team.label": "Team",
+          "teamBase.label": "Base",
+          "derived": {
+            "health": {
+              "value": {
+                "label": "Health"
+              }
+            },
+            "resolve": {
+              "value": {
+                "label": "Resolve"
+              }
+            },
+            "slugfest": {
+              "label": "Slugfest",
+              "tooltip": "Base <strong>Slugfest</strong> damage {max}",
+              "slugfest": "Slugfest",
+              "damage": "Slugfest Damage",
+              "charge": "Charge",
+              "grapple": "Grapple",
+              "wreckZone": "{attack} + Wreck Zone",
+              "wreckZoneBonus": "Wreck Zone"
             }
           },
-          "resolve": {
-            "value": {
-              "label": "resolve"
-            }
-          },
-          "slugfest": {
-            "label": "Slugfest",
-            "tooltip": "Base <strong>Slugfest</strong> damage {max}",
-            "slugfest": "Slugfest",
-            "charge": "Charge",
-            "grapple": "Grapple",
-            "wreckZone": "{attack} + Wreck Zone",
-            "wreckZoneBonus": "Wreck Zone"
-          }
+          "resources.label": "Resources"
         }
       },
       "Superhero": {
@@ -116,12 +122,65 @@
           }
         }
       },
+      "Minions": {
+        "FIELDS": {
+          "name.label": "Minions Name",
+          "derived": {
+            "health.value.label": "Minions",
+            "resolve.value.label": "Resolve"
+          }
+        }
+      },
+      "Challenge": {
+        "FIELDS": {
+          "name.label": "",
+          "subtitle.label": "",
+          "derived.health.value": {
+            "label": "CR",
+            "hint": "Challenge Rating"
+          },
+          "derived.resolve.value": {
+            "label": "TL",
+            "hint": "Time Limit"
+          }
+        }
+      },
+      "Vehicle": {
+        "FIELDS": {
+          "name.label": "Vehicle",
+          "type": {
+            "ground.label": "Ground",
+            "aerial.label": "Aerial",
+            "water.label": "Water",
+            "space.label": "Space",
+            "label": "Type"
+          },
+          "passengers.label": "Passengers",
+          "maneuverability.label": "Maneuverability",
+          "speed.label": "Speed",
+          "derived.health.value": {
+            "label": "D",
+            "hint": "Durability"
+          },
+          "armour.label": "Armour",
+          "cost.label": "Cost"
+        }
+      },
       "Character": {
         "FIELDS": {
           "attributes.level.value": {
             "label": "Level"
           }
         }
+      },
+      "Embed": {
+        "gear": "Gear",
+        "talents": "Talents",
+        "drawback": "Drawback",
+        "minionGroups": "A group of minions has a Health score equal to their number",
+        "knownPowers": "Known Powers",
+        "knownTalents": "Known Talents",
+        "knownDrawbacks": "Known Drawbacks"
       }
     },
     "Item": {
@@ -130,27 +189,20 @@
         "Description": "Info",
         "Effects": "Effects",
         "Automations": "Auto",
-        "Boosts": "Boosts"
+        "Boosts": "Boosts",
+        "Limits": "Limits",
+        "ExtraConfiguration": "Extra Configuration"
       },
       "Gear": {
         "FIELDS": {
-          "rollFormula": {
-            "label": "Roll Formula"
+          "cost": {
+            "label": "Cost"
           },
-          "numDice": {
-            "label": "Number of Dice"
+          "singleUse": {
+            "label": "Single Use"
           },
-          "dieSize": {
-            "label": "Die Size"
-          },
-          "rollMod": {
-            "label": "Roll Modifier"
-          },
-          "quantity": {
-            "label": "Quantity"
-          },
-          "weight": {
-            "label": "Weight"
+          "restricted": {
+            "label": "Restricted"
           }
         }
       },
@@ -182,7 +234,21 @@
           "powerSource": {
             "label": "Power Source",
             "hint": "Select the Power Source for this Power:"
+          },
+          "level": {
+            ".label": "",
+            "dynamic": "(dynamic)",
+            "basic.label": "Basic ",
+            "major.label": "Major ",
+            "massive.label": "Massive ",
+            "monstrous.label": "Monstrous "
           }
+        }
+      },
+      "VehicleWeapon": {
+        "FIELDS": {
+          "cost.label": "Cost",
+          "restricted.label": "Restricted"
         }
       }
     },
@@ -204,7 +270,9 @@
         "automation": "Automation",
         "rollAttribute": "Roll Attribute",
         "rollAttack": "Roll Attack",
+        "rollAttackWithActor": "Roll Attack (with actor)",
         "rollArmor": "Roll Armor Protection",
+        "modifyRollAttack": "Modify Roll Attack",
         "reloadWeapon": "Reload / Recharge Weapon",
         "runMacro": "Run Macro",
         "consume": "Consume Item",
@@ -214,7 +282,9 @@
         "rollArmorBlight": "Roll Armor's Blight Protection",
         "rollCreatureAttack": "Roll Creature Attack",
         "rollBirdPower": "Roll Bird Power",
-        "rollUpgrade": "Roll Upgrade"
+        "rollUpgrade": "Roll Upgrade",
+        "useGear": "Use Gear",
+        "toggleActiveEffect": "Toggle Active Effect"
       },
       "Category": {
         "Default": "Default",
@@ -246,7 +316,14 @@
           "baseDamage.label": "Base Damage",
           "range.label": "Range",
           "minRange.label": "Min Range",
-          "maxRange.label": "Max Range"
+          "maxRange.label": "Max Range",
+          "actualDamage.label": "Actual Damage",
+          "stressCost.label": "Stress Cost",
+          "bypassArmor.label": "Bypass Armor",
+          "conditionToApply": {
+            "label": "Condition To Apply",
+            "hint": "Drop a condition item here or paste its UUID on the field"
+          }
         },
         "rollArmor": {
           "armor.label": "Armor"
@@ -254,11 +331,19 @@
         "reloadWeapon": {
           "reloaded": "Weapon reloaded / recharged. Suppies consumed: {supplyConsumed}. Supplies available: {newQuantity}."
         },
+        "toggleActiveEffect": {
+          "activeEffect.label": "Active Effect"
+        },
         "macro": {
           "open": "Open Macro",
           "drop": "Drop a macro here or paste its UUID on the field",
           "error": "This automation is not of type \"Run Macro\"",
           "notFound": "Macro not set or not found. Please, verify."
+        },
+        "item": {
+          "open": "Open Item",
+          "drop": "Drop an item here or paste its UUID on the field",
+          "notFound": "Item not set or not found. Please, verify."
         },
         "consume": {
           "noQuantity": "This item does not have a quantity. Check the automation.",
@@ -288,11 +373,18 @@
         },
         "upgrade": {
           "noExplorer": "Select an explorer to use the vehicle upgrade."
+        },
+        "modify": {
+          "autoModify": {
+            "label": "Auto Modify",
+            "hint": "If selected, it will automatically modify the automation. If not, it will allow you to select if you want to use the boost/limit."
+          }
         }
       }
     },
     "Roll": {
       "bonus": "Bonus",
+      "damage": "Damage",
       "brokenByDamageAndStress": "This actor is broken by damage and stress. Do you want to proceed with the roll?",
       "brokenByDamage": "This actor is broken by damage. Do you want to proceed with the roll?",
       "brokenByStress": "This actor is broken by stress. Do you want to proceed with the roll?"
@@ -303,11 +395,62 @@
       },
       "DamageInfo": {
         "DamageTaken": "Damage Taken",
-        "DamageInfo": "<strong>{actor}</strong> took <strong>{damage}</strong> damage."
+        "DamageInfo": "<strong>{actor}</strong> took <strong>{damage}</strong> damage.",
+        "CriticalInjury": "They also took <strong>{ciName}</strong> critical injury."
       }
     },
     "Stunts": {
+      "DoubleDamage": {
+        "label": "Double Damage",
+        "stunt": "Double Damage"
+      },
+      "Knockback": {
+        "label": "Knockback",
+        "stunt": "Knockback: {value} zone(s)"
+      },
+      "Stun": {
+        "label": "Stun",
+        "stunt": "Stun"
+      },
+      "BangHeads": {
+        "label": "Bang Heads",
+        "stunt": "Bang Heads ({value}): damage {damage}"
+      },
+      "Suppressed": {
+        "label": "Suppressed",
+        "stunt": "Suppressed"
+      },
+      "TrickShot": {
+        "label": "TrickShot",
+        "stunt": "TrickShot"
+      },
+      "Trap": {
+        "label": "Trap",
+        "stunt": "Trap"
+      },
+      "Disarm": {
+        "label": "Disarm",
+        "stunt": "Disarm"
+      },
+      "DeadlyHit": {
+        "label": "Deadly Hit",
+        "stunt": "Deadly Hit"
+      },
+      "SpecialStunt": {
+        "label": "Special Stunt",
+        "stunt": "Special Stunt"
+      },
+      "YourOwn": {
+        "label": "Your Own",
+        "stunt": "Your Own"
+      },
       "ApplyStunts": "Apply Stunts"
+    },
+    "Settings": {
+      "showItemDescription": {
+        "label": "Show Item Description",
+        "hint": "Show/hide the item description on the actors sheet."
+      }
     }
   },
   "YZUR": {
@@ -335,7 +478,9 @@
     "Actor": {
       "superhero": "Superhero",
       "npc": "NPC",
-      "challenge": "Challenge"
+      "challenge": "Challenge",
+      "minions": "Minions",
+      "vehicle": "Vehicle"
     },
     "Item": {
       "powerSource": "Power Source",
@@ -343,7 +488,10 @@
       "talent": "Talent",
       "drawback": "Drawback",
       "gear": "Gear",
-      "criticalInjury": "Critical Injury"
+      "criticalInjury": "Critical Injury",
+      "boost": "Boost",
+      "limit": "Limit",
+      "vehicleWeapon": "Vehicle Weapon"
     }
   }
 }

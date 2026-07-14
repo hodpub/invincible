@@ -34,8 +34,86 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
         initial: true
       }),
       origin: new fields.StringField(),
+      extraConfiguration: new fields.JavaScriptField({}),
       open: new fields.BooleanField({ initial: true }),
     };
+  }
+
+  _initialize(options = {}) {
+    super._initialize(options);
+  }
+
+  async viewAutomationItem(event) {
+    const dataset = event.target.dataset;
+    const uuid = dataset.uuid;
+    const item = await fromUuid(uuid);
+    item.sheet.render(true);
+  }
+
+  async applyBoostsAndLimits() {
+    const mods = this.actor.items.filter(it => it.system.power == this.item.id);
+    let modifyAutomations = [];
+    let selectableMods = [];
+    let currentExecution = this.toObject();
+
+    const removeKeys = ["name", "_id", "type", "showAsSelection", "open", "autoModify"];
+    const boolKeys = ["actualDamage", "bypassArmor"];
+
+    for (const mod of mods) {
+      const m = Object.values(mod.system.automations).filter(it => it.type == "modifyRollAttack");
+      modifyAutomations = modifyAutomations.concat(m.filter(it => it.autoModify));
+      selectableMods = selectableMods.concat(m.filter(it => !it.autoModify));
+    }
+
+    let choices = [];
+    for (const choice of selectableMods) {
+      choices.push(`<div class="form-field"><input type="checkbox" name="${choice.name}" id="${choice.name}"><label for="${choice.name}"><strong>${choice.name}<strong></label>${choice.parent.description}</div>`);
+    }
+    if (choices.length) {
+      const choiceResult = await foundry.applications.api.DialogV2.input({
+        window: { title: currentExecution.name },
+        classes: ["roll-application"],
+        content: choices.join(""),
+        ok: {
+          label: "Apply",
+          icon: "fa-solid fa-floppy-disk",
+        }
+      });
+      if (!choiceResult)
+        return;
+
+      for (const choice of selectableMods) {
+        if (!choiceResult[choice.name])
+          continue;
+        modifyAutomations.push(choice);
+      }
+    }
+    currentExecution.effects = [];
+    for (const mod of modifyAutomations) {
+      const modification = mod.toObject();
+      currentExecution.effects.push({
+        name: mod.parent.parent.name,
+        description: mod.parent.description,
+        type: mod.parent.parent.type,
+      });
+
+      for (const key of Object.keys(modification)) {
+        if (removeKeys.indexOf(key) > -1)
+          continue;
+        const value = modification[key];
+        if ((Array.isArray(value) || typeof value == "string")
+          && value.length)
+          currentExecution[key] = value;
+        else if (boolKeys.indexOf(key) > -1) {
+          if (value == -1)
+            continue;
+          currentExecution[key] = Boolean(value);
+        }
+        else if (typeof value == "number")
+          currentExecution[key] = value;
+      }
+    }
+    return currentExecution;
   }
 
   /**

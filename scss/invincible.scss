@@ -56,3 +56,6 @@
 
   @import 'book/layout';
 }
+
+// Outside because we want to use the figure.content-embeded
+@import 'book/components/embed';

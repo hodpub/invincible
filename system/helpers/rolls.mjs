@@ -42,7 +42,7 @@ export function registerDice3D(dice3d) {
     ],
     colorset: 'Invincible Base',
     system: ID,
-  });
+  }, "d6");
   // dice3d.addDicePreset({
   //   type: 'dg',
   //   labels: [
@@ -75,36 +75,64 @@ export async function applyTargetDamage(message, roll) {
   if (!roll.attackDamage)
     return;
 
+  const criticalInjuries = await fromUuid("Compendium.invincible.rolltables.RollTable.lRIHdMV6UBdDaeae");
+
+  let condition = null;
+
+  if (roll.options.conditionToApply)
+    condition = await fromUuid(roll.options.conditionToApply);
+
   for (const target of game.canvas.tokens.controlled) {
     const changes = {};
 
     let protection = 0;
-    if (target.actor?.bonuses?.armorProtection)
+    if (target.actor?.bonuses?.armorProtection && !roll.options.bypassArmor)
       protection = Math.max(...Object.values(target.actor.bonuses.armorProtection));
     const damage = Math.max(0, roll.attackDamage - protection);
     if (!damage)
+      continue;
+
+    if (roll.options.conditionToApply)
+      target.actor.createEmbeddedDocuments(condition.documentName, [condition]);
+
+    if (!roll.options.actualDamage)
       continue;
 
     const newHealth = target.actor.system.derived.health.value - damage;
     changes["system.derived.health.value"] = Math.max(0, newHealth);
     await target.actor.update(changes);
 
-    await InvincibleChatMessage.sendToChat(target.actor, game.i18n.localize("INVINCIBLE.Chat.DamageInfo.DamageTaken"), `<p>${game.i18n.format("INVINCIBLE.Chat.DamageInfo.DamageInfo", { actor: target.actor.name, damage: damage })}</p>`, { shiftKey: true });
+    let content = `<p>${game.i18n.format("INVINCIBLE.Chat.DamageInfo.DamageInfo", { actor: target.actor.name, damage: damage })}</p>`
+    if (newHealth < 0) {
+      let ciRoll = await Roll.create(`1d6 + ${newHealth * -1}`).roll();
+      let ciDraw = await criticalInjuries.draw({ roll: ciRoll, displayChat: false });
+      let ciUuid = ciDraw.results[0].documentUuid;
+      let ciItem = await fromUuid(ciUuid);
 
-    if (newHealth >= 0)
-      continue;
+      const ciExists = target.actor.items.get(ciItem.id);
+      if (ciExists) {
+        ciRoll = await Roll.create(`${ciRoll.total + 1}`).roll();
+        ciDraw = await criticalInjuries.draw({ roll: ciRoll, displayChat: false });
+        ciUuid = ciDraw.results[0].documentUuid;
+        ciItem = await fromUuid(ciUuid);
+      }
 
-    //TODO: roll critical injury automatically?
+      content += `<p>${game.i18n.format("INVINCIBLE.Chat.DamageInfo.CriticalInjury", { ciName: ciItem.name })}</p>`;
+
+      target.actor.createEmbeddedDocuments(ciItem.documentName, [ciItem]);
+    }
+
+    await InvincibleChatMessage.sendToChat(target.actor, game.i18n.localize("INVINCIBLE.Chat.DamageInfo.DamageTaken"), content, { shiftKey: true });
   }
 }
 
 export async function applyStress(message, roll) {
-  if (!roll.attributeTrauma)
+  if (!roll.options.stressCost || roll.pushable)
     return;
 
-  const actor = game.actors.get(message.speaker.actor);
+  const actor = message.speakerActor;
   if (!actor)
     return;
 
-  return actor.update({ "system.derived.resolve.value": actor.system.derived.resolve.value - roll.attributeTrauma });
+  return actor.update({ "system.derived.resolve.value": actor.system.derived.resolve.value - roll.options.stressCost });
 }

@@ -2,10 +2,10 @@
   "id": "invincible",
   "title": "Invincible - Superhero Roleplaying",
   "description": "The official Invincible – Superhero Roleplaying system for FoundryVTT!",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "compatibility": {
-    "minimum": "13.348",
-    "verified": "13.348"
+    "minimum": "14",
+    "verified": "14.364"
   },
   "authors": [
     {
@@ -18,7 +18,7 @@
   "license": "LICENSE.txt",
   "readme": "README.md",
   "bugs": "https://github.com/hodpub/invincible/issues",
-  "changelog": "CHANGELOG.md",
+  "changelog": "https://github.com/hodpub/invincible/releases",
   "media": [
     {
       "type": "setup",
@@ -41,6 +41,39 @@
   ],
   "packs": [
     {
+      "name": "critical-injuries",
+      "label": "Critial Injuries",
+      "path": "packs/critical-injuries",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "invincible"
+    },
+    {
+      "name": "rolltables",
+      "label": "Roll Tables",
+      "path": "packs/rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "invincible"
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "invincible"
+    },
+    {
       "name": "basic-data",
       "label": "Quickstart",
       "path": "packs/basic-data",
@@ -54,10 +87,13 @@
   ],
   "packFolders": [
     {
-      "name": "Invincible Quickstart",
+      "name": "Invincible",
       "sorting": "m",
       "color": "#0096cb",
       "packs": [
+        "critical-injuries",
+        "rolltables",
+        "macros",
         "basic-data"
       ]
     }
@@ -86,11 +122,17 @@
           "biography"
         ]
       },
+      "minions": {
+        "htmlFields": [
+          "biography"
+        ]
+      },
       "challenge": {
         "htmlFields": [
-          "description"
+          "biography"
         ]
-      }
+      },
+      "vehicle": {}
     },
     "Item": {
       "powerSource": {
@@ -119,6 +161,21 @@
         ]
       },
       "criticalInjury": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "boost": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "limit": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "vehicleWeapon": {
         "htmlFields": [
           "description"
         ]

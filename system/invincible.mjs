@@ -4,6 +4,8 @@ import { InvincibleItem } from './documents/item.mjs';
 import { InvincibleChatMessage } from "./documents/chat-message.mjs";
 // Import sheet classes.
 import { InvincibleActorSheet } from './sheets/actor-sheet.mjs';
+import { InvincibleChallengeActorSheet } from './sheets/actor-challenge-sheet.mjs';
+import { InvincibleVehicleActorSheet } from './sheets/actor-vehicle-sheet.mjs';
 import { InvincibleItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { INVINCIBLE } from './config/_invincible.mjs';
@@ -14,6 +16,9 @@ import registerHandlebarsHelpers from "./helpers/handlebars.mjs";
 // YZUR Lib
 import { YearZeroRollManager } from '../lib/yzur.js';
 import { InvincibleChatLog } from "./applications/sidebar/tabs/chatLog.mjs";
+import { InvincibleItemDirectory } from "./applications/sidebar/tabs/item-directory.mjs";
+import { InvincibleCompendiumDirectory } from "./applications/sidebar/tabs/compendium-directory.mjs";
+import { InvincibleCompendium } from "./applications/sidebar/apps/compendium.mjs";
 import { registerDice3D } from "./helpers/rolls.mjs";
 import InvincibleRollDialog from "./applications/dialog/roll-dialog.mjs";
 import { registerSettings, registerYearZeroCombatSettings } from "./helpers/settings.mjs";
@@ -68,18 +73,29 @@ Hooks.once('init', function () {
   CONFIG.Actor.dataModels = {
     superhero: models.InvincibleSuperhero,
     npc: models.InvincibleNPC,
+    minions: models.InvincibleMinions,
+    challenge: models.InvincibleChallenge,
+    vehicle: models.InvincibleVehicle,
   };
   CONFIG.Item.documentClass = InvincibleItem;
   CONFIG.Item.dataModels = {
     gear: models.InvincibleGear,
-    feature: models.InvincibleFeature,
+    boost: models.InvincibleBoost,
+    limit: models.InvincibleLimit,
     spell: models.InvincibleSpell,
     criticalInjury: models.InvincibleCriticalInjury,
     talent: models.InvincibleTalent,
     drawback: models.InvincibleDrawback,
     powerSource: models.InvinciblePowerSource,
     power: models.InvinciblePower,
+    vehicleWeapon: models.InvincibleVehicleWeapon,
   };
+  if (!CONFIG.Item.compendiumIndexFields.includes("system.level")) {
+    CONFIG.Item.compendiumIndexFields.push("system.level");
+  }
+
+  CONFIG.ui.items = InvincibleItemDirectory;
+  CONFIG.ui.compendium = InvincibleCompendiumDirectory;
 
   // Active Effects are never copied to the Actor,
   // but will still apply to the Actor from within the Item
@@ -95,6 +111,16 @@ Hooks.once('init', function () {
     makeDefault: true,
     label: 'INVINCIBLE.SheetLabels.Actor',
   });
+  collections.Actors.registerSheet('invincible', InvincibleChallengeActorSheet, {
+    makeDefault: true,
+    label: 'INVINCIBLE.SheetLabels.Actor',
+    types: ["challenge"],
+  });
+  collections.Actors.registerSheet('invincible', InvincibleVehicleActorSheet, {
+    makeDefault: true,
+    label: 'INVINCIBLE.SheetLabels.Actor',
+    types: ["vehicle"],
+  });
   collections.Items.unregisterSheet('core', sheets.ItemSheet);
   collections.Items.registerSheet('invincible', InvincibleItemSheet, {
     makeDefault: true,
@@ -109,6 +135,12 @@ Hooks.once('init', function () {
     "Roll.tooltipTemplate": `systems/invincible/templates/dice/tooltip.hbs`,
     "Roll.infosTemplate": `systems/invincible/templates/dice/infos.hbs`,
   });
+});
+
+Hooks.once("setup", function () {
+  for (const pack of game.packs) {
+    pack.applicationClass = InvincibleCompendium;
+  }
 });
 
 /* -------------------------------------------- */
@@ -128,22 +160,29 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
-  adventureImport();
+  // adventureImport();
+  showHideItemDescription();
+
+  for (const pack of game.packs.contents) {
+    if (pack.documentName !== "Item") continue;
+
+    pack.getIndex();
+  }
 });
 
 const quickstartAdventureUuid = "Compendium.invincible.basic-data.Adventure.UPXxPs1B06jTxXq6";
 
-async function adventureImport() {
-  if (game.items.get("4X4nw1do9wEOAaLx"))
-    return;
+// async function adventureImport() {
+//   if (game.scenes.get("vL4Lqhd60r7UHjPT"))
+//     return;
 
-  const adventure = await fromUuid(quickstartAdventureUuid);
-  adventure.sheet.render(true);
-}
+//   const adventure = await fromUuid(quickstartAdventureUuid);
+//   adventure.sheet.render(true);
+// }
 
 Hooks.on('importAdventure', async (adventure) => {
   if (adventure.uuid !== quickstartAdventureUuid)
-      return;
+    return;
   const scene = await fromUuid("Scene.sge0EEkIG8wuvCmB");
   scene.activate();
   const journal = await fromUuid("JournalEntry.JYIKkkXpyqIM3IC0");
@@ -152,6 +191,12 @@ Hooks.on('importAdventure', async (adventure) => {
 
 Hooks.once('diceSoNiceReady', registerDice3D);
 Hooks.once('yzeCombatReady', registerYearZeroCombatSettings);
+
+function showHideItemDescription() {
+  const showItemDescription = game.settings.get(INVINCIBLE.ID, "showItemDescription");
+  if (!showItemDescription)
+    document.body.classList.add("hide-item-description");
+}
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */

@@ -1,4 +1,5 @@
 import { YearZeroRoll } from "../../../lib/yzur.js";
+import { applyStunts } from "../../helpers/rolls.mjs";
 
 const { HandlebarsApplicationMixin, ApplicationV2, DialogV2 } = foundry.applications.api;
 const TextEditor = foundry.applications.ux.TextEditor.implementation;
@@ -67,29 +68,23 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
 
   async _prepareContext() {
     const { breakdown, dice } = this.getBreakdown();
+    const disabled = !this.hideAttribute && this.requireAttribute && !this.attribute;
+    const buttonsList = Object.keys(CONFIG.ChatMessage.modes).filter(it => it != "ic").map(key => {
+      const mode = CONFIG.ChatMessage.modes[key];
+      return {
+        type: "submit",
+        icon: mode.icon,
+        label: mode.label,
+        disabled: disabled,
+        action: key,
+      };
+    });
+    if (this.attackInfo)
+      this.attackInfo.conditionText = this.attackInfo.conditionToApply ?
+        await TextEditor.enrichHTML(
+          `@UUID[${this.attackInfo.conditionToApply}]`) : "";
     const context = {
-      buttons: [
-        {
-          type: "submit", icon: "fa-solid fa-globe", label: "CHAT.RollPublic",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.PUBLIC
-        },
-        {
-          type: "submit", icon: "fa-solid fa-user-secret", label: "CHAT.RollPrivate",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.PRIVATE
-        },
-        {
-          type: "submit", icon: "fa-solid fa-eye-slash", label: "CHAT.RollBlind",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.BLIND
-        },
-        {
-          type: "submit", icon: "fa-solid fa-user", label: "CHAT.RollSelf",
-          disabled: !this.hideAttribute && this.requireAttribute && !this.attribute,
-          action: CONST.DICE_ROLL_MODES.SELF
-        },
-      ],
+      buttons: buttonsList,
       actor: this.actor,
       item: this.item,
       breakdown: this.breakdown,
@@ -132,7 +127,6 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
   async _updateDialog(formData) {
     const formValues = formData.object;
     this.bonus = formValues.bonus || 0;
-    console.log(this);
     this.render(true);
   }
 
@@ -147,7 +141,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
       breakdown.push({ name: game.i18n.localize("INVINCIBLE.Roll.bonus"), value: this.bonus });
       dice += this.bonus;
     }
-    return { breakdown, dice };
+    return { breakdown, dice: Math.max(dice, 1) };
   }
 
   async _roll(event, form, formData) {
@@ -156,15 +150,12 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
 
     let attackType = undefined;
     if (this.attackInfo) {
-      attackType = this.attackInfo.attackType ?? (this.attribute == "agility" ? "shooting" : "melee");
+      attackType = this.attackInfo.attackType ?? (this.attribute == "agility" ? "shooting" : "slugfest");
     }
 
     let options = this.rollOptions;
     options.breakdown = breakdown;
-    options.damage = this.attackInfo?.damage;
-    options.minRange = this.attackInfo?.minRange;
-    options.maxRange = this.attackInfo?.maxRange;
-    options.armor = this.attackInfo?.armor;
+    options = foundry.utils.mergeObject(options, this.attackInfo);
     options.description = await TextEditor.enrichHTML(
       this.item?.system.description,
       {
@@ -176,6 +167,7 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
     );
     options.item = this.item?.uuid;
     options.attackType = attackType;
+    options.stressCost ??= 0;
     let maxPush = this.maxPush ?? this.actor.system.maxPush?.["all"] ?? this.actor.system.maxPush?.[this.attribute] ?? 1;
 
     let roll = await new YearZeroRoll(formula, { maxPush }, options).roll();
@@ -190,31 +182,18 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
 
     await game.dice3d?.waitFor3DAnimationByMessageID(message.id);
 
+    if (!roll.pushable) {
+      if (options.stressCost > 0)
+        await this.actor.update({ "system.derived.resolve.value": this.actor.system.derived.resolve.value - options.stressCost });
+
+      await applyStunts(message);
+    }
+
     return this.result;
   }
 
   async wait(event) {
-    let stopRoll = false;
-    let message = "brokenBy";
-    if (this.actor?.system.derived.health.max > 0 && this.actor?.system.derived.health.value == 0)
-      message += "Damage";
-    if (this.actor?.system.derived.resolve.max > 0 && this.actor?.system.derived.resolve.value == 0)
-      message += "AndStress";
-    message = message.replace("ByAnd", "By");
-
-    if (message != "brokenBy") {
-      stopRoll = !(await DialogV2.confirm({
-        window: { title: this.options.window.title },
-        content: `<p>${game.i18n.localize(`INVINCIBLE.Roll.${message}`)}</p>`,
-        modal: true,
-        rejectClose: false,
-        classes: ['roll-application'],
-      }));
-    }
-
-    console.log(stopRoll);
-    if (stopRoll)
-      return;
+    await this.actor?.system.checkIfBroken(this.options.window.title);
 
     if (event?.shiftKey) {
       event.submitter = {

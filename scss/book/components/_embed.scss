@@ -1,0 +1,207 @@
+figure.content-embed {
+  div#invbook {
+    div.invincible-actor {
+
+      img.portrait {
+        max-height: 210px;
+        margin-left: $default-margin !important;
+        margin-bottom: calc($default-margin / 2);
+        shape-margin: 16px;
+        float: right;
+        box-shadow: none;
+      }
+
+
+      &>div:not(:last-child) {
+        border-bottom: 1px solid $c-darkblue;
+
+        &.talents,
+        &:has(+ .talents) {
+          border-bottom: 0;
+        }
+      }
+
+      div {
+        label {
+          font-size: var(--font-size-16);
+        }
+
+        &:not(.biography) p {
+          text-align: start;
+          hyphens: none;
+        }
+
+        p,
+        label {
+          color: $c-darkblue;
+          font-family: $font-sans;
+          text-indent: 0;
+        }
+      }
+
+      ul {
+        margin: 0;
+
+        li::before {
+          background-image: url(../assets/book/icons/star-darkblue.svg);
+        }
+      }
+
+      div.header {
+        display: flex;
+      }
+
+      p.as-of {
+        float: right;
+        font-size: var(--font-size-13);
+        text-wrap: balance;
+        width: 50%;
+        margin-left: 20px;
+        margin-top: -2px;
+        text-align: left;
+        color: $c-darkblue;
+        transform: skew(-5deg) rotate(-1deg);
+        font-family: $font-sans;
+      }
+
+      div.name {
+        width: fit-content;
+        margin-bottom: $default-margin;
+
+        p {
+          width: fit-content;
+          margin-left: $default-margin;
+          margin-right: $default-margin;
+          color: black;
+        }
+      }
+
+      div.biography {
+        margin-bottom: 1.5rem;
+
+        p {
+          color: black;
+        }
+      }
+
+      div.header,
+      div.biography,
+      div.derived:not(.non-hero) {
+        border-bottom: 0;
+      }
+
+      div.attributes p strong {
+        text-transform: uppercase;
+      }
+
+      div.powers,
+      div.talents,
+      div.drawbacks {
+        margin-top: $default-margin;
+
+        &>p:first-child {
+          border-bottom: 1px solid $c-darkblue;
+        }
+      }
+
+      div.power-source {
+        border-bottom: 1px solid $c-darkblue;
+
+        &>label {
+          float: left;
+          margin-right: 5px;
+
+          strong:first-child {
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      div.power,
+      div.drawback,
+      div.boostLimit {
+        border-bottom: 0;
+        padding-left: $default-margin;
+
+        &::before {
+          content: "";
+          background-image: url(../assets/book/icons/star-darkblue.svg);
+          color: $c-darkblue;
+          width: $default-margin;
+          height: $default-margin;
+          float: left;
+          position: absolute;
+          left: calc($default-margin) * 1.5;
+          margin-top: 0.2rem;
+          font-size: 24px;
+        }
+
+        &>label {
+          text-transform: uppercase;
+          float: left;
+          margin-right: 5px;
+
+          span {
+            text-transform: none;
+          }
+        }
+      }
+
+      div.boostLimit::before {
+        background-image: none;
+        content: "⦾";
+        font-size: 0.8rem;
+        float: left;
+        left: calc($default-margin * 2.7);
+      }
+    }
+
+    div.non-hero {
+      margin-top: 0 !important;
+
+      strong {
+        text-transform: capitalize;
+      }
+
+      &.drawback {
+        .drawback label strong {
+          text-transform: none !important;
+        }
+      }
+
+      &.talents {
+        border-top: 1px solid $c-darkblue;
+        border-bottom: 1px solid $c-darkblue !important;
+
+        p {
+          border: 0 !important;
+        }
+
+        strong:first-child {
+          @extend .small-caps;
+          margin-right: calc($default-margin * 0.25);
+        }
+
+        p:not(:last-child) {
+          float: left !important;
+        }
+      }
+    }
+
+    div.gears {
+      clear: both;
+
+      strong {
+        @extend .small-caps
+      }
+    }
+  }
+
+  strong.embed-caption {
+    color: black;
+
+    &:has(+cite) {
+      margin-right: 10px;
+    }
+  }
+}

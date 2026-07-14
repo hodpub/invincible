@@ -20,7 +20,8 @@ export class InvincibleChatMessage extends foundry.documents.ChatMessage {
     if (!event?.shiftKey) {
       const buttons = [
         {
-          type: "submit", icon: "fa-solid fa-globe", label: "CHAT.RollPublic",
+          ...CONFIG.ChatMessage.modes.public,
+          type: "submit",
           action: CONST.DICE_ROLL_MODES.PUBLIC,
           callback: () => {
             return {
@@ -30,7 +31,8 @@ export class InvincibleChatMessage extends foundry.documents.ChatMessage {
           }
         },
         {
-          type: "submit", icon: "fa-solid fa-user-secret", label: "CHAT.RollPrivate",
+          ...CONFIG.ChatMessage.modes.gm,
+          type: "submit",
           action: CONST.DICE_ROLL_MODES.PRIVATE,
           callback: () => {
             return {
@@ -40,7 +42,8 @@ export class InvincibleChatMessage extends foundry.documents.ChatMessage {
           }
         },
         {
-          type: "submit", icon: "fa-solid fa-eye-slash", label: "CHAT.RollBlind",
+          ...CONFIG.ChatMessage.modes.blind,
+          type: "submit",
           action: CONST.DICE_ROLL_MODES.BLIND,
           callback: () => {
             return {
@@ -50,7 +53,8 @@ export class InvincibleChatMessage extends foundry.documents.ChatMessage {
           }
         },
         {
-          type: "submit", icon: "fa-solid fa-user", label: "CHAT.RollSelf",
+          ...CONFIG.ChatMessage.modes.self,
+          type: "submit",
           action: CONST.DICE_ROLL_MODES.SELF,
           callback: () => {
             return {

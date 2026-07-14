@@ -40,14 +40,14 @@
         {{localize (concat 'INVINCIBLE.Actor.base.FIELDS.attributes.' name '.label')}}
       </label>
       {{#if (eq name "strength")}}
-      <label class="rollable slugfest" data-action="roll" data-roll-type="slugfest" data-tooltip-html="<label class='slugfest-tooltip'>{{localize "INVINCIBLE.Actor.base.FIELDS.slugfest.tooltip" max=../system.derived.slugfest.max}}</label>">
+      <label class="rollable slugfest" data-action="roll" data-roll-type="slugfest" data-tooltip-html="<label class='slugfest-tooltip'>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.tooltip" max=../system.derived.slugfest.max}}</label>">
         <i class="fas fa-hand-fist"> </i>
       </label>
       {{/if}}
     </div>
     {{#if (eq name "strength")}}
     <div class="bar">
-      <label>{{localize "INVINCIBLE.Actor.base.FIELDS.health.value.label"}}</label>
+      <label>{{../systemFields.derived.fields.health.fields.value.label}}</label>
       {{bar ../system.derived.health.value ../system.derived.health.max}}
       <div class="form-fields">
         <input type='text' name='system.derived.health.value' value='{{../system.derived.health.value}}'
@@ -60,7 +60,7 @@
 
     {{#if (eq name "presence")}}
     <div class="bar">
-      <label>{{localize "INVINCIBLE.Actor.base.FIELDS.resolve.value.label"}}</label>
+      <label>{{localize "INVINCIBLE.Actor.base.FIELDS.derived.resolve.value.label"}}</label>
       {{bar ../system.derived.resolve.value ../system.derived.resolve.max}}
       <div class="form-fields">
         <input type='text' name='system.derived.resolve.value' value='{{../system.derived.resolve.value}}'

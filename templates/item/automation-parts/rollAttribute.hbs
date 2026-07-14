@@ -2,7 +2,7 @@
   <div class="form-group cgd-custom">
     <label for="system.automations.{{key}}.attribute">{{localize
       "INVINCIBLE.Automation.FIELDS.attribute.label"}}</label>
-    <select name="system.automations.{{key}}.attribute">
+    <select name="system.automations.{{key}}.attribute" multiple>
       {{selectOptions @root.config.ACTOR.ATTRIBUTE_CHOICES selected=automation.attribute localize=true}}
     </select>
   </div>

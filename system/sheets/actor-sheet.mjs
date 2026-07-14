@@ -96,7 +96,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     switch (this.document.type) {
       case 'superhero':
       case 'npc':
-        options.parts.push('powers', 'talents', 'injuries', 'effects', 'portrait', 'biography', 'personal');
+      case 'minions':
+        options.parts.push('powers', 'talents', 'gear', 'injuries', 'effects', 'portrait', 'biography', 'personal');
         break;
     }
   }
@@ -125,8 +126,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
       currentType: this.actor.type.charAt(0).toUpperCase() + this.actor.type.slice(1),
     };
 
-    // Offloading context prep to a helper function
-    await this._prepareItems(context);
+    await this.actor.system.prepareItems(context);
 
     return context;
   }
@@ -236,63 +236,6 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     }, {});
   }
 
-  /**
-   * Organize and classify Items for Actor sheets.
-   *
-   * @param {object} context The context object to mutate
-   */
-  async _prepareItems(context) {
-    // Initialize containers.
-    // You can just use `this.document.itemTypes` instead
-    // if you don't need to subdivide a given type like
-    // this sheet does with spells
-    const powers = {};
-    const injuries = [];
-    const talents = [];
-    const drawbacks = [];
-
-    const powerSources = this.document.items.filter(i => i.type === "powerSource");
-    const others = this.document.items.filter(i => i.type !== "powerSource");
-    for (const ps of powerSources) {
-      ps.enriched = await this._enrich(ps.system.description);
-      powers[ps.id] = {
-        powerSource: ps,
-        powers: []
-      };
-    }
-
-    // Iterate through items, allocating to containers
-    for (let i of others) {
-      i.enriched = await this._enrich(i.system.description);
-
-      if (i.type === "power") {
-        powers[i.system.powerSource ?? powerSources[0].id].powers.push(i);
-        continue;
-      }
-      if (i.type === "criticalInjury") {
-        injuries.push(i);
-        continue;
-      }
-      if (i.type === "talent") {
-        talents.push(i);
-        continue;
-      }
-      if (i.type === "drawback") {
-        drawbacks.push(i);
-        continue;
-      }
-    }
-
-    for (const [key, value] of Object.entries(powers)) {
-      powers[key].powers = value.powers.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    }
-
-    // Sort then assign
-    context.powers = Object.values(powers).sort((a, b) => (a.powerSource.sort || 0) - (b.powerSource.sort || 0));
-    context.injuries = injuries.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.talents = talents.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.drawbacks = drawbacks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-  }
 
   /**
    * Actions performed after any render of the Application.
@@ -440,7 +383,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             actor: this.actor,
             breakdown: {
               [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${dataset.attribute}.label`)]: this.actor.system.attributes[dataset.attribute].value,
-              ...this.actor.system.bonuses[`system.attributes.${dataset.attribute}.value`]
+              ...this.actor.system.bonuses[dataset.attribute]
             },
             attribute: dataset.attribute,
           }
@@ -514,7 +457,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
   _getItemButtonContextOptions() {
     return [
       {
-        name: "INVINCIBLE.Automation.sendToChat",
+        label: "INVINCIBLE.Automation.sendToChat",
         icon: "<i class=\"fa-solid fa-comment\"></i>",
         callback: async (target) => {
           const item = this._getEmbeddedDocument(target);
@@ -526,7 +469,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         },
       },
       {
-        name: "Edit",
+        label: "Edit",
         icon: "<i class=\"fa-solid fa-fw fa-edit\"></i>",
         // condition: () => this.isEditMode,
         callback: async (target) => {
@@ -539,9 +482,9 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         },
       },
       {
-        name: "Delete",
+        label: "Delete",
         icon: "<i class=\"fa-solid fa-fw fa-trash\"></i>",
-        condition: (target) => {
+        visible: (target) => {
           let item = this._getEmbeddedDocument(target);
           return this.actor.isOwner && !item.flags["coriolis-tgd"]?.isSupply;
         },
@@ -552,6 +495,12 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             return;
           }
           await item.deleteDialog();
+          if (item.type == "power") {
+            const related = this.actor.items.filter(it => it.system.power == item.id)
+            for (const relatedItem of related) {
+              await relatedItem.delete();
+            }
+          }
         },
       },
     ]
@@ -687,6 +636,13 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
     return this.actor.createEmbeddedDocuments('Item', itemData);
   }
 
+  async _onDropItem(event, item) {
+    if (["boost", "limit"].indexOf(item.type) > -1)
+      return ui.notifications.error("You can't add boosts/limits directly to the actor. Open a Power and drop the boost/limit on the item sheet.");
+
+    return super._onDropItem(event, item);
+  }
+
   /********************
    *
    * Actor Override Handling
@@ -736,7 +692,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
   }
 
   async _slugfest(event) {
-    const slugfestFlavor = game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.label");
+    const slugfestFlavor = game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.label");
     const buttons = [
       {
         type: "submit", icon: "fa-solid fa-globe", label: slugfestFlavor,
@@ -755,12 +711,12 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: slugfestFlavor }),
+        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: slugfestFlavor }),
         action: "slugfestWreckZone",
         callback: () => {
           return {
             rollType: "slugfest",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: slugfestFlavor }),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: slugfestFlavor }),
             attribute: "fighting",
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
@@ -768,18 +724,18 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               maxRange: 1
             },
             bonus: {
-              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZoneBonus")]: 2
+              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZoneBonus")]: 2
             }
           }
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-person-running-fast", label: "INVINCIBLE.Actor.base.FIELDS.slugfest.charge",
+        type: "submit", icon: "fa-solid fa-person-running-fast", label: "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge",
         action: "charge",
         callback: () => {
           return {
             rollType: "charge",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.charge"),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge"),
             attribute: "strength",
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
@@ -791,12 +747,12 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.charge") }),
+        type: "submit", icon: "fa-solid fa-globe", label: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge") }),
         action: "chargeWreckZone",
         callback: () => {
           return {
             rollType: "charge",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.charge") }),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge") }),
             attribute: "strength",
             attackInfo: {
               damage: this.actor.system.derived.slugfest.max,
@@ -805,18 +761,18 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               attackType: "charge"
             },
             bonus: {
-              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.slugfest.wreckZoneBonus")]: 2
+              [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZoneBonus")]: 2
             }
           }
         }
       },
       {
-        type: "submit", icon: "fa-solid fa-hand-holding", label: "INVINCIBLE.Actor.base.FIELDS.slugfest.grapple",
+        type: "submit", icon: "fa-solid fa-hand-holding", label: "INVINCIBLE.Actor.base.FIELDS.derived.slugfest.grapple",
         action: "grapple",
         callback: () => {
           return {
             rollType: "grapple",
-            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.slugfest.grapple"),
+            rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.grapple"),
             attribute: "fighting",
           }
         }
@@ -843,7 +799,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         attribute: attackType.attribute,
         breakdown: {
           [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attackType.attribute}.label`)]: this.actor.system.attributes[attackType.attribute].value,
-          ...this.actor.system.bonuses[`system.attributes.${attackType.attribute}.value`],
+          ...this.actor.system.bonuses[attackType.attribute],
           ...attackType.bonus
         },
         attackInfo: attackType.attackInfo

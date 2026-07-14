@@ -1,6 +1,10 @@
 import { ACTOR } from "./actors.mjs";
+import { AUTOMATIONS } from "./automations.mjs";
+import { POWERS } from "./power.mjs";
 
 export const INVINCIBLE = {
   ID: "invincible",
-  ACTOR
+  ACTOR,
+  AUTOMATIONS,
+  POWERS,
 };

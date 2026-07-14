@@ -72,6 +72,32 @@ div.form-group {
     flex: 1;
   }
 
+  &:has(document-tags) {
+    flex-direction: column;
+
+    &>label {
+      width: 100%;
+    }
+
+    .automation-open-item {
+      font-size: var(--font-size-10);
+      float: right;
+    }
+
+    input {
+      padding-left: 0;
+    }
+  }
+
+  &:has(code-mirror) {
+    flex-direction: column;
+
+    .form-fields {
+      width: 100%;
+      text-transform: none;
+    }
+  }
+
   &:has(> .form-fields textarea) {
     align-items: flex-start;
     margin-top: 3px;
@@ -90,6 +116,19 @@ div.form-group {
 
     div.attribute {
       width: 35%;
+    }
+  }
+
+  &.stacked {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3px 0;
+    align-items: center;
+
+    &>* {
+      flex: 0 0 100%;
     }
   }
 }
@@ -161,5 +200,13 @@ details {
     display: block;
     margin-top: 6px;
     text-align: right;
+  }
+}
+
+select[multiple] {
+  height: calc(var(--input-height) * 5);
+
+  option[selected] {
+    --color-select-option-bg: #{$c-lightblue};
   }
 }

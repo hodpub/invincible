@@ -1,0 +1,12 @@
+<section class='tab weapons scrollable {{tab.cssClass}}' data-group='primary' data-tab='weapons'>
+  <label class="title">{{{localize "TYPES.Actor.vehicle"}}}</label>
+  {{#each weapons as | weapon index |}}
+  <div class="gear-info" data-document-class="Item" data-item-id="{{weapon.id}}">
+    <label class="rollable" data-action="roll" data-roll-type="automation">
+      {{weapon.name}} 
+    </label>
+    {{weapon.system.extraInfo}}
+    {{{weapon.enriched}}}
+  </div>
+  {{/each}}
+</section>

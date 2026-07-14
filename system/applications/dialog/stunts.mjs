@@ -1,3 +1,4 @@
+import { STUNTS } from "../../config/stunts.mjs";
 import { unflatten } from "../../helpers/utils.mjs";
 
 const { HandlebarsApplicationMixin, ApplicationV2, DialogV2 } = foundry.applications.api;
@@ -17,77 +18,15 @@ export default class InvincibleStuntsDialog extends HandlebarsApplicationMixin(A
     this.stuntsMod = stuntsMod;
     this.roll = message.rolls[0];
     this.stuntsMax = Math.max((this.roll.stunts ?? 0) + stuntsMod, 0);
-    this.stuntOptions = foundry.utils.mergeObject(customStunts, {
-      "Extra Damage": {
-        value: 0,
-        max: 99,
-        maxDisabled: false,
-        minDisabled: true,
-      },
-      "Knockback": {
-        value: 0,
-        max: 1,
-        maxDisabled: false,
-        minDisabled: true,
-      },
-      "Stun": {
-        value: 0,
-        max: 1,
-        maxDisabled: false,
-        minDisabled: true,
-      },
-      "Bonus Move": {
-        value: 0,
-        max: 99,
-        maxDisabled: false,
-        minDisabled: true,
-      },
-      "Bonus Attack": {
-        value: 0,
-        max: 1,
-        maxDisabled: false,
-        minDisabled: true,
-      },
-      "Disarm": {
-        value: 0,
-        max: 1,
-        maxDisabled: false,
-        minDisabled: true,
-      },
-      "Save Bystanders": {
-        value: 0,
-        max: 99,
-        maxDisabled: false,
-        minDisabled: true,
-      },
-      "Your Own": {
-        value: 0,
-        max: 99,
-        maxDisabled: false,
-        minDisabled: true,
-      }
-    });
-    if (this.roll.options.attackType == "shooting") {
-      delete this.stuntOptions["Knockback"];
-      delete this.stuntOptions["Stun"];
-      delete this.stuntOptions["Bonus Move"];
-      delete this.stuntOptions["Save Bystanders"];
+    const stuntsList = STUNTS[this.roll.options.attackType];
+    const defaultStunts = {};
+    for (const stunt of stuntsList) {
+      if (!this.message.speaker.actor && STUNTS.list[stunt].requiresActor)
+        continue;
+
+      defaultStunts[stunt] = foundry.utils.mergeObject({ value: 0 }, STUNTS.list[stunt]);
     }
-    else if (this.roll.options.attackType == "charge") {
-      delete this.stuntOptions["Knockback"];
-      delete this.stuntOptions["Stun"];
-      delete this.stuntOptions["Bonus Move"];
-      delete this.stuntOptions["Bonus Attack"];
-      delete this.stuntOptions["Disarm"];
-      delete this.stuntOptions["Save Bystanders"];
-      delete this.stuntOptions["Your Own"];
-      this.stuntOptions["Slam"] = {
-        value: 0,
-        max: 1,
-        maxDisabled: false,
-        minDisabled: true,
-      };
-    }
+    this.stuntOptions = foundry.utils.mergeObject(customStunts, defaultStunts);
   }
 
   get stuntsCurrent() {
@@ -112,7 +51,6 @@ export default class InvincibleStuntsDialog extends HandlebarsApplicationMixin(A
     actions: {
       increase: this._increase,
       decrease: this._decrease,
-      // setRollType: this._setRollType,
     },
     tag: "form",
     form: {
@@ -187,36 +125,21 @@ export default class InvincibleStuntsDialog extends HandlebarsApplicationMixin(A
     const formValues = formData.object;
     const unflatted = unflatten(formValues);
     this.stuntOptions = unflatted.stuntOptions;
-    console.log(this);
     this.render(true);
   }
 
-  // getBreakdown() {
-  //   let dice = 0;
-  //   const breakdown = Object.keys(this.breakdown).map(key => {
-  //     const currentValue = this.breakdown[key];
-  //     dice += currentValue;
-  //     return { name: key, value: currentValue };
-  //   });
-  //   if (this.bonus) {
-  //     breakdown.push({ name: game.i18n.localize("INVINCIBLE.Roll.bonus"), value: this.bonus });
-  //     dice += this.bonus;
-  //   }
-  //   return { breakdown, dice };
-  // }
-
   async _updateMessage(event, form, formData) {
-    let damageMultiplier = 1;
-    const stuntList = Object.entries(this.stuntOptions).filter(s => s[1].value > 0).map(s => {
-      if (s[0] === "Extra Damage")
-        damageMultiplier += s[1].value;
-      return { name: s[0], value: s[1].value };
-    });
     const message = this.message;
-
     let roll = message.rolls[0].duplicate();
-    roll.options.damage = (roll.options.damage ?? 0) * damageMultiplier;
-    roll.options.stuntsList = stuntList;
+    let actor = game.actors.get(message.speaker.actor);
+    roll.options.stuntsList = [];
+
+    for (const stunt of Object.values(this.stuntOptions)) {
+      if (stunt.value == 0)
+        continue;
+      roll = await stunt.action(actor, roll, stunt.value);
+    }
+
     await message.update({ "rolls": [roll] });
 
     this.close();

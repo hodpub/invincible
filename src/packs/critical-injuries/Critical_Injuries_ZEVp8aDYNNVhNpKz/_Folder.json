@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": null,
+  "name": "Critical Injuries",
+  "color": "#0096cb",
+  "sorting": "a",
+  "_id": "ZEVp8aDYNNVhNpKz",
+  "description": "",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.360",
+    "systemId": "invincible",
+    "systemVersion": "0.0.0",
+    "createdTime": 1777407886385,
+    "modifiedTime": 1777407886451,
+    "lastModifiedBy": "W2gM75eXe7s7FPbM"
+  },
+  "_key": "!folders!ZEVp8aDYNNVhNpKz"
+}

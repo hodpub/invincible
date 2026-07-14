@@ -2,7 +2,7 @@ import RollAttributeAutomation from "./roll-attribute-automation.mjs";
 import { DataHelper } from "../helpers/data.mjs";
 import InvincibleRollDialog from "../applications/dialog/roll-dialog.mjs";
 
-const { DocumentUUIDField } = foundry.data.fields;
+const fields = foundry.data.fields;
 export default class RollAttackAutomation extends RollAttributeAutomation {
   /** @inheritdoc */
   static get TYPE() {
@@ -12,41 +12,55 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
   static defineSchema() {
     const schema = super.defineSchema();
 
-    schema.baseDamage = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 1, min: 0 });
-    schema.minRange = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
-    schema.maxRange = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
+    schema.baseDamage = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 1, min: 0 });
+    schema.minRange = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
+    schema.maxRange = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
 
+    schema.actualDamage = new fields.BooleanField({ initial: true, required: true });
+
+    schema.stressCost = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
+
+    schema.conditionToApply = new fields.DocumentUUIDField();
+    schema.bypassArmor = new fields.BooleanField({ initial: false, required: true });
     //TODO: Add validation to ensure maxRange >= minRange
     //TODO: Add type of action (quick/full)
     //TODO: Add validation if action type is used before rolling the attack
     //TODO: Auto use the action type
 
-    schema.postExecution = new DocumentUUIDField();
+    schema.postExecution = new fields.DocumentUUIDField();
 
     return schema;
   }
 
-  async viewAutomationMacro() {
-    const macro = await fromUuid(this.postExecution);
-    macro.sheet.render(true);
-  }
-
   async execute(event) {
-    const breakdown = {
-      [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${this.attribute}.label`)]: this.actor.system.attributes[this.attribute].value,
+    const currentExecution = await this.applyBoostsAndLimits();
+    if (!currentExecution)
+      return;
 
-      ...this.actor.system.bonuses[`system.attributes.${this.attribute}.value`]
+    let attribute = await this.getAttributeToUse();
+    if (!attribute)
+      return;
+
+    const breakdown = {
+      [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attribute}.label`)]: this.actor.system.attributes[attribute].value,
+
+      ...this.actor.system.bonuses[attribute]
     };
     if (this.rollBonus)
       breakdown[this.name] = this.rollBonus;
     const rollDialog = new InvincibleRollDialog(this.name, {
       actor: this.actor,
-      attribute: this.attribute,
+      attribute: attribute,
       item: this.item,
       attackInfo: {
-        damage: this.baseDamage,
-        minRange: this.minRange,
-        maxRange: this.maxRange,
+        damage: currentExecution.baseDamage,
+        minRange: currentExecution.minRange,
+        maxRange: currentExecution.maxRange,
+        stressCost: currentExecution.stressCost,
+        effects: currentExecution.effects,
+        actualDamage: currentExecution.actualDamage,
+        conditionToApply: currentExecution.conditionToApply,
+        bypassArmor: currentExecution.bypassArmor,
       },
       breakdown
     });
@@ -60,7 +74,7 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
       return;
     }
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
-    await macro.execute({ speaker, actor: this.actor, event, automation: this, message });
+    await macro.execute({ speaker, actor: this.actor, event, automation: currentExecution, message });
 
     return message;
   }

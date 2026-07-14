@@ -37,3 +37,35 @@ ACTOR.DERIVED = {
     initial: 2
   }
 };
+
+ACTOR.PROTOTYPE_TOKEN = {
+  superhero: {
+    actorLink: true,
+    disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY,
+    sight: {
+      enabled: true,
+    },
+  },
+  npc: {
+    actorLink: true,
+    disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL,
+    sight: {
+      enabled: true,
+    },
+  },
+  minions: {
+    disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL,
+    sight: {
+      enabled: true,
+    },
+  }
+}
+
+ACTOR.VEHICLE_TYPES = {
+  ground: "ground",
+  water: "water",
+  aerial: "aerial",
+  space: "space",
+};
+
+createListAndChoices(ACTOR, "VEHICLE_TYPES", ACTOR.VEHICLE_TYPES, "INVINCIBLE.Actor.Vehicle.FIELDS.type");

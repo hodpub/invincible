@@ -1,0 +1,14 @@
+diff --git a/system/automations/toggle-active-effect-automation.mjs b/system/automations/toggle-active-effect-automation.mjs
+index 2df59f3..90bfd0e 100644
+--- a/system/automations/toggle-active-effect-automation.mjs
++++ b/system/automations/toggle-active-effect-automation.mjs
+@@ -23,6 +23,9 @@ export default class ToggleActiveEffectAutomation extends BaseAutomation {
+       return await fromUuid(this.activeEffectUuid);
+ 
+     const effects = this.item.effects;
++    if (effects.size == 0)
++      throw ui.notifications.error("No effect configured on the item");
++
+     if (effects.size == 1)
+       return effects.contents[0];
+ 

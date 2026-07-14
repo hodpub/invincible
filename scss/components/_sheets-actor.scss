@@ -134,7 +134,7 @@
     top: 3px;
     right: 3px;
     font-size: var(--font-size-14);
-    
+
     cursor: pointer;
     transition: transform 0.2s;
 
@@ -144,5 +144,50 @@
       padding: 2px;
       transform: scale(1.5);
     }
+  }
+
+  div.boostLimit {
+    min-height: 16px;
+
+    img {
+      float: left;
+      height: 16px;
+      margin-right: 3px;
+    }
+  }
+
+  div.resources {
+    font-family: Comic, sans-serif;
+    text-transform: uppercase;
+    font-size: var(--font-size-18);
+
+    label:first-child {
+      color: black;
+    }
+  }
+}
+
+&.sheet.actor.challenge {
+  img.profile-img {
+    height: 317px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.bar label:first-child {
+    min-width: 30px;
+  }
+}
+
+&.sheet.actor.vehicle {
+  img.profile-img {
+    height: 231px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+  }
+
+  div.bar label:first-child {
+    min-width: 30px;
   }
 }
