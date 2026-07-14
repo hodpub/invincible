@@ -8,7 +8,7 @@
     </label>
   </div>
   {{#each system.automations as | automation |}}
-  <details data-automation-id="{{@key}}" {{#if (and automation.open (or automation.showAsSelection (not automation.schema.fields.showAsSelection)))}}open{{/if}}>
+  <details data-automation-id="{{@key}}" {{#if automation.open}}open{{/if}}>
     <summary>
       {{automation.name}}
     </summary>
