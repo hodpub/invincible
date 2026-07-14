@@ -2,7 +2,7 @@
   "id": "invincible",
   "title": "Invincible - Superhero Roleplaying",
   "description": "The official Invincible – Superhero Roleplaying system for FoundryVTT!",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14.364"
@@ -18,7 +18,7 @@
   "license": "LICENSE.txt",
   "readme": "README.md",
   "bugs": "https://github.com/hodpub/invincible/issues",
-  "changelog": "CHANGELOG.md",
+  "changelog": "https://github.com/hodpub/invincible/releases",
   "media": [
     {
       "type": "setup",
