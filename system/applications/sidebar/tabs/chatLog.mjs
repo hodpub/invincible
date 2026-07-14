@@ -30,7 +30,7 @@ export class InvincibleChatLog extends foundry.applications.sidebar.tabs.ChatLog
 
     // Push the roll and send it.
     await roll.push();
-    roll.options.stressCost += roll.attributeTrauma;
+    roll.options.stressCost = roll.attributeTrauma;
     await Promise.all([
       applyStress(message, roll),
     ]);
