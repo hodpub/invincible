@@ -18,8 +18,6 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
 
     schema.actualDamage = new fields.BooleanField({ initial: true, required: true });
 
-    schema.stressCost = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
-
     schema.conditionToApply = new fields.DocumentUUIDField();
     schema.bypassArmor = new fields.BooleanField({ initial: false, required: true });
     //TODO: Add validation to ensure maxRange >= minRange

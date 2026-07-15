@@ -2,7 +2,7 @@ import InvincibleRollDialog from "../applications/dialog/roll-dialog.mjs";
 import { DataHelper } from "../helpers/data.mjs";
 import BaseAutomation from "./base-automation.mjs";
 
-const { StringField, BooleanField, SetField } = foundry.data.fields;
+const fields = foundry.data.fields;
 export default class RollAttributeAutomation extends BaseAutomation {
   /** @inheritdoc */
   static get TYPE() {
@@ -12,10 +12,12 @@ export default class RollAttributeAutomation extends BaseAutomation {
   static defineSchema() {
     const schema = super.defineSchema();
 
-    schema.attribute = new SetField(new StringField({ required: false }));
-    schema.requireAttribute = new BooleanField({ initial: true });
-    schema.canChangeAttribute = new BooleanField({ initial: true });
-    schema.rollBonus = new foundry.data.fields.NumberField({ ...DataHelper.requiredInteger, initial: 0 });
+    schema.attribute = new fields.SetField(new fields.StringField({ required: false }));
+    schema.requireAttribute = new fields.BooleanField({ initial: true });
+    schema.canChangeAttribute = new fields.BooleanField({ initial: true });
+    schema.rollBonus = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0 });
+
+    schema.stressCost = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
 
     return schema;
   }
@@ -71,7 +73,10 @@ export default class RollAttributeAutomation extends BaseAutomation {
       actor: this.actor,
       attribute: attribute,
       item: this.item,
-      breakdown
+      breakdown,
+      attackInfo: {
+        stressCost: this.stressCost
+      }
     });
     return rollDialog.wait(event);
   }

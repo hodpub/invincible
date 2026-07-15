@@ -308,7 +308,8 @@
         },
         "rollAttribute": {
           "requireAttribute.label": "Requires Attribute",
-          "canChangeAttribute.label": "Can change Attribute"
+          "canChangeAttribute.label": "Can change Attribute",
+          "stressCost.label": "Stress Cost"
         },
         "rollAttack": {
           "notLoaded": "You cannot attack with an weapon that is not loaded/charged.",
@@ -318,7 +319,6 @@
           "minRange.label": "Min Range",
           "maxRange.label": "Max Range",
           "actualDamage.label": "Actual Damage",
-          "stressCost.label": "Stress Cost",
           "bypassArmor.label": "Bypass Armor",
           "conditionToApply": {
             "label": "Condition To Apply",
