@@ -105,7 +105,13 @@
               "wreckZoneBonus": "Wreck Zone"
             }
           },
-          "resources.label": "Resources"
+          "resources.label": "Resources",
+          "dodge": {
+            "label": "Dodge"
+          },
+          "block": {
+            "label": "Block"
+          }
         }
       },
       "Superhero": {

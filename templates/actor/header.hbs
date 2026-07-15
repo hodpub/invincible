@@ -44,6 +44,16 @@
         <i class="fas fa-hand-fist"> </i>
       </label>
       {{/if}}
+      {{#if (eq name "fighting")}}
+      <label class="rollable slugfest" data-action="roll" data-roll-type="block" data-tooltip-html="<label class='slugfest-tooltip'>{{localize "INVINCIBLE.Actor.base.FIELDS.block.label"}}</label>">
+        <i class="fas fa-shield"> </i>
+      </label>
+      {{/if}}
+      {{#if (eq name "agility")}}
+      <label class="rollable slugfest" data-action="roll" data-roll-type="dodge" data-tooltip-html="<label class='slugfest-tooltip'>{{localize "INVINCIBLE.Actor.base.FIELDS.dodge.label"}}</label>">
+        <i class="fas fa-person-falling"> </i>
+      </label>
+      {{/if}}
     </div>
     {{#if (eq name "strength")}}
     <div class="bar">

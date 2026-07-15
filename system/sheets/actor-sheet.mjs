@@ -393,6 +393,10 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
         return InvincibleChatMessage.sendToChat(this.actor, flavor, dataset.rollData, event);
       case "slugfest":
         return this._slugfest(event);
+      case "block":
+        return this._block(event);
+      case "dodge":
+        return this._dodge(event);
       case 'automation':
       default:
         const automationItem = this._getEmbeddedDocument(target);
@@ -814,6 +818,36 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
           ...attackType.bonus
         },
         attackInfo: attackType.attackInfo
+      }
+    ).wait(event);
+  }
+
+  async _block(event) {
+    return new InvincibleRollDialog(
+      game.i18n.format("INVINCIBLE.Actor.base.FIELDS.block.label"),
+      {
+        actor: this.actor,
+        attribute: "fighting",
+        breakdown: {
+          [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.fighting.label`)]: this.actor.system.attributes["fighting"].value,
+          ...this.actor.system.bonuses["fighting"],
+          ...this.actor.system.bonuses["block"]
+        }
+      }
+    ).wait(event);
+  }
+
+  async _dodge(event) {
+    return new InvincibleRollDialog(
+      game.i18n.format("INVINCIBLE.Actor.base.FIELDS.dodge.label"),
+      {
+        actor: this.actor,
+        attribute: "agility",
+        breakdown: {
+          [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.agility.label`)]: this.actor.system.attributes["agility"].value,
+          ...this.actor.system.bonuses["agility"],
+          ...this.actor.system.bonuses["dodge"]
+        }
       }
     ).wait(event);
   }
