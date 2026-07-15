@@ -706,6 +706,9 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               damage: this.actor.system.derived.slugfest.max,
               minRange: 0,
               maxRange: 0
+            },
+            bonus: {
+              ...this.actor.system.bonuses["system.derived.slugfest.bonus"]
             }
           }
         }
@@ -724,6 +727,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               maxRange: 1
             },
             bonus: {
+              ...this.actor.system.bonuses["system.derived.slugfest.bonus"],
               [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZoneBonus")]: 2
             }
           }
@@ -742,6 +746,9 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               minRange: 1,
               maxRange: "Movement",
               attackType: "charge"
+            },
+            bonus: {
+              ...this.actor.system.bonuses["charge"]
             }
           }
         }
@@ -761,6 +768,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               attackType: "charge"
             },
             bonus: {
+              ...this.actor.system.bonuses["charge"],
               [game.i18n.localize("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZoneBonus")]: 2
             }
           }
@@ -774,6 +782,9 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             rollType: "grapple",
             rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.grapple"),
             attribute: "fighting",
+            bonus: {
+              ...this.actor.system.bonuses["grapple"]
+            }
           }
         }
       }
