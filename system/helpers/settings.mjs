@@ -31,7 +31,9 @@ export async function registerYearZeroCombatSettings(yzec) {
     initResetDeckOnCombatStart: true,
     slowAndFastActions: true,
     resetEachRound: true,
-    actorDrawSizeAttribute: "system.initiativeSize"
+    actorDrawSizeAttribute: "system.initiativeSize",
+    actorSpeedAttribute: "system.initiativeKept",
+    duplicateCombatantOnCombatStart: true
   }, false);
   game.settings.set(INVINCIBLE.ID, 'configuredYzeCombat', true)
 } 
