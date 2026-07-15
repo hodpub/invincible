@@ -27,7 +27,7 @@
   {{#if attackInfo}}
   <div class="separator"></div>
   <div class="breakdown">
-    {{#unless attackInfo.armor}}
+    {{#if attackInfo.damage}}
     <div class="attribute">
       <input type='text' value='{{attackInfo.damage}}' data-dtype='Number' disabled />
       <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.baseDamage.label"}}</label>
@@ -40,17 +40,17 @@
       <input type='text' value='{{attackInfo.maxRange}}' data-dtype='Number' disabled />
       <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.maxRange.label"}}</label>
     </div>
-    {{#if attackInfo.stressCost}}
-    <div class="attribute">
-      <input type='text' value='{{attackInfo.stressCost}}' data-dtype='Number' disabled />
-      <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttack.stressCost.label"}}</label>
-    </div>
     {{/if}}
-    {{/unless}}
     {{#if attackInfo.armor}}
     <div class="attribute">
       <input type='text' value='{{attackInfo.armor}}' data-dtype='Number' disabled />
       <label class="attribute-label">{{localize "YZUR.CHAT.ROLL.ATTACK.ARMOR"}}</label>
+    </div>
+    {{/if}}
+    {{#if attackInfo.stressCost}}
+    <div class="attribute">
+      <input type='text' value='{{attackInfo.stressCost}}' data-dtype='Number' disabled />
+      <label class="attribute-label">{{localize "INVINCIBLE.Automation.FIELDS.rollAttribute.stressCost.label"}}</label>
     </div>
     {{/if}}
   </div>
