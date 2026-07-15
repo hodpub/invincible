@@ -1,7 +1,8 @@
 export default function registerHandlebarsHelpers() {
   Handlebars.registerHelper({
     bar,
-    add
+    add,
+    addActiveSign
   });
 }
 
@@ -14,4 +15,12 @@ export function bar(value, max) {
 
 export function add(value, increment) {
   return value + increment;
+}
+
+
+export function addActiveSign(isActive) {
+  if (isActive == null)
+    return "";
+  const cssClass = isActive ? "fa fa-circle-check" : "fa-regular fa-circle";
+  return new Handlebars.SafeString(` <i class="${cssClass}"></i>`);
 }

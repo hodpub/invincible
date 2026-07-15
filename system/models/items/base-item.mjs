@@ -1,5 +1,6 @@
-export default class InvincibleItemBase extends foundry.abstract
-  .TypeDataModel {
+import { checkIfActive } from "../../helpers/effects.mjs";
+
+export default class InvincibleItemBase extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
     const schema = {};
@@ -14,4 +15,10 @@ export default class InvincibleItemBase extends foundry.abstract
   get chatTemplate() {
     return "systems/invincible/templates/sidebar/chat/item.hbs";
   };
+
+  prepareDerivedData() {
+    super.prepareDerivedData();
+
+    this.active = checkIfActive(this.parent.effects);
+  }
 }

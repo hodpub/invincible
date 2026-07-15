@@ -36,3 +36,14 @@ export function prepareActiveEffectCategories(effects) {
   }
   return categories;
 }
+
+export function checkIfActive(effects) {
+  if (!effects.size)
+    return null;
+
+  for (const e of effects) {
+    if (!e.disabled)
+      return true;
+  }
+  return false;
+}

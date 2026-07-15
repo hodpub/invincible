@@ -3,7 +3,7 @@
   {{#each talents as | talent index |}}
   <div class="talent-info" data-document-class="Item" data-item-id="{{talent.id}}">
     <label class="rollable" data-action="roll" data-roll-type="automation">
-      {{talent.name}}
+      {{talent.name}}{{addActiveSign talent.system.active}}
     </label>
     {{{talent.enriched}}}
   </div>
@@ -14,7 +14,7 @@
   {{#each drawbacks as | drawback index |}}
   <div class="talent-info" data-document-class="Item" data-item-id="{{drawback.id}}">
     <label class="rollable" data-action="roll" data-roll-type="automation">
-      {{drawback.name}}
+      {{drawback.name}}{{addActiveSign drawback.system.active}}
     </label>
     {{{drawback.enriched}}}
   </div>

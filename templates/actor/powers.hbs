@@ -4,7 +4,7 @@
   <div class="powers-info">
     <label class="rollable" data-action="roll" data-roll-type="automation" data-document-class="Item"
       data-item-id="{{ps.powerSource.id}}">
-      {{ps.powerSource.name}}
+      {{ps.powerSource.name}}{{addActiveSign ps.powerSource.system.active}}
     </label>
     <div class="item-description">
       {{{ps.powerSource.enriched}}}
@@ -13,7 +13,7 @@
     <ul>
       <li data-document-class="Item" data-item-id="{{power.id}}">
         <label class="rollable" data-action="roll"
-          data-roll-type="automation">{{power.system.powerLevel}}{{power.name}}</label>
+          data-roll-type="automation">{{power.system.powerLevel}}{{power.name}}{{addActiveSign power.system.active}}</label>
         <div class="item-description">
           {{{power.enriched}}}
         </div>

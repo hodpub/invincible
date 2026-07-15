@@ -3,7 +3,7 @@
   {{#each injuries as | injury index |}}
   <div class="injury-info" data-document-class="Item" data-item-id="{{injury.id}}">
     <label class="rollable" data-action="roll">
-      {{injury.name}}
+      {{injury.name}}{{addActiveSign injury.system.active}}
     </label>
     {{{injury.enriched}}}
   </div>

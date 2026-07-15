@@ -8,7 +8,7 @@
   {{#each gear as | gear index |}}
   <div class="gear-info" data-document-class="Item" data-item-id="{{gear.id}}">
     <label class="rollable" data-action="roll" data-roll-type="automation">
-      {{gear.name}} 
+      {{gear.name}}{{addActiveSign gear.system.active}}
     </label>
     {{gear.system.extraInfo}}
     {{{gear.enriched}}}
