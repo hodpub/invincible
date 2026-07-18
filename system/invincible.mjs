@@ -22,6 +22,7 @@ import { InvincibleCompendium } from "./applications/sidebar/apps/compendium.mjs
 import { registerDice3D } from "./helpers/rolls.mjs";
 import InvincibleRollDialog from "./applications/dialog/roll-dialog.mjs";
 import { registerSettings, registerYearZeroCombatSettings } from "./helpers/settings.mjs";
+import { registerActiveEffectsList } from "./helpers/effects.mjs";
 
 const collections = foundry.documents.collections;
 const sheets = foundry.appv1.sheets;
@@ -207,6 +208,8 @@ Hooks.on("renderSettings", (_application, element) => {
 
   supportButton.insertAdjacentElement("beforebegin", manualLink);
 });
+
+registerActiveEffectsList();
 
 Hooks.once('diceSoNiceReady', registerDice3D);
 Hooks.once('yzeCombatReady', registerYearZeroCombatSettings);

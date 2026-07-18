@@ -47,3 +47,29 @@ export function checkIfActive(effects) {
   }
   return false;
 }
+
+export function registerActiveEffectsList() {
+  Hooks.on("renderActiveEffectConfig", async (activeEffectConfig, html, data) => {
+    console.log(`${CONFIG.INVINCIBLE.ID} | Adding Attribute Key options to the ActiveEffects app`);
+
+    const effectsSection = html.querySelector("section[data-tab='changes']");
+    const inputFields = effectsSection.querySelectorAll(".key input");
+    const datalist = document.createElement("datalist");
+
+    datalist.id = 'attribute-key-list';
+    inputFields.forEach((inputField) => {
+      inputField.setAttribute('list', 'attribute-key-list');
+    });
+
+    const effects_list = foundry.utils.flattenObject(game.i18n.translations.INVINCIBLE.Effects);
+
+    Object.keys(effects_list).forEach(key => {
+      const attributeKeyOption = document.createElement("option");
+      attributeKeyOption.value = key;
+      attributeKeyOption.label = effects_list[key];
+      datalist.appendChild(attributeKeyOption);
+    });
+
+    effectsSection.append(datalist);
+  });
+}
