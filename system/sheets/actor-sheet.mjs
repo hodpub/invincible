@@ -707,7 +707,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             rollName: slugfestFlavor,
             attribute: "fighting",
             attackInfo: {
-              damage: this.actor.system.derived.slugfest.max,
+              damage: this.actor.system.derived.slugfest.damage,
               minRange: 0,
               maxRange: 0
             },
@@ -726,7 +726,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: slugfestFlavor }),
             attribute: "fighting",
             attackInfo: {
-              damage: this.actor.system.derived.slugfest.max,
+              damage: this.actor.system.derived.slugfest.damage,
               minRange: 0,
               maxRange: 1
             },
@@ -746,7 +746,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge"),
             attribute: "strength",
             attackInfo: {
-              damage: this.actor.system.derived.slugfest.max,
+              damage: this.actor.system.derived.slugfest.damage,
               minRange: 1,
               maxRange: "Movement",
               attackType: "charge"
@@ -766,7 +766,7 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             rollName: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.wreckZone", { attack: game.i18n.format("INVINCIBLE.Actor.base.FIELDS.derived.slugfest.charge") }),
             attribute: "strength",
             attackInfo: {
-              damage: this.actor.system.derived.slugfest.max,
+              damage: this.actor.system.derived.slugfest.damage,
               minRange: 1,
               maxRange: "Movement",
               attackType: "charge"
