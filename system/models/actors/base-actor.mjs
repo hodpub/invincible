@@ -83,7 +83,7 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     }
 
     this.derived.slugfest.damage ??= 0;
-    this.derived.slugfest.damage += Math.ceil(this.attributes.strength.value) / 2;
+    this.derived.slugfest.damage += Math.ceil(this.attributes.strength.value / 2);
 
     const bonuses = this.parent.appliedEffects.reduce((acc, effect) => {
       if (effect.changes && !effect.disabled) {
