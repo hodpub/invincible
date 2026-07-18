@@ -6,7 +6,7 @@
   </div>
   <div class="separator"></div>
   {{#each gear as | gear index |}}
-  <div class="gear-info" data-document-class="Item" data-item-id="{{gear.id}}">
+  <div class="gear-info draggable" data-document-class="Item" data-item-id="{{gear.id}}">
     <label class="rollable" data-action="roll" data-roll-type="automation">
       {{gear.name}}{{addActiveSign gear.system.active}}
     </label>

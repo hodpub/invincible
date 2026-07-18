@@ -160,7 +160,7 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
+  Hooks.on('hotbarDrop', (bar, data, slot) => checkIfCreateDocMacro(data, slot));
   // adventureImport();
   showHideItemDescription();
 
@@ -231,6 +231,16 @@ function showHideItemDescription() {
  * @param {number} slot     The hotbar slot to use
  * @returns {Promise}
  */
+function checkIfCreateDocMacro(data, slot) {
+  if (data.type !== 'Item') return true;
+  if (!data.uuid.includes('Actor.') && !data.uuid.includes('Token.')) {
+    return ui.notifications.warn(
+      'You can only create macro buttons for owned Items'
+    );
+  }
+  createDocMacro(data, slot);
+  return false;
+}
 async function createDocMacro(data, slot) {
   // First, determine if this is a valid owned item.
   if (data.type !== 'Item') return;
@@ -243,7 +253,7 @@ async function createDocMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.invincible.rollItemMacro("${data.uuid}");`;
+  const command = `invincible.utils.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(
     (m) => m.name === item.name && m.command === command
   );
