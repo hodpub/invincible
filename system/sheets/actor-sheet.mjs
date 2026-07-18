@@ -517,6 +517,28 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
    ***************/
 
   /**
+   * Callback actions which occur at the beginning of a drag start workflow.
+   * @param {DragEvent} event       The originating DragEvent
+   * @protected
+   */
+  _onDragStart(event) {
+    if ('link' in event.target.dataset) return;
+
+    super._onDragStart(event);
+
+    const currentData = event.dataTransfer.getData(event.dataTransfer.types[0]);
+    if (currentData)
+      return;
+
+    let dragData = event.target.dataset;
+    dragData.actorUuid = this.actor.uuid;
+    dragData.actorName = this.actor.name;
+
+    // Set data transfer
+    event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
+  }
+
+  /**
    * Handle the dropping of ActiveEffect data onto an Actor Sheet
    * @param {DragEvent} event                  The concluding DragEvent which contains drop data
    * @param {object} data                      The data transfer extracted from the event

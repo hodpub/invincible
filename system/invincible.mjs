@@ -232,7 +232,11 @@ function showHideItemDescription() {
  * @returns {Promise}
  */
 function checkIfCreateDocMacro(data, slot) {
-  if (data.type !== 'Item') return true;
+  if (data.rollType) {
+    createSheetMacro(data, slot);
+    return false;
+  }
+  if (data.type !== 'Item' && data.documentClass !== 'Item') return true;
   if (!data.uuid.includes('Actor.') && !data.uuid.includes('Token.')) {
     return ui.notifications.warn(
       'You can only create macro buttons for owned Items'
@@ -242,13 +246,6 @@ function checkIfCreateDocMacro(data, slot) {
   return false;
 }
 async function createDocMacro(data, slot) {
-  // First, determine if this is a valid owned item.
-  if (data.type !== 'Item') return;
-  if (!data.uuid.includes('Actor.') && !data.uuid.includes('Token.')) {
-    return ui.notifications.warn(
-      'You can only create macro buttons for owned Items'
-    );
-  }
   // If it is, retrieve it based on the uuid.
   const item = await Item.fromDropData(data);
 
@@ -267,7 +264,34 @@ async function createDocMacro(data, slot) {
     });
   }
   game.user.assignHotbarMacro(macro, slot);
-  return false;
+}
+async function createSheetMacro(data, slot) {
+
+  // Create the macro command using the uuid.
+  const command = `
+  const a = await fromUuid("${data.actorUuid}");
+  return a.sheet._${data.rollType}(event);
+  `;
+  console.log(data);
+
+  let parser = new DOMParser();
+  const doc = parser.parseFromString(data.tooltipHtml, 'text/html');
+  const text = doc.body.innerText;
+
+  const name = `${data.actorName} - ${text}`;
+  let macro = game.macros.find(
+    (m) => m.name === name && m.command === command
+  );
+  if (!macro) {
+    macro = await Macro.create({
+      name: name,
+      type: 'script',
+      // img: item.img,
+      command: command,
+      flags: { 'invincible.itemMacro': true },
+    });
+  }
+  game.user.assignHotbarMacro(macro, slot);
 }
 
 /**
