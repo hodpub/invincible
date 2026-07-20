@@ -22,14 +22,14 @@ export default class RollAttributeAutomation extends BaseAutomation {
     return schema;
   }
 
-  async getAttributeToUse() {
-    let attribute = this.attribute;
-    if (attribute.size == 0) {
+  async getAttributeToUse(currentExecution) {
+    let attribute = currentExecution.attribute;
+    if (attribute.length == 0) {
       ui.notifications.error("You need to have an attribute selected for the automation.");
       throw Error("You need to have an attribute selected for the automation.");
     }
 
-    if (attribute.size == 1)
+    if (attribute.length == 1)
       return attribute.values().next().value;
 
     let btnIndex = 0;
@@ -59,7 +59,7 @@ export default class RollAttributeAutomation extends BaseAutomation {
   }
 
   async execute(event) {
-    let attribute = await this.getAttributeToUse();
+    let attribute = await this.getAttributeToUse(this);
     if (!attribute)
       return;
 

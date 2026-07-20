@@ -14,7 +14,7 @@ export default class RollAttackWithActorAutomation extends RollAttackAutomation 
     if (!currentExecution)
       return;
 
-    let attribute = await this.getAttributeToUse();
+    let attribute = await this.getAttributeToUse(currentExecution);
     if (!attribute)
       return;
 

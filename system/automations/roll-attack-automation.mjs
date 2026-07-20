@@ -35,7 +35,7 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
     if (!currentExecution)
       return;
 
-    let attribute = await this.getAttributeToUse();
+    let attribute = await this.getAttributeToUse(currentExecution);
     if (!attribute)
       return;
 

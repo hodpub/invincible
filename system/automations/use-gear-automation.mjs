@@ -9,7 +9,7 @@ export default class UseGearAutomation extends RollAttributeAutomation {
   }
 
   async execute(event) {
-    let attribute = await this.getAttributeToUse();
+    let attribute = await this.getAttributeToUse(this);
     if (!attribute)
       return;
 
