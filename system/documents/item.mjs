@@ -105,6 +105,14 @@ export class InvincibleItem extends Item {
       if (automation.showAsSelection)
         possibleAutomations.push(item.system.automations[automationId]);
     }
+    const boostsAndLimits = item.actor.items.filter(it => it.system.power == item.id);
+    for (const boostOrLimit of boostsAndLimits) {
+      for (const automationId of Object.keys(boostOrLimit.system.automations)) {
+        const automation = boostOrLimit.system.automations[automationId];
+        if (automation.showAsSelection)
+          possibleAutomations.push(boostOrLimit.system.automations[automationId]);
+      }
+    }
 
     if (possibleAutomations.length == 0) {
       await item.actor.system.checkIfBroken(item.name);
