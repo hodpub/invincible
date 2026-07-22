@@ -7,8 +7,8 @@
       </a>
     </label>
   </div>
-  {{#each system.automations as | automation |}}
-  <details data-automation-id="{{@key}}" {{#if automation.open}}open{{/if}}>
+  {{#each automations as | automation |}}
+  <details data-automation-id="{{automation._id}}" {{#if automation.open}}open{{/if}}>
     <summary>
       {{automation.name}}
     </summary>
@@ -19,21 +19,21 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="system.automations.{{@key}}.name">{{localize "Name"}}</label>
+      <label for="system.automations.{{automation._id}}.name">{{localize "Name"}}</label>
       <div class="form-fields">
-        <input type="text" name="system.automations.{{@key}}.name" value="{{automation.name}}">
+        <input type="text" name="system.automations.{{automation._id}}.name" value="{{automation.name}}">
       </div>
     </div>
     {{#if automation.schema.fields.showAsSelection}}
     <div class="form-group">
-      <label for="system.automations.{{@key}}.showAsSelection">{{localize
+      <label for="system.automations.{{automation._id}}.showAsSelection">{{localize
         "INVINCIBLE.Automation.FIELDS.showAsSelection.label"}}</label>
-      <input type="checkbox" name="system.automations.{{@key}}.showAsSelection" {{checked
+      <input type="checkbox" name="system.automations.{{automation._id}}.showAsSelection" {{checked
         automation.showAsSelection}} />
     </div>
     {{/if}}
     {{> (concat "systems/invincible/templates/item/automation-parts/" automation.type ".hbs") automation=automation
-    key=@key}}
+    key=automation._id}}
 
     <a class='delete' data-action='deleteAutomation' data-tooltip='{{localize "DOCUMENT.Delete" type='Automation'}}'>
       {{localize 'DOCUMENT.Delete' type='Automation'}}

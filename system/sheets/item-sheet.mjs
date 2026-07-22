@@ -157,6 +157,8 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
 
     await this._loadBoostLimit(context);
 
+    context.automations = Array.from(Object.values(context.item.system.automations)).sort((a, b) => a.name.localeCompare(b.name));
+
     return context;
   }
 
@@ -166,8 +168,8 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
 
     const boostsAndLimits = this.item.actor.items.filter(it => it.system.power == this.item.id);
 
-    context.boosts = boostsAndLimits.filter(it => it.type == "boost");
-    context.limits = boostsAndLimits.filter(it => it.type == "limit");
+    context.boosts = boostsAndLimits.filter(it => it.type == "boost").sort((a, b) => a.name.localeCompare(b.name));
+    context.limits = boostsAndLimits.filter(it => it.type == "limit").sort((a, b) => a.name.localeCompare(b.name));
   }
 
   /** @override */
