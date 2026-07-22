@@ -18,45 +18,6 @@ export default class ToggleActiveEffectAutomation extends BaseAutomation {
     return schema;
   }
 
-  async getActiveEffect() {
-    if (this.activeEffectUuid)
-      return await fromUuid(this.activeEffectUuid);
-
-    const effects = this.item.effects;
-    if (effects.size == 0)
-      throw ui.notifications.error("No effect configured on the item");
-
-    if (effects.size == 1)
-      return effects.contents[0];
-
-
-    let btnIndex = 0;
-    const buttons = [
-      ...effects.contents.map((e) => {
-        const btn = Object.assign({
-          label: e.name,
-          action: e._id
-        });
-        btnIndex++;
-        return btn;
-      })
-    ];
-    const title = this.item.name;
-
-    const effectId = await foundry.applications.api.DialogV2.wait({
-      buttons,
-      rejectClose: false,
-      modal: true,
-      classes: ['roll-application', 'choices-dialog'],
-      position: {
-        width: 400
-      },
-      window: { title },
-    });
-
-    return this.item.effects.get(effectId);
-  }
-
   async execute(event) {
     if (this.actor.system.derived.resolve.value < this.stressCost)
       return ui.notifications.warn("You don't have enough resolve to use this.");
@@ -64,9 +25,53 @@ export default class ToggleActiveEffectAutomation extends BaseAutomation {
     const originalHealthMax = this.actor.system.derived.health.max;
     const originalResolvehMax = this.actor.system.derived.resolve.max;
 
-    let effect = await this.getActiveEffect();
+    if (this.activeEffectUuid) {
+      let effect = await fromUuid(this.activeEffectUuid);
+      await effect.update({ disabled: !effect.disabled });
+    }
+    else {
+      const mods = this.actor.items.filter(it => it.system.power == this.item.id).map(x => x.effects.contents);
+      let effects = [...this.item.effects];
+      effects = effects.concat(...mods);
 
-    await effect.update({ disabled: !effect.disabled });
+      let choiceResult;
+      if (effects.length == 1) {
+        choiceResult = { [effects[0].name]: true };
+      }
+      else if (event.shiftKey) {
+        choiceResult = effects.reduce((all, current) => {
+          all[current.name] = true;
+          return all;
+        }, {});
+      }
+      else {
+        let choices = [];
+        for (const choice of effects) {
+          choices.push(`<div class="form-field"><input type="checkbox" name="${choice.name}" id="${choice.name}" checked><label for="${choice.name}"><strong>${choice.name}<strong></label>${choice.parent.system.description}</div>`);
+        }
+        choiceResult = await foundry.applications.api.DialogV2.input({
+          window: { title: this.name },
+          classes: ["roll-application"],
+          content: choices.join(""),
+          ok: {
+            label: "Apply",
+            icon: "fa-solid fa-floppy-disk",
+          }
+        });
+        if (!choiceResult)
+          return;
+      }
+
+      let changeEffects = [];
+
+      for (const choice of effects) {
+        if (!choiceResult[choice.name])
+          continue;
+        changeEffects.push(choice.update({ disabled: !choice.disabled }));
+      }
+
+      await Promise.all(changeEffects);
+    }
 
     const updatedHealthMax = this.actor.system.derived.health.max;
     const updatedResolvehMax = this.actor.system.derived.resolve.max;
