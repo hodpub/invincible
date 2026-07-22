@@ -295,4 +295,15 @@
     display: inline-block;
     text-align: right;
   }
+
+  ul.effects,
+  ul.stunts {
+    li>p:last-child {
+      margin-bottom: var(--default-margin);
+    }
+
+    li:last-child>p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

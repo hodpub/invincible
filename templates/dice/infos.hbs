@@ -51,14 +51,14 @@
     <span class="label">{{localize "YZUR.CHAT.ROLL.ATTACK.STUNTS"}}: </span>
     <span class="result">{{roll.stunts}}</span>
   </div>
-  <ul>
+  <ul class="stunts">
     {{#each roll.options.stuntsList as | item |}}
     <li>{{item}}</li>
     {{/each}}
   </ul>
   {{/if}}
 
-  <ul>
+  <ul class="effects">
     {{#each roll.options.effects as | item|}}
     <li data-tooltip-html="{{{item.description}}}"><strong>[{{localize (concat "TYPES.Item." item.type)}}] {{item.name}}</strong></li>
     {{/each}}
