@@ -498,8 +498,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             console.error("Could not find item");
             return;
           }
-          await item.deleteDialog();
-          if (item.type == "power") {
+          const result = await item.deleteDialog();
+          if (result && item.type == "power") {
             const related = this.actor.items.filter(it => it.system.power == item.id)
             for (const relatedItem of related) {
               await relatedItem.delete();
