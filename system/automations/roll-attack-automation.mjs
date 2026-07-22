@@ -46,6 +46,8 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
     };
     if (this.rollBonus)
       breakdown[this.name] = this.rollBonus;
+
+    currentExecution.baseDamage += currentExecution.additionalDamage ?? 0;
     const rollDialog = new InvincibleRollDialog(this.name, {
       actor: this.actor,
       attribute: attribute,

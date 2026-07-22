@@ -323,6 +323,7 @@
           "notLoaded": "You cannot attack with an weapon that is not loaded/charged.",
           "postExecutionMacro.label": "Post Execution Macro",
           "baseDamage.label": "Base Damage",
+          "additionalDamage.label": "Additional Damage",
           "range.label": "Range",
           "minRange.label": "Min Range",
           "maxRange.label": "Max Range",
