@@ -6,3 +6,5 @@ export { default as ModifyRollAttackAutomation } from "./modify-roll-attack-auto
 export { default as UseGearAutomation } from "./use-gear-automation.mjs";
 export { default as ToggleActiveEffectAutomation } from "./toggle-active-effect-automation.mjs";
 export { default as RollAttackWithActorAutomation } from "./roll-attack-with-actor-automation.mjs";
+export { default as UsePowerAutomation } from "./use-power-automation.mjs";
+export { default as ModifyUsePowerAutomation } from "./modify-use-power-automation.mjs";

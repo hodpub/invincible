@@ -50,7 +50,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
     item.sheet.render(true);
   }
 
-  async applyBoostsAndLimits() {
+  async applyBoostsAndLimits(automationType = "modifyRollAttack") {
     const mods = this.actor.items.filter(it => it.system.power == this.item.id);
     let modifyAutomations = [];
     let selectableMods = [];
@@ -60,7 +60,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
     const boolKeys = ["actualDamage", "bypassArmor"];
 
     for (const mod of mods) {
-      const m = Object.values(mod.system.automations).filter(it => it.type == "modifyRollAttack");
+      const m = Object.values(mod.system.automations).filter(it => it.type == automationType);
       modifyAutomations = modifyAutomations.concat(m.filter(it => it.autoModify));
       selectableMods = selectableMods.concat(m.filter(it => !it.autoModify));
     }

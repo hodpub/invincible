@@ -290,7 +290,9 @@
         "rollBirdPower": "Roll Bird Power",
         "rollUpgrade": "Roll Upgrade",
         "useGear": "Use Gear",
-        "toggleActiveEffect": "Toggle Active Effect"
+        "toggleActiveEffect": "Toggle Active Effect",
+        "usePower": "Use Power",
+        "modifyUsePower": "Modify Use Power"
       },
       "Category": {
         "Default": "Default",

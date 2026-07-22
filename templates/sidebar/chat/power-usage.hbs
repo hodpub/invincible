@@ -1,0 +1,19 @@
+<div>
+  {{{enriched}}}
+
+  {{#if stressCost}}
+  <div class="dice-info roll-trauma">
+    <span class="label">{{localize "YZUR.CHAT.ROLL.Trauma"}}: </span>
+    <span class="result">{{stressCost}}</span>
+  </div>
+  {{/if}}
+  <ul>
+    {{#each effects as | effect|}}
+    <li>
+      <p><strong>[{{localize (concat "TYPES.Item." effect.type)}}]
+          {{effect.name}}</strong></p>
+      {{{effect.description}}}
+    </li>
+    {{/each}}
+  </ul>
+</div>

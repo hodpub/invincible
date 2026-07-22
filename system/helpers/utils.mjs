@@ -14,3 +14,19 @@ export function getStuntText(item, data) {
 }
 
 export function signedNumber(n) { return (n > 0) ? `+${n}` : n; }
+
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
+export async function enrich(obj, key) {
+  const value = foundry.utils.getProperty(obj, key);
+  return await TextEditor.enrichHTML(
+    value,
+    {
+      // Whether to show secret blocks in the finished html
+      secrets: obj.isOwner,
+      // Data to fill in for inline rolls
+      rollData: obj.getRollData(),
+      // Relative UUID resolution
+      relativeTo: obj,
+    }
+  );
+}
