@@ -116,6 +116,17 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
     return currentExecution;
   }
 
+  async checkStress(currentExecution) {
+    if (this.actor.system.derived.resolve.value < currentExecution.stressCost)
+      return ui.notifications.warn("You don't have enough resolve to use this.");
+  }
+
+  async applyStress(currentExecution) {
+    await this.actor.update({
+      "system.derived.resolve.value": this.actor.system.derived.resolve.value - currentExecution.stressCost,
+    });
+  }
+
   /**
    * The subtypes of this pseudo-document.
    * @type {Record<string, typeof PseudoDocument>}

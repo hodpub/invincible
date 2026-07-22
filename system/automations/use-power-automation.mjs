@@ -22,16 +22,11 @@ export default class UsePowerAutomation extends BaseAutomation {
     const currentExecution = await this.applyBoostsAndLimits("modifyUsePower");
     if (!currentExecution)
       return;
+    if (await this.checkStress(currentExecution))
+      return;
 
-    const stressCost = currentExecution.stressCost;
-    if (this.actor.system.derived.resolve.value < stressCost)
-      return ui.notifications.warn("You don't have enough resolve to use this.");
+    await this.applyStress(currentExecution);
 
-    await this.actor.update({
-      "system.derived.resolve.value": this.actor.system.derived.resolve.value - stressCost,
-    });
-
-    console.log(currentExecution);
     const label = this.name;
     const template = "systems/invincible/templates/sidebar/chat/power-usage.hbs";
     const context = currentExecution;

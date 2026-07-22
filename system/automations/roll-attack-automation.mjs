@@ -39,6 +39,9 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
     if (!attribute)
       return;
 
+    if (await this.checkStress(currentExecution))
+      return;
+
     const breakdown = {
       [game.i18n.localize(`INVINCIBLE.Actor.base.FIELDS.attributes.${attribute}.label`)]: this.actor.system.attributes[attribute].value,
 
