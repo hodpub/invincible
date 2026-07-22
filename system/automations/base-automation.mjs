@@ -51,7 +51,8 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
   }
 
   async applyBoostsAndLimits(automationType = "modifyRollAttack") {
-    const mods = this.actor.items.filter(it => it.system.power == this.item.id);
+    const itemId = this.item.system.power ?? this.item.id;
+    const mods = this.actor.items.filter(it => it.system.power == itemId);
     let modifyAutomations = [];
     let selectableMods = [];
     let currentExecution = this.toObject();
@@ -113,7 +114,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
           currentExecution[key] = value;
       }
     }
-    currentExecution.effects = currentExecution.effects.sort((a, b) => a.name.localeCompare(b.name));
+    currentExecution.effects = currentExecution.effects.sort((a, b) => a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
     return currentExecution;
   }
 
