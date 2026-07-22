@@ -113,6 +113,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
           currentExecution[key] = value;
       }
     }
+    currentExecution.effects = currentExecution.effects.sort((a, b) => a.name.localeCompare(b.name));
     return currentExecution;
   }
 
