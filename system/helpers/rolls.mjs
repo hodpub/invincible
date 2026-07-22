@@ -86,8 +86,8 @@ export async function applyTargetDamage(message, roll) {
     const changes = {};
 
     let protection = 0;
-    if (target.actor?.bonuses?.armorProtection && !roll.options.bypassArmor)
-      protection = Math.max(...Object.values(target.actor.bonuses.armorProtection));
+    if (target.actor?.system.bonuses?.armorProtection && !roll.options.bypassArmor)
+      protection = Math.max(...Object.values(target.actor.system.bonuses.armorProtection));
     const damage = Math.max(0, roll.attackDamage - protection);
     if (!damage)
       continue;
