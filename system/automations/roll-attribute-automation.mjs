@@ -24,6 +24,8 @@ export default class RollAttributeAutomation extends BaseAutomation {
 
   async getAttributeToUse(currentExecution) {
     let attribute = currentExecution.attribute;
+    if (!Array.isArray(attribute))
+      attribute = Array.from(attribute);
     if (attribute.length == 0) {
       ui.notifications.error("You need to have an attribute selected for the automation.");
       throw Error("You need to have an attribute selected for the automation.");
