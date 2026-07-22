@@ -61,7 +61,11 @@ export default class RollAttributeAutomation extends BaseAutomation {
   }
 
   async execute(event) {
-    let attribute = await this.getAttributeToUse(this);
+    const currentExecution = await this.applyBoostsAndLimits("modifyUsePower");
+    if (!currentExecution)
+      return;
+
+    let attribute = await this.getAttributeToUse(currentExecution);
     if (!attribute)
       return;
 
@@ -77,7 +81,8 @@ export default class RollAttributeAutomation extends BaseAutomation {
       item: this.item,
       breakdown,
       attackInfo: {
-        stressCost: this.stressCost
+        stressCost: this.stressCost,
+        effects: currentExecution.effects,
       }
     });
     return rollDialog.wait(event);
