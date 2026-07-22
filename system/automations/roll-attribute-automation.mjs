@@ -84,7 +84,7 @@ export default class RollAttributeAutomation extends BaseAutomation {
       item: this.item,
       breakdown,
       attackInfo: {
-        stressCost: this.stressCost,
+        stressCost: currentExecution.stressCost,
         effects: currentExecution.effects,
       }
     });
