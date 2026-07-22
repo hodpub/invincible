@@ -42,7 +42,8 @@ export class InvincibleChatLog extends foundry.applications.sidebar.tabs.ChatLog
       rollMode: game.settings.get('core', 'rollMode'),
     });
     await game.dice3d?.waitFor3DAnimationByMessageID(newMessage.id);
-    await applyStunts(newMessage);
+    if (!roll.pushable)
+      await applyStunts(newMessage);
     return message;
   }
 
