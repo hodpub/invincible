@@ -1,8 +1,8 @@
 <div>
   <div class="form-group">
-    <label for="system.automations.{{@key}}.autoModify">{{localize
+    <label for="system.automations.{{automation._id}}.autoModify">{{localize
       "INVINCIBLE.Automation.FIELDS.modify.autoModify.label"}}</label>
-    <input type="checkbox" name="system.automations.{{@key}}.autoModify" {{checked automation.autoModify}} />
+    <input type="checkbox" name="system.automations.{{automation._id}}.autoModify" {{checked automation.autoModify}} />
   </div>
   <div class="tip">
     <label class="hint">{{localize "INVINCIBLE.Automation.FIELDS.modify.autoModify.hint"}}</label>
@@ -36,16 +36,16 @@
     <input type="text" name="system.automations.{{key}}.maxRange" value="{{automation.maxRange}}">
   </div>
   <div class="form-group stacked">
-    <label for="system.automations.{{@key}}.actualDamage">{{localize
+    <label for="system.automations.{{automation._id}}.actualDamage">{{localize
       "INVINCIBLE.Automation.FIELDS.rollAttack.actualDamage.label"}}</label>
-      <select name="system.automations.{{@key}}.actualDamage">
+      <select name="system.automations.{{automation._id}}.actualDamage">
         {{selectOptions @root.config.AUTOMATIONS.MODIFY.BOOL selected=automation.actualDamage}}
       </select>
   </div>
   <div class="form-group stacked">
-    <label for="system.automations.{{@key}}.bypassArmor">{{localize
+    <label for="system.automations.{{automation._id}}.bypassArmor">{{localize
       "INVINCIBLE.Automation.FIELDS.rollAttack.bypassArmor.label"}}</label>
-      <select name="system.automations.{{@key}}.bypassArmor">
+      <select name="system.automations.{{automation._id}}.bypassArmor">
         {{selectOptions @root.config.AUTOMATIONS.MODIFY.BOOL selected=automation.bypassArmor}}
       </select>
   </div>
