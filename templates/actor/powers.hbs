@@ -18,7 +18,7 @@
           {{{power.enriched}}}
         </div>
         {{#if (lookup ../../boosts power.id)}}
-        <div style="height: 15px;"></div>
+        <div style="height: 8px;"></div>
         {{/if}}
         {{#each (lookup ../../boosts power.id) as | boost |}}
         <div class="boostLimit">
@@ -29,6 +29,9 @@
           </div>
         </div>
         {{/each}}
+        {{#if (lookup ../../limits power.id)}}
+        <div style="height: 8px;"></div>
+        {{/if}}
         {{#each (lookup ../../limits power.id) as | limit |}}
         <div class="boostLimit">
           <img src="{{limit.img}}">
