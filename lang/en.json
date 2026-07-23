@@ -316,7 +316,6 @@
         },
         "rollAttribute": {
           "requireAttribute.label": "Requires Attribute",
-          "canChangeAttribute.label": "Can change Attribute",
           "stressCost.label": "Stress Cost"
         },
         "rollAttack": {

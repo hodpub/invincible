@@ -20,7 +20,6 @@ export default class RollAttributeAutomation extends BaseAutomation {
 
     schema.attribute = new fields.SetField(new fields.StringField({ required: false }));
     schema.requireAttribute = new fields.BooleanField({ initial: true });
-    schema.canChangeAttribute = new fields.BooleanField({ initial: true });
     schema.rollBonus = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0 });
 
     schema.stressCost = new fields.NumberField({ ...DataHelper.requiredInteger, initial: 0, min: 0 });
