@@ -8,7 +8,7 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
   static get TYPE() {
     return "rollAttack";
   }
-  get SORT() {
+  get sort() {
     return 50;
   }
 

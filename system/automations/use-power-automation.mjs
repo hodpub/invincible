@@ -9,7 +9,7 @@ export default class UsePowerAutomation extends BaseAutomation {
   static get TYPE() {
     return "usePower";
   }
-  get SORT() {
+  get sort() {
     return 10;
   }
   get icon() {

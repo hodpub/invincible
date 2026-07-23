@@ -8,7 +8,7 @@ export default class ToggleActiveEffectAutomation extends BaseAutomation {
   static get TYPE() {
     return "toggleActiveEffect";
   }
-  get SORT() {
+  get sort() {
     return 70;
   }
   get icon(){

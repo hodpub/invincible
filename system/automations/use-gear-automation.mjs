@@ -7,7 +7,7 @@ export default class UseGearAutomation extends RollAttributeAutomation {
   static get TYPE() {
     return "useGear";
   }
-  get SORT() {
+  get sort() {
     return 10;
   }
   get icon() {

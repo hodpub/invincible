@@ -16,7 +16,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
    */
   static TYPE = "";
 
-  get SORT() { return 1000; }
+  get sort() { return 1000; }
   get icon() { return "fa-solid fa-bolt-auto"; }
   get parentType() {
     switch (this.parent.parent.type) {

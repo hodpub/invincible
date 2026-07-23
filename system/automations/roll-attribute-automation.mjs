@@ -8,7 +8,7 @@ export default class RollAttributeAutomation extends BaseAutomation {
   static get TYPE() {
     return "rollAttribute";
   }
-  get SORT() {
+  get sort() {
     return 30;
   }
   get icon(){
