@@ -122,7 +122,7 @@ export class InvincibleItem extends Item {
     if (possibleAutomations.length == 1)
       return possibleAutomations[0].execute(event);
 
-    possibleAutomations = possibleAutomations.sort((a, b) => a.name.localeCompare(b.name));
+    possibleAutomations = possibleAutomations.sort((a, b) => a.SORT - b.SORT || a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
 
     const automationToRun = await showAutomationsDialog(possibleAutomations, item.name);
     await automationToRun.execute(event);

@@ -9,6 +9,10 @@ export default class ToggleActiveEffectAutomation extends BaseAutomation {
     return "toggleActiveEffect";
   }
 
+  get SORT() {
+    return 70;
+  }
+
   static defineSchema() {
     const schema = super.defineSchema();
 

@@ -8,6 +8,9 @@ export default class RollAttributeAutomation extends BaseAutomation {
   static get TYPE() {
     return "rollAttribute";
   }
+  get SORT() {
+    return 30;
+  }
 
   static defineSchema() {
     const schema = super.defineSchema();

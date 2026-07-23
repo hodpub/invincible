@@ -8,6 +8,9 @@ export default class RollAttackAutomation extends RollAttributeAutomation {
   static get TYPE() {
     return "rollAttack";
   }
+  get SORT() {
+    return 50;
+  }
 
   static defineSchema() {
     const schema = super.defineSchema();

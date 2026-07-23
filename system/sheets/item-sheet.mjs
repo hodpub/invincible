@@ -157,7 +157,7 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
 
     await this._loadBoostLimit(context);
 
-    context.automations = Array.from(Object.values(context.item.system.automations)).sort((a, b) => a.name.localeCompare(b.name));
+    context.automations = Array.from(Object.values(context.item.system.automations)).sort((a, b) => a.SORT - b.SORT || a.type.localeCompare(b.type) ||  a.name.localeCompare(b.name));
 
     return context;
   }

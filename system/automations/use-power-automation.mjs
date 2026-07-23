@@ -9,6 +9,9 @@ export default class UsePowerAutomation extends BaseAutomation {
   static get TYPE() {
     return "usePower";
   }
+  get SORT() {
+    return 10;
+  }
 
   static defineSchema() {
     const schema = super.defineSchema();

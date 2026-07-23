@@ -7,6 +7,9 @@ export default class UseGearAutomation extends RollAttributeAutomation {
   static get TYPE() {
     return "useGear";
   }
+  get SORT() {
+    return 10;
+  }
 
   async execute(event) {
     let attribute = await this.getAttributeToUse(this);

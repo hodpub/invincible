@@ -14,6 +14,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
    */
   static TYPE = "";
 
+  get SORT() { return 1000; }
 
   static defineSchema() {
     return {
