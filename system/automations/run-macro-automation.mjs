@@ -6,6 +6,9 @@ export default class RunMacroAutomation extends BaseAutomation {
   static get TYPE() {
     return "runMacro";
   }
+  get icon() {
+    return "fa-solid fa-code";
+  }
 
   static defineSchema() {
     const schema = super.defineSchema();

@@ -12,6 +12,9 @@ export default class UsePowerAutomation extends BaseAutomation {
   get SORT() {
     return 10;
   }
+  get icon() {
+    return "fa-solid fa-play";
+  }
 
   static defineSchema() {
     const schema = super.defineSchema();

@@ -10,6 +10,9 @@ export default class UseGearAutomation extends RollAttributeAutomation {
   get SORT() {
     return 10;
   }
+  get icon() {
+    return "fa-solid fa-play";
+  }
 
   async execute(event) {
     let attribute = await this.getAttributeToUse(this);

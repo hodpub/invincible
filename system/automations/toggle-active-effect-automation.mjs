@@ -8,9 +8,11 @@ export default class ToggleActiveEffectAutomation extends BaseAutomation {
   static get TYPE() {
     return "toggleActiveEffect";
   }
-
   get SORT() {
     return 70;
+  }
+  get icon(){
+    return "fa-solid fa-swap";
   }
 
   static defineSchema() {

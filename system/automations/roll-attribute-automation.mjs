@@ -11,6 +11,9 @@ export default class RollAttributeAutomation extends BaseAutomation {
   get SORT() {
     return 30;
   }
+  get icon(){
+    return "fa-solid fa-dice";
+  }
 
   static defineSchema() {
     const schema = super.defineSchema();
