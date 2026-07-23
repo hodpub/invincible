@@ -119,6 +119,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
         name: mod.showName,
         description: mod.showDescription,
         type: mod.parent.parent.type,
+        parentType: mod.parentType,
       });
 
       for (const key of Object.keys(modification)) {
@@ -138,6 +139,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
       }
     }
     currentExecution.effects = sortAutomations(currentExecution.effects);
+    console.log(currentExecution.effects);
     return currentExecution;
   }
 
