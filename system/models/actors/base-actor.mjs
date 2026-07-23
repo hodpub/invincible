@@ -1,5 +1,6 @@
 import { DataHelper } from "../../helpers/data.mjs";
 import { INVINCIBLE } from "../../config/_invincible.mjs";
+import { defaultSort } from "../../helpers/utils.mjs";
 
 export default class InvincibleActorBase extends foundry.abstract.TypeDataModel {
   static LOCALIZATION_PREFIXES = ["INVINCIBLE.Actor.base"];
@@ -182,15 +183,19 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     }
 
     for (const [key, value] of Object.entries(powers)) {
-      powers[key].powers = value.powers.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+      powers[key].powers = value.powers.sort(defaultSort);
+      for (const power of powers[key].powers) {
+        boosts[power.id] = boosts[power.id]?.sort(defaultSort);
+        limits[power.id] = limits[power.id]?.sort(defaultSort);
+      }
     }
 
     // Sort then assign
-    context.powers = Object.values(powers).sort((a, b) => (a.powerSource.sort || 0) - (b.powerSource.sort || 0));
-    context.injuries = injuries.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.talents = talents.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.drawbacks = drawbacks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.powers = Object.values(powers).sort(defaultSort);
+    context.injuries = injuries.sort(defaultSort);
+    context.talents = talents.sort(defaultSort);
+    context.drawbacks = drawbacks.sort(defaultSort);
+    context.gear = gear.sort(defaultSort);
     context.boosts = boosts;
     context.limits = limits;
   }

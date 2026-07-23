@@ -1,5 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import { BaseAutomation } from '../automations/_automations.mjs';
+import { defaultSort } from "../helpers/utils.mjs";
 
 const { api, sheets } = foundry.applications;
 const DragDrop = foundry.applications.ux.DragDrop;
@@ -168,8 +169,8 @@ export class InvincibleItemSheet extends api.HandlebarsApplicationMixin(sheets.I
 
     const boostsAndLimits = this.item.actor.items.filter(it => it.system.power == this.item.id);
 
-    context.boosts = boostsAndLimits.filter(it => it.type == "boost").sort((a, b) => a.name.localeCompare(b.name));
-    context.limits = boostsAndLimits.filter(it => it.type == "limit").sort((a, b) => a.name.localeCompare(b.name));
+    context.boosts = boostsAndLimits.filter(it => it.type == "boost").sort(defaultSort);
+    context.limits = boostsAndLimits.filter(it => it.type == "limit").sort(defaultSort);
   }
 
   /** @override */
