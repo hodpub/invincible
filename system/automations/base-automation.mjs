@@ -54,10 +54,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
 
   async applyBoostsAndLimits(automationsType = ["modifyRollAttack", "modifyUsePower"]) {
     const itemId = this.item.system.power ?? this.item.id;
-    const mods = this.actor.items.filter(it => it.system.power == itemId);
-
-    // Add the item itself, so modify automations from the item can be applied
-    mods.push(this.item);
+    const mods = [this.item, ...this.actor.items.filter(it => it.system.power == itemId)];
 
     let modifyAutomations = [];
     let selectableMods = [];
@@ -66,7 +63,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
     const removeKeys = ["name", "_id", "type", "showAsSelection", "open", "autoModify"];
     const boolKeys = ["actualDamage", "bypassArmor"];
 
-    for (const mod of mods) {
+    for (const mod of mods.sort((a,b) => a.parentType - b.parentType || a.name.localeCompare(b.name))) {
       const m = Object.values(mod.system.automations).filter(it => automationsType.indexOf(it.type) > -1);
       modifyAutomations = modifyAutomations.concat(m.filter(it => it.autoModify));
       selectableMods = selectableMods.concat(m.filter(it => !it.autoModify));
