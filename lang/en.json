@@ -486,6 +486,8 @@
       "system.derived.slugfest.damage": "Slugfest Damage",
       "bonus.block": "Block Bonus",
       "bonus.dodge": "Dodge Bonus",
+      "bonus.charge": "Charge Attack",
+      "bonus.grapple": "Grapple Attack",
       "system.derived.health.bonus": "Maximum Health",
       "system.derived.resolve.bonus": "Maximum Resolve",
       "system.biography": "Biography",
