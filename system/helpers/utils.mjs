@@ -32,5 +32,5 @@ export async function enrich(obj, key) {
 }
 
 export function defaultSort(a, b) {
-  return (a.sort || 0) - (b.sort || 0) || a.name.localeCompare(b.name)
+  return a.name.localeCompare(b.name)
 }
