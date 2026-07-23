@@ -61,7 +61,7 @@ export default class RollAttributeAutomation extends BaseAutomation {
   }
 
   async execute(event) {
-    const currentExecution = await this.applyBoostsAndLimits("modifyUsePower");
+    const currentExecution = await this.applyBoostsAndLimits(["modifyUsePower"]);
     if (!currentExecution)
       return;
 

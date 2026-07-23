@@ -19,7 +19,7 @@ export default class UsePowerAutomation extends BaseAutomation {
   }
 
   async execute(event) {
-    const currentExecution = await this.applyBoostsAndLimits("modifyUsePower");
+    const currentExecution = await this.applyBoostsAndLimits(["modifyUsePower"]);
     if (!currentExecution)
       return;
     if (await this.checkStress(currentExecution))
