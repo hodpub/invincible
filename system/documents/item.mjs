@@ -102,15 +102,21 @@ export class InvincibleItem extends Item {
     let possibleAutomations = [];
     for (const automationId of keys) {
       const automation = item.system.automations[automationId];
-      if (automation.showAsSelection)
-        possibleAutomations.push(item.system.automations[automationId]);
+      if (!automation.showAsSelection)
+        continue;
+
+      automation.parentType = 10;
+      possibleAutomations.push(automation);
     }
     const boostsAndLimits = item.actor.items.filter(it => it.system.power == item.id);
     for (const boostOrLimit of boostsAndLimits) {
       for (const automationId of Object.keys(boostOrLimit.system.automations)) {
         const automation = boostOrLimit.system.automations[automationId];
-        if (automation.showAsSelection)
-          possibleAutomations.push(boostOrLimit.system.automations[automationId]);
+        if (!automation.showAsSelection)
+          continue;
+
+        automation.parentType = boostOrLimit.type == "boost" ? 20 : 30;
+        possibleAutomations.push(automation);
       }
     }
 
@@ -122,7 +128,7 @@ export class InvincibleItem extends Item {
     if (possibleAutomations.length == 1)
       return possibleAutomations[0].execute(event);
 
-    possibleAutomations = possibleAutomations.sort((a, b) => a.SORT - b.SORT || a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
+    possibleAutomations = possibleAutomations.sort((a, b) => a.parentType - b.parentType || a.SORT - b.SORT || a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
 
     const automationToRun = await showAutomationsDialog(possibleAutomations, item.name);
     await automationToRun.execute(event);
