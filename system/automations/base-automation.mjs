@@ -116,7 +116,7 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
           currentExecution[key] = Boolean(value);
         }
         else if (typeof value == "number")
-          currentExecution[key] = value;
+          currentExecution[key] += value;
       }
     }
     currentExecution.effects = currentExecution.effects.sort((a, b) => a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
