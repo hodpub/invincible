@@ -7,7 +7,7 @@ export function showAutomationsDialog(automations, title, { content, icon = 'fa-
         return;
 
       const btn = Object.assign({
-        label: automation.name,
+        label: `${automation.name}${automation.origin ?? ""}`,
         icon: automation.icon,
         action: automationId,
         callback: () => automations[automationId],

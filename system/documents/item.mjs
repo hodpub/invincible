@@ -116,6 +116,7 @@ export class InvincibleItem extends Item {
           continue;
 
         automation.parentType = boostOrLimit.type == "boost" ? 20 : 30;
+        automation.origin = ` (${boostOrLimit.type[0].toUpperCase()})`;
         possibleAutomations.push(automation);
       }
     }
