@@ -172,9 +172,12 @@ export default class InvincibleRollDialog extends HandlebarsApplicationMixin(App
 
     let roll = await new YearZeroRoll(formula, { maxPush }, options).roll();
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
+    let flavor = this.rollName;
+    if (flavor.toLocaleLowerCase().indexOf(this.item.name.toLocaleLowerCase()) == -1)
+      flavor = `${this.item.name} - ${flavor}`;
     const message = await roll.toMessage({
       speaker,
-      flavor: this.rollName,
+      flavor,
     }, { rollMode: event.submitter?.dataset.action ?? game.settings.get('core', 'rollMode') });
     this.result = message;
 

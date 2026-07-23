@@ -33,7 +33,9 @@ export default class UsePowerAutomation extends BaseAutomation {
 
     await this.applyStress(currentExecution);
 
-    const label = this.name;
+    let label = this.name;
+    if (label.toLocaleLowerCase().indexOf(this.item.name.toLocaleLowerCase()) == -1)
+      label = `${this.item.name} - ${label}`;
     const template = "systems/invincible/templates/sidebar/chat/power-usage.hbs";
     const context = currentExecution;
     context.enriched = await enrich(this.item, "system.description");
