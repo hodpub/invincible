@@ -191,7 +191,7 @@ export default class InvincibleActorBase extends foundry.abstract.TypeDataModel 
     }
 
     // Sort then assign
-    context.powers = Object.values(powers).sort(defaultSort);
+    context.powers = Object.values(powers);
     context.injuries = injuries.sort(defaultSort);
     context.talents = talents.sort(defaultSort);
     context.drawbacks = drawbacks.sort(defaultSort);
