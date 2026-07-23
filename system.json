@@ -1,8 +1,8 @@
 {
   "id": "invincible",
   "title": "Invincible - Superhero Roleplaying",
-  "description": "The official Invincible – Superhero Roleplaying system for FoundryVTT!",
-  "version": "2.0.0",
+  "description": "The official Invincible - Superhero Roleplaying system for FoundryVTT!",
+  "version": "2.1.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14.364"
