@@ -29,3 +29,7 @@ export function showAutomationsDialog(automations, title, { content, icon = 'fa-
     window: { title },
   });
 }
+
+export function sortAutomations(automations) {
+  return automations.sort((a, b) => a.parentType - b.parentType || a.sort - b.sort || a.name.localeCompare(b.name));
+}

@@ -1,4 +1,4 @@
-import { showAutomationsDialog } from "../helpers/automations.mjs";
+import { showAutomationsDialog, sortAutomations } from "../helpers/automations.mjs";
 import { InvincibleChatMessage } from "./chat-message.mjs";
 
 /**
@@ -104,8 +104,6 @@ export class InvincibleItem extends Item {
       const automation = item.system.automations[automationId];
       if (!automation.showAsSelection)
         continue;
-
-      automation.parentType = 10;
       possibleAutomations.push(automation);
     }
     const boostsAndLimits = item.actor.items.filter(it => it.system.power == item.id);
@@ -114,8 +112,6 @@ export class InvincibleItem extends Item {
         const automation = boostOrLimit.system.automations[automationId];
         if (!automation.showAsSelection)
           continue;
-
-        automation.parentType = boostOrLimit.type == "boost" ? 20 : 30;
         automation.origin = ` (${boostOrLimit.type[0].toUpperCase()})`;
         possibleAutomations.push(automation);
       }
@@ -129,7 +125,7 @@ export class InvincibleItem extends Item {
     if (possibleAutomations.length == 1)
       return possibleAutomations[0].execute(event);
 
-    possibleAutomations = possibleAutomations.sort((a, b) => a.parentType - b.parentType || a.SORT - b.SORT || a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
+    possibleAutomations = sortAutomations(possibleAutomations);
 
     const automationToRun = await showAutomationsDialog(possibleAutomations, item.name);
     await automationToRun.execute(event);
