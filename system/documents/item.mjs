@@ -128,6 +128,6 @@ export class InvincibleItem extends Item {
     possibleAutomations = sortAutomations(possibleAutomations);
 
     const automationToRun = await showAutomationsDialog(possibleAutomations, item.name);
-    await automationToRun.execute(event);
+    await automationToRun?.execute(event);
   }
 }
