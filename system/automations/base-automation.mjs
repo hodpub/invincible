@@ -30,6 +30,12 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
         return 1000;
     }
   }
+  get showName() {
+    return this.parent.parent.id == this.item.id ? this.name : this.parent.parent.name;
+  }
+  get showDescription() {
+    return this.description ? `<p>${this.description}</p>` : this.parent.description;
+  }
 
   static defineSchema() {
     return {
@@ -85,8 +91,6 @@ export default class BaseAutomation extends foundry.abstract.DataModel {
 
     let choices = [];
     for (const choice of selectableMods) {
-      choice.showName = choice.parent.parent.id == this.item.id ? choice.name : choice.parent.parent.name;
-      choice.showDescription = choice.description ? `<p>${choice.description}</p>` : choice.parent.description;
       choices.push(`<div class="form-field"><input type="checkbox" name="${choice.name}" id="${choice.name}"><label for="${choice.name}"><strong>${choice.name}<strong></label>${choice.showDescription}</div>`);
     }
     if (choices.length) {
