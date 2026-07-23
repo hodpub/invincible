@@ -15,6 +15,7 @@ export default class ModifyUsePowerAutomation extends BaseAutomation {
 
     schema.stressCost = new fields.NumberField();
     schema.autoModify = new fields.BooleanField({ initial: true });
+    schema.description = new fields.StringField();
 
     return schema;
   }

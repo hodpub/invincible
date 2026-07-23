@@ -387,7 +387,8 @@
           "autoModify": {
             "label": "Auto Modify",
             "hint": "If selected, it will automatically modify the automation. If not, it will allow you to select if you want to use the boost/limit."
-          }
+          },
+          "description.label": "Description"
         }
       }
     },
