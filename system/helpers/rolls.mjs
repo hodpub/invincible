@@ -128,8 +128,10 @@ export async function applyTargetDamage(message, roll) {
 
 export async function applyStress(message, roll) {
   const stress = roll.options.stressCost + roll.attributeTrauma;
-  if (stress || roll.pushable)
+  if (!stress || roll.pushable)
     return;
+
+  roll.options.stressCost = roll.options.stressCost + roll.attributeTrauma;
 
   const actor = message.speakerActor;
   if (!actor)
