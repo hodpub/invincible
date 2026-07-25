@@ -731,7 +731,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             attackInfo: {
               damage: this.actor.system.derived.slugfest.damage,
               minRange: 0,
-              maxRange: 0
+              maxRange: 0,
+              actualDamage: true,
             },
             bonus: {
               ...this.actor.system.bonuses["system.derived.slugfest.bonus"]
@@ -750,7 +751,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
             attackInfo: {
               damage: this.actor.system.derived.slugfest.damage,
               minRange: 0,
-              maxRange: 1
+              maxRange: 1,
+              actualDamage: true,
             },
             bonus: {
               ...this.actor.system.bonuses["system.derived.slugfest.bonus"],
@@ -771,7 +773,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               damage: this.actor.system.derived.slugfest.damage,
               minRange: 1,
               maxRange: "Movement",
-              attackType: "charge"
+              attackType: "charge",
+              actualDamage: true,
             },
             bonus: {
               ...this.actor.system.bonuses["charge"]
@@ -791,7 +794,8 @@ export class InvincibleActorSheet extends api.HandlebarsApplicationMixin(
               damage: this.actor.system.derived.slugfest.damage,
               minRange: 1,
               maxRange: "Movement",
-              attackType: "charge"
+              attackType: "charge",
+              actualDamage: true,
             },
             bonus: {
               ...this.actor.system.bonuses["charge"],
