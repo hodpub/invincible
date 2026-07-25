@@ -453,6 +453,10 @@
         "label": "Your Own",
         "stunt": "Your Own"
       },
+      "Slam": {
+        "label": "Slam",
+        "stunt": "Slam"
+      },
       "ApplyStunts": "Apply Stunts"
     },
     "Settings": {
