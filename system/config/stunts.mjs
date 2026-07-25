@@ -88,7 +88,7 @@ STUNTS.list = {
     }
   },
   "SpecialStunt": {
-    max: 1,
+    max: 99,
     maxDisabled: false,
     minDisabled: true,
     action: async (actor, roll) => {
@@ -97,7 +97,7 @@ STUNTS.list = {
     }
   },
   "YourOwn": {
-    max: 1,
+    max: 99,
     maxDisabled: false,
     minDisabled: true,
     action: async (actor, roll) => {
@@ -140,6 +140,8 @@ STUNTS.slugfest = [
 STUNTS.charge = [
   "DoubleDamage",
   "Slam",
+  "SpecialStunt",
+  "YourOwn",
 ]
 
 STUNTS.shooting = [
