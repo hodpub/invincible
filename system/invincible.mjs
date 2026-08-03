@@ -23,6 +23,7 @@ import { registerDice3D } from "./helpers/rolls.mjs";
 import InvincibleRollDialog from "./applications/dialog/roll-dialog.mjs";
 import { registerSettings, registerYearZeroCombatSettings } from "./helpers/settings.mjs";
 import { registerActiveEffectsList } from "./helpers/effects.mjs";
+import { migrate, registerMigrationSettings } from "./migrations/_base-migration.mjs";
 
 const collections = foundry.documents.collections;
 const sheets = foundry.appv1.sheets;
@@ -129,6 +130,7 @@ Hooks.once('init', function () {
   });
 
   registerSettings();
+  registerMigrationSettings();
 
   YearZeroRollManager.register("inv", {
     "Roll.baseTemplate": `systems/invincible/templates/dice/broll.hbs`,
@@ -159,6 +161,7 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 /* -------------------------------------------- */
 
 Hooks.once('ready', function () {
+  migrate();
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => checkIfCreateDocMacro(data, slot));
   // adventureImport();
