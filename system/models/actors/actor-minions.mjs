@@ -10,9 +10,10 @@ export default class InvincibleMinions extends InvincibleActorBase {
     super.prepareDerivedData();
     this.derived.health.max = 10;
 
-    for (const attribute of Object.keys(this.attributes)) {
-      this.bonuses[attribute] ??= {};
-      this.bonuses[attribute][game.i18n.localize("TYPES.Actor.minions")] = Math.max(this.derived.health.value - 1, 0);
-    }
+    if (this.derived.health.value <= 1)
+      return;
+
+    this.bonuses["attack"] ??= {};
+    this.bonuses["attack"][game.i18n.localize("TYPES.Actor.minions")] = Math.max(this.derived.health.value - 1, 0);
   }
 }

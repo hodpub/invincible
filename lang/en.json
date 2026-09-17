@@ -492,6 +492,7 @@
       "bonus.dodge": "Dodge Bonus",
       "bonus.charge": "Charge Attack",
       "bonus.grapple": "Grapple Attack",
+      "bonus.attack": "Any Attack (Slugfest, Charge, Grapple, any Roll Attack automation)",
       "system.derived.health.bonus": "Maximum Health",
       "system.derived.resolve.bonus": "Maximum Resolve",
       "system.biography": "Biography",
