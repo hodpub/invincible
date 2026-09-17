@@ -49,9 +49,9 @@ export class InvincibleChatLog extends foundry.applications.sidebar.tabs.ChatLog
     let { message, roll } = InvincibleChatLog.getMessageAndRoll(event);
     roll = roll.duplicate();
     roll.maxPush = 0;
-    message = await message.update({ rolls: [roll.toJSON()] });
     await applyStunts(message);
-    await applyStress(message, roll, false);
+    await applyStress(message, roll, roll.pushCount, true);
+    message = await message.update({ rolls: [roll.toJSON()] });
     return message;
   }
   static async #applyTargetDamage(event) {

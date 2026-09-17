@@ -126,12 +126,12 @@ export async function applyTargetDamage(message, roll) {
   }
 }
 
-export async function applyStress(message, roll, pushed = true) {
+export async function applyStress(message, roll, pushed = true, accepted = false) {
   let stress = roll.options.stressCost;
   if (pushed)
     stress += roll.attributeTrauma;
 
-  if (!stress || roll.pushable)
+  if (!stress || (!accepted && roll.pushable))
     return;
 
   roll.options.stressCost = stress;
