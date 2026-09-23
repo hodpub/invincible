@@ -508,7 +508,8 @@
       "system.flaw": "Flaw",
       "system.relationships": "Relationships",
       "system.team": "Team",
-      "system.teamBase": "Team Base"
+      "system.teamBase": "Team Base",
+      "token.texture.src": "Token Texture"
     },
     "SystemManual": "Invincible System Manual"
   },
